@@ -1,0 +1,97 @@
+CREATE OR REPLACE TABLE `Agencije` (
+	`id` INT NOT NULL AUTO_INCREMENT UNIQUE,
+	`naziv` VARCHAR(255),
+	`adresa` VARCHAR(255),
+	`gradID` INT,
+	`email` VARCHAR(255),
+	`fiksni` VARCHAR(255) NOT NULL,
+	`mobitel` VARCHAR(255) NOT NULL,
+	`korisnikID` INT,
+	PRIMARY KEY(`id`)
+);
+CREATE OR REPLACE TABLE `Grad` (
+	`id` INT NOT NULL AUTO_INCREMENT UNIQUE,
+	`naziv` VARCHAR(255),
+	`drzavaID` INT,
+	PRIMARY KEY(`id`)
+);
+CREATE OR REPLACE TABLE `Drzava` (
+	`id` INT NOT NULL AUTO_INCREMENT UNIQUE,
+	`naziv` VARCHAR(255),
+	PRIMARY KEY(`id`)
+);
+CREATE OR REPLACE TABLE `Destinacije` (
+	`id` INT NOT NULL AUTO_INCREMENT UNIQUE,
+	`naziv` VARCHAR(255),
+	`agencijaID` INT,
+	`mjestoPolaska` VARCHAR(255),
+	`mjestoPovratka` VARCHAR(255),
+	PRIMARY KEY(`id`)
+);
+/* Stanice koje se nalaze izmedju mjesta polaska i mjesta povratka
+kratkiOpis: da li je natkrivena, unistena, cista,.... */
+CREATE OR REPLACE TABLE `Stanice` (
+	`id` INT NOT NULL AUTO_INCREMENT UNIQUE,
+	`naziv` VARCHAR(255) NOT NULL,
+	`kratkiOpis` TEXT(65535) NOT NULL,
+	`koordinate` VARCHAR(255) NOT NULL,
+	`slika` VARCHAR(255),
+	PRIMARY KEY(`id`)
+);
+CREATE OR REPLACE TABLE `DestStanica` (
+	`id` INT NOT NULL AUTO_INCREMENT UNIQUE,
+	`destinacijaID` INT NOT NULL,
+	`stanicaID` INT NOT NULL,
+	`cijenaPolaska` DOUBLE NOT NULL,
+	`cijenaPovratka` DOUBLE,
+	`vrijemePovratka` TIME NOT NULL,
+	`brojstanice` INT NOT NULL,
+	`vrijemePolaska` TIME NOT NULL,
+	PRIMARY KEY(`id`)
+);
+CREATE OR REPLACE TABLE `Korisnici` (
+	`id` INT NOT NULL AUTO_INCREMENT UNIQUE,
+	`username` VARCHAR(255) NOT NULL,
+	`password` VARCHAR(255) NOT NULL,
+	`rolaID` INT NOT NULL,
+	PRIMARY KEY(`id`)
+);
+CREATE OR REPLACE TABLE `Rola` (
+	`id` INT NOT NULL AUTO_INCREMENT UNIQUE,
+	`nazivRole` VARCHAR(255) NOT NULL,
+	PRIMARY KEY(`id`)
+);
+CREATE OR REPLACE TABLE `Reviews` (
+	`id` INT NOT NULL AUTO_INCREMENT UNIQUE,
+	`kratkiOpis` TEXT(65535),
+	`korisnikID` INT,
+	`stanicaID` INT,
+	PRIMARY KEY(`id`)
+);
+ALTER TABLE `Grad`
+ADD FOREIGN KEY(`id`) REFERENCES `Agencije`(`gradID`)
+ON UPDATE NO ACTION ON DELETE NO ACTION;
+ALTER TABLE `Drzava`
+ADD FOREIGN KEY(`id`) REFERENCES `Grad`(`drzavaID`)
+ON UPDATE NO ACTION ON DELETE NO ACTION;
+ALTER TABLE `Agencije`
+ADD FOREIGN KEY(`id`) REFERENCES `Destinacije`(`agencijaID`)
+ON UPDATE NO ACTION ON DELETE NO ACTION;
+ALTER TABLE `Destinacije`
+ADD FOREIGN KEY(`id`) REFERENCES `DestStanica`(`destinacijaID`)
+ON UPDATE NO ACTION ON DELETE NO ACTION;
+ALTER TABLE `Stanice`
+ADD FOREIGN KEY(`id`) REFERENCES `DestStanica`(`stanicaID`)
+ON UPDATE NO ACTION ON DELETE NO ACTION;
+ALTER TABLE `Rola`
+ADD FOREIGN KEY(`id`) REFERENCES `Korisnici`(`rolaID`)
+ON UPDATE NO ACTION ON DELETE NO ACTION;
+ALTER TABLE `Korisnici`
+ADD FOREIGN KEY(`id`) REFERENCES `Agencije`(`korisnikID`)
+ON UPDATE NO ACTION ON DELETE NO ACTION;
+ALTER TABLE `Korisnici`
+ADD FOREIGN KEY(`id`) REFERENCES `Reviews`(`korisnikID`)
+ON UPDATE NO ACTION ON DELETE NO ACTION;
+ALTER TABLE `Stanice`
+ADD FOREIGN KEY(`id`) REFERENCES `Reviews`(`stanicaID`)
+ON UPDATE NO ACTION ON DELETE NO ACTION;
