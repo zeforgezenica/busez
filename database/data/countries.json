@@ -1,0 +1,50 @@
+[
+  {
+    "_id": 1,
+    "name": "Bosnia and Herzegovina",
+    "code": 387,
+    "acronym": "BIH"
+  },
+  {
+    "_id": 2,
+    "name": "Croatia",
+    "code": 385,
+    "acronym": "HRV"
+  },
+  {
+    "_id": 3,
+    "name": "Serbia",
+    "code": 381,
+    "acronym": "SRB"
+  },
+  {
+    "_id": 4,
+    "name": "Slovenia",
+    "code": 386,
+    "acronym": "SVN"
+  },
+  {
+    "_id": 5,
+    "name": "Montenegro",
+    "code": 382,
+    "acronym": "MNE"
+  },
+  {
+    "_id": 6,
+    "name": "North Macedonia",
+    "code": 389,
+    "acronym": "MKD"
+  },
+  {
+    "_id": 7,
+    "name": "Kosovo",
+    "code": 383,
+    "acronym": "XK"
+  },
+  {
+    "_id": 8,
+    "name": "Kosovo",
+    "code": 383,
+    "acronym": "RKS"
+  }
+]

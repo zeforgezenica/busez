@@ -1,0 +1,3764 @@
+[
+  {
+    "_id": 1,
+    "countryId": 1,
+    "name": "Aleksandrovac",
+    "zipCode": 78255
+  },
+  {
+    "_id": 2,
+    "countryId": 1,
+    "name": "Avtovac",
+    "zipCode": 89245
+  },
+  {
+    "_id": 3,
+    "countryId": 1,
+    "name": "Banovići",
+    "zipCode": 75290
+  },
+  {
+    "_id": 4,
+    "countryId": 1,
+    "name": "Banja Luka",
+    "zipCode": 78000
+  },
+  {
+    "_id": 5,
+    "countryId": 1,
+    "name": "Banja Vrućica",
+    "zipCode": 74273
+  },
+  {
+    "_id": 6,
+    "countryId": 1,
+    "name": "Baraći",
+    "zipCode": 70267
+  },
+  {
+    "_id": 7,
+    "countryId": 1,
+    "name": "Batković",
+    "zipCode": 76312
+  },
+  {
+    "_id": 8,
+    "countryId": 1,
+    "name": "Begov Han",
+    "zipCode": 72233
+  },
+  {
+    "_id": 9,
+    "countryId": 1,
+    "name": "Berkovići",
+    "zipCode": 88363
+  },
+  {
+    "_id": 10,
+    "countryId": 1,
+    "name": "Bihać",
+    "zipCode": 77000
+  },
+  {
+    "_id": 11,
+    "countryId": 1,
+    "name": "Bijela",
+    "zipCode": 76204
+  },
+  {
+    "_id": 12,
+    "countryId": 1,
+    "name": "Bijelo Brdo",
+    "zipCode": 73263
+  },
+  {
+    "_id": 13,
+    "countryId": 1,
+    "name": "Bijeljina",
+    "zipCode": 76300
+  },
+  {
+    "_id": 14,
+    "countryId": 1,
+    "name": "Bijeljinsko Suho Polje",
+    "zipCode": 76321
+  },
+  {
+    "_id": 15,
+    "countryId": 1,
+    "name": "Bilalovac",
+    "zipCode": 71253
+  },
+  {
+    "_id": 16,
+    "countryId": 1,
+    "name": "Bileća",
+    "zipCode": 89230
+  },
+  {
+    "_id": 17,
+    "countryId": 1,
+    "name": "Biletić Polje",
+    "zipCode": 88263
+  },
+  {
+    "_id": 18,
+    "countryId": 1,
+    "name": "Bilješevo",
+    "zipCode": 72248
+  },
+  {
+    "_id": 19,
+    "countryId": 1,
+    "name": "Bjelimići",
+    "zipCode": 88407
+  },
+  {
+    "_id": 20,
+    "countryId": 1,
+    "name": "Blagaj",
+    "zipCode": 88201
+  },
+  {
+    "_id": 21,
+    "countryId": 1,
+    "name": "Blatnica",
+    "zipCode": 74275
+  },
+  {
+    "_id": 22,
+    "countryId": 1,
+    "name": "Blažuj",
+    "zipCode": 71215
+  },
+  {
+    "_id": 23,
+    "countryId": 1,
+    "name": "Boće",
+    "zipCode": 76210
+  },
+  {
+    "_id": 24,
+    "countryId": 1,
+    "name": "Bok",
+    "zipCode": 76277
+  },
+  {
+    "_id": 25,
+    "countryId": 1,
+    "name": "Boljanić",
+    "zipCode": 74322
+  },
+  {
+    "_id": 26,
+    "countryId": 1,
+    "name": "Boračko Jezero",
+    "zipCode": 88405
+  },
+  {
+    "_id": 27,
+    "countryId": 1,
+    "name": "Borike",
+    "zipCode": 73225
+  },
+  {
+    "_id": 28,
+    "countryId": 1,
+    "name": "Borojevići",
+    "zipCode": 88365
+  },
+  {
+    "_id": 29,
+    "countryId": 1,
+    "name": "Bosanska Krupa",
+    "zipCode": 77240
+  },
+  {
+    "_id": 30,
+    "countryId": 1,
+    "name": "Bosanski Petrovac",
+    "zipCode": 77250
+  },
+  {
+    "_id": 31,
+    "countryId": 1,
+    "name": "Bosansko Grahovo",
+    "zipCode": 80270
+  },
+  {
+    "_id": 32,
+    "countryId": 1,
+    "name": "Bratunac",
+    "zipCode": 75420
+  },
+  {
+    "_id": 33,
+    "countryId": 1,
+    "name": "Brčko",
+    "zipCode": 76000
+  },
+  {
+    "_id": 34,
+    "countryId": 1,
+    "name": "Brčko Novo",
+    "zipCode": 76105
+  },
+  {
+    "_id": 35,
+    "countryId": 1,
+    "name": "Brekovica",
+    "zipCode": 77205
+  },
+  {
+    "_id": 36,
+    "countryId": 1,
+    "name": "Brestovo",
+    "zipCode": 74210
+  },
+  {
+    "_id": 37,
+    "countryId": 1,
+    "name": "Brijesnica kod Doboja",
+    "zipCode": 74206
+  },
+  {
+    "_id": 38,
+    "countryId": 1,
+    "name": "Brka",
+    "zipCode": 76206
+  },
+  {
+    "_id": 39,
+    "countryId": 1,
+    "name": "Brnjic",
+    "zipCode": 72243
+  },
+  {
+    "_id": 40,
+    "countryId": 1,
+    "name": "Brnjica kod Sanskog Mosta",
+    "zipCode": 79270
+  },
+  {
+    "_id": 41,
+    "countryId": 1,
+    "name": "Brod",
+    "zipCode": 74440
+  },
+  {
+    "_id": 42,
+    "countryId": 1,
+    "name": "Brodski Stupnik",
+    "zipCode": 74255
+  },
+  {
+    "_id": 43,
+    "countryId": 1,
+    "name": "Brotnja",
+    "zipCode": 75214
+  },
+  {
+    "_id": 44,
+    "countryId": 1,
+    "name": "Brtava",
+    "zipCode": 75308
+  },
+  {
+    "_id": 45,
+    "countryId": 1,
+    "name": "Brtava Kula",
+    "zipCode": 73310
+  },
+  {
+    "_id": 46,
+    "countryId": 1,
+    "name": "Bukovica",
+    "zipCode": 72346
+  },
+  {
+    "_id": 47,
+    "countryId": 1,
+    "name": "Busovača",
+    "zipCode": 72260
+  },
+  {
+    "_id": 48,
+    "countryId": 1,
+    "name": "Bužim",
+    "zipCode": 77270
+  },
+  {
+    "_id": 49,
+    "countryId": 1,
+    "name": "Cazin",
+    "zipCode": 77220
+  },
+  {
+    "_id": 50,
+    "countryId": 1,
+    "name": "Centar",
+    "zipCode": 76190
+  },
+  {
+    "_id": 51,
+    "countryId": 1,
+    "name": "Cerik",
+    "zipCode": 74224
+  },
+  {
+    "_id": 52,
+    "countryId": 1,
+    "name": "Čađavica",
+    "zipCode": 78432
+  },
+  {
+    "_id": 53,
+    "countryId": 1,
+    "name": "Čair",
+    "zipCode": 76216
+  },
+  {
+    "_id": 54,
+    "countryId": 1,
+    "name": "Čajniče",
+    "zipCode": 73320
+  },
+  {
+    "_id": 55,
+    "countryId": 1,
+    "name": "Čapljina",
+    "zipCode": 88300
+  },
+  {
+    "_id": 56,
+    "countryId": 1,
+    "name": "Čaršija",
+    "zipCode": 74207
+  },
+  {
+    "_id": 57,
+    "countryId": 1,
+    "name": "Čelinac",
+    "zipCode": 78030
+  },
+  {
+    "_id": 58,
+    "countryId": 1,
+    "name": "Čelopek",
+    "zipCode": 71320
+  },
+  {
+    "_id": 59,
+    "countryId": 1,
+    "name": "Čelinac Donji",
+    "zipCode": 78031
+  },
+  {
+    "_id": 60,
+    "countryId": 1,
+    "name": "Čelinac Gornji",
+    "zipCode": 78032
+  },
+  {
+    "_id": 61,
+    "countryId": 1,
+    "name": "Čelinac Mala",
+    "zipCode": 78033
+  },
+  {
+    "_id": 62,
+    "countryId": 1,
+    "name": "Čelinac Stara",
+    "zipCode": 78034
+  },
+  {
+    "_id": 63,
+    "countryId": 1,
+    "name": "Čelinac Trn",
+    "zipCode": 78035
+  },
+  {
+    "_id": 64,
+    "countryId": 1,
+    "name": "Čelinac Velika",
+    "zipCode": 78036
+  },
+  {
+    "_id": 65,
+    "countryId": 1,
+    "name": "Čelić",
+    "zipCode": 75246
+  },
+  {
+    "_id": 66,
+    "countryId": 1,
+    "name": "Čengići",
+    "zipCode": 74262
+  },
+  {
+    "_id": 67,
+    "countryId": 1,
+    "name": "Čepelica",
+    "zipCode": 88256
+  },
+  {
+    "_id": 68,
+    "countryId": 1,
+    "name": "Čiče",
+    "zipCode": 76239
+  },
+  {
+    "_id": 69,
+    "countryId": 1,
+    "name": "Čiče Polje",
+    "zipCode": 75217
+  },
+  {
+    "_id": 70,
+    "countryId": 1,
+    "name": "Čičevo",
+    "zipCode": 71308
+  },
+  {
+    "_id": 71,
+    "countryId": 1,
+    "name": "Čiči",
+    "zipCode": 79200
+  },
+  {
+    "_id": 72,
+    "countryId": 1,
+    "name": "Čifluk",
+    "zipCode": 74222
+  },
+  {
+    "_id": 73,
+    "countryId": 1,
+    "name": "Čitluk",
+    "zipCode": 88260
+  },
+  {
+    "_id": 74,
+    "countryId": 1,
+    "name": "Čitluk Prvi",
+    "zipCode": 76261
+  },
+  {
+    "_id": 75,
+    "countryId": 1,
+    "name": "Čitluk Četvrti",
+    "zipCode": 74260
+  },
+  {
+    "_id": 76,
+    "countryId": 1,
+    "name": "Čivčije",
+    "zipCode": 76320
+  },
+  {
+    "_id": 77,
+    "countryId": 1,
+    "name": "Čokori",
+    "zipCode": 76261
+  },
+  {
+    "_id": 78,
+    "countryId": 1,
+    "name": "Čološevo",
+    "zipCode": 76218
+  },
+  {
+    "_id": 79,
+    "countryId": 1,
+    "name": "Čoplić",
+    "zipCode": 75280
+  },
+  {
+    "_id": 80,
+    "countryId": 1,
+    "name": "Čoralići",
+    "zipCode": 77226
+  },
+  {
+    "_id": 81,
+    "countryId": 1,
+    "name": "Čorak",
+    "zipCode": 76331
+  },
+  {
+    "_id": 82,
+    "countryId": 1,
+    "name": "Čorba",
+    "zipCode": 74221
+  },
+  {
+    "_id": 83,
+    "countryId": 1,
+    "name": "Čorbovo",
+    "zipCode": 75360
+  },
+  {
+    "_id": 84,
+    "countryId": 1,
+    "name": "Čorci",
+    "zipCode": 74263
+  },
+  {
+    "_id": 85,
+    "countryId": 1,
+    "name": "Čorići",
+    "zipCode": 79249
+  },
+  {
+    "_id": 86,
+    "countryId": 1,
+    "name": "Čosnica",
+    "zipCode": 74208
+  },
+  {
+    "_id": 87,
+    "countryId": 1,
+    "name": "Čubinje",
+    "zipCode": 77235
+  },
+  {
+    "_id": 88,
+    "countryId": 1,
+    "name": "Čuklić",
+    "zipCode": 71380
+  },
+  {
+    "_id": 89,
+    "countryId": 1,
+    "name": "Čuljci",
+    "zipCode": 76292
+  },
+  {
+    "_id": 90,
+    "countryId": 1,
+    "name": "Čuljevići",
+    "zipCode": 77206
+  },
+  {
+    "_id": 91,
+    "countryId": 1,
+    "name": "Čuljkovići",
+    "zipCode": 78225
+  },
+  {
+    "_id": 92,
+    "countryId": 1,
+    "name": "Čunčići",
+    "zipCode": 79266
+  },
+  {
+    "_id": 93,
+    "countryId": 1,
+    "name": "Čunkovac",
+    "zipCode": 75212
+  },
+  {
+    "_id": 94,
+    "countryId": 1,
+    "name": "Čurin",
+    "zipCode": 74244
+  },
+  {
+    "_id": 95,
+    "countryId": 1,
+    "name": "Čurkovci",
+    "zipCode": 78246
+  },
+  {
+    "_id": 96,
+    "countryId": 1,
+    "name": "Čurlej",
+    "zipCode": 76263
+  },
+  {
+    "_id": 97,
+    "countryId": 1,
+    "name": "Čurug",
+    "zipCode": 21233
+  },
+  {
+    "_id": 98,
+    "countryId": 1,
+    "name": "Čustovo",
+    "zipCode": 74209
+  },
+  {
+    "_id": 99,
+    "countryId": 1,
+    "name": "Ćaćići",
+    "zipCode": 75308
+  },
+  {
+    "_id": 100,
+    "countryId": 1,
+    "name": "Ćaići",
+    "zipCode": 79242
+  },
+  {
+    "_id": 101,
+    "countryId": 1,
+    "name": "Čajniče",
+    "zipCode": 73280
+  },
+  {
+    "_id": 102,
+    "countryId": 1,
+    "name": "Čapljina",
+    "zipCode": 88300
+  },
+  {
+    "_id": 103,
+    "countryId": 1,
+    "name": "Čardak",
+    "zipCode": 72224
+  },
+  {
+    "_id": 104,
+    "countryId": 1,
+    "name": "Čatići",
+    "zipCode": 72246
+  },
+  {
+    "_id": 105,
+    "countryId": 1,
+    "name": "Čečava",
+    "zipCode": 74274
+  },
+  {
+    "_id": 106,
+    "countryId": 1,
+    "name": "Čelebići",
+    "zipCode": 88404
+  },
+  {
+    "_id": 107,
+    "countryId": 1,
+    "name": "Čelić",
+    "zipCode": 75246
+  },
+  {
+    "_id": 108,
+    "countryId": 1,
+    "name": "Čelinac",
+    "zipCode": 78240
+  },
+  {
+    "_id": 109,
+    "countryId": 1,
+    "name": "Čemerno",
+    "zipCode": 89243
+  },
+  {
+    "_id": 110,
+    "countryId": 1,
+    "name": "Čerin",
+    "zipCode": 88265
+  },
+  {
+    "_id": 111,
+    "countryId": 1,
+    "name": "Čitluk",
+    "zipCode": 88260
+  },
+  {
+    "_id": 112,
+    "countryId": 1,
+    "name": "Ćoralići",
+    "zipCode": 77226
+  },
+  {
+    "_id": 113,
+    "countryId": 1,
+    "name": "Ćukali",
+    "zipCode": 78427
+  },
+  {
+    "_id": 114,
+    "countryId": 1,
+    "name": "Dejčići",
+    "zipCode": 71221
+  },
+  {
+    "_id": 115,
+    "countryId": 1,
+    "name": "Delijaš",
+    "zipCode": 71223
+  },
+  {
+    "_id": 116,
+    "countryId": 1,
+    "name": "Demirovac",
+    "zipCode": 79243
+  },
+  {
+    "_id": 117,
+    "countryId": 1,
+    "name": "Derventa",
+    "zipCode": 74400
+  },
+  {
+    "_id": 118,
+    "countryId": 1,
+    "name": "Derventa kod Vlasenice",
+    "zipCode": 75444
+  },
+  {
+    "_id": 119,
+    "countryId": 1,
+    "name": "Divičani",
+    "zipCode": 70204
+  },
+  {
+    "_id": 120,
+    "countryId": 1,
+    "name": "Divin",
+    "zipCode": 89233
+  },
+  {
+    "_id": 121,
+    "countryId": 1,
+    "name": "Doboj",
+    "zipCode": 74000
+  },
+  {
+    "_id": 122,
+    "countryId": 1,
+    "name": "Doborovci",
+    "zipCode": 75328
+  },
+  {
+    "_id": 123,
+    "countryId": 1,
+    "name": "Dobretići",
+    "zipCode": 70210
+  },
+  {
+    "_id": 124,
+    "countryId": 1,
+    "name": "Dobrinja",
+    "zipCode": 71124
+  },
+  {
+    "_id": 125,
+    "countryId": 1,
+    "name": "Dobrljin",
+    "zipCode": 79223
+  },
+  {
+    "_id": 126,
+    "countryId": 1,
+    "name": "Dobrun",
+    "zipCode": 73247
+  },
+  {
+    "_id": 127,
+    "countryId": 1,
+    "name": "Dokanj",
+    "zipCode": 75206
+  },
+  {
+    "_id": 128,
+    "countryId": 1,
+    "name": "Dolac na Lašvi",
+    "zipCode": 72278
+  },
+  {
+    "_id": 129,
+    "countryId": 1,
+    "name": "Doljani",
+    "zipCode": 88446
+  },
+  {
+    "_id": 130,
+    "countryId": 1,
+    "name": "Domaljevac",
+    "zipCode": 76233
+  },
+  {
+    "_id": 131,
+    "countryId": 1,
+    "name": "Domanovići",
+    "zipCode": 88305
+  },
+  {
+    "_id": 132,
+    "countryId": 1,
+    "name": "Donja Mahala",
+    "zipCode": 78203
+  },
+  {
+    "_id": 133,
+    "countryId": 1,
+    "name": "Donja Slatina",
+    "zipCode": 76237
+  },
+  {
+    "_id": 134,
+    "countryId": 1,
+    "name": "Donje Moštre",
+    "zipCode": 71305
+  },
+  {
+    "_id": 135,
+    "countryId": 1,
+    "name": "Donji Agići",
+    "zipCode": 79228
+  },
+  {
+    "_id": 136,
+    "countryId": 1,
+    "name": "Donji Brezik",
+    "zipCode": 76109
+  },
+  {
+    "_id": 137,
+    "countryId": 1,
+    "name": "Donji Kamengrad",
+    "zipCode": 79266
+  },
+  {
+    "_id": 138,
+    "countryId": 1,
+    "name": "Donji Mamići",
+    "zipCode": 88343
+  },
+  {
+    "_id": 139,
+    "countryId": 1,
+    "name": "Donji Svilaj",
+    "zipCode": 76297
+  },
+  {
+    "_id": 140,
+    "countryId": 1,
+    "name": "Donji Vakuf",
+    "zipCode": 70220
+  },
+  {
+    "_id": 141,
+    "countryId": 1,
+    "name": "Donji Vijačani",
+    "zipCode": 78432
+  },
+  {
+    "_id": 142,
+    "countryId": 1,
+    "name": "Donji Vrbljani",
+    "zipCode": 79289
+  },
+  {
+    "_id": 143,
+    "countryId": 1,
+    "name": "Dragalovci",
+    "zipCode": 74209
+  },
+  {
+    "_id": 144,
+    "countryId": 1,
+    "name": "Dragaljevac",
+    "zipCode": 76323
+  },
+  {
+    "_id": 145,
+    "countryId": 1,
+    "name": "Dragočaj",
+    "zipCode": 78215
+  },
+  {
+    "_id": 146,
+    "countryId": 1,
+    "name": "Drežnica",
+    "zipCode": 88215
+  },
+  {
+    "_id": 147,
+    "countryId": 1,
+    "name": "Drinić",
+    "zipCode": 79290
+  },
+  {
+    "_id": 148,
+    "countryId": 1,
+    "name": "Drinovci",
+    "zipCode": 88344
+  },
+  {
+    "_id": 149,
+    "countryId": 1,
+    "name": "Drinjača",
+    "zipCode": 75410
+  },
+  {
+    "_id": 150,
+    "countryId": 1,
+    "name": "Drvar",
+    "zipCode": 80260
+  },
+  {
+    "_id": 151,
+    "countryId": 1,
+    "name": "Drvetine",
+    "zipCode": 70237
+  },
+  {
+    "_id": 152,
+    "countryId": 1,
+    "name": "Duboki Potok",
+    "zipCode": 75358
+  },
+  {
+    "_id": 153,
+    "countryId": 1,
+    "name": "Duboštica",
+    "zipCode": 75308
+  },
+  {
+    "_id": 154,
+    "countryId": 1,
+    "name": "Dubovik",
+    "zipCode": 79227
+  },
+  {
+    "_id": 155,
+    "countryId": 1,
+    "name": "Dubrave",
+    "zipCode": 78411
+  },
+  {
+    "_id": 156,
+    "countryId": 1,
+    "name": "Dubrave Donje",
+    "zipCode": 75274
+  },
+  {
+    "_id": 157,
+    "countryId": 1,
+    "name": "Dubrave Gornje",
+    "zipCode": 75273
+  },
+  {
+    "_id": 158,
+    "countryId": 1,
+    "name": "Dugo Polje",
+    "zipCode": 74483
+  },
+  {
+    "_id": 159,
+    "countryId": 1,
+    "name": "Dužice",
+    "zipCode": 88342
+  },
+  {
+    "_id": 160,
+    "countryId": 1,
+    "name": "Dvorovi",
+    "zipCode": 76311
+  },
+  {
+    "_id": 161,
+    "countryId": 1,
+    "name": "Đurđevik",
+    "zipCode": 75272
+  },
+  {
+    "_id": 162,
+    "countryId": 1,
+    "name": "Fajtovci",
+    "zipCode": 79264
+  },
+  {
+    "_id": 163,
+    "countryId": 1,
+    "name": "Fakovići",
+    "zipCode": 75423
+  },
+  {
+    "_id": 164,
+    "countryId": 1,
+    "name": "Foča",
+    "zipCode": 73300
+  },
+  {
+    "_id": 165,
+    "countryId": 1,
+    "name": "Fojnica",
+    "zipCode": 71270
+  },
+  {
+    "_id": 166,
+    "countryId": 1,
+    "name": "Fojnica",
+    "zipCode": 89247
+  },
+  {
+    "_id": 167,
+    "countryId": 1,
+    "name": "Gabela",
+    "zipCode": 88306
+  },
+  {
+    "_id": 168,
+    "countryId": 1,
+    "name": "Gacko",
+    "zipCode": 89240
+  },
+  {
+    "_id": 169,
+    "countryId": 1,
+    "name": "Garevac",
+    "zipCode": 74484
+  },
+  {
+    "_id": 170,
+    "countryId": 1,
+    "name": "Glamoč",
+    "zipCode": 80230
+  },
+  {
+    "_id": 171,
+    "countryId": 1,
+    "name": "Glavatičevo",
+    "zipCode": 88406
+  },
+  {
+    "_id": 172,
+    "countryId": 1,
+    "name": "Glavičice",
+    "zipCode": 76318
+  },
+  {
+    "_id": 173,
+    "countryId": 1,
+    "name": "Globarica",
+    "zipCode": 74258
+  },
+  {
+    "_id": 174,
+    "countryId": 1,
+    "name": "Glogošnica",
+    "zipCode": 88422
+  },
+  {
+    "_id": 175,
+    "countryId": 1,
+    "name": "Gojevići",
+    "zipCode": 71275
+  },
+  {
+    "_id": 176,
+    "countryId": 1,
+    "name": "Goleši",
+    "zipCode": 78203
+  },
+  {
+    "_id": 177,
+    "countryId": 1,
+    "name": "Goražde",
+    "zipCode": 73101
+  },
+  {
+    "_id": 178,
+    "countryId": 1,
+    "name": "Gornja Dubica",
+    "zipCode": 76296
+  },
+  {
+    "_id": 179,
+    "countryId": 1,
+    "name": "Gornja Koprivna",
+    "zipCode": 77222
+  },
+  {
+    "_id": 180,
+    "countryId": 1,
+    "name": "Gornja Lamovita",
+    "zipCode": 79204
+  },
+  {
+    "_id": 181,
+    "countryId": 1,
+    "name": "Gornja Slatna",
+    "zipCode": 76238
+  },
+  {
+    "_id": 182,
+    "countryId": 1,
+    "name": "Gornja Tuzla",
+    "zipCode": 75208
+  },
+  {
+    "_id": 183,
+    "countryId": 1,
+    "name": "Gornji Podgradci",
+    "zipCode": 78405
+  },
+  {
+    "_id": 184,
+    "countryId": 1,
+    "name": "Gornji Rahić",
+    "zipCode": 76207
+  },
+  {
+    "_id": 185,
+    "countryId": 1,
+    "name": "Gornji Ribnik",
+    "zipCode": 79288
+  },
+  {
+    "_id": 186,
+    "countryId": 1,
+    "name": "Gornji Smrtići",
+    "zipCode": 78438
+  },
+  {
+    "_id": 187,
+    "countryId": 1,
+    "name": "Gornji Štrpci",
+    "zipCode": 78439
+  },
+  {
+    "_id": 188,
+    "countryId": 1,
+    "name": "Gornji Teslić",
+    "zipCode": 74272
+  },
+  {
+    "_id": 189,
+    "countryId": 1,
+    "name": "Gornji Vakuf",
+    "zipCode": 70240
+  },
+  {
+    "_id": 190,
+    "countryId": 1,
+    "name": "Gornji Zovik",
+    "zipCode": 76214
+  },
+  {
+    "_id": 191,
+    "countryId": 1,
+    "name": "Grab",
+    "zipCode": 89201
+  },
+  {
+    "_id": 192,
+    "countryId": 1,
+    "name": "Grabovica",
+    "zipCode": 78227
+  },
+  {
+    "_id": 193,
+    "countryId": 1,
+    "name": "Gračac",
+    "zipCode": 88443
+  },
+  {
+    "_id": 194,
+    "countryId": 1,
+    "name": "Gračanica",
+    "zipCode": 75320
+  },
+  {
+    "_id": 195,
+    "countryId": 1,
+    "name": "Gračanica K/ Bugojna",
+    "zipCode": 70233
+  },
+  {
+    "_id": 196,
+    "countryId": 1,
+    "name": "Gračanica Selo",
+    "zipCode": 75276
+  },
+  {
+    "_id": 197,
+    "countryId": 1,
+    "name": "Gradac",
+    "zipCode": 88392
+  },
+  {
+    "_id": 198,
+    "countryId": 1,
+    "name": "Gradačac",
+    "zipCode": 76250
+  },
+  {
+    "_id": 199,
+    "countryId": 1,
+    "name": "Gradiška",
+    "zipCode": 78400
+  },
+  {
+    "_id": 200,
+    "countryId": 1,
+    "name": "Grebnice",
+    "zipCode": 76234
+  },
+  {
+    "_id": 201,
+    "countryId": 1,
+    "name": "Grude",
+    "zipCode": 88340
+  },
+  {
+    "_id": 202,
+    "countryId": 1,
+    "name": "Guber",
+    "zipCode": 80205
+  },
+  {
+    "_id": 203,
+    "countryId": 1,
+    "name": "Guča Gora",
+    "zipCode": 72277
+  },
+  {
+    "_id": 204,
+    "countryId": 1,
+    "name": "Gušteri",
+    "zipCode": 75404
+  },
+  {
+    "_id": 205,
+    "countryId": 1,
+    "name": "Hadžići",
+    "zipCode": 71240
+  },
+  {
+    "_id": 206,
+    "countryId": 1,
+    "name": "Hajdarevići",
+    "zipCode": 72225
+  },
+  {
+    "_id": 207,
+    "countryId": 1,
+    "name": "Haljinići",
+    "zipCode": 72245
+  },
+  {
+    "_id": 208,
+    "countryId": 1,
+    "name": "Han Bila",
+    "zipCode": 72281
+  },
+  {
+    "_id": 209,
+    "countryId": 1,
+    "name": "Han Pijesak",
+    "zipCode": 71360
+  },
+  {
+    "_id": 210,
+    "countryId": 1,
+    "name": "Hodovo",
+    "zipCode": 88368
+  },
+  {
+    "_id": 211,
+    "countryId": 1,
+    "name": "Hotonj",
+    "zipCode": 71322
+  },
+  {
+    "_id": 212,
+    "countryId": 1,
+    "name": "Hrasnica",
+    "zipCode": 71212
+  },
+  {
+    "_id": 213,
+    "countryId": 1,
+    "name": "Hrasno",
+    "zipCode": 88395
+  },
+  {
+    "_id": 214,
+    "countryId": 1,
+    "name": "Hreša",
+    "zipCode": 71144
+  },
+  {
+    "_id": 215,
+    "countryId": 1,
+    "name": "Hrvaćani",
+    "zipCode": 78436
+  },
+  {
+    "_id": 216,
+    "countryId": 1,
+    "name": "Husino",
+    "zipCode": 75216
+  },
+  {
+    "_id": 217,
+    "countryId": 1,
+    "name": "Hutovo",
+    "zipCode": 88394
+  },
+  {
+    "_id": 218,
+    "countryId": 1,
+    "name": "Ilidža",
+    "zipCode": 71210
+  },
+  {
+    "_id": 219,
+    "countryId": 1,
+    "name": "Ilijaš",
+    "zipCode": 71380
+  },
+  {
+    "_id": 220,
+    "countryId": 1,
+    "name": "Ilovača",
+    "zipCode": 73208
+  },
+  {
+    "_id": 221,
+    "countryId": 1,
+    "name": "Imljani",
+    "zipCode": 78234
+  },
+  {
+    "_id": 222,
+    "countryId": 1,
+    "name": "Istočno Sarajevo",
+    "zipCode": 71123
+  },
+  {
+    "_id": 223,
+    "countryId": 1,
+    "name": "Izačić",
+    "zipCode": 77208
+  },
+  {
+    "_id": 224,
+    "countryId": 1,
+    "name": "Jablanica",
+    "zipCode": 88420
+  },
+  {
+    "_id": 225,
+    "countryId": 1,
+    "name": "Jahorina",
+    "zipCode": 71423
+  },
+  {
+    "_id": 226,
+    "countryId": 1,
+    "name": "Jajce",
+    "zipCode": 70101
+  },
+  {
+    "_id": 227,
+    "countryId": 1,
+    "name": "Janja",
+    "zipCode": 76316
+  },
+  {
+    "_id": 228,
+    "countryId": 1,
+    "name": "Janjići",
+    "zipCode": 72215
+  },
+  {
+    "_id": 229,
+    "countryId": 1,
+    "name": "Jare",
+    "zipCode": 88224
+  },
+  {
+    "_id": 230,
+    "countryId": 1,
+    "name": "Javorani",
+    "zipCode": 78233
+  },
+  {
+    "_id": 231,
+    "countryId": 1,
+    "name": "Jelah",
+    "zipCode": 74264
+  },
+  {
+    "_id": 232,
+    "countryId": 1,
+    "name": "Jezero",
+    "zipCode": 70206
+  },
+  {
+    "_id": 233,
+    "countryId": 1,
+    "name": "Jezerski",
+    "zipCode": 77241
+  },
+  {
+    "_id": 234,
+    "countryId": 1,
+    "name": "Johova",
+    "zipCode": 79244
+  },
+  {
+    "_id": 235,
+    "countryId": 1,
+    "name": "Jošanica",
+    "zipCode": 73319
+  },
+  {
+    "_id": 236,
+    "countryId": 1,
+    "name": "Jošavka",
+    "zipCode": 78244
+  },
+  {
+    "_id": 237,
+    "countryId": 1,
+    "name": "Kačuni",
+    "zipCode": 72264
+  },
+  {
+    "_id": 238,
+    "countryId": 1,
+    "name": "Kakanj",
+    "zipCode": 72240
+  },
+  {
+    "_id": 239,
+    "countryId": 1,
+    "name": "Kalenderovci",
+    "zipCode": 74413
+  },
+  {
+    "_id": 240,
+    "countryId": 1,
+    "name": "Kalesija",
+    "zipCode": 75260
+  },
+  {
+    "_id": 241,
+    "countryId": 1,
+    "name": "Kalinovik",
+    "zipCode": 71230
+  },
+  {
+    "_id": 242,
+    "countryId": 1,
+    "name": "Kaljina",
+    "zipCode": 71355
+  },
+  {
+    "_id": 243,
+    "countryId": 1,
+    "name": "Kamenica",
+    "zipCode": 77204
+  },
+  {
+    "_id": 244,
+    "countryId": 1,
+    "name": "Kaonik",
+    "zipCode": 72265
+  },
+  {
+    "_id": 245,
+    "countryId": 1,
+    "name": "Karađe",
+    "zipCode": 70235
+  },
+  {
+    "_id": 246,
+    "countryId": 1,
+    "name": "Karaula",
+    "zipCode": 72284
+  },
+  {
+    "_id": 247,
+    "countryId": 1,
+    "name": "Kasindo",
+    "zipCode": 71213
+  },
+  {
+    "_id": 248,
+    "countryId": 1,
+    "name": "Kazaginac",
+    "zipCode": 80246
+  },
+  {
+    "_id": 249,
+    "countryId": 1,
+    "name": "Kifino Selo",
+    "zipCode": 88283
+  },
+  {
+    "_id": 250,
+    "countryId": 1,
+    "name": "Kiseljak",
+    "zipCode": 71250
+  },
+  {
+    "_id": 251,
+    "countryId": 1,
+    "name": "Kiseljak kod Tuzle",
+    "zipCode": 75211
+  },
+  {
+    "_id": 252,
+    "countryId": 1,
+    "name": "Kladanj",
+    "zipCode": 75280
+  },
+  {
+    "_id": 253,
+    "countryId": 1,
+    "name": "Klobuk",
+    "zipCode": 88324
+  },
+  {
+    "_id": 254,
+    "countryId": 1,
+    "name": "Klokotnica",
+    "zipCode": 74207
+  },
+  {
+    "_id": 255,
+    "countryId": 1,
+    "name": "Ključ",
+    "zipCode": 79280
+  },
+  {
+    "_id": 256,
+    "countryId": 1,
+    "name": "Kneževo",
+    "zipCode": 78230
+  },
+  {
+    "_id": 257,
+    "countryId": 1,
+    "name": "Knežica",
+    "zipCode": 79246
+  },
+  {
+    "_id": 258,
+    "countryId": 1,
+    "name": "Knežina",
+    "zipCode": 71356
+  },
+  {
+    "_id": 259,
+    "countryId": 1,
+    "name": "Kobaš",
+    "zipCode": 78423
+  },
+  {
+    "_id": 260,
+    "countryId": 1,
+    "name": "Kobilja Glava",
+    "zipCode": 71323
+  },
+  {
+    "_id": 261,
+    "countryId": 1,
+    "name": "Kočerin",
+    "zipCode": 88226
+  },
+  {
+    "_id": 262,
+    "countryId": 1,
+    "name": "Kočićevo",
+    "zipCode": 78409
+  },
+  {
+    "_id": 263,
+    "countryId": 1,
+    "name": "Kola",
+    "zipCode": 78207
+  },
+  {
+    "_id": 264,
+    "countryId": 1,
+    "name": "Kongora",
+    "zipCode": 80244
+  },
+  {
+    "_id": 265,
+    "countryId": 1,
+    "name": "Konjic",
+    "zipCode": 88400
+  },
+  {
+    "_id": 266,
+    "countryId": 1,
+    "name": "Konjoder",
+    "zipCode": 77249
+  },
+  {
+    "_id": 267,
+    "countryId": 1,
+    "name": "Koprivna",
+    "zipCode": 74489
+  },
+  {
+    "_id": 268,
+    "countryId": 1,
+    "name": "Koraj",
+    "zipCode": 75247
+  },
+  {
+    "_id": 269,
+    "countryId": 1,
+    "name": "Kosova",
+    "zipCode": 74253
+  },
+  {
+    "_id": 270,
+    "countryId": 1,
+    "name": "Kostajnica",
+    "zipCode": 79224
+  },
+  {
+    "_id": 271,
+    "countryId": 1,
+    "name": "Kostajnica-Doboj",
+    "zipCode": 74222
+  },
+  {
+    "_id": 272,
+    "countryId": 1,
+    "name": "Kostrč",
+    "zipCode": 76276
+  },
+  {
+    "_id": 273,
+    "countryId": 1,
+    "name": "Kotor Varoš",
+    "zipCode": 78220
+  },
+  {
+    "_id": 274,
+    "countryId": 1,
+    "name": "Kotorsko",
+    "zipCode": 74215
+  },
+  {
+    "_id": 275,
+    "countryId": 1,
+    "name": "Kovači",
+    "zipCode": 72226
+  },
+  {
+    "_id": 276,
+    "countryId": 1,
+    "name": "Kozarac",
+    "zipCode": 79202
+  },
+  {
+    "_id": 277,
+    "countryId": 1,
+    "name": "Kozarska Dubica",
+    "zipCode": 79240
+  },
+  {
+    "_id": 278,
+    "countryId": 1,
+    "name": "Kozluk",
+    "zipCode": 75413
+  },
+  {
+    "_id": 279,
+    "countryId": 1,
+    "name": "Kraljeva Sutjeska",
+    "zipCode": 72244
+  },
+  {
+    "_id": 280,
+    "countryId": 1,
+    "name": "Krasulje",
+    "zipCode": 79284
+  },
+  {
+    "_id": 281,
+    "countryId": 1,
+    "name": "Krepšić",
+    "zipCode": 76212
+  },
+  {
+    "_id": 282,
+    "countryId": 1,
+    "name": "Kreševo",
+    "zipCode": 71260
+  },
+  {
+    "_id": 283,
+    "countryId": 1,
+    "name": "Kriškovci",
+    "zipCode": 78256
+  },
+  {
+    "_id": 284,
+    "countryId": 1,
+    "name": "Krnjeuša",
+    "zipCode": 77253
+  },
+  {
+    "_id": 285,
+    "countryId": 1,
+    "name": "Krupa na Vrbasu",
+    "zipCode": 78206
+  },
+  {
+    "_id": 286,
+    "countryId": 1,
+    "name": "Kruščica",
+    "zipCode": 72253
+  },
+  {
+    "_id": 287,
+    "countryId": 1,
+    "name": "Kruševo",
+    "zipCode": 88203
+  },
+  {
+    "_id": 288,
+    "countryId": 1,
+    "name": "Kukulje",
+    "zipCode": 78424
+  },
+  {
+    "_id": 289,
+    "countryId": 1,
+    "name": "Kula",
+    "zipCode": 71216
+  },
+  {
+    "_id": 290,
+    "countryId": 1,
+    "name": "Kulaši",
+    "zipCode": 78443
+  },
+  {
+    "_id": 291,
+    "countryId": 1,
+    "name": "Kulen Vakuf",
+    "zipCode": 77206
+  },
+  {
+    "_id": 292,
+    "countryId": 1,
+    "name": "Kupres",
+    "zipCode": 80320
+  },
+  {
+    "_id": 293,
+    "countryId": 1,
+    "name": "Laktaši",
+    "zipCode": 78250
+  },
+  {
+    "_id": 294,
+    "countryId": 1,
+    "name": "Laminci-Sređani",
+    "zipCode": 78407
+  },
+  {
+    "_id": 295,
+    "countryId": 1,
+    "name": "Lastva",
+    "zipCode": 89208
+  },
+  {
+    "_id": 296,
+    "countryId": 1,
+    "name": "Lepenica",
+    "zipCode": 71254
+  },
+  {
+    "_id": 297,
+    "countryId": 1,
+    "name": "Liplje",
+    "zipCode": 78222
+  },
+  {
+    "_id": 298,
+    "countryId": 1,
+    "name": "Lipnica",
+    "zipCode": 75513
+  },
+  {
+    "_id": 299,
+    "countryId": 1,
+    "name": "Lištani",
+    "zipCode": 80204
+  },
+  {
+    "_id": 300,
+    "countryId": 1,
+    "name": "Livno",
+    "zipCode": 80101
+  },
+  {
+    "_id": 301,
+    "countryId": 1,
+    "name": "Lončari",
+    "zipCode": 76278
+  },
+  {
+    "_id": 302,
+    "countryId": 1,
+    "name": "Lopare",
+    "zipCode": 75240
+  },
+  {
+    "_id": 303,
+    "countryId": 1,
+    "name": "Lukavac",
+    "zipCode": 75300
+  },
+  {
+    "_id": 304,
+    "countryId": 1,
+    "name": "Lukavac Mjesto",
+    "zipCode": 75301
+  },
+  {
+    "_id": 305,
+    "countryId": 1,
+    "name": "Lukavica",
+    "zipCode": 71126
+  },
+  {
+    "_id": 306,
+    "countryId": 1,
+    "name": "Lukavica",
+    "zipCode": 75327
+  },
+  {
+    "_id": 307,
+    "countryId": 1,
+    "name": "Lusnić",
+    "zipCode": 80203
+  },
+  {
+    "_id": 308,
+    "countryId": 1,
+    "name": "Lušci Palanka",
+    "zipCode": 79267
+  },
+  {
+    "_id": 309,
+    "countryId": 1,
+    "name": "Ljubače",
+    "zipCode": 75214
+  },
+  {
+    "_id": 310,
+    "countryId": 1,
+    "name": "Ljubija",
+    "zipCode": 79206
+  },
+  {
+    "_id": 311,
+    "countryId": 1,
+    "name": "Ljubinje",
+    "zipCode": 88380
+  },
+  {
+    "_id": 312,
+    "countryId": 1,
+    "name": "Ljubomir",
+    "zipCode": 89209
+  },
+  {
+    "_id": 313,
+    "countryId": 1,
+    "name": "Ljubuški",
+    "zipCode": 88320
+  },
+  {
+    "_id": 314,
+    "countryId": 1,
+    "name": "Ljuti Dolac",
+    "zipCode": 88223
+  },
+  {
+    "_id": 315,
+    "countryId": 1,
+    "name": "Maglaj",
+    "zipCode": 74250
+  },
+  {
+    "_id": 316,
+    "countryId": 1,
+    "name": "Majevac",
+    "zipCode": 74216
+  },
+  {
+    "_id": 317,
+    "countryId": 1,
+    "name": "Mala Kladuša",
+    "zipCode": 77235
+  },
+  {
+    "_id": 318,
+    "countryId": 1,
+    "name": "Mala Sočanica",
+    "zipCode": 74418
+  },
+  {
+    "_id": 319,
+    "countryId": 1,
+    "name": "Malešići",
+    "zipCode": 75326
+  },
+  {
+    "_id": 320,
+    "countryId": 1,
+    "name": "Maoča",
+    "zipCode": 76208
+  },
+  {
+    "_id": 321,
+    "countryId": 1,
+    "name": "Maslovare",
+    "zipCode": 78223
+  },
+  {
+    "_id": 322,
+    "countryId": 1,
+    "name": "Mašići",
+    "zipCode": 78410
+  },
+  {
+    "_id": 323,
+    "countryId": 1,
+    "name": "Matići",
+    "zipCode": 76271
+  },
+  {
+    "_id": 324,
+    "countryId": 1,
+    "name": "Matuzići",
+    "zipCode": 74203
+  },
+  {
+    "_id": 325,
+    "countryId": 1,
+    "name": "Međiđa Donja",
+    "zipCode": 76257
+  },
+  {
+    "_id": 326,
+    "countryId": 1,
+    "name": "Međugorje",
+    "zipCode": 88266
+  },
+  {
+    "_id": 327,
+    "countryId": 1,
+    "name": "Međuvođe",
+    "zipCode": 79247
+  },
+  {
+    "_id": 328,
+    "countryId": 1,
+    "name": "Mehurići",
+    "zipCode": 72282
+  },
+  {
+    "_id": 329,
+    "countryId": 1,
+    "name": "Mesihovina",
+    "zipCode": 80243
+  },
+  {
+    "_id": 330,
+    "countryId": 1,
+    "name": "Milići",
+    "zipCode": 75446
+  },
+  {
+    "_id": 331,
+    "countryId": 1,
+    "name": "Miloševac",
+    "zipCode": 74485
+  },
+  {
+    "_id": 332,
+    "countryId": 1,
+    "name": "Miljeno",
+    "zipCode": 73283
+  },
+  {
+    "_id": 333,
+    "countryId": 1,
+    "name": "Miljevina",
+    "zipCode": 73313
+  },
+  {
+    "_id": 334,
+    "countryId": 1,
+    "name": "Miričina",
+    "zipCode": 75329
+  },
+  {
+    "_id": 335,
+    "countryId": 1,
+    "name": "Modriča",
+    "zipCode": 74480
+  },
+  {
+    "_id": 336,
+    "countryId": 1,
+    "name": "Mokro",
+    "zipCode": 71428
+  },
+  {
+    "_id": 337,
+    "countryId": 1,
+    "name": "Mosko",
+    "zipCode": 89204
+  },
+  {
+    "_id": 338,
+    "countryId": 1,
+    "name": "Mostar",
+    "zipCode": 88000
+  },
+  {
+    "_id": 339,
+    "countryId": 1,
+    "name": "Mostar",
+    "zipCode": 88104
+  },
+  {
+    "_id": 340,
+    "countryId": 1,
+    "name": "Mramor",
+    "zipCode": 75212
+  },
+  {
+    "_id": 341,
+    "countryId": 1,
+    "name": "Mravinjac",
+    "zipCode": 73206
+  },
+  {
+    "_id": 342,
+    "countryId": 1,
+    "name": "Mrkonjić Grad",
+    "zipCode": 70260
+  },
+  {
+    "_id": 343,
+    "countryId": 1,
+    "name": "Naseobina Lišnja",
+    "zipCode": 78434
+  },
+  {
+    "_id": 344,
+    "countryId": 1,
+    "name": "Nemila",
+    "zipCode": 72212
+  },
+  {
+    "_id": 345,
+    "countryId": 1,
+    "name": "Neum",
+    "zipCode": 88390
+  },
+  {
+    "_id": 346,
+    "countryId": 1,
+    "name": "Nevesinje",
+    "zipCode": 88280
+  },
+  {
+    "_id": 347,
+    "countryId": 1,
+    "name": "Nišići",
+    "zipCode": 71383
+  },
+  {
+    "_id": 348,
+    "countryId": 1,
+    "name": "Nova Bila",
+    "zipCode": 72276
+  },
+  {
+    "_id": 349,
+    "countryId": 1,
+    "name": "Nova Kasaba",
+    "zipCode": 75445
+  },
+  {
+    "_id": 350,
+    "countryId": 1,
+    "name": "Nova Topola",
+    "zipCode": 78418
+  },
+  {
+    "_id": 351,
+    "countryId": 1,
+    "name": "Novi Grad",
+    "zipCode": 79220
+  },
+  {
+    "_id": 352,
+    "countryId": 1,
+    "name": "Novi Šeher",
+    "zipCode": 74254
+  },
+  {
+    "_id": 353,
+    "countryId": 1,
+    "name": "Novi Travnik",
+    "zipCode": 72290
+  },
+  {
+    "_id": 354,
+    "countryId": 1,
+    "name": "Novi Travnik",
+    "zipCode": 72290
+  },
+  {
+    "_id": 355,
+    "countryId": 1,
+    "name": "Novo Goražde",
+    "zipCode": 73110
+  },
+  {
+    "_id": 356,
+    "countryId": 1,
+    "name": "Nožičko",
+    "zipCode": 78428
+  },
+  {
+    "_id": 357,
+    "countryId": 1,
+    "name": "Oborci",
+    "zipCode": 70225
+  },
+  {
+    "_id": 358,
+    "countryId": 1,
+    "name": "Obudovac",
+    "zipCode": 76235
+  },
+  {
+    "_id": 359,
+    "countryId": 1,
+    "name": "Odžak",
+    "zipCode": 88285
+  },
+  {
+    "_id": 360,
+    "countryId": 1,
+    "name": "Odžak",
+    "zipCode": 76290
+  },
+  {
+    "_id": 361,
+    "countryId": 1,
+    "name": "Olovo",
+    "zipCode": 71340
+  },
+  {
+    "_id": 362,
+    "countryId": 1,
+    "name": "Omarska",
+    "zipCode": 79203
+  },
+  {
+    "_id": 363,
+    "countryId": 1,
+    "name": "Opara",
+    "zipCode": 72293
+  },
+  {
+    "_id": 364,
+    "countryId": 1,
+    "name": "Orahova",
+    "zipCode": 78406
+  },
+  {
+    "_id": 365,
+    "countryId": 1,
+    "name": "Orahovica Donja",
+    "zipCode": 75323
+  },
+  {
+    "_id": 366,
+    "countryId": 1,
+    "name": "Orašje",
+    "zipCode": 76270
+  },
+  {
+    "_id": 367,
+    "countryId": 1,
+    "name": "Orguz",
+    "zipCode": 80206
+  },
+  {
+    "_id": 368,
+    "countryId": 1,
+    "name": "Osinja",
+    "zipCode": 74412
+  },
+  {
+    "_id": 369,
+    "countryId": 1,
+    "name": "Osječani",
+    "zipCode": 74225
+  },
+  {
+    "_id": 370,
+    "countryId": 1,
+    "name": "Osmaci",
+    "zipCode": 75406
+  },
+  {
+    "_id": 371,
+    "countryId": 1,
+    "name": "Ostrožac",
+    "zipCode": 88423
+  },
+  {
+    "_id": 372,
+    "countryId": 1,
+    "name": "Ostrožac kod Cazina",
+    "zipCode": 77228
+  },
+  {
+    "_id": 373,
+    "countryId": 1,
+    "name": "Oštra Luka",
+    "zipCode": 76279
+  },
+  {
+    "_id": 374,
+    "countryId": 1,
+    "name": "Oštra Luka",
+    "zipCode": 79263
+  },
+  {
+    "_id": 375,
+    "countryId": 1,
+    "name": "Otoka",
+    "zipCode": 77244
+  },
+  {
+    "_id": 376,
+    "countryId": 1,
+    "name": "Ozimica",
+    "zipCode": 72238
+  },
+  {
+    "_id": 377,
+    "countryId": 1,
+    "name": "Pajić Polje",
+    "zipCode": 70243
+  },
+  {
+    "_id": 378,
+    "countryId": 1,
+    "name": "Paklenica",
+    "zipCode": 74255
+  },
+  {
+    "_id": 379,
+    "countryId": 1,
+    "name": "Palačkovci",
+    "zipCode": 78437
+  },
+  {
+    "_id": 380,
+    "countryId": 1,
+    "name": "Pale",
+    "zipCode": 71420
+  },
+  {
+    "_id": 381,
+    "countryId": 1,
+    "name": "Paprača",
+    "zipCode": 75453
+  },
+  {
+    "_id": 382,
+    "countryId": 1,
+    "name": "Pazarić",
+    "zipCode": 71243
+  },
+  {
+    "_id": 383,
+    "countryId": 1,
+    "name": "Pećigrad",
+    "zipCode": 77227
+  },
+  {
+    "_id": 384,
+    "countryId": 1,
+    "name": "Pelagičevo",
+    "zipCode": 76256
+  },
+  {
+    "_id": 385,
+    "countryId": 1,
+    "name": "Petrovo",
+    "zipCode": 74317
+  },
+  {
+    "_id": 386,
+    "countryId": 1,
+    "name": "Pilica",
+    "zipCode": 75412
+  },
+  {
+    "_id": 387,
+    "countryId": 1,
+    "name": "Piperi",
+    "zipCode": 75248
+  },
+  {
+    "_id": 388,
+    "countryId": 1,
+    "name": "Piskavica",
+    "zipCode": 78217
+  },
+  {
+    "_id": 389,
+    "countryId": 1,
+    "name": "Pljeva",
+    "zipCode": 70275
+  },
+  {
+    "_id": 390,
+    "countryId": 1,
+    "name": "Počulica",
+    "zipCode": 72252
+  },
+  {
+    "_id": 391,
+    "countryId": 1,
+    "name": "Podgrab",
+    "zipCode": 71425
+  },
+  {
+    "_id": 392,
+    "countryId": 1,
+    "name": "Podhum",
+    "zipCode": 80209
+  },
+  {
+    "_id": 393,
+    "countryId": 1,
+    "name": "Podlugovi",
+    "zipCode": 71387
+  },
+  {
+    "_id": 394,
+    "countryId": 1,
+    "name": "Podnovlje",
+    "zipCode": 74217
+  },
+  {
+    "_id": 395,
+    "countryId": 1,
+    "name": "Podorašac",
+    "zipCode": 88403
+  },
+  {
+    "_id": 396,
+    "countryId": 1,
+    "name": "Podorašje",
+    "zipCode": 75355
+  },
+  {
+    "_id": 397,
+    "countryId": 1,
+    "name": "Podrašnica",
+    "zipCode": 70266
+  },
+  {
+    "_id": 398,
+    "countryId": 1,
+    "name": "Podvelež",
+    "zipCode": 88206
+  },
+  {
+    "_id": 399,
+    "countryId": 1,
+    "name": "Podzvizd",
+    "zipCode": 77232
+  },
+  {
+    "_id": 400,
+    "countryId": 1,
+    "name": "Pokoj",
+    "zipCode": 77209
+  },
+  {
+    "_id": 401,
+    "countryId": 1,
+    "name": "Polje Bijela",
+    "zipCode": 88402
+  },
+  {
+    "_id": 402,
+    "countryId": 1,
+    "name": "Poljice kod Tuzle",
+    "zipCode": 75303
+  },
+  {
+    "_id": 403,
+    "countryId": 1,
+    "name": "Popovac",
+    "zipCode": 78242
+  },
+  {
+    "_id": 404,
+    "countryId": 1,
+    "name": "Posušje",
+    "zipCode": 88240
+  },
+  {
+    "_id": 405,
+    "countryId": 1,
+    "name": "Potkozarje",
+    "zipCode": 78216
+  },
+  {
+    "_id": 406,
+    "countryId": 1,
+    "name": "Potoci",
+    "zipCode": 88208
+  },
+  {
+    "_id": 407,
+    "countryId": 1,
+    "name": "Potočani",
+    "zipCode": 76298
+  },
+  {
+    "_id": 408,
+    "countryId": 1,
+    "name": "Potočani",
+    "zipCode": 78435
+  },
+  {
+    "_id": 409,
+    "countryId": 1,
+    "name": "Potočari",
+    "zipCode": 75433
+  },
+  {
+    "_id": 410,
+    "countryId": 1,
+    "name": "Prača",
+    "zipCode": 73290
+  },
+  {
+    "_id": 411,
+    "countryId": 1,
+    "name": "Prelovo",
+    "zipCode": 73245
+  },
+  {
+    "_id": 412,
+    "countryId": 1,
+    "name": "Previja",
+    "zipCode": 79287
+  },
+  {
+    "_id": 413,
+    "countryId": 1,
+    "name": "Pribij kod Lopara",
+    "zipCode": 75249
+  },
+  {
+    "_id": 414,
+    "countryId": 1,
+    "name": "Pribinić",
+    "zipCode": 74276
+  },
+  {
+    "_id": 415,
+    "countryId": 1,
+    "name": "Prijedor",
+    "zipCode": 79000
+  },
+  {
+    "_id": 416,
+    "countryId": 1,
+    "name": "Priluka",
+    "zipCode": 80202
+  },
+  {
+    "_id": 417,
+    "countryId": 1,
+    "name": "Prisoje",
+    "zipCode": 80245
+  },
+  {
+    "_id": 418,
+    "countryId": 1,
+    "name": "Prnjavor",
+    "zipCode": 78430
+  },
+  {
+    "_id": 419,
+    "countryId": 1,
+    "name": "Prnjavor Mali",
+    "zipCode": 74214
+  },
+  {
+    "_id": 420,
+    "countryId": 1,
+    "name": "Prolog",
+    "zipCode": 88327
+  },
+  {
+    "_id": 421,
+    "countryId": 1,
+    "name": "Prozor",
+    "zipCode": 88440
+  },
+  {
+    "_id": 422,
+    "countryId": 1,
+    "name": "Prud",
+    "zipCode": 76292
+  },
+  {
+    "_id": 423,
+    "countryId": 1,
+    "name": "Prusac",
+    "zipCode": 70223
+  },
+  {
+    "_id": 424,
+    "countryId": 1,
+    "name": "Pržići",
+    "zipCode": 71335
+  },
+  {
+    "_id": 425,
+    "countryId": 1,
+    "name": "Puhovac",
+    "zipCode": 72207
+  },
+  {
+    "_id": 426,
+    "countryId": 1,
+    "name": "Puračić",
+    "zipCode": 75305
+  },
+  {
+    "_id": 427,
+    "countryId": 1,
+    "name": "Radišići",
+    "zipCode": 88325
+  },
+  {
+    "_id": 428,
+    "countryId": 1,
+    "name": "Rainci Gornji",
+    "zipCode": 75268
+  },
+  {
+    "_id": 429,
+    "countryId": 1,
+    "name": "Rakitno",
+    "zipCode": 88245
+  },
+  {
+    "_id": 430,
+    "countryId": 1,
+    "name": "Rakovica",
+    "zipCode": 71217
+  },
+  {
+    "_id": 431,
+    "countryId": 1,
+    "name": "Ravno",
+    "zipCode": 88370
+  },
+  {
+    "_id": 432,
+    "countryId": 1,
+    "name": "Razboj Lijevče",
+    "zipCode": 78429
+  },
+  {
+    "_id": 433,
+    "countryId": 1,
+    "name": "Ražljevo",
+    "zipCode": 76218
+  },
+  {
+    "_id": 434,
+    "countryId": 1,
+    "name": "Ripač",
+    "zipCode": 77215
+  },
+  {
+    "_id": 435,
+    "countryId": 1,
+    "name": "Rogatica",
+    "zipCode": 73220
+  },
+  {
+    "_id": 436,
+    "countryId": 1,
+    "name": "Roško Polje",
+    "zipCode": 80247
+  },
+  {
+    "_id": 437,
+    "countryId": 1,
+    "name": "Rudice",
+    "zipCode": 79226
+  },
+  {
+    "_id": 438,
+    "countryId": 1,
+    "name": "Rudo",
+    "zipCode": 73260
+  },
+  {
+    "_id": 439,
+    "countryId": 1,
+    "name": "Ružići",
+    "zipCode": 88347
+  },
+  {
+    "_id": 440,
+    "countryId": 1,
+    "name": "Sanica Gornja",
+    "zipCode": 79285
+  },
+  {
+    "_id": 441,
+    "countryId": 1,
+    "name": "Sanski Most",
+    "zipCode": 79260
+  },
+  {
+    "_id": 442,
+    "countryId": 1,
+    "name": "Sapna",
+    "zipCode": 75411
+  },
+  {
+    "_id": 443,
+    "countryId": 1,
+    "name": "Saračica",
+    "zipCode": 78202
+  },
+  {
+    "_id": 444,
+    "countryId": 1,
+    "name": "Sarajevo",
+    "zipCode": 71000
+  },
+  {
+    "_id": 445,
+    "countryId": 1,
+    "name": "Semizovac",
+    "zipCode": 71321
+  },
+  {
+    "_id": 446,
+    "countryId": 1,
+    "name": "Seonjaci",
+    "zipCode": 76205
+  },
+  {
+    "_id": 447,
+    "countryId": 1,
+    "name": "Simin Han",
+    "zipCode": 75207
+  },
+  {
+    "_id": 448,
+    "countryId": 1,
+    "name": "Sitneši",
+    "zipCode": 78422
+  },
+  {
+    "_id": 449,
+    "countryId": 1,
+    "name": "Sitnica",
+    "zipCode": 79283
+  },
+  {
+    "_id": 450,
+    "countryId": 1,
+    "name": "Skelani",
+    "zipCode": 75436
+  },
+  {
+    "_id": 451,
+    "countryId": 1,
+    "name": "Skugrić",
+    "zipCode": 74261
+  },
+  {
+    "_id": 452,
+    "countryId": 1,
+    "name": "Sladna",
+    "zipCode": 75353
+  },
+  {
+    "_id": 453,
+    "countryId": 1,
+    "name": "Slatina Ilidža",
+    "zipCode": 78253
+  },
+  {
+    "_id": 454,
+    "countryId": 1,
+    "name": "Sočkovac",
+    "zipCode": 74323
+  },
+  {
+    "_id": 455,
+    "countryId": 1,
+    "name": "Sokolac",
+    "zipCode": 71350
+  },
+  {
+    "_id": 456,
+    "countryId": 1,
+    "name": "Sokolović Kolonija",
+    "zipCode": 71218
+  },
+  {
+    "_id": 457,
+    "countryId": 1,
+    "name": "Sokolovići",
+    "zipCode": 71357
+  },
+  {
+    "_id": 458,
+    "countryId": 1,
+    "name": "Sovići",
+    "zipCode": 88345
+  },
+  {
+    "_id": 459,
+    "countryId": 1,
+    "name": "Srbac",
+    "zipCode": 78420
+  },
+  {
+    "_id": 460,
+    "countryId": 1,
+    "name": "Srebrenica",
+    "zipCode": 75430
+  },
+  {
+    "_id": 461,
+    "countryId": 1,
+    "name": "Srebrenik",
+    "zipCode": 75350
+  },
+  {
+    "_id": 462,
+    "countryId": 1,
+    "name": "Srednje",
+    "zipCode": 71385
+  },
+  {
+    "_id": 463,
+    "countryId": 1,
+    "name": "Sreflije",
+    "zipCode": 79249
+  },
+  {
+    "_id": 464,
+    "countryId": 1,
+    "name": "Srnice",
+    "zipCode": 76258
+  },
+  {
+    "_id": 465,
+    "countryId": 1,
+    "name": "Stanari",
+    "zipCode": 74208
+  },
+  {
+    "_id": 466,
+    "countryId": 1,
+    "name": "Stara Bila",
+    "zipCode": 72256
+  },
+  {
+    "_id": 467,
+    "countryId": 1,
+    "name": "Stara Dubrava",
+    "zipCode": 78243
+  },
+  {
+    "_id": 468,
+    "countryId": 1,
+    "name": "Stari Majdan",
+    "zipCode": 79268
+  },
+  {
+    "_id": 469,
+    "countryId": 1,
+    "name": "Stari Vitez",
+    "zipCode": 72251
+  },
+  {
+    "_id": 470,
+    "countryId": 1,
+    "name": "Stijena",
+    "zipCode": 77224
+  },
+  {
+    "_id": 471,
+    "countryId": 1,
+    "name": "Stjenice",
+    "zipCode": 73223
+  },
+  {
+    "_id": 472,
+    "countryId": 1,
+    "name": "Stjepan Polje",
+    "zipCode": 75324
+  },
+  {
+    "_id": 473,
+    "countryId": 1,
+    "name": "Stolac",
+    "zipCode": 88360
+  },
+  {
+    "_id": 474,
+    "countryId": 1,
+    "name": "Stranjani",
+    "zipCode": 72209
+  },
+  {
+    "_id": 475,
+    "countryId": 1,
+    "name": "Stričići",
+    "zipCode": 78208
+  },
+  {
+    "_id": 476,
+    "countryId": 1,
+    "name": "Strojice",
+    "zipCode": 70273
+  },
+  {
+    "_id": 477,
+    "countryId": 1,
+    "name": "Studenci",
+    "zipCode": 88323
+  },
+  {
+    "_id": 478,
+    "countryId": 1,
+    "name": "Stupari",
+    "zipCode": 75283
+  },
+  {
+    "_id": 479,
+    "countryId": 1,
+    "name": "Svodna",
+    "zipCode": 79229
+  },
+  {
+    "_id": 480,
+    "countryId": 1,
+    "name": "Šamac",
+    "zipCode": 76230
+  },
+  {
+    "_id": 481,
+    "countryId": 1,
+    "name": "Šamac",
+    "zipCode": 76231
+  },
+  {
+    "_id": 482,
+    "countryId": 1,
+    "name": "Šatorovići",
+    "zipCode": 76209
+  },
+  {
+    "_id": 483,
+    "countryId": 1,
+    "name": "Šekovići",
+    "zipCode": 75450
+  },
+  {
+    "_id": 484,
+    "countryId": 1,
+    "name": "Šerići",
+    "zipCode": 75275
+  },
+  {
+    "_id": 485,
+    "countryId": 1,
+    "name": "Šibošnica",
+    "zipCode": 75245
+  },
+  {
+    "_id": 486,
+    "countryId": 1,
+    "name": "Šibovska",
+    "zipCode": 78433
+  },
+  {
+    "_id": 487,
+    "countryId": 1,
+    "name": "Šipovo",
+    "zipCode": 70270
+  },
+  {
+    "_id": 488,
+    "countryId": 1,
+    "name": "Šiprage",
+    "zipCode": 78224
+  },
+  {
+    "_id": 489,
+    "countryId": 1,
+    "name": "Široki Brijeg",
+    "zipCode": 88220
+  },
+  {
+    "_id": 490,
+    "countryId": 1,
+    "name": "Šnjegotina Gornja",
+    "zipCode": 74279
+  },
+  {
+    "_id": 491,
+    "countryId": 1,
+    "name": "Špionica",
+    "zipCode": 75356
+  },
+  {
+    "_id": 492,
+    "countryId": 1,
+    "name": "Šturlić",
+    "zipCode": 77223
+  },
+  {
+    "_id": 493,
+    "countryId": 1,
+    "name": "Šujica",
+    "zipCode": 80249
+  },
+  {
+    "_id": 494,
+    "countryId": 1,
+    "name": "Šumatac",
+    "zipCode": 77234
+  },
+  {
+    "_id": 495,
+    "countryId": 1,
+    "name": "Tarčin",
+    "zipCode": 71244
+  },
+  {
+    "_id": 496,
+    "countryId": 1,
+    "name": "Teočak",
+    "zipCode": 75414
+  },
+  {
+    "_id": 497,
+    "countryId": 1,
+    "name": "Teslić",
+    "zipCode": 74270
+  },
+  {
+    "_id": 498,
+    "countryId": 1,
+    "name": "Tešanj",
+    "zipCode": 74260
+  },
+  {
+    "_id": 499,
+    "countryId": 1,
+    "name": "Tešanjka",
+    "zipCode": 74266
+  },
+  {
+    "_id": 500,
+    "countryId": 1,
+    "name": "Tihaljina",
+    "zipCode": 88348
+  },
+  {
+    "_id": 501,
+    "countryId": 1,
+    "name": "Tinja",
+    "zipCode": 75357
+  },
+  {
+    "_id": 502,
+    "countryId": 1,
+    "name": "Tišća",
+    "zipCode": 75455
+  },
+  {
+    "_id": 503,
+    "countryId": 1,
+    "name": "Tjentište",
+    "zipCode": 73311
+  },
+  {
+    "_id": 504,
+    "countryId": 1,
+    "name": "Todorovo",
+    "zipCode": 77233
+  },
+  {
+    "_id": 505,
+    "countryId": 1,
+    "name": "Tojšići",
+    "zipCode": 75265
+  },
+  {
+    "_id": 506,
+    "countryId": 1,
+    "name": "Tolisa",
+    "zipCode": 76272
+  },
+  {
+    "_id": 507,
+    "countryId": 1,
+    "name": "Tomina",
+    "zipCode": 79265
+  },
+  {
+    "_id": 508,
+    "countryId": 1,
+    "name": "Tomislavgrad",
+    "zipCode": 80240
+  },
+  {
+    "_id": 509,
+    "countryId": 1,
+    "name": "Topčić Polje",
+    "zipCode": 72213
+  },
+  {
+    "_id": 510,
+    "countryId": 1,
+    "name": "Torlakovac",
+    "zipCode": 70224
+  },
+  {
+    "_id": 511,
+    "countryId": 1,
+    "name": "Travnik",
+    "zipCode": 72270
+  },
+  {
+    "_id": 512,
+    "countryId": 1,
+    "name": "Trebinja",
+    "zipCode": 88375
+  },
+  {
+    "_id": 513,
+    "countryId": 1,
+    "name": "Trebinje",
+    "zipCode": 89000
+  },
+  {
+    "_id": 514,
+    "countryId": 1,
+    "name": "Trn",
+    "zipCode": 78252
+  },
+  {
+    "_id": 515,
+    "countryId": 1,
+    "name": "Trnova Donja",
+    "zipCode": 76335
+  },
+  {
+    "_id": 516,
+    "countryId": 1,
+    "name": "Trnovo",
+    "zipCode": 71220
+  },
+  {
+    "_id": 517,
+    "countryId": 1,
+    "name": "Trnjaci",
+    "zipCode": 76310
+  },
+  {
+    "_id": 518,
+    "countryId": 1,
+    "name": "Tržačka Raštela",
+    "zipCode": 77225
+  },
+  {
+    "_id": 519,
+    "countryId": 1,
+    "name": "Turbe",
+    "zipCode": 72283
+  },
+  {
+    "_id": 520,
+    "countryId": 1,
+    "name": "Turija",
+    "zipCode": 75306
+  },
+  {
+    "_id": 521,
+    "countryId": 1,
+    "name": "Turjak",
+    "zipCode": 78404
+  },
+  {
+    "_id": 522,
+    "countryId": 1,
+    "name": "Tuzla",
+    "zipCode": 75000
+  },
+  {
+    "_id": 523,
+    "countryId": 1,
+    "name": "Ugljevik",
+    "zipCode": 76330
+  },
+  {
+    "_id": 524,
+    "countryId": 1,
+    "name": "Ugodnovići",
+    "zipCode": 74278
+  },
+  {
+    "_id": 525,
+    "countryId": 1,
+    "name": "Ulog",
+    "zipCode": 71233
+  },
+  {
+    "_id": 526,
+    "countryId": 1,
+    "name": "Uskoplje",
+    "zipCode": 70280
+  },
+  {
+    "_id": 527,
+    "countryId": 1,
+    "name": "Usora Žabljak",
+    "zipCode": 74230
+  },
+  {
+    "_id": 528,
+    "countryId": 1,
+    "name": "Usora-Sivša",
+    "zipCode": 74321
+  },
+  {
+    "_id": 529,
+    "countryId": 1,
+    "name": "Ustikolina",
+    "zipCode": 73250
+  },
+  {
+    "_id": 530,
+    "countryId": 1,
+    "name": "Uvac",
+    "zipCode": 73265
+  },
+  {
+    "_id": 531,
+    "countryId": 1,
+    "name": "Uzdol",
+    "zipCode": 88444
+  },
+  {
+    "_id": 532,
+    "countryId": 1,
+    "name": "Vardište",
+    "zipCode": 73249
+  },
+  {
+    "_id": 533,
+    "countryId": 1,
+    "name": "Vareš",
+    "zipCode": 71330
+  },
+  {
+    "_id": 534,
+    "countryId": 1,
+    "name": "Vareš Majdan",
+    "zipCode": 71333
+  },
+  {
+    "_id": 535,
+    "countryId": 1,
+    "name": "Varoška Rijeka",
+    "zipCode": 77243
+  },
+  {
+    "_id": 536,
+    "countryId": 1,
+    "name": "Velika Bukovica",
+    "zipCode": 74213
+  },
+  {
+    "_id": 537,
+    "countryId": 1,
+    "name": "Velika Gata",
+    "zipCode": 77207
+  },
+  {
+    "_id": 538,
+    "countryId": 1,
+    "name": "Velika Kladuša",
+    "zipCode": 77230
+  },
+  {
+    "_id": 539,
+    "countryId": 1,
+    "name": "Velika Obarska",
+    "zipCode": 76329
+  },
+  {
+    "_id": 540,
+    "countryId": 1,
+    "name": "Vesela",
+    "zipCode": 70234
+  },
+  {
+    "_id": 541,
+    "countryId": 1,
+    "name": "Vidoši",
+    "zipCode": 80208
+  },
+  {
+    "_id": 542,
+    "countryId": 1,
+    "name": "Vidovice",
+    "zipCode": 76275
+  },
+  {
+    "_id": 543,
+    "countryId": 1,
+    "name": "Vinac",
+    "zipCode": 70202
+  },
+  {
+    "_id": 544,
+    "countryId": 1,
+    "name": "Vinska",
+    "zipCode": 74455
+  },
+  {
+    "_id": 545,
+    "countryId": 1,
+    "name": "Vir",
+    "zipCode": 88247
+  },
+  {
+    "_id": 546,
+    "countryId": 1,
+    "name": "Visoko",
+    "zipCode": 71300
+  },
+  {
+    "_id": 547,
+    "countryId": 1,
+    "name": "Višegrad",
+    "zipCode": 73240
+  },
+  {
+    "_id": 548,
+    "countryId": 1,
+    "name": "Višići",
+    "zipCode": 88307
+  },
+  {
+    "_id": 549,
+    "countryId": 1,
+    "name": "Vitez",
+    "zipCode": 72250
+  },
+  {
+    "_id": 550,
+    "countryId": 1,
+    "name": "Vitina",
+    "zipCode": 88326
+  },
+  {
+    "_id": 551,
+    "countryId": 1,
+    "name": "Vitkovci Donji",
+    "zipCode": 74265
+  },
+  {
+    "_id": 552,
+    "countryId": 1,
+    "name": "Vitkovići",
+    "zipCode": 73205
+  },
+  {
+    "_id": 553,
+    "countryId": 1,
+    "name": "Vlasenica",
+    "zipCode": 75440
+  },
+  {
+    "_id": 554,
+    "countryId": 1,
+    "name": "Vogošća",
+    "zipCode": 71320
+  },
+  {
+    "_id": 555,
+    "countryId": 1,
+    "name": "Vojkovići",
+    "zipCode": 71214
+  },
+  {
+    "_id": 556,
+    "countryId": 1,
+    "name": "Voljevac",
+    "zipCode": 70246
+  },
+  {
+    "_id": 557,
+    "countryId": 1,
+    "name": "Voljice",
+    "zipCode": 70247
+  },
+  {
+    "_id": 558,
+    "countryId": 1,
+    "name": "Vozuća",
+    "zipCode": 72227
+  },
+  {
+    "_id": 559,
+    "countryId": 1,
+    "name": "Vranjak",
+    "zipCode": 74487
+  },
+  {
+    "_id": 560,
+    "countryId": 1,
+    "name": "Vranjak",
+    "zipCode": 74488
+  },
+  {
+    "_id": 561,
+    "countryId": 1,
+    "name": "Vrapčići",
+    "zipCode": 88113
+  },
+  {
+    "_id": 562,
+    "countryId": 1,
+    "name": "Vražići",
+    "zipCode": 75428
+  },
+  {
+    "_id": 563,
+    "countryId": 1,
+    "name": "Vrbanja",
+    "zipCode": 78211
+  },
+  {
+    "_id": 564,
+    "countryId": 1,
+    "name": "Vrbanjci",
+    "zipCode": 78225
+  },
+  {
+    "_id": 565,
+    "countryId": 1,
+    "name": "Vrbaška",
+    "zipCode": 78408
+  },
+  {
+    "_id": 566,
+    "countryId": 1,
+    "name": "Vrnograč",
+    "zipCode": 77231
+  },
+  {
+    "_id": 567,
+    "countryId": 1,
+    "name": "Vrsta",
+    "zipCode": 77203
+  },
+  {
+    "_id": 568,
+    "countryId": 1,
+    "name": "Vršani",
+    "zipCode": 76325
+  },
+  {
+    "_id": 569,
+    "countryId": 1,
+    "name": "Vučkovci",
+    "zipCode": 76254
+  },
+  {
+    "_id": 570,
+    "countryId": 1,
+    "name": "Vukosavlje",
+    "zipCode": 74470
+  },
+  {
+    "_id": 571,
+    "countryId": 1,
+    "name": "Zaborak",
+    "zipCode": 73287
+  },
+  {
+    "_id": 572,
+    "countryId": 1,
+    "name": "Zabrđe",
+    "zipCode": 78221
+  },
+  {
+    "_id": 573,
+    "countryId": 1,
+    "name": "Zabrđe",
+    "zipCode": 76333
+  },
+  {
+    "_id": 574,
+    "countryId": 1,
+    "name": "Zalužani",
+    "zipCode": 78214
+  },
+  {
+    "_id": 575,
+    "countryId": 1,
+    "name": "Zavajt",
+    "zipCode": 73305
+  },
+  {
+    "_id": 576,
+    "countryId": 1,
+    "name": "Zavidovići",
+    "zipCode": 72220
+  },
+  {
+    "_id": 577,
+    "countryId": 1,
+    "name": "Zborište",
+    "zipCode": 74451
+  },
+  {
+    "_id": 578,
+    "countryId": 1,
+    "name": "Zborište",
+    "zipCode": 77236
+  },
+  {
+    "_id": 579,
+    "countryId": 1,
+    "name": "Zelinja",
+    "zipCode": 76259
+  },
+  {
+    "_id": 580,
+    "countryId": 1,
+    "name": "Zenica",
+    "zipCode": 72000
+  },
+  {
+    "_id": 581,
+    "countryId": 1,
+    "name": "Zovi Do",
+    "zipCode": 88286
+  },
+  {
+    "_id": 582,
+    "countryId": 1,
+    "name": "Zvornik",
+    "zipCode": 75400
+  },
+  {
+    "_id": 583,
+    "countryId": 1,
+    "name": "Žabar Donji",
+    "zipCode": 76273
+  },
+  {
+    "_id": 584,
+    "countryId": 1,
+    "name": "Željezno Polje",
+    "zipCode": 72236
+  },
+  {
+    "_id": 585,
+    "countryId": 1,
+    "name": "Žepče",
+    "zipCode": 72230
+  },
+  {
+    "_id": 586,
+    "countryId": 1,
+    "name": "Živinice",
+    "zipCode": 75270
+  },
+  {
+    "_id": 587,
+    "countryId": 1,
+    "name": "Župča",
+    "zipCode": 71373
+  },
+  {
+    "_id": 385001,
+    "countryId": 2,
+    "name": "Zagreb",
+    "zipCode": 10000
+  },
+  {
+    "_id": 385002,
+    "countryId": 2,
+    "name": "Split",
+    "zipCode": 21000
+  },
+  {
+    "_id": 385003,
+    "countryId": 2,
+    "name": "Rijeka",
+    "zipCode": 51000
+  },
+  {
+    "_id": 385004,
+    "countryId": 2,
+    "name": "Osijek",
+    "zipCode": 31000
+  },
+  {
+    "_id": 385005,
+    "countryId": 2,
+    "name": "Zadar",
+    "zipCode": 23000
+  },
+  {
+    "_id": 385006,
+    "countryId": 2,
+    "name": "Slavonski Brod",
+    "zipCode": 35000
+  },
+  {
+    "_id": 385007,
+    "countryId": 2,
+    "name": "Pula",
+    "zipCode": 52000
+  },
+  {
+    "_id": 385008,
+    "countryId": 2,
+    "name": "Karlovac",
+    "zipCode": 47000
+  },
+  {
+    "_id": 385009,
+    "countryId": 2,
+    "name": "Sisak",
+    "zipCode": 44000
+  },
+  {
+    "_id": 385010,
+    "countryId": 2,
+    "name": "Šibenik",
+    "zipCode": 22000
+  },
+  {
+    "_id": 385011,
+    "countryId": 2,
+    "name": "Varaždin",
+    "zipCode": 42000
+  },
+  {
+    "_id": 385012,
+    "countryId": 2,
+    "name": "Dubrovnik",
+    "zipCode": 20000
+  },
+  {
+    "_id": 385013,
+    "countryId": 2,
+    "name": "Bjelovar",
+    "zipCode": 43000
+  },
+  {
+    "_id": 385014,
+    "countryId": 2,
+    "name": "Velika Gorica",
+    "zipCode": 10410
+  },
+  {
+    "_id": 385015,
+    "countryId": 2,
+    "name": "Koprivnica",
+    "zipCode": 48000
+  },
+  {
+    "_id": 385016,
+    "countryId": 2,
+    "name": "Poreč",
+    "zipCode": 52440
+  },
+  {
+    "_id": 385017,
+    "countryId": 2,
+    "name": "Vinkovci",
+    "zipCode": 32100
+  },
+  {
+    "_id": 385018,
+    "countryId": 2,
+    "name": "Samobor",
+    "zipCode": 10430
+  },
+  {
+    "_id": 385019,
+    "countryId": 2,
+    "name": "Solin",
+    "zipCode": 21210
+  },
+  {
+    "_id": 385020,
+    "countryId": 2,
+    "name": "Kaštela",
+    "zipCode": 21210
+  },
+  {
+    "_id": 381001,
+    "countryId": 3,
+    "name": "Belgrade",
+    "zipCode": 11000
+  },
+  {
+    "_id": 381002,
+    "countryId": 3,
+    "name": "Novi Sad",
+    "zipCode": 21000
+  },
+  {
+    "_id": 381003,
+    "countryId": 3,
+    "name": "Niš",
+    "zipCode": 18000
+  },
+  {
+    "_id": 381004,
+    "countryId": 3,
+    "name": "Kragujevac",
+    "zipCode": 34000
+  },
+  {
+    "_id": 381005,
+    "countryId": 3,
+    "name": "Subotica",
+    "zipCode": 24000
+  },
+  {
+    "_id": 381006,
+    "countryId": 3,
+    "name": "Zrenjanin",
+    "zipCode": 23000
+  },
+  {
+    "_id": 381007,
+    "countryId": 3,
+    "name": "Pančevo",
+    "zipCode": 26000
+  },
+  {
+    "_id": 381008,
+    "countryId": 3,
+    "name": "Čačak",
+    "zipCode": 32000
+  },
+  {
+    "_id": 381009,
+    "countryId": 3,
+    "name": "Novi Pazar",
+    "zipCode": 36300
+  },
+  {
+    "_id": 381010,
+    "countryId": 3,
+    "name": "Kraljevo",
+    "zipCode": 36000
+  },
+  {
+    "_id": 381011,
+    "countryId": 3,
+    "name": "Leskovac",
+    "zipCode": 16000
+  },
+  {
+    "_id": 381012,
+    "countryId": 3,
+    "name": "Valjevo",
+    "zipCode": 14000
+  },
+  {
+    "_id": 381013,
+    "countryId": 3,
+    "name": "Smederevo",
+    "zipCode": 11300
+  },
+  {
+    "_id": 381014,
+    "countryId": 3,
+    "name": "Užice",
+    "zipCode": 31000
+  },
+  {
+    "_id": 381015,
+    "countryId": 3,
+    "name": "Vranje",
+    "zipCode": 17500
+  },
+  {
+    "_id": 381016,
+    "countryId": 3,
+    "name": "Šabac",
+    "zipCode": 15000
+  },
+  {
+    "_id": 381017,
+    "countryId": 3,
+    "name": "Sombor",
+    "zipCode": 25000
+  },
+  {
+    "_id": 381018,
+    "countryId": 3,
+    "name": "Požarevac",
+    "zipCode": 12000
+  },
+  {
+    "_id": 381019,
+    "countryId": 3,
+    "name": "Pirot",
+    "zipCode": 18300
+  },
+  {
+    "_id": 381020,
+    "countryId": 3,
+    "name": "Zaječar",
+    "zipCode": 19000
+  }
+]

@@ -1,0 +1,177 @@
+[
+  {
+    "_id": 1,
+    "cityId": 580,
+    "name": "Bolnica"
+  },
+  {
+    "_id": 2,
+    "cityId": 580,
+    "name": "Crkvice"
+  },
+  {
+    "_id": 3,
+    "cityId": 580,
+    "name": "Crkvice \"R\""
+  },
+  {
+    "_id": 4,
+    "cityId": 580,
+    "name": "Donje Crkvice \"R\""
+  },
+  {
+    "_id": 5,
+    "cityId": 580,
+    "name": "Garnizon"
+  },
+  {
+    "_id": 6,
+    "cityId": 580,
+    "name": "Novi Most"
+  },
+  {
+    "_id": 7,
+    "cityId": 580,
+    "name": "Džamija"
+  },
+  {
+    "_id": 8,
+    "cityId": 580,
+    "name": "Stara Pijaca"
+  },
+  {
+    "_id": 9,
+    "cityId": 580,
+    "name": "Hotel \"Metalurg\""
+  },
+  {
+    "_id": 10,
+    "cityId": 580,
+    "name": "Zenica \"AS\""
+  },
+  {
+    "_id": 11,
+    "cityId": 580,
+    "name": "Nova Zenica"
+  },
+  {
+    "_id": 12,
+    "cityId": 580,
+    "name": "Preporod"
+  },
+  {
+    "_id": 13,
+    "cityId": 580,
+    "name": "Brana 2"
+  },
+  {
+    "_id": 14,
+    "cityId": 580,
+    "name": "Kanal"
+  },
+  {
+    "_id": 15,
+    "cityId": 580,
+    "name": "Ričice (Džamija)"
+  },
+  {
+    "_id": 16,
+    "cityId": 580,
+    "name": "Pehare (Sviće)"
+  },
+  {
+    "_id": 17,
+    "cityId": 580,
+    "name": "Paviljon"
+  },
+  {
+    "_id": 18,
+    "cityId": 580,
+    "name": "Babina Rijeka"
+  },
+  {
+    "_id": 19,
+    "cityId": 580,
+    "name": "Komplex \"A\""
+  },
+  {
+    "_id": 20,
+    "cityId": 580,
+    "name": "Otpad"
+  },
+  {
+    "_id": 21,
+    "cityId": 580,
+    "name": "DC ZPP"
+  },
+  {
+    "_id": 22,
+    "cityId": 580,
+    "name": "Rampa"
+  },
+  {
+    "_id": 23,
+    "cityId": 580,
+    "name": "Lukovo Polje"
+  },
+  {
+    "_id": 24,
+    "cityId": 580,
+    "name": "Donja Gračanica"
+  },
+  {
+    "_id": 25,
+    "cityId": 444,
+    "name": "Sarajevo \"AS\""
+  },
+  {
+    "_id": 26,
+    "cityId": 238,
+    "name": "Kakanj \"AS\""
+  },
+  {
+    "_id": 27,
+    "cityId": 546,
+    "name": "Visoko \"AS\""
+  },
+  {
+    "_id": 28,
+    "cityId": 585,
+    "name": "Žepče \"AS\""
+  },
+  {
+    "_id": 29,
+    "cityId": 316,
+    "name": "Maglaj \"AS\""
+  },
+  {
+    "_id": 30,
+    "cityId": 41,
+    "name": "Bosanski Brod \"AS\""
+  },
+  {
+    "_id": 31,
+    "cityId": 385006,
+    "name": "Autobusni Kolodvor Slavonski Brod"
+  },
+  {
+    "_id": 32,
+    "cityId": 385001,
+    "name": "Autobusni kolodvor Zagreb"
+  },
+  {
+    "_id": 33,
+    "cityId": 385008,
+    "name": "Autobusni kolodvor Karlovac"
+  },
+  {
+    "_id": 34,
+    "cityId": 385003,
+    "name": "Autobusni kolodvor Rijeka"
+  },
+  {
+    "_id": 35,
+    "cityId": 385007,
+    "name": "Autobusni kolodvor Pula"
+  }
+]
