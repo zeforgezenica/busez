@@ -1,6 +1,5 @@
 "use client";
 import BusezTable from "./BusezTable";
-import Footer from "./components/Footer";
 
 const Home: React.FC = () => {
   return (
@@ -10,7 +9,6 @@ const Home: React.FC = () => {
         Aplikacija za prikaz informacija o redu vožnje javnog prevoza u Zenici.
       </h2>
       <BusezTable />
-      <Footer />
     </>
   );
 };

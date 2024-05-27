@@ -22,7 +22,7 @@ const CountryForm: React.FC<CountryFormProps> = ({ onCountryAdded }) => {
 
     try {
       const response = await CountryService.post(newCountry);
-      console.log("Country created successfully:", response);
+      console.log("Country added successfully:", response);
       onCountryAdded(response);
       setCountryName("");
       setCountryCode("");

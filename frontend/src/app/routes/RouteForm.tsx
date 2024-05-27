@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Card, Input, Button, Switch, Textarea } from "@nextui-org/react"; // Import Textarea
+import { Card, Input, Button, Switch, Textarea } from "@nextui-org/react";
 import dynamic from "next/dynamic";
 import { Station } from "../models/station.model";
 import { Agency } from "../models/agency.model";
@@ -65,6 +65,12 @@ const RouteForm: React.FC<RouteFormProps> = ({
       ...prevData,
       activeDays: selectedDays,
     }));
+    if (!useCustomReturnDays) {
+      setRouteData((prevData) => ({
+        ...prevData,
+        returnDays: { ...selectedDays },
+      }));
+    }
   };
 
   const handleReturnDaysChange = (selectedDays: Weekdays): void => {
@@ -97,13 +103,9 @@ const RouteForm: React.FC<RouteFormProps> = ({
 
   const handleSubmit = async (): Promise<void> => {
     try {
-      console.log("Submitted Route Data:", routeData);
-
-      // Re-enable the POST request
       const newRoute = await RouteService.post(routeData as Route);
       console.log("Route added successfully!", newRoute);
 
-      // Reset state after logging the route data
       setRouteData({
         name: "",
         agencyId: "",
@@ -114,7 +116,6 @@ const RouteForm: React.FC<RouteFormProps> = ({
         type: undefined,
       });
 
-      // Call onRouteAdded without arguments
       onRouteAdded();
     } catch (error) {
       console.error("Error adding route:", error);
@@ -124,6 +125,11 @@ const RouteForm: React.FC<RouteFormProps> = ({
   const handleUseCustomReturnDaysChange = (): void => {
     setUseCustomReturnDays((prevValue) => !prevValue);
     if (!useCustomReturnDays) {
+      setRouteData((prevData) => ({
+        ...prevData,
+        returnDays: { ...prevData.activeDays },
+      }));
+    } else {
       setRouteData((prevData) => ({
         ...prevData,
         returnDays: {},
@@ -254,7 +260,7 @@ const RouteForm: React.FC<RouteFormProps> = ({
             placeholder="Departure Time"
             minRows={1}
             maxRows={6}
-            style={{ overflowY: "auto" }} // Show scrollbar if content exceeds maxRows
+            style={{ overflowY: "auto" }}
             className="w-25"
           />
           <Textarea
@@ -265,7 +271,7 @@ const RouteForm: React.FC<RouteFormProps> = ({
             placeholder="Return Time"
             minRows={1}
             maxRows={6}
-            style={{ overflowY: "auto" }} // Show scrollbar if content exceeds maxRows
+            style={{ overflowY: "auto" }}
             className="w-25"
           />
 
