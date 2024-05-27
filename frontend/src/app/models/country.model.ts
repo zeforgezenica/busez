@@ -1,6 +1,6 @@
 export interface Country {
-  _id: number;
-  name: String;
+  _id?: string;
+  name: string;
   code: number;
   acronym: string;
 }

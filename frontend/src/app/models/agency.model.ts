@@ -1,10 +1,11 @@
 export interface Agency {
-  _id: number;
-  cityId: number;
-  address: String;
-  website: String;
-  email: String;
-  phoneNumber: String;
+  _id?: string;
+  cityId: string;
+  name: string;
+  address: string;
+  website?: string;
+  email?: string;
+  phoneNumber?: string;
 }
 
 export default Agency;

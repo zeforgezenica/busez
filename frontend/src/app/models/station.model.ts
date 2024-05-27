@@ -1,7 +1,8 @@
 export interface Station {
-  _id: number;
-  cityId: number;
+  _id?: string;
+  cityId: string;
   name: string;
+  coordinates?: string;
 }
 
 export default Station;

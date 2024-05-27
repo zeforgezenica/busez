@@ -1,20 +1,26 @@
 import Weekdays from "./weekdays.model";
 
-export interface Route {
-  _id: number;
-  agencyId: number;
-  name: string;
-  activeDays: Weekdays;
-  stations: Array<{
-    stationId: number;
-    departureTime: string[];
-    returnTime: string[];
-  }>;
-  duration: string;
+export enum RouteType {
+  Intercity = 1,
+  International = 2,
+  Local = 3,
 }
 
-export interface InternationalRoute extends Route {
-  returnDays: Weekdays;
+export interface StationTimes {
+  stationId: string;
+  departureTime: string[];
+  returnTime: string[];
+}
+
+export interface Route {
+  _id?: string;
+  agencyId: string;
+  name: string;
+  type: RouteType;
+  activeDays: Weekdays;
+  returnDays?: Weekdays;
+  stations: StationTimes[];
+  duration?: string;
 }
 
 export default Route;

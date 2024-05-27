@@ -1,0 +1,49 @@
+{
+  "type": "object",
+  "properties": {
+    "_id": { "type": "string" },
+    "agencyId": { "type": "string" },
+    "name": { "type": "string" },
+    "activeDays": {
+      "$ref": "#/definitions/Weekdays"
+    },
+    "returnDays": {
+      "anyOf": [{ "$ref": "#/definitions/Weekdays" }, { "type": "null" }]
+    },
+    "stations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "stationId": { "type": "string" },
+          "departureTime": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "returnTime": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        },
+        "required": ["stationId", "departureTime", "returnTime"]
+      }
+    },
+    "duration": { "type": "string" }
+  },
+  "required": ["agencyId", "name", "activeDays", "stations", "duration"],
+  "definitions": {
+    "Weekdays": {
+      "type": "object",
+      "properties": {
+        "Monday": { "type": ["boolean", "null"] },
+        "Tuesday": { "type": ["boolean", "null"] },
+        "Wednesday": { "type": ["boolean", "null"] },
+        "Thursday": { "type": ["boolean", "null"] },
+        "Friday": { "type": ["boolean", "null"] },
+        "Saturday": { "type": ["boolean", "null"] },
+        "Sunday": { "type": ["boolean", "null"] }
+      },
+      "required": []
+    }
+  }
+}
