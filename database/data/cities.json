@@ -1,0 +1,3764 @@
+[
+  {
+    "_id": "578cfe09-be8a-4eec-b829-e227b472cd20",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Aleksandrovac",
+    "zipCode": 78255
+  },
+  {
+    "_id": "8745d890-9ebc-4811-a0ec-493a20c7a131",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Avtovac",
+    "zipCode": 89245
+  },
+  {
+    "_id": "ce7e28c5-4df7-4907-a4e4-8afff553f599",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Banovići",
+    "zipCode": 75290
+  },
+  {
+    "_id": "93a9f6f1-77a7-4f1d-a48a-d4c2616060d5",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Banja Luka",
+    "zipCode": 78000
+  },
+  {
+    "_id": "a0f84285-68e2-460c-a704-8de284c6ee1e",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Banja Vrućica",
+    "zipCode": 74273
+  },
+  {
+    "_id": "0c780987-cbf6-4b80-928a-de2ed61a95dd",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Baraći",
+    "zipCode": 70267
+  },
+  {
+    "_id": "e9f87670-d45e-4306-98ea-89637235004f",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Batković",
+    "zipCode": 76312
+  },
+  {
+    "_id": "5da5d7c5-72c5-4f55-a7a0-41635552d289",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Begov Han",
+    "zipCode": 72233
+  },
+  {
+    "_id": "4172b07b-1bfc-47d0-aa85-c3e4eadf40db",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Berkovići",
+    "zipCode": 88363
+  },
+  {
+    "_id": "9e0b0bf0-1564-4c44-b906-1dd44de993d6",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Bihać",
+    "zipCode": 77000
+  },
+  {
+    "_id": "670a6d4c-f4e8-4a7d-a7ba-bbf94d50fc6c",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Bijela",
+    "zipCode": 76204
+  },
+  {
+    "_id": "9799f7ee-28fd-41e9-8ab5-f88c35f09acc",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Bijelo Brdo",
+    "zipCode": 73263
+  },
+  {
+    "_id": "5f5800e8-7bb2-4122-8437-73c19d2d38e6",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Bijeljina",
+    "zipCode": 76300
+  },
+  {
+    "_id": "c2b7bb03-3ef9-4a24-89ba-6e215f49868c",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Bijeljinsko Suho Polje",
+    "zipCode": 76321
+  },
+  {
+    "_id": "a7b8624d-0155-412f-98a2-ba6ba33268fe",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Bilalovac",
+    "zipCode": 71253
+  },
+  {
+    "_id": "23834e86-822e-4b00-945f-b334a7f42c24",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Bileća",
+    "zipCode": 89230
+  },
+  {
+    "_id": "73493e44-5caa-429a-8238-36f0d6dead55",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Biletić Polje",
+    "zipCode": 88263
+  },
+  {
+    "_id": "f2f4e502-9ec6-472c-a825-5081c4373aba",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Bilješevo",
+    "zipCode": 72248
+  },
+  {
+    "_id": "bcecd348-cb99-468b-a438-f19c7598ba50",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Bjelimići",
+    "zipCode": 88407
+  },
+  {
+    "_id": "25e69c17-6f7d-4980-a7aa-caeb45c5b9f6",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Blagaj",
+    "zipCode": 88201
+  },
+  {
+    "_id": "003de722-4c44-4da9-b519-8e0775e4e4b0",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Blatnica",
+    "zipCode": 74275
+  },
+  {
+    "_id": "982b2cbc-86c1-420a-bd3f-3cf85cc7f74a",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Blažuj",
+    "zipCode": 71215
+  },
+  {
+    "_id": "eb1e2b9c-84b2-47d5-a6d5-47234b1da37a",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Boće",
+    "zipCode": 76210
+  },
+  {
+    "_id": "867e65a2-8f9b-4e4d-93b7-69b82cfbd44b",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Bok",
+    "zipCode": 76277
+  },
+  {
+    "_id": "d5564b89-62e7-4695-849f-a390ae2253d1",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Boljanić",
+    "zipCode": 74322
+  },
+  {
+    "_id": "ecd02a4a-4507-40d4-ae89-6fcad81c05a3",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Boračko Jezero",
+    "zipCode": 88405
+  },
+  {
+    "_id": "ac30c33e-018e-42e7-9ca2-df9720471816",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Borike",
+    "zipCode": 73225
+  },
+  {
+    "_id": "c5700bd3-de20-405e-8fb9-509d36f327c3",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Borojevići",
+    "zipCode": 88365
+  },
+  {
+    "_id": "938ddace-924c-4089-8da8-acfa0b0228b5",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Bosanska Krupa",
+    "zipCode": 77240
+  },
+  {
+    "_id": "dd17bbba-5986-4614-967f-51527077ad2b",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Bosanski Petrovac",
+    "zipCode": 77250
+  },
+  {
+    "_id": "efa5253a-bad1-4ee5-8e7d-fc9e9785386d",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Bosansko Grahovo",
+    "zipCode": 80270
+  },
+  {
+    "_id": "76f85877-e0fd-4446-a3d0-870bb594417a",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Bratunac",
+    "zipCode": 75420
+  },
+  {
+    "_id": "7c7e4df3-cfdc-4e72-b77e-7151d43d52e8",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Brčko",
+    "zipCode": 76000
+  },
+  {
+    "_id": "632d107b-15bf-4470-bf33-4913543d46cd",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Brčko Novo",
+    "zipCode": 76105
+  },
+  {
+    "_id": "92321858-aeab-4dd4-a684-e60591ac9f50",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Brekovica",
+    "zipCode": 77205
+  },
+  {
+    "_id": "00ac1349-f4ba-4b10-92f5-ad562761351a",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Brestovo",
+    "zipCode": 74210
+  },
+  {
+    "_id": "ade3f20d-41f4-4750-ab9e-3909b7c41e65",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Brijesnica kod Doboja",
+    "zipCode": 74206
+  },
+  {
+    "_id": "f366d30f-3402-4adb-925a-aa44cd00fa0a",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Brka",
+    "zipCode": 76206
+  },
+  {
+    "_id": "149359ab-234c-418b-bb16-ccac0e06b49b",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Brnjic",
+    "zipCode": 72243
+  },
+  {
+    "_id": "09199546-3099-4fa0-b996-7337e773dab0",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Brnjica kod Sanskog Mosta",
+    "zipCode": 79270
+  },
+  {
+    "_id": "e80d0e8c-904e-46f7-9fd7-b08c729d5bb4",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Brod",
+    "zipCode": 74440
+  },
+  {
+    "_id": "5e12d8f6-f832-4305-877b-ed6f3ec69676",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Brodski Stupnik",
+    "zipCode": 74255
+  },
+  {
+    "_id": "008b9166-1450-4214-8738-01b1f4da2098",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Brotnja",
+    "zipCode": 75214
+  },
+  {
+    "_id": "a9ab6431-ab42-4e5f-bfc8-72e36bce2248",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Brtava",
+    "zipCode": 75308
+  },
+  {
+    "_id": "04dbd12b-2a32-4894-889d-166545ff984a",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Brtava Kula",
+    "zipCode": 73310
+  },
+  {
+    "_id": "74f10ebf-0c44-4205-ae8d-360f2b1e98c1",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Bukovica",
+    "zipCode": 72346
+  },
+  {
+    "_id": "6089195d-f98d-4449-8f57-e4cf53c2f231",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Busovača",
+    "zipCode": 72260
+  },
+  {
+    "_id": "5dc2137a-7810-4d1b-abf1-e24e4501efad",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Bužim",
+    "zipCode": 77270
+  },
+  {
+    "_id": "ed3c0a6f-b281-4dbe-8698-760ae772dbee",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Cazin",
+    "zipCode": 77220
+  },
+  {
+    "_id": "21829b88-1d8e-422a-ac1d-99c8ad9b81ca",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Centar",
+    "zipCode": 76190
+  },
+  {
+    "_id": "d13d9b9c-3401-4b9f-8d49-bcccdd9b7dc8",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Cerik",
+    "zipCode": 74224
+  },
+  {
+    "_id": "5d0287c8-6c0a-4bd9-8fa7-77de4493bfeb",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Čađavica",
+    "zipCode": 78432
+  },
+  {
+    "_id": "9104e38f-f1e8-49c2-964d-b07866ed4899",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Čair",
+    "zipCode": 76216
+  },
+  {
+    "_id": "2597c026-393c-4b76-a4eb-dcde63809b7e",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Čajniče",
+    "zipCode": 73320
+  },
+  {
+    "_id": "225b91d0-90c3-41c8-ad4f-f89bf08df94c",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Čapljina",
+    "zipCode": 88300
+  },
+  {
+    "_id": "93ef07e4-ea66-4d97-aec7-c0ed58ed3740",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Čaršija",
+    "zipCode": 74207
+  },
+  {
+    "_id": "d550b201-7e4c-44bf-bc96-633686b38655",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Čelinac",
+    "zipCode": 78030
+  },
+  {
+    "_id": "3c5aeafd-48c9-4927-99ea-32b7fd66042a",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Čelopek",
+    "zipCode": 71320
+  },
+  {
+    "_id": "228373cf-e2fb-4689-adab-a99bc746304a",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Čelinac Donji",
+    "zipCode": 78031
+  },
+  {
+    "_id": "12e22be1-a76c-44a8-b956-da84e8c2fba5",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Čelinac Gornji",
+    "zipCode": 78032
+  },
+  {
+    "_id": "2a413350-5ed3-4c06-a2df-7e4fb0bfb684",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Čelinac Mala",
+    "zipCode": 78033
+  },
+  {
+    "_id": "17814000-fb54-4a75-9b53-a4bcff831202",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Čelinac Stara",
+    "zipCode": 78034
+  },
+  {
+    "_id": "cce8f2c4-6885-4e3d-8a39-d8eac4081405",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Čelinac Trn",
+    "zipCode": 78035
+  },
+  {
+    "_id": "6ab04bc6-ddfc-41b4-b45d-d0445cfa703f",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Čelinac Velika",
+    "zipCode": 78036
+  },
+  {
+    "_id": "df5aae43-9f66-41f1-84cc-fe3221b3221e",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Čelić",
+    "zipCode": 75246
+  },
+  {
+    "_id": "f1f3ad65-22df-4130-97c3-2212876271e2",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Čengići",
+    "zipCode": 74262
+  },
+  {
+    "_id": "3e46d97f-2170-4d1f-a4a3-abbb4285fdc0",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Čepelica",
+    "zipCode": 88256
+  },
+  {
+    "_id": "319711a9-d028-49fc-bba0-2b7ad4ac6955",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Čiče",
+    "zipCode": 76239
+  },
+  {
+    "_id": "4dd755fa-59d0-4123-82c6-1429e49fee4d",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Čiče Polje",
+    "zipCode": 75217
+  },
+  {
+    "_id": "88432b33-03a7-4a0f-b7eb-f18c6ae8b7c9",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Čičevo",
+    "zipCode": 71308
+  },
+  {
+    "_id": "7fcbf3eb-a5aa-4e44-8689-d9201bf8ca39",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Čiči",
+    "zipCode": 79200
+  },
+  {
+    "_id": "49ea299c-510d-46c8-85fd-6590e5a2b704",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Čifluk",
+    "zipCode": 74222
+  },
+  {
+    "_id": "76b1409b-7f25-41e9-86ab-ecbf6ee91980",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Čitluk",
+    "zipCode": 88260
+  },
+  {
+    "_id": "125791f4-19f7-47e8-b4ae-dedf5d3091f1",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Čitluk Prvi",
+    "zipCode": 76261
+  },
+  {
+    "_id": "e39de60b-6ef6-44bf-8c4d-b7fa2c5ead6b",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Čitluk Četvrti",
+    "zipCode": 74260
+  },
+  {
+    "_id": "48ec9c57-05be-491b-8db8-ff10ddbeea1f",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Čivčije",
+    "zipCode": 76320
+  },
+  {
+    "_id": "32d220fa-3aeb-4814-8284-fe8b1cb79e5a",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Čokori",
+    "zipCode": 76261
+  },
+  {
+    "_id": "806a5db1-f7b7-43c6-9815-5135a95e4766",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Čološevo",
+    "zipCode": 76218
+  },
+  {
+    "_id": "d13615e5-7618-41f5-b4d2-757c01be4d6c",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Čoplić",
+    "zipCode": 75280
+  },
+  {
+    "_id": "3f25de49-4e2d-4f88-bc3e-78271a96faa1",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Čoralići",
+    "zipCode": 77226
+  },
+  {
+    "_id": "176248a6-fe43-46e2-b989-3cc2ddad2d3c",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Čorak",
+    "zipCode": 76331
+  },
+  {
+    "_id": "d0302de0-5934-40e7-af17-fcb3847affb0",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Čorba",
+    "zipCode": 74221
+  },
+  {
+    "_id": "434ac83f-c31f-4185-b9b1-6136de81486e",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Čorbovo",
+    "zipCode": 75360
+  },
+  {
+    "_id": "e437bb92-1ba1-4359-afe1-de9cdf3efa21",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Čorci",
+    "zipCode": 74263
+  },
+  {
+    "_id": "cd31b864-97ea-42f5-bfb9-e342863d42ce",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Čorići",
+    "zipCode": 79249
+  },
+  {
+    "_id": "c5446db0-5a1a-4ea9-966a-f402c57d57fb",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Čosnica",
+    "zipCode": 74208
+  },
+  {
+    "_id": "2530995e-2d78-45fd-aaa0-8ed9f5f3dc5a",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Čubinje",
+    "zipCode": 77235
+  },
+  {
+    "_id": "ca37a9c8-717e-4278-8fab-e75b67e3ed6b",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Čuklić",
+    "zipCode": 71380
+  },
+  {
+    "_id": "2625527e-cf97-4a83-84ef-77e7f9267b85",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Čuljci",
+    "zipCode": 76292
+  },
+  {
+    "_id": "91b7bdd7-f348-4a2e-abc4-f6baf25d831f",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Čuljevići",
+    "zipCode": 77206
+  },
+  {
+    "_id": "2a37629a-b708-4f74-943d-767f7bcd7e9a",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Čuljkovići",
+    "zipCode": 78225
+  },
+  {
+    "_id": "3c0c847d-999f-45eb-b9fe-b0c915b15513",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Čunčići",
+    "zipCode": 79266
+  },
+  {
+    "_id": "9ed3be50-5e53-436e-a0e8-b7818cc1e8f1",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Čunkovac",
+    "zipCode": 75212
+  },
+  {
+    "_id": "40cf45d3-fd4d-441b-9118-33c269e31a3e",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Čurin",
+    "zipCode": 74244
+  },
+  {
+    "_id": "8d3d92ca-b088-4271-bbe8-ba5030446bd9",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Čurkovci",
+    "zipCode": 78246
+  },
+  {
+    "_id": "858afee3-6237-4187-87f0-3202940c8fb5",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Čurlej",
+    "zipCode": 76263
+  },
+  {
+    "_id": "95adf21f-e81d-482a-a112-9cf7f7001887",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Čurug",
+    "zipCode": 21233
+  },
+  {
+    "_id": "54624de6-8a7c-4ba7-9212-5f1b6fd8677a",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Čustovo",
+    "zipCode": 74209
+  },
+  {
+    "_id": "310baec4-0da3-49f5-819c-727b31e156ac",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Ćaćići",
+    "zipCode": 75308
+  },
+  {
+    "_id": "fe6891a3-ddc6-41c6-b5c2-5f9170e32115",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Ćaići",
+    "zipCode": 79242
+  },
+  {
+    "_id": "0d5411c0-74bd-44ad-ae13-7040ef041e95",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Čajniče",
+    "zipCode": 73280
+  },
+  {
+    "_id": "668521bd-098e-4267-ac27-2590a343b7fd",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Čapljina",
+    "zipCode": 88300
+  },
+  {
+    "_id": "9dd5dc9e-f176-491a-abdf-2902e195f70d",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Čardak",
+    "zipCode": 72224
+  },
+  {
+    "_id": "11d3ca23-5ec5-48e0-828a-84c28213d1fa",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Čatići",
+    "zipCode": 72246
+  },
+  {
+    "_id": "7f4f2545-47b1-46ba-8088-10819a109bbe",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Čečava",
+    "zipCode": 74274
+  },
+  {
+    "_id": "7a734eed-4446-461a-86ab-8c8b5d691d59",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Čelebići",
+    "zipCode": 88404
+  },
+  {
+    "_id": "52a849dc-b055-40f0-be34-ba70ba99f524",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Čelić",
+    "zipCode": 75246
+  },
+  {
+    "_id": "b9cead95-90e1-4928-864d-18d3b171eb58",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Čelinac",
+    "zipCode": 78240
+  },
+  {
+    "_id": "face21ab-dbf3-4708-8b59-07c0f73813c7",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Čemerno",
+    "zipCode": 89243
+  },
+  {
+    "_id": "5f7dd559-bd59-421d-801d-b5f7af19c5c0",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Čerin",
+    "zipCode": 88265
+  },
+  {
+    "_id": "3e0d249f-be1b-42b2-bdca-638f292462a7",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Čitluk",
+    "zipCode": 88260
+  },
+  {
+    "_id": "f06bbeaf-41ce-4310-a8a2-182747b486df",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Ćoralići",
+    "zipCode": 77226
+  },
+  {
+    "_id": "f0c3b436-19c9-4ddc-870f-c2fa93521133",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Ćukali",
+    "zipCode": 78427
+  },
+  {
+    "_id": "5a138a76-d7e0-458d-a4c0-7a3ac4244ba5",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Dejčići",
+    "zipCode": 71221
+  },
+  {
+    "_id": "8c0d89a7-60f0-4760-a774-5368cd510257",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Delijaš",
+    "zipCode": 71223
+  },
+  {
+    "_id": "8997fe7a-957e-46b6-8d22-753672ae4c14",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Demirovac",
+    "zipCode": 79243
+  },
+  {
+    "_id": "222eee39-5003-421a-96ee-cec9206cde3b",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Derventa",
+    "zipCode": 74400
+  },
+  {
+    "_id": "ac06e047-06c5-45d2-b7c0-221ba11926fb",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Derventa kod Vlasenice",
+    "zipCode": 75444
+  },
+  {
+    "_id": "b9e1b679-0ffc-4476-b2fa-33769eb10d8c",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Divičani",
+    "zipCode": 70204
+  },
+  {
+    "_id": "07923207-b6eb-4bed-b6f8-1ff74284246e",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Divin",
+    "zipCode": 89233
+  },
+  {
+    "_id": "10ef4d54-808a-452e-abaa-267bb33fdef4",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Doboj",
+    "zipCode": 74000
+  },
+  {
+    "_id": "41c97ef3-c8cb-4630-97c5-3b950ba19429",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Doborovci",
+    "zipCode": 75328
+  },
+  {
+    "_id": "3e46c805-c466-4d00-8dee-b1522c48d263",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Dobretići",
+    "zipCode": 70210
+  },
+  {
+    "_id": "f0056c30-79b3-40f2-942b-30a94d8303d0",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Dobrinja",
+    "zipCode": 71124
+  },
+  {
+    "_id": "8f356e1c-9abf-4b4b-a0d3-2c6e00ee44cd",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Dobrljin",
+    "zipCode": 79223
+  },
+  {
+    "_id": "e56f1016-34b3-4194-87af-49cdecbe8a58",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Dobrun",
+    "zipCode": 73247
+  },
+  {
+    "_id": "2739015d-3723-4beb-82fa-6e1e0c3123d2",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Dokanj",
+    "zipCode": 75206
+  },
+  {
+    "_id": "d44dff60-479b-421c-b7a3-eea169dea2c1",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Dolac na Lašvi",
+    "zipCode": 72278
+  },
+  {
+    "_id": "56a29969-91e1-49a8-bf56-da42b7d39951",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Doljani",
+    "zipCode": 88446
+  },
+  {
+    "_id": "10226890-54a6-484b-a052-390a32b13f7b",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Domaljevac",
+    "zipCode": 76233
+  },
+  {
+    "_id": "cb7e9237-85e2-45b6-b49e-c1dd8a5566b6",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Domanovići",
+    "zipCode": 88305
+  },
+  {
+    "_id": "37b57029-581a-425b-b9e9-0436311f58ca",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Donja Mahala",
+    "zipCode": 78203
+  },
+  {
+    "_id": "8c2e382f-8e4d-4b39-9816-cfb965b6336f",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Donja Slatina",
+    "zipCode": 76237
+  },
+  {
+    "_id": "e8c1e1d6-044a-4586-8fec-c4032681e8d1",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Donje Moštre",
+    "zipCode": 71305
+  },
+  {
+    "_id": "c2872f44-7c26-4ee9-9119-8ecd17816a4b",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Donji Agići",
+    "zipCode": 79228
+  },
+  {
+    "_id": "c64a162c-bb4d-4bf4-afac-d3304e0f6e9d",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Donji Brezik",
+    "zipCode": 76109
+  },
+  {
+    "_id": "03d69bdb-bbc9-4ebc-804e-82f5dd8c3422",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Donji Kamengrad",
+    "zipCode": 79266
+  },
+  {
+    "_id": "750abd7a-b95e-45f4-914f-b981e2267726",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Donji Mamići",
+    "zipCode": 88343
+  },
+  {
+    "_id": "f4b8e292-75b0-40d9-9005-09ae301d4334",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Donji Svilaj",
+    "zipCode": 76297
+  },
+  {
+    "_id": "11d70851-aa1d-47ea-bd4b-85294dcbb627",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Donji Vakuf",
+    "zipCode": 70220
+  },
+  {
+    "_id": "f8ae4807-42c3-4643-9902-259729068234",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Donji Vijačani",
+    "zipCode": 78432
+  },
+  {
+    "_id": "93cc16b2-efac-46cf-a349-1ac883a481ff",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Donji Vrbljani",
+    "zipCode": 79289
+  },
+  {
+    "_id": "7b978765-2abd-4975-92f7-ef43724cd2f1",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Dragalovci",
+    "zipCode": 74209
+  },
+  {
+    "_id": "4dfbe088-2ae6-4eef-83ac-d72f66a931c4",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Dragaljevac",
+    "zipCode": 76323
+  },
+  {
+    "_id": "2bb78dfa-3c79-4d7f-9090-bab495634e66",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Dragočaj",
+    "zipCode": 78215
+  },
+  {
+    "_id": "9d355117-7b9d-4a67-8c61-3859b196ff38",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Drežnica",
+    "zipCode": 88215
+  },
+  {
+    "_id": "5a011afb-8dc8-491b-8cf3-60d72cfbfc36",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Drinić",
+    "zipCode": 79290
+  },
+  {
+    "_id": "fbea561e-3bf6-40dc-b553-936af6ce4cd5",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Drinovci",
+    "zipCode": 88344
+  },
+  {
+    "_id": "2c7e8c1c-b901-4f51-b5ca-098112e19e99",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Drinjača",
+    "zipCode": 75410
+  },
+  {
+    "_id": "b7a4e2d5-ecbc-47bc-a3cb-31a43ad990e8",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Drvar",
+    "zipCode": 80260
+  },
+  {
+    "_id": "2502effb-c5d1-40e6-9f63-1117bbf5c656",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Drvetine",
+    "zipCode": 70237
+  },
+  {
+    "_id": "33bb5f34-d022-4699-bbd9-31fa56007932",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Duboki Potok",
+    "zipCode": 75358
+  },
+  {
+    "_id": "e0dc7772-5426-4118-aeb4-cb2ef4bb7ee0",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Duboštica",
+    "zipCode": 75308
+  },
+  {
+    "_id": "47eb9f63-d954-473a-86ae-1685197279b8",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Dubovik",
+    "zipCode": 79227
+  },
+  {
+    "_id": "c96e22ca-fbf1-4354-8f7d-b6326160d419",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Dubrave",
+    "zipCode": 78411
+  },
+  {
+    "_id": "324d3a1f-7049-4af6-9846-e34d37e4383e",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Dubrave Donje",
+    "zipCode": 75274
+  },
+  {
+    "_id": "e6436193-6512-41f0-9d9c-b1966cf23de1",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Dubrave Gornje",
+    "zipCode": 75273
+  },
+  {
+    "_id": "ba84c9e7-e435-4a8b-b737-6ab90ce17752",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Dugo Polje",
+    "zipCode": 74483
+  },
+  {
+    "_id": "d741afde-bbea-4b14-af79-234e070a104c",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Dužice",
+    "zipCode": 88342
+  },
+  {
+    "_id": "86dfbafc-4038-4e9d-8918-e1e09d59b4f9",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Dvorovi",
+    "zipCode": 76311
+  },
+  {
+    "_id": "a0d1f85a-7b6a-4fc7-8a66-b641ccf1471e",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Đurđevik",
+    "zipCode": 75272
+  },
+  {
+    "_id": "8d31186e-4b11-48ff-880a-98e4a4e28cff",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Fajtovci",
+    "zipCode": 79264
+  },
+  {
+    "_id": "e690219c-b9b6-47ef-97e3-97cebe304e63",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Fakovići",
+    "zipCode": 75423
+  },
+  {
+    "_id": "859d4a67-ded4-4d95-86d7-c683e5908255",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Foča",
+    "zipCode": 73300
+  },
+  {
+    "_id": "7aab9f68-3b19-4390-9a60-4e5cd0faf313",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Fojnica",
+    "zipCode": 71270
+  },
+  {
+    "_id": "a1f24dea-bf85-4f4a-ae54-2bd1e334902d",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Fojnica",
+    "zipCode": 89247
+  },
+  {
+    "_id": "a880908e-b782-4c39-92e1-860b7345b26a",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Gabela",
+    "zipCode": 88306
+  },
+  {
+    "_id": "72aec9cf-5177-4855-86a0-96f7794b2ffc",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Gacko",
+    "zipCode": 89240
+  },
+  {
+    "_id": "7e16ea14-6a49-4047-af43-c36494c1da71",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Garevac",
+    "zipCode": 74484
+  },
+  {
+    "_id": "4cb1a744-75be-4bad-9442-6917a37a3abc",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Glamoč",
+    "zipCode": 80230
+  },
+  {
+    "_id": "baeabcd0-29e1-44f5-8105-93dc1dd54f62",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Glavatičevo",
+    "zipCode": 88406
+  },
+  {
+    "_id": "5877d419-5aab-4f62-87b1-475dded2d38b",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Glavičice",
+    "zipCode": 76318
+  },
+  {
+    "_id": "29666c26-6123-4b62-bbf1-84ae2c363d77",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Globarica",
+    "zipCode": 74258
+  },
+  {
+    "_id": "4124fbd7-f84d-40e6-a7a9-cf9fb373c82b",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Glogošnica",
+    "zipCode": 88422
+  },
+  {
+    "_id": "c0be2d35-1c54-4a9f-a33e-69091f735362",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Gojevići",
+    "zipCode": 71275
+  },
+  {
+    "_id": "d40cf921-0086-43c1-af66-59a84f57b6e9",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Goleši",
+    "zipCode": 78203
+  },
+  {
+    "_id": "b492c139-a1fa-4225-a0c0-a5db622e8c55",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Goražde",
+    "zipCode": 73101
+  },
+  {
+    "_id": "d634284f-eab9-4eaf-96d0-20ab1a0108aa",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Gornja Dubica",
+    "zipCode": 76296
+  },
+  {
+    "_id": "c0a57485-26e1-4a12-a172-85cfe7848223",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Gornja Koprivna",
+    "zipCode": 77222
+  },
+  {
+    "_id": "224c7896-d272-4f17-9bde-3273aabc67c5",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Gornja Lamovita",
+    "zipCode": 79204
+  },
+  {
+    "_id": "2027f643-7398-4c35-a38e-89b3302107f8",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Gornja Slatna",
+    "zipCode": 76238
+  },
+  {
+    "_id": "e5e26955-54d2-46a4-82b5-22533ba49323",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Gornja Tuzla",
+    "zipCode": 75208
+  },
+  {
+    "_id": "2f71311d-3fa8-4f07-9040-04415a482f86",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Gornji Podgradci",
+    "zipCode": 78405
+  },
+  {
+    "_id": "a7621156-9c7a-4c1f-88ca-154f5e3c8de0",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Gornji Rahić",
+    "zipCode": 76207
+  },
+  {
+    "_id": "78d8d900-c7d5-405a-a447-24a28d611371",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Gornji Ribnik",
+    "zipCode": 79288
+  },
+  {
+    "_id": "ab7cfdb3-ffbb-4de1-9fd1-96647e83cc19",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Gornji Smrtići",
+    "zipCode": 78438
+  },
+  {
+    "_id": "7cd364fd-067c-4327-8cc9-19aa5138ae17",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Gornji Štrpci",
+    "zipCode": 78439
+  },
+  {
+    "_id": "0e73bda2-4ca7-436d-8bda-9536bc445aa4",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Gornji Teslić",
+    "zipCode": 74272
+  },
+  {
+    "_id": "ca1c7c99-0503-4acf-8c64-a45203599b35",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Gornji Vakuf",
+    "zipCode": 70240
+  },
+  {
+    "_id": "42d042ab-e3bc-4016-a301-ba84a3dd6d6f",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Gornji Zovik",
+    "zipCode": 76214
+  },
+  {
+    "_id": "cdea15e7-48f5-46b4-809e-3d61c5780cbb",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Grab",
+    "zipCode": 89201
+  },
+  {
+    "_id": "6aad947c-9b0f-4ead-9d11-27a4d5695ca2",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Grabovica",
+    "zipCode": 78227
+  },
+  {
+    "_id": "177fc114-dee1-464b-98d3-b3dce53c4331",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Gračac",
+    "zipCode": 88443
+  },
+  {
+    "_id": "9b9df62a-4970-43fc-9fb4-d216d0d2a0c1",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Gračanica",
+    "zipCode": 75320
+  },
+  {
+    "_id": "ea0029d9-82d3-443f-b975-d955fd90087b",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Gračanica K/ Bugojna",
+    "zipCode": 70233
+  },
+  {
+    "_id": "f9999555-6108-43c2-9871-26cf05133175",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Gračanica Selo",
+    "zipCode": 75276
+  },
+  {
+    "_id": "024693a2-9a4a-495a-aded-b344559b5ce0",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Gradac",
+    "zipCode": 88392
+  },
+  {
+    "_id": "54c9edee-3b61-4df0-b948-e24945663f0f",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Gradačac",
+    "zipCode": 76250
+  },
+  {
+    "_id": "ba35b6d6-4f08-40e0-93ad-f023a92cf618",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Gradiška",
+    "zipCode": 78400
+  },
+  {
+    "_id": "3a7b4361-9865-497a-8765-5cc181037750",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Grebnice",
+    "zipCode": 76234
+  },
+  {
+    "_id": "d389d25d-b7c8-497e-83fa-35523e14554b",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Grude",
+    "zipCode": 88340
+  },
+  {
+    "_id": "8c74342d-f067-49dd-9504-f0f8d8e7d2fa",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Guber",
+    "zipCode": 80205
+  },
+  {
+    "_id": "dfb34b9b-fdeb-4351-97b9-389a6ec95c48",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Guča Gora",
+    "zipCode": 72277
+  },
+  {
+    "_id": "6d92dcb6-dedb-40a9-a7ef-a4c34c1a5f25",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Gušteri",
+    "zipCode": 75404
+  },
+  {
+    "_id": "7f2f8135-2aaf-47b9-9232-6d387758f1da",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Hadžići",
+    "zipCode": 71240
+  },
+  {
+    "_id": "248ea66a-6e14-4142-9e54-2f9865b6ee16",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Hajdarevići",
+    "zipCode": 72225
+  },
+  {
+    "_id": "a59910be-566e-4fd7-af87-c6d0cb4a2ea4",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Haljinići",
+    "zipCode": 72245
+  },
+  {
+    "_id": "6b5d22fb-08cd-4005-806d-6f94fdb8e824",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Han Bila",
+    "zipCode": 72281
+  },
+  {
+    "_id": "f8cd1600-ff51-48e4-ad8a-1b79776151e4",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Han Pijesak",
+    "zipCode": 71360
+  },
+  {
+    "_id": "6c56878c-c7cb-46f7-a980-8cb375dd9888",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Hodovo",
+    "zipCode": 88368
+  },
+  {
+    "_id": "d56f73c2-3c0b-44c0-87cb-c999e789a058",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Hotonj",
+    "zipCode": 71322
+  },
+  {
+    "_id": "522871e2-1aad-43ef-9bc7-c0fd71f9f843",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Hrasnica",
+    "zipCode": 71212
+  },
+  {
+    "_id": "86eae10e-4a72-4cbb-8a02-d21ba24752a9",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Hrasno",
+    "zipCode": 88395
+  },
+  {
+    "_id": "1ec0e86c-f128-4949-becf-ad28bbdd8749",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Hreša",
+    "zipCode": 71144
+  },
+  {
+    "_id": "f33faea9-92f3-4459-9540-4f5feebaf668",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Hrvaćani",
+    "zipCode": 78436
+  },
+  {
+    "_id": "8faec6b8-7527-4b3b-be1a-f6e353e64575",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Husino",
+    "zipCode": 75216
+  },
+  {
+    "_id": "b23d80fd-6927-4c59-b760-397024632b82",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Hutovo",
+    "zipCode": 88394
+  },
+  {
+    "_id": "4a2adb10-2dc5-42dd-bbb1-cecc345d8d8c",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Ilidža",
+    "zipCode": 71210
+  },
+  {
+    "_id": "1236d3fc-590e-4862-b673-defb7af23ecf",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Ilijaš",
+    "zipCode": 71380
+  },
+  {
+    "_id": "dfe1099a-b28a-4740-8663-310af5533973",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Ilovača",
+    "zipCode": 73208
+  },
+  {
+    "_id": "e94fc8b5-a116-4201-8708-7cf8f9552594",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Imljani",
+    "zipCode": 78234
+  },
+  {
+    "_id": "e085753e-fd54-4734-a202-4ead84d714b7",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Istočno Sarajevo",
+    "zipCode": 71123
+  },
+  {
+    "_id": "eb894054-a630-445a-a858-038569a69108",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Izačić",
+    "zipCode": 77208
+  },
+  {
+    "_id": "8d4b7ca9-3649-46a0-b1d3-0f2ab3212107",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Jablanica",
+    "zipCode": 88420
+  },
+  {
+    "_id": "99c72d76-e5e8-4c33-84f2-a41ce8b4b021",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Jahorina",
+    "zipCode": 71423
+  },
+  {
+    "_id": "d35d51c8-5279-427c-9a51-ddfd2b83f297",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Jajce",
+    "zipCode": 70101
+  },
+  {
+    "_id": "a162fd4a-770e-4be1-85c5-4e7baf0992e5",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Janja",
+    "zipCode": 76316
+  },
+  {
+    "_id": "3581bd14-942d-4fd3-8d4d-fc436c048038",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Janjići",
+    "zipCode": 72215
+  },
+  {
+    "_id": "310cdfd5-c7be-4cb3-9c38-40c5533c10d5",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Jare",
+    "zipCode": 88224
+  },
+  {
+    "_id": "fd3f4d4b-d539-4330-a2a7-ac1ce00346ed",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Javorani",
+    "zipCode": 78233
+  },
+  {
+    "_id": "284d4f72-3e0d-4819-9245-f454dd2d835f",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Jelah",
+    "zipCode": 74264
+  },
+  {
+    "_id": "e9f2d8ef-b948-4f7c-976e-42e0e16edf5f",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Jezero",
+    "zipCode": 70206
+  },
+  {
+    "_id": "b980881d-0efd-4688-b1dd-5e2e152be106",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Jezerski",
+    "zipCode": 77241
+  },
+  {
+    "_id": "df7d6cd8-b3d2-4d4a-96bc-f6d1b9ee9282",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Johova",
+    "zipCode": 79244
+  },
+  {
+    "_id": "b6e90cc4-b47e-4a22-a4b3-812a45b71497",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Jošanica",
+    "zipCode": 73319
+  },
+  {
+    "_id": "364e7f83-7f5b-42e7-a8ff-8231275d1585",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Jošavka",
+    "zipCode": 78244
+  },
+  {
+    "_id": "4384f653-f69b-4ce1-b86d-d897c7cba14b",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Kačuni",
+    "zipCode": 72264
+  },
+  {
+    "_id": "66da3a55-7d9a-4203-973c-c76603be1b8e",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Kakanj",
+    "zipCode": 72240
+  },
+  {
+    "_id": "62cea7df-1955-4524-abe3-c9abc3011359",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Kalenderovci",
+    "zipCode": 74413
+  },
+  {
+    "_id": "153d23e2-a883-4015-bff2-3e7fc2b62acd",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Kalesija",
+    "zipCode": 75260
+  },
+  {
+    "_id": "42771ea8-9794-471c-9724-fcfc37eee5d3",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Kalinovik",
+    "zipCode": 71230
+  },
+  {
+    "_id": "830a0f29-062e-4679-8e83-04a6d4249c83",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Kaljina",
+    "zipCode": 71355
+  },
+  {
+    "_id": "66030e94-1d99-4e81-b251-ff03c96185d0",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Kamenica",
+    "zipCode": 77204
+  },
+  {
+    "_id": "6bbe5def-53af-471f-a711-fe1026ca6e74",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Kaonik",
+    "zipCode": 72265
+  },
+  {
+    "_id": "e6875792-549c-47f5-bf33-d93c089d2e11",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Karađe",
+    "zipCode": 70235
+  },
+  {
+    "_id": "e0e32fdb-bc98-4983-b0c3-38263b64fd82",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Karaula",
+    "zipCode": 72284
+  },
+  {
+    "_id": "6320d61d-e203-49df-8fd2-798c828c3f02",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Kasindo",
+    "zipCode": 71213
+  },
+  {
+    "_id": "21a5689e-202c-4459-a115-7c7aa2364ca0",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Kazaginac",
+    "zipCode": 80246
+  },
+  {
+    "_id": "00477fb5-7dad-444c-8563-cd1b44c85e30",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Kifino Selo",
+    "zipCode": 88283
+  },
+  {
+    "_id": "48bb258b-2a6e-4ac0-b6fa-e383feaafd5d",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Kiseljak",
+    "zipCode": 71250
+  },
+  {
+    "_id": "233a0657-fd5c-4e6b-aa4f-aaf70b8cc1db",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Kiseljak kod Tuzle",
+    "zipCode": 75211
+  },
+  {
+    "_id": "7acda877-dabb-45a4-af19-f7236ea56c76",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Kladanj",
+    "zipCode": 75280
+  },
+  {
+    "_id": "175edbc5-bb34-4c80-8121-d6971c25ffb5",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Klobuk",
+    "zipCode": 88324
+  },
+  {
+    "_id": "9f2ca418-fa97-4773-8c20-0e3c92c7b952",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Klokotnica",
+    "zipCode": 74207
+  },
+  {
+    "_id": "b53e70f4-1ff6-4272-a3af-4903957cf674",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Ključ",
+    "zipCode": 79280
+  },
+  {
+    "_id": "d2f7e6e0-e5ce-463e-933d-accb851ffb7e",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Kneževo",
+    "zipCode": 78230
+  },
+  {
+    "_id": "5cb301a7-cb8b-45bd-b2b9-0218163cf2bb",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Knežica",
+    "zipCode": 79246
+  },
+  {
+    "_id": "1a95d88e-0e70-486d-992e-f0eb2d4efca5",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Knežina",
+    "zipCode": 71356
+  },
+  {
+    "_id": "0ea380b5-324c-462e-a9ee-cc88c43889be",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Kobaš",
+    "zipCode": 78423
+  },
+  {
+    "_id": "e0373fe1-eca0-4933-906f-ac4c9f3e768b",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Kobilja Glava",
+    "zipCode": 71323
+  },
+  {
+    "_id": "f9ed5c53-7ee6-4e9f-9541-ba024c666735",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Kočerin",
+    "zipCode": 88226
+  },
+  {
+    "_id": "140379f3-b332-43c5-91f4-cf5940cb905d",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Kočićevo",
+    "zipCode": 78409
+  },
+  {
+    "_id": "6d71f661-66c7-4f19-90cf-5dbb8ecc029b",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Kola",
+    "zipCode": 78207
+  },
+  {
+    "_id": "0da1aa7c-4201-47c8-8368-8f65aaa8b06a",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Kongora",
+    "zipCode": 80244
+  },
+  {
+    "_id": "55332c6f-3dd7-4827-bde3-61dca4e0e98f",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Konjic",
+    "zipCode": 88400
+  },
+  {
+    "_id": "a80c0d41-d49a-456b-872d-3236eb1fcca7",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Konjoder",
+    "zipCode": 77249
+  },
+  {
+    "_id": "e66398c7-f30b-49fa-b882-7de86b37388b",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Koprivna",
+    "zipCode": 74489
+  },
+  {
+    "_id": "6936c024-7a18-48d7-a9fb-5c4de68fb59b",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Koraj",
+    "zipCode": 75247
+  },
+  {
+    "_id": "ec507ef8-4b18-4ee2-83f1-f7e9847345ad",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Kosova",
+    "zipCode": 74253
+  },
+  {
+    "_id": "815d6fb4-c335-423d-8ff6-9039de373d47",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Kostajnica",
+    "zipCode": 79224
+  },
+  {
+    "_id": "33472c98-00b9-4d02-8f43-4e04983ef215",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Kostajnica-Doboj",
+    "zipCode": 74222
+  },
+  {
+    "_id": "53b359be-78dd-46d1-8c9e-5725c11a1243",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Kostrč",
+    "zipCode": 76276
+  },
+  {
+    "_id": "7f710512-f939-457e-9b1d-9b633d7fc777",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Kotor Varoš",
+    "zipCode": 78220
+  },
+  {
+    "_id": "b78a6bb5-15a8-40fe-85df-620839695639",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Kotorsko",
+    "zipCode": 74215
+  },
+  {
+    "_id": "560d6119-b8b2-45b1-b0c5-68d28c4a38b4",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Kovači",
+    "zipCode": 72226
+  },
+  {
+    "_id": "9b22a9c7-5bd5-4b2f-af09-ac0adf1a734b",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Kozarac",
+    "zipCode": 79202
+  },
+  {
+    "_id": "b6ca9b99-4048-4ae2-9bab-23ae2b941bd5",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Kozarska Dubica",
+    "zipCode": 79240
+  },
+  {
+    "_id": "da4923b0-adf9-4dd3-a271-5016fed23c70",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Kozluk",
+    "zipCode": 75413
+  },
+  {
+    "_id": "29b2f976-2ff4-4cfd-b512-5d1be9924735",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Kraljeva Sutjeska",
+    "zipCode": 72244
+  },
+  {
+    "_id": "25b568ec-e6e4-45e3-a7f2-d7bebcb04493",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Krasulje",
+    "zipCode": 79284
+  },
+  {
+    "_id": "af1b7cca-473e-44c0-bbf0-4193bbf19bda",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Krepšić",
+    "zipCode": 76212
+  },
+  {
+    "_id": "d35ec424-561f-4880-bbe3-038a45d3952e",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Kreševo",
+    "zipCode": 71260
+  },
+  {
+    "_id": "7bc97849-40ce-4e1c-8457-69323b2c757b",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Kriškovci",
+    "zipCode": 78256
+  },
+  {
+    "_id": "cb21f0af-0223-44b1-bbc1-137709556c1f",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Krnjeuša",
+    "zipCode": 77253
+  },
+  {
+    "_id": "a8941ac1-946d-4469-bd23-c8f1f98c5640",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Krupa na Vrbasu",
+    "zipCode": 78206
+  },
+  {
+    "_id": "27036adb-e1c6-4417-9437-dfc013c46240",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Kruščica",
+    "zipCode": 72253
+  },
+  {
+    "_id": "b8017abe-4103-4184-bbb4-83dad98b1d5b",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Kruševo",
+    "zipCode": 88203
+  },
+  {
+    "_id": "9e58efb9-f2ac-4810-9d50-ab82219d43f0",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Kukulje",
+    "zipCode": 78424
+  },
+  {
+    "_id": "0f7f4d8e-a5c6-4689-86f4-c04dfd29abe3",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Kula",
+    "zipCode": 71216
+  },
+  {
+    "_id": "28504c74-5b9f-40cd-bd25-7de4e24e0190",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Kulaši",
+    "zipCode": 78443
+  },
+  {
+    "_id": "fcbd0c7f-74d5-4af1-b1c6-1b426b4047ed",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Kulen Vakuf",
+    "zipCode": 77206
+  },
+  {
+    "_id": "a705788e-657a-4159-bffc-d2cbd651f7bf",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Kupres",
+    "zipCode": 80320
+  },
+  {
+    "_id": "c66c1d37-7979-43cb-840b-004bfcb2846d",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Laktaši",
+    "zipCode": 78250
+  },
+  {
+    "_id": "24d258d5-9e53-464a-a1ba-ee8b148bb6b9",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Laminci-Sređani",
+    "zipCode": 78407
+  },
+  {
+    "_id": "b17460f9-27ab-475f-8faa-c48db8c4e2ae",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Lastva",
+    "zipCode": 89208
+  },
+  {
+    "_id": "26adcdc8-e628-494f-af6f-908cb43c7bd2",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Lepenica",
+    "zipCode": 71254
+  },
+  {
+    "_id": "6f6bf993-0825-4a79-99fb-0f20f98923bf",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Liplje",
+    "zipCode": 78222
+  },
+  {
+    "_id": "f917f7b6-32d8-4218-bb4c-d6814183057e",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Lipnica",
+    "zipCode": 75513
+  },
+  {
+    "_id": "30de6d9f-6cf0-45bf-983c-185e06d4cab7",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Lištani",
+    "zipCode": 80204
+  },
+  {
+    "_id": "dd0ca149-d386-411f-ab0f-5bf43df12bc3",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Livno",
+    "zipCode": 80101
+  },
+  {
+    "_id": "ceabf6e4-963a-4e90-a466-3907888610a2",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Lončari",
+    "zipCode": 76278
+  },
+  {
+    "_id": "b3ae7958-2b3e-43f1-b109-942655a3a903",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Lopare",
+    "zipCode": 75240
+  },
+  {
+    "_id": "a066e4e5-5952-442b-a814-129018820a2b",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Lukavac",
+    "zipCode": 75300
+  },
+  {
+    "_id": "18bd33b3-5b43-447b-b78f-17ef413485b8",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Lukavac Mjesto",
+    "zipCode": 75301
+  },
+  {
+    "_id": "d5330244-f14f-4afa-88c9-099936539ff7",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Lukavica",
+    "zipCode": 71126
+  },
+  {
+    "_id": "750c0266-af95-45b5-a19a-b596f9ce9c53",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Lukavica",
+    "zipCode": 75327
+  },
+  {
+    "_id": "7865ed15-ebc5-4f01-a23a-d391250a62f3",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Lusnić",
+    "zipCode": 80203
+  },
+  {
+    "_id": "f6720a1a-c018-46fe-937d-23a1e0edd246",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Lušci Palanka",
+    "zipCode": 79267
+  },
+  {
+    "_id": "04deba87-67af-4878-95ea-b788065fc784",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Ljubače",
+    "zipCode": 75214
+  },
+  {
+    "_id": "3ddbd754-34a4-4e1d-90cf-a1d10db952da",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Ljubija",
+    "zipCode": 79206
+  },
+  {
+    "_id": "8b704fbd-ead8-4146-bfb5-9b0149bd92d0",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Ljubinje",
+    "zipCode": 88380
+  },
+  {
+    "_id": "89bd079b-ae98-4358-9125-6b448c14dc65",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Ljubomir",
+    "zipCode": 89209
+  },
+  {
+    "_id": "47c87d80-2582-4b3a-a94e-b5162a882df2",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Ljubuški",
+    "zipCode": 88320
+  },
+  {
+    "_id": "231373e6-8166-4ad4-a133-d010c52c19ad",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Ljuti Dolac",
+    "zipCode": 88223
+  },
+  {
+    "_id": "f6c34bd4-c8eb-464e-afbf-c5b8758d1702",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Maglaj",
+    "zipCode": 74250
+  },
+  {
+    "_id": "432652dc-1e39-42da-b59d-5b135e8dcc79",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Majevac",
+    "zipCode": 74216
+  },
+  {
+    "_id": "e46dd747-cace-41bf-93b0-2cd83f9819b9",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Mala Kladuša",
+    "zipCode": 77235
+  },
+  {
+    "_id": "57e04ec3-d884-4616-90ad-91b559501f37",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Mala Sočanica",
+    "zipCode": 74418
+  },
+  {
+    "_id": "d2151d69-2d4d-4eaf-b4d4-99819af2c40e",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Malešići",
+    "zipCode": 75326
+  },
+  {
+    "_id": "bcbfe74e-c8e7-43d8-8c01-d62f66f96f00",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Maoča",
+    "zipCode": 76208
+  },
+  {
+    "_id": "a0601651-c61a-4529-b06d-f5c99c6f1a97",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Maslovare",
+    "zipCode": 78223
+  },
+  {
+    "_id": "019bb5e6-953f-490c-9e2c-f88702b64606",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Mašići",
+    "zipCode": 78410
+  },
+  {
+    "_id": "722051a5-3980-4dac-9627-e07aefda51a3",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Matići",
+    "zipCode": 76271
+  },
+  {
+    "_id": "5958a57f-78c4-4cf8-b9a0-ed1d40afe32a",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Matuzići",
+    "zipCode": 74203
+  },
+  {
+    "_id": "aaa78593-f956-4014-af25-d9b58aee2e90",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Međiđa Donja",
+    "zipCode": 76257
+  },
+  {
+    "_id": "c02c5e11-1b55-4f69-a1d7-a3d0f37a2c72",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Međugorje",
+    "zipCode": 88266
+  },
+  {
+    "_id": "e97144e0-283a-425c-9107-ac9cfdc2a071",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Međuvođe",
+    "zipCode": 79247
+  },
+  {
+    "_id": "df254438-798e-4af6-b20b-1eca22447033",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Mehurići",
+    "zipCode": 72282
+  },
+  {
+    "_id": "a91ba04e-aae2-4cf4-ba58-93bce6261b70",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Mesihovina",
+    "zipCode": 80243
+  },
+  {
+    "_id": "fdfaa917-02be-49f4-872b-de7f8c91c33f",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Milići",
+    "zipCode": 75446
+  },
+  {
+    "_id": "b50b5b54-8a91-4d68-9943-3cbfd3f7231b",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Miloševac",
+    "zipCode": 74485
+  },
+  {
+    "_id": "2dd27110-4259-41d7-bfe3-177e1986d7a6",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Miljeno",
+    "zipCode": 73283
+  },
+  {
+    "_id": "0f8817c1-919a-46bc-8624-b7f8edab2dec",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Miljevina",
+    "zipCode": 73313
+  },
+  {
+    "_id": "8a8b6206-b6ab-4f11-a720-b2303a30a2b2",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Miričina",
+    "zipCode": 75329
+  },
+  {
+    "_id": "955291da-55db-4f4f-ad6f-141aa9b22faf",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Modriča",
+    "zipCode": 74480
+  },
+  {
+    "_id": "b550f60d-417f-4ea5-ae70-f9efdfa34411",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Mokro",
+    "zipCode": 71428
+  },
+  {
+    "_id": "33976530-cfe7-4068-8a30-9b0633486e82",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Mosko",
+    "zipCode": 89204
+  },
+  {
+    "_id": "96e45c0a-405d-4a7a-9030-64815c12c949",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Mostar",
+    "zipCode": 88000
+  },
+  {
+    "_id": "5b19c02a-455d-4cdf-8832-d49b0434dddc",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Mostar",
+    "zipCode": 88104
+  },
+  {
+    "_id": "e8a721fa-373a-4613-a35f-fe1a989fea12",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Mramor",
+    "zipCode": 75212
+  },
+  {
+    "_id": "c64854fe-69a8-4c1d-bcc2-982fb675e925",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Mravinjac",
+    "zipCode": 73206
+  },
+  {
+    "_id": "fd99ac7b-92a2-45a8-88e6-f6a5c2da3b50",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Mrkonjić Grad",
+    "zipCode": 70260
+  },
+  {
+    "_id": "15478e35-f258-48a6-a2ac-7e5602e5d721",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Naseobina Lišnja",
+    "zipCode": 78434
+  },
+  {
+    "_id": "8976ad62-b413-401b-b8ce-74a52186920c",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Nemila",
+    "zipCode": 72212
+  },
+  {
+    "_id": "af5c8c4b-61ac-4b8b-b138-cd05e6ef3de9",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Neum",
+    "zipCode": 88390
+  },
+  {
+    "_id": "d449819d-962d-4750-93bf-a6420ad055ab",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Nevesinje",
+    "zipCode": 88280
+  },
+  {
+    "_id": "fe6c8796-b66b-487b-b778-9c4facb4ddde",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Nišići",
+    "zipCode": 71383
+  },
+  {
+    "_id": "581dec85-0162-4e05-b5fb-4f559ad6fd96",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Nova Bila",
+    "zipCode": 72276
+  },
+  {
+    "_id": "12534a2f-bd65-450d-89f6-02b66a8714f6",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Nova Kasaba",
+    "zipCode": 75445
+  },
+  {
+    "_id": "807189fa-1ab2-4d83-8244-ec16003de174",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Nova Topola",
+    "zipCode": 78418
+  },
+  {
+    "_id": "bbfe35fe-7b36-465d-8d03-54fde9a112bc",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Novi Grad",
+    "zipCode": 79220
+  },
+  {
+    "_id": "3b0a164c-80b3-4817-ba5a-1610a8307471",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Novi Šeher",
+    "zipCode": 74254
+  },
+  {
+    "_id": "aad86524-8545-4026-94b2-cbe7dcd25c59",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Novi Travnik",
+    "zipCode": 72290
+  },
+  {
+    "_id": "ad925b4f-74ca-4e87-9256-590a16ae27cf",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Novi Travnik",
+    "zipCode": 72290
+  },
+  {
+    "_id": "151ff57f-7ded-41c1-bf04-33ddcf5f07b7",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Novo Goražde",
+    "zipCode": 73110
+  },
+  {
+    "_id": "475aae99-6cb6-4ffd-bb22-597338a7e03a",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Nožičko",
+    "zipCode": 78428
+  },
+  {
+    "_id": "a3c2d4be-5ad3-4cc5-b589-6d8b0ec01476",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Oborci",
+    "zipCode": 70225
+  },
+  {
+    "_id": "8c4e2289-9742-4aab-b7dd-a58de9e741e4",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Obudovac",
+    "zipCode": 76235
+  },
+  {
+    "_id": "c5afe833-177b-4a39-9620-e29ae7a6398b",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Odžak",
+    "zipCode": 88285
+  },
+  {
+    "_id": "f4827a6e-ec9c-4293-a289-8cf8dc55f5d4",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Odžak",
+    "zipCode": 76290
+  },
+  {
+    "_id": "d09bb91a-ca5c-497f-954d-2afdf1fc85d7",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Olovo",
+    "zipCode": 71340
+  },
+  {
+    "_id": "2feac3ec-0f36-4859-b5d6-e735b2a6acf6",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Omarska",
+    "zipCode": 79203
+  },
+  {
+    "_id": "1d20df5f-8725-47bd-8d3c-e42de614783f",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Opara",
+    "zipCode": 72293
+  },
+  {
+    "_id": "5b4348cf-0e4f-4bc9-a428-acd736fca611",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Orahova",
+    "zipCode": 78406
+  },
+  {
+    "_id": "80a277dc-903d-424a-8504-98306f4d34f7",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Orahovica Donja",
+    "zipCode": 75323
+  },
+  {
+    "_id": "7ed2d2c0-6b48-4ec4-a3e0-2817e1fd3db6",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Orašje",
+    "zipCode": 76270
+  },
+  {
+    "_id": "a3629c7f-48af-48a5-b646-eda94667b47c",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Orguz",
+    "zipCode": 80206
+  },
+  {
+    "_id": "cfbc08dc-32cf-48c4-b177-06c5e8696f83",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Osinja",
+    "zipCode": 74412
+  },
+  {
+    "_id": "48813a63-0b82-4383-b2a9-19cf82318450",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Osječani",
+    "zipCode": 74225
+  },
+  {
+    "_id": "4ad06cf9-fe3a-4ab4-818e-0c12ad67adee",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Osmaci",
+    "zipCode": 75406
+  },
+  {
+    "_id": "f2f51683-2327-4e30-a440-50e8862301c6",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Ostrožac",
+    "zipCode": 88423
+  },
+  {
+    "_id": "adaf92c5-5cc4-4f3f-927d-2d639bd6613f",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Ostrožac kod Cazina",
+    "zipCode": 77228
+  },
+  {
+    "_id": "ff2db04f-81b2-4c9b-b11c-11d2a238b03e",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Oštra Luka",
+    "zipCode": 76279
+  },
+  {
+    "_id": "1dfdfda2-f74a-4436-b27e-6b65acab65fc",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Oštra Luka",
+    "zipCode": 79263
+  },
+  {
+    "_id": "46741702-31b6-4d72-b392-957035791fe1",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Otoka",
+    "zipCode": 77244
+  },
+  {
+    "_id": "32ad123b-031d-4b59-b063-d5231fd8b8de",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Ozimica",
+    "zipCode": 72238
+  },
+  {
+    "_id": "7cdeed12-2317-41cf-85d2-772f250371b1",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Pajić Polje",
+    "zipCode": 70243
+  },
+  {
+    "_id": "2f175455-d9be-4359-a903-2ec9cc123f29",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Paklenica",
+    "zipCode": 74255
+  },
+  {
+    "_id": "3705e21f-f5da-4bbc-8d2a-59c23c6a5ebf",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Palačkovci",
+    "zipCode": 78437
+  },
+  {
+    "_id": "6c2a0263-0fd3-45b5-b433-0e16f07e0a3c",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Pale",
+    "zipCode": 71420
+  },
+  {
+    "_id": "3d95e6b5-b08c-4573-93ed-892b2c82a24a",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Paprača",
+    "zipCode": 75453
+  },
+  {
+    "_id": "3cf96c38-0445-41b2-a099-1f4241c2e2f5",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Pazarić",
+    "zipCode": 71243
+  },
+  {
+    "_id": "79e6ca18-c14d-436b-92c6-7a2c98c3e540",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Pećigrad",
+    "zipCode": 77227
+  },
+  {
+    "_id": "086bd392-4289-4a2c-8627-6f6ab292d3cc",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Pelagičevo",
+    "zipCode": 76256
+  },
+  {
+    "_id": "5f5402c0-edb5-42cf-bb1c-ba8f68582eca",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Petrovo",
+    "zipCode": 74317
+  },
+  {
+    "_id": "dbd59e6d-ec38-4d22-b5f2-069f831b6f3a",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Pilica",
+    "zipCode": 75412
+  },
+  {
+    "_id": "11f8a866-89c1-488e-9abf-08dacaa7ff1c",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Piperi",
+    "zipCode": 75248
+  },
+  {
+    "_id": "d858f8e6-184d-4711-befb-d2d290822279",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Piskavica",
+    "zipCode": 78217
+  },
+  {
+    "_id": "cd7ad6a5-5b61-4468-b14a-a6cdbc16a73b",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Pljeva",
+    "zipCode": 70275
+  },
+  {
+    "_id": "2b19af92-6218-4732-8cf2-c711531bc231",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Počulica",
+    "zipCode": 72252
+  },
+  {
+    "_id": "b4be11b2-3018-4a89-b04f-7226142f648d",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Podgrab",
+    "zipCode": 71425
+  },
+  {
+    "_id": "26b9b1ab-f5f5-44b8-b365-08dc53ea31e1",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Podhum",
+    "zipCode": 80209
+  },
+  {
+    "_id": "6064e0c7-feee-40f8-ae54-7902bde3b6a1",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Podlugovi",
+    "zipCode": 71387
+  },
+  {
+    "_id": "02bd7b5d-2ce2-4538-a66a-1d4c32220b69",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Podnovlje",
+    "zipCode": 74217
+  },
+  {
+    "_id": "894ef4ef-8502-4c92-8add-aae6e2a1206b",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Podorašac",
+    "zipCode": 88403
+  },
+  {
+    "_id": "22118f15-dc2a-488f-8aee-f458c8e35f73",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Podorašje",
+    "zipCode": 75355
+  },
+  {
+    "_id": "f0b68f05-4753-4b2f-9245-821d40d97b52",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Podrašnica",
+    "zipCode": 70266
+  },
+  {
+    "_id": "3e981071-5116-4491-b92c-7bb1b2c6e9ea",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Podvelež",
+    "zipCode": 88206
+  },
+  {
+    "_id": "1416857e-dcc4-4a09-a00d-a8b9d9b4ebfb",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Podzvizd",
+    "zipCode": 77232
+  },
+  {
+    "_id": "7ea11f2b-579d-4ad4-baa5-ec385e2538ae",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Pokoj",
+    "zipCode": 77209
+  },
+  {
+    "_id": "ccd04a8c-7c57-403b-b549-d14032efeb6f",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Polje Bijela",
+    "zipCode": 88402
+  },
+  {
+    "_id": "c5e31f86-d642-4dd4-9bf7-89a63d214867",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Poljice kod Tuzle",
+    "zipCode": 75303
+  },
+  {
+    "_id": "bf80073c-a8a8-4446-ad2b-9b69c7eb314a",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Popovac",
+    "zipCode": 78242
+  },
+  {
+    "_id": "06ed5d46-3415-4f10-909c-7b802495e9c2",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Posušje",
+    "zipCode": 88240
+  },
+  {
+    "_id": "4f5d0910-d3a6-44d0-b26a-72e8ee01cba9",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Potkozarje",
+    "zipCode": 78216
+  },
+  {
+    "_id": "49752a3d-7319-4011-945b-5fc954124eb0",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Potoci",
+    "zipCode": 88208
+  },
+  {
+    "_id": "10e2a864-02bc-4f52-9dc8-ecf8291ad406",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Potočani",
+    "zipCode": 76298
+  },
+  {
+    "_id": "9e0d035c-86ed-4d97-aefd-f38d82fadbed",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Potočani",
+    "zipCode": 78435
+  },
+  {
+    "_id": "7a3c6d9b-7c53-4600-bfc1-78c4c8071d36",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Potočari",
+    "zipCode": 75433
+  },
+  {
+    "_id": "6521659e-9799-4ee5-b9f3-95aa270dedbd",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Prača",
+    "zipCode": 73290
+  },
+  {
+    "_id": "309884f0-967e-49e6-9d20-777f62c33e6c",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Prelovo",
+    "zipCode": 73245
+  },
+  {
+    "_id": "eeedf9dd-3b0b-43b8-94c2-86b1331d78e4",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Previja",
+    "zipCode": 79287
+  },
+  {
+    "_id": "8846730d-241d-4823-a073-4640191f3f9d",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Pribij kod Lopara",
+    "zipCode": 75249
+  },
+  {
+    "_id": "03d59f8d-a17f-4c2a-a8d2-f18d67ce852d",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Pribinić",
+    "zipCode": 74276
+  },
+  {
+    "_id": "d11eb408-b9c6-40e0-9680-f355cdb9b183",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Prijedor",
+    "zipCode": 79000
+  },
+  {
+    "_id": "3e4759a0-c6ff-41e7-a5b4-faca0df0fdfb",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Priluka",
+    "zipCode": 80202
+  },
+  {
+    "_id": "04a0d04b-585e-4e04-8fe0-9e1cd8d1d3ce",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Prisoje",
+    "zipCode": 80245
+  },
+  {
+    "_id": "04950e52-61ee-4e8f-ab9e-37bf94a41ab3",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Prnjavor",
+    "zipCode": 78430
+  },
+  {
+    "_id": "871bc8c8-e340-490b-afbf-8b6259b8754f",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Prnjavor Mali",
+    "zipCode": 74214
+  },
+  {
+    "_id": "48799a81-5b4a-4c1f-beb1-50241d8f9694",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Prolog",
+    "zipCode": 88327
+  },
+  {
+    "_id": "4b993ba4-f1cb-43bd-a31f-35ed175d9a10",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Prozor",
+    "zipCode": 88440
+  },
+  {
+    "_id": "34b0662a-1307-4f6f-bb4d-e811aca4f650",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Prud",
+    "zipCode": 76292
+  },
+  {
+    "_id": "a7d7cd1b-e79a-49b3-a420-3622132d3f50",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Prusac",
+    "zipCode": 70223
+  },
+  {
+    "_id": "ca185461-4850-4c53-ba28-92b52848d715",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Pržići",
+    "zipCode": 71335
+  },
+  {
+    "_id": "9c53c0dc-9a6f-44dd-8370-f1df05687b11",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Puhovac",
+    "zipCode": 72207
+  },
+  {
+    "_id": "0da1f178-f40c-467e-b4d5-208b1f837a33",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Puračić",
+    "zipCode": 75305
+  },
+  {
+    "_id": "912000c9-2db1-4ea0-b018-f1eb025c54dc",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Radišići",
+    "zipCode": 88325
+  },
+  {
+    "_id": "ed941e45-5a91-4cfc-956d-24bd62a67d88",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Rainci Gornji",
+    "zipCode": 75268
+  },
+  {
+    "_id": "3221642b-6390-4ae9-b7a9-65d0a5752803",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Rakitno",
+    "zipCode": 88245
+  },
+  {
+    "_id": "80842a7b-a39b-474b-a6ed-d3a2412588c0",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Rakovica",
+    "zipCode": 71217
+  },
+  {
+    "_id": "e8b2a7f9-d0f3-4111-b322-992e223eb4c0",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Ravno",
+    "zipCode": 88370
+  },
+  {
+    "_id": "b5a6d13d-af89-4c75-9760-e80fb1a1d927",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Razboj Lijevče",
+    "zipCode": 78429
+  },
+  {
+    "_id": "5ac694e5-dd6f-4b96-b0e7-65502524fc74",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Ražljevo",
+    "zipCode": 76218
+  },
+  {
+    "_id": "47a9a46b-fa7b-41a7-9fd9-4e2746ceb397",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Ripač",
+    "zipCode": 77215
+  },
+  {
+    "_id": "8733187d-efa9-4b25-83f7-2f731de1a093",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Rogatica",
+    "zipCode": 73220
+  },
+  {
+    "_id": "680619e6-b532-4edf-9637-d800b618a7ea",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Roško Polje",
+    "zipCode": 80247
+  },
+  {
+    "_id": "14b55549-e04e-4b34-bba7-241948e58608",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Rudice",
+    "zipCode": 79226
+  },
+  {
+    "_id": "88cd5918-1959-4b6b-b602-bc3cebc68302",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Rudo",
+    "zipCode": 73260
+  },
+  {
+    "_id": "b23bcc2b-ce81-4f28-a19d-386ee193279f",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Ružići",
+    "zipCode": 88347
+  },
+  {
+    "_id": "2962e7c0-a489-4049-b534-6fae7f4dfdd6",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Sanica Gornja",
+    "zipCode": 79285
+  },
+  {
+    "_id": "4738ca44-dba6-401e-8fb7-e6f56f3280f7",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Sanski Most",
+    "zipCode": 79260
+  },
+  {
+    "_id": "27e887ff-a14f-4b5e-b7ea-98124c0b527a",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Sapna",
+    "zipCode": 75411
+  },
+  {
+    "_id": "12e75565-95ec-40c4-84b5-c13070d55bd0",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Saračica",
+    "zipCode": 78202
+  },
+  {
+    "_id": "fd48d1d5-47ad-4f45-99cf-a54f1ebe1b17",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Sarajevo",
+    "zipCode": 71000
+  },
+  {
+    "_id": "03754a39-9fe3-4348-becf-b8036dc96ce1",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Semizovac",
+    "zipCode": 71321
+  },
+  {
+    "_id": "835fa517-a79d-4c45-8102-4fd6b900146e",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Seonjaci",
+    "zipCode": 76205
+  },
+  {
+    "_id": "d10c2613-483c-4c7e-9a85-fde26051ab1f",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Simin Han",
+    "zipCode": 75207
+  },
+  {
+    "_id": "c3e0672b-bd83-407b-bc19-63845f2ab5df",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Sitneši",
+    "zipCode": 78422
+  },
+  {
+    "_id": "a069c420-c709-4c3f-9677-f639b03dc444",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Sitnica",
+    "zipCode": 79283
+  },
+  {
+    "_id": "9ceff370-8795-4ff0-bb3f-a3a524f9fd83",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Skelani",
+    "zipCode": 75436
+  },
+  {
+    "_id": "87318401-6014-4d58-97bc-74478ac2c70a",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Skugrić",
+    "zipCode": 74261
+  },
+  {
+    "_id": "08e8bde3-9a15-40d7-b731-79644e57bf6d",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Sladna",
+    "zipCode": 75353
+  },
+  {
+    "_id": "ca4c35c3-f2b7-496e-ba37-d8fe5b8ce2d2",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Slatina Ilidža",
+    "zipCode": 78253
+  },
+  {
+    "_id": "8d728c05-94e8-4d6f-9d5d-4bb627e78689",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Sočkovac",
+    "zipCode": 74323
+  },
+  {
+    "_id": "2764cdf6-a63e-4830-8bbd-17c56cfd3dc2",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Sokolac",
+    "zipCode": 71350
+  },
+  {
+    "_id": "39339a28-68e2-4c5a-a51d-05608a696657",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Sokolović Kolonija",
+    "zipCode": 71218
+  },
+  {
+    "_id": "a9d74ba4-2aac-4e1b-a511-85de5086a9d8",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Sokolovići",
+    "zipCode": 71357
+  },
+  {
+    "_id": "52223e8a-c663-41fd-9438-fda432c957ad",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Sovići",
+    "zipCode": 88345
+  },
+  {
+    "_id": "69f998c0-69e7-4e6e-81ca-45b38fbf885c",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Srbac",
+    "zipCode": 78420
+  },
+  {
+    "_id": "036ed21c-43b0-4308-9995-3132842c2cb7",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Srebrenica",
+    "zipCode": 75430
+  },
+  {
+    "_id": "c44bc7f9-1de5-4523-97d9-a7bb42e4b7fe",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Srebrenik",
+    "zipCode": 75350
+  },
+  {
+    "_id": "dbaeac2b-2c9c-481f-918f-bc88186de7f0",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Srednje",
+    "zipCode": 71385
+  },
+  {
+    "_id": "7f6ae5b0-252e-4c9f-9c97-aaec38b684e9",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Sreflije",
+    "zipCode": 79249
+  },
+  {
+    "_id": "3a5059cd-8673-4902-a1a1-8df0d51e2175",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Srnice",
+    "zipCode": 76258
+  },
+  {
+    "_id": "c962aa21-5b34-4937-93f7-43103482fd38",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Stanari",
+    "zipCode": 74208
+  },
+  {
+    "_id": "419a5dd9-e7d3-424e-9cdb-1f23ab4430e0",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Stara Bila",
+    "zipCode": 72256
+  },
+  {
+    "_id": "cf7c775d-2d9f-40d1-a873-5a6504ac6159",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Stara Dubrava",
+    "zipCode": 78243
+  },
+  {
+    "_id": "cbddd0c5-2db4-403e-9d9e-9ca3ad2ca85d",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Stari Majdan",
+    "zipCode": 79268
+  },
+  {
+    "_id": "b982b000-3ee8-48bd-a038-b82d0f174a61",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Stari Vitez",
+    "zipCode": 72251
+  },
+  {
+    "_id": "50115d66-1bdc-4d03-8625-e729db436b08",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Stijena",
+    "zipCode": 77224
+  },
+  {
+    "_id": "0e7a3736-5669-4669-8afa-62c340012d2a",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Stjenice",
+    "zipCode": 73223
+  },
+  {
+    "_id": "65d38b2c-9f21-4d28-8d7a-209f8d0f591c",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Stjepan Polje",
+    "zipCode": 75324
+  },
+  {
+    "_id": "2b8cbe70-7e8d-4f59-af16-12c0abe6e544",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Stolac",
+    "zipCode": 88360
+  },
+  {
+    "_id": "363761e7-3fa2-4bf0-a925-1c66676f4ab9",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Stranjani",
+    "zipCode": 72209
+  },
+  {
+    "_id": "6878a421-d707-4837-ba08-0a223cedf007",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Stričići",
+    "zipCode": 78208
+  },
+  {
+    "_id": "55f7f9b0-604c-497e-aa9a-705b25232b81",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Strojice",
+    "zipCode": 70273
+  },
+  {
+    "_id": "6b4fe009-09a6-4214-bb4c-cb73110c807f",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Studenci",
+    "zipCode": 88323
+  },
+  {
+    "_id": "f743993a-d557-4b31-9d1d-ed31ad5cd153",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Stupari",
+    "zipCode": 75283
+  },
+  {
+    "_id": "747549be-db05-4d36-a269-d9222d88c6ea",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Svodna",
+    "zipCode": 79229
+  },
+  {
+    "_id": "2a36d5f6-61ce-4d1b-8f0b-91afa1549dc3",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Šamac",
+    "zipCode": 76230
+  },
+  {
+    "_id": "24b3e0c6-5e40-4805-9b2f-7b33f1d95e82",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Šamac",
+    "zipCode": 76231
+  },
+  {
+    "_id": "2fcf21aa-9fe9-404b-a0ec-162853fac7a1",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Šatorovići",
+    "zipCode": 76209
+  },
+  {
+    "_id": "7b4e65e9-3d06-4e2c-8118-4581025bd0cd",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Šekovići",
+    "zipCode": 75450
+  },
+  {
+    "_id": "9eed59cd-fe78-4b60-b7e5-6c39f7b70de7",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Šerići",
+    "zipCode": 75275
+  },
+  {
+    "_id": "03a5f5ee-1053-4bd8-be95-c62f5be97139",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Šibošnica",
+    "zipCode": 75245
+  },
+  {
+    "_id": "94b30865-0829-4507-b94a-ddc5b392f2f1",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Šibovska",
+    "zipCode": 78433
+  },
+  {
+    "_id": "da76407f-e5db-48cf-96f3-780ea22f6f35",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Šipovo",
+    "zipCode": 70270
+  },
+  {
+    "_id": "5507296f-e366-4987-b558-77f421850493",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Šiprage",
+    "zipCode": 78224
+  },
+  {
+    "_id": "1f462169-f69c-49bb-9f0d-2bc18d49161c",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Široki Brijeg",
+    "zipCode": 88220
+  },
+  {
+    "_id": "af391ef9-b105-42d4-975f-7021f103d014",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Šnjegotina Gornja",
+    "zipCode": 74279
+  },
+  {
+    "_id": "01f53ec1-0e1c-4ae9-a8e0-84336fa8a69f",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Špionica",
+    "zipCode": 75356
+  },
+  {
+    "_id": "56c36b19-8750-4702-bc2d-e8dd17183edb",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Šturlić",
+    "zipCode": 77223
+  },
+  {
+    "_id": "f3d3723d-912f-4877-b32d-fdb48e54e281",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Šujica",
+    "zipCode": 80249
+  },
+  {
+    "_id": "295fc50c-f159-48de-95af-db0caeca81d3",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Šumatac",
+    "zipCode": 77234
+  },
+  {
+    "_id": "5f7d3f45-7cf9-422c-b7c1-51d286e35818",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Tarčin",
+    "zipCode": 71244
+  },
+  {
+    "_id": "1eaf0164-e24a-4d4e-a0e2-2f6edd503f3d",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Teočak",
+    "zipCode": 75414
+  },
+  {
+    "_id": "fa7c42de-1372-4373-9593-b5f4e65bc164",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Teslić",
+    "zipCode": 74270
+  },
+  {
+    "_id": "9ed5394f-17a7-4a2b-8d66-677296442e23",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Tešanj",
+    "zipCode": 74260
+  },
+  {
+    "_id": "6011a39b-e21c-4b8c-b50c-e3803cc53c0f",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Tešanjka",
+    "zipCode": 74266
+  },
+  {
+    "_id": "327329c0-0de1-456c-8b66-06e1ad897cd4",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Tihaljina",
+    "zipCode": 88348
+  },
+  {
+    "_id": "456f61e7-94b2-461c-ae40-36fcd3aaf5df",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Tinja",
+    "zipCode": 75357
+  },
+  {
+    "_id": "a21a9666-21e2-4bd6-9bf4-dde64b690595",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Tišća",
+    "zipCode": 75455
+  },
+  {
+    "_id": "7b6b892f-f0b5-49ca-9184-d5318b416754",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Tjentište",
+    "zipCode": 73311
+  },
+  {
+    "_id": "8eb5b572-c20b-4121-b201-07703628d3f8",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Todorovo",
+    "zipCode": 77233
+  },
+  {
+    "_id": "fec424ab-7cc7-44ff-95af-a7e8734e57e3",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Tojšići",
+    "zipCode": 75265
+  },
+  {
+    "_id": "c6a5ff63-55c4-464e-9344-4e89254562ea",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Tolisa",
+    "zipCode": 76272
+  },
+  {
+    "_id": "d72eedcb-9a5e-46bc-9636-a3216fbd0fae",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Tomina",
+    "zipCode": 79265
+  },
+  {
+    "_id": "b2b9ecb7-a5d9-480c-88d8-fcc276f64b94",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Tomislavgrad",
+    "zipCode": 80240
+  },
+  {
+    "_id": "a402d0ec-4e6f-43f0-94a6-e2d7ed3d0c1e",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Topčić Polje",
+    "zipCode": 72213
+  },
+  {
+    "_id": "13e70f18-c309-4933-80d8-8941f6b68edf",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Torlakovac",
+    "zipCode": 70224
+  },
+  {
+    "_id": "87b81ba8-2b68-418c-b731-53f054713892",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Travnik",
+    "zipCode": 72270
+  },
+  {
+    "_id": "7661cc3e-5a00-44ce-84d5-e5c4b1fbcc95",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Trebinja",
+    "zipCode": 88375
+  },
+  {
+    "_id": "a2633322-4ca4-45e3-9a21-930679751dac",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Trebinje",
+    "zipCode": 89000
+  },
+  {
+    "_id": "de392d93-d5af-43f9-88e5-6d543c11360b",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Trn",
+    "zipCode": 78252
+  },
+  {
+    "_id": "1a621ae0-e5fa-469d-aceb-f8f6cbd6f430",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Trnova Donja",
+    "zipCode": 76335
+  },
+  {
+    "_id": "a146ff16-342c-42a2-a1c4-3b8e32ff42ef",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Trnovo",
+    "zipCode": 71220
+  },
+  {
+    "_id": "b806d699-bbc9-4141-821c-b2d9c28f176a",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Trnjaci",
+    "zipCode": 76310
+  },
+  {
+    "_id": "eaf7e86a-3619-48f9-9505-dc316ba736d3",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Tržačka Raštela",
+    "zipCode": 77225
+  },
+  {
+    "_id": "e409341f-4553-480e-9fe8-55bad2f324ce",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Turbe",
+    "zipCode": 72283
+  },
+  {
+    "_id": "18aabc39-d676-4447-809f-3489a6211266",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Turija",
+    "zipCode": 75306
+  },
+  {
+    "_id": "58c245fd-fd2c-478b-8653-ae1db56ad4a0",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Turjak",
+    "zipCode": 78404
+  },
+  {
+    "_id": "9b017b1d-a94b-450f-9a1d-fdd568f16fd8",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Tuzla",
+    "zipCode": 75000
+  },
+  {
+    "_id": "1f482e19-567d-4c4f-b90e-0d017366bd46",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Ugljevik",
+    "zipCode": 76330
+  },
+  {
+    "_id": "b79ae6bb-aa63-4afe-8ece-9d37a4f2d333",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Ugodnovići",
+    "zipCode": 74278
+  },
+  {
+    "_id": "6cc457f0-bc57-42df-be13-20d5aa8d6d01",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Ulog",
+    "zipCode": 71233
+  },
+  {
+    "_id": "2f4d66d3-1fe2-4464-84a0-730f39624ee2",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Uskoplje",
+    "zipCode": 70280
+  },
+  {
+    "_id": "05c42827-73c7-4441-89ee-5fd767f21ea8",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Usora Žabljak",
+    "zipCode": 74230
+  },
+  {
+    "_id": "0f3181b3-1da0-44e9-b103-3140f70e3160",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Usora-Sivša",
+    "zipCode": 74321
+  },
+  {
+    "_id": "49a6dfff-e684-430e-81ec-b510654a7dc7",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Ustikolina",
+    "zipCode": 73250
+  },
+  {
+    "_id": "99fe2f97-1a53-4f21-ae1e-e3d08fbfc13f",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Uvac",
+    "zipCode": 73265
+  },
+  {
+    "_id": "da32b49e-bb2d-4dcd-94e9-330b724df8ac",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Uzdol",
+    "zipCode": 88444
+  },
+  {
+    "_id": "a6b2eb95-d6da-4ca9-b4e8-05428209fe46",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Vardište",
+    "zipCode": 73249
+  },
+  {
+    "_id": "58f83468-cd71-4c97-b410-aca19a52f5d5",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Vareš",
+    "zipCode": 71330
+  },
+  {
+    "_id": "29e86406-c4c2-4ac5-97bd-20db176d8a6b",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Vareš Majdan",
+    "zipCode": 71333
+  },
+  {
+    "_id": "a8f2f063-63d6-4b6d-a443-8ae86fc415b3",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Varoška Rijeka",
+    "zipCode": 77243
+  },
+  {
+    "_id": "276ab6b2-7f95-40bb-9889-8bc3f5b5ff05",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Velika Bukovica",
+    "zipCode": 74213
+  },
+  {
+    "_id": "64c51fa7-820b-467d-9c42-efc07953e1c7",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Velika Gata",
+    "zipCode": 77207
+  },
+  {
+    "_id": "4896b236-8a3e-4591-9a62-a3ca56cc639c",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Velika Kladuša",
+    "zipCode": 77230
+  },
+  {
+    "_id": "63401811-73b8-4495-b4c9-b2d79d44a56b",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Velika Obarska",
+    "zipCode": 76329
+  },
+  {
+    "_id": "a3cab8c7-0a7b-4183-826a-20b31f450834",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Vesela",
+    "zipCode": 70234
+  },
+  {
+    "_id": "68dab891-a946-4b70-8ed8-dddf3d856f84",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Vidoši",
+    "zipCode": 80208
+  },
+  {
+    "_id": "48475c69-780e-484a-a998-3f4cc67f21cc",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Vidovice",
+    "zipCode": 76275
+  },
+  {
+    "_id": "245318bc-ecab-4f0d-95fa-c401a738f2fd",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Vinac",
+    "zipCode": 70202
+  },
+  {
+    "_id": "08480303-429d-480d-bd13-47515789267a",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Vinska",
+    "zipCode": 74455
+  },
+  {
+    "_id": "498f0ba3-2c89-41ec-b820-c48af020af02",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Vir",
+    "zipCode": 88247
+  },
+  {
+    "_id": "d4873226-2d80-4e46-b879-bd0cb1467bc2",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Visoko",
+    "zipCode": 71300
+  },
+  {
+    "_id": "601d61c0-24ec-481c-b2ec-a1e042a19c5f",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Višegrad",
+    "zipCode": 73240
+  },
+  {
+    "_id": "07161c51-131b-402c-ae08-2fefe520be5b",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Višići",
+    "zipCode": 88307
+  },
+  {
+    "_id": "c34d546c-93e4-4c61-8e60-e17093a6b290",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Vitez",
+    "zipCode": 72250
+  },
+  {
+    "_id": "0b0e0a4c-56b5-43cf-bab8-5899150bb141",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Vitina",
+    "zipCode": 88326
+  },
+  {
+    "_id": "62449c75-267c-4382-8182-f9dfed676c42",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Vitkovci Donji",
+    "zipCode": 74265
+  },
+  {
+    "_id": "955b0164-2b7d-48f1-9895-f0680d1935ed",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Vitkovići",
+    "zipCode": 73205
+  },
+  {
+    "_id": "95ac113b-8dc0-4a3a-a131-9b6629936095",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Vlasenica",
+    "zipCode": 75440
+  },
+  {
+    "_id": "9cd24e76-108f-484f-aed4-e8d1d208fd2c",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Vogošća",
+    "zipCode": 71320
+  },
+  {
+    "_id": "efab235d-ad55-46d8-88ae-16aec4616dcd",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Vojkovići",
+    "zipCode": 71214
+  },
+  {
+    "_id": "eea9ef68-d1ff-43c0-a3c0-3065961aee2a",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Voljevac",
+    "zipCode": 70246
+  },
+  {
+    "_id": "1607b82c-c8d4-40d2-aeae-2a07bf74ed98",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Voljice",
+    "zipCode": 70247
+  },
+  {
+    "_id": "438f1970-e55b-4b93-8fe9-32d86ad62427",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Vozuća",
+    "zipCode": 72227
+  },
+  {
+    "_id": "92524d1f-8591-4797-9e06-3180b466a3dc",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Vranjak",
+    "zipCode": 74487
+  },
+  {
+    "_id": "d3cf9916-6854-45d4-8e11-f1a0f1ff6fe9",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Vranjak",
+    "zipCode": 74488
+  },
+  {
+    "_id": "e0f492d1-871f-4042-87b8-a340c3804f2a",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Vrapčići",
+    "zipCode": 88113
+  },
+  {
+    "_id": "fdf40989-6d40-4fa3-9310-f842af79cd88",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Vražići",
+    "zipCode": 75428
+  },
+  {
+    "_id": "0c644dfe-0e8e-4eba-adce-c33442466e60",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Vrbanja",
+    "zipCode": 78211
+  },
+  {
+    "_id": "a56440b4-aef2-427f-9861-0b6be282aff5",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Vrbanjci",
+    "zipCode": 78225
+  },
+  {
+    "_id": "32b2a43d-75d5-4be1-a504-2f30542f6217",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Vrbaška",
+    "zipCode": 78408
+  },
+  {
+    "_id": "5511d8aa-dc80-4f00-b7c5-a0c4e82f3e7f",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Vrnograč",
+    "zipCode": 77231
+  },
+  {
+    "_id": "5db7142a-2864-4037-ada8-5e12068ac72a",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Vrsta",
+    "zipCode": 77203
+  },
+  {
+    "_id": "635b5d0f-9cf9-4b0a-ba13-1e41c0e3e631",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Vršani",
+    "zipCode": 76325
+  },
+  {
+    "_id": "6b292a52-7b76-4782-97f0-bff6f5d58090",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Vučkovci",
+    "zipCode": 76254
+  },
+  {
+    "_id": "764480f0-10c3-4923-b9dc-f5d248024a61",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Vukosavlje",
+    "zipCode": 74470
+  },
+  {
+    "_id": "a854dcbc-3a44-4b4f-9adf-0326dfd7a2a0",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Zaborak",
+    "zipCode": 73287
+  },
+  {
+    "_id": "916b998d-d4df-4623-954d-63985d483ad6",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Zabrđe",
+    "zipCode": 78221
+  },
+  {
+    "_id": "4c71585a-5fdc-43d9-8e39-d6094854cc0b",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Zabrđe",
+    "zipCode": 76333
+  },
+  {
+    "_id": "3079320f-b7fc-4a31-abb9-8c63aaea2b90",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Zalužani",
+    "zipCode": 78214
+  },
+  {
+    "_id": "364b9fa2-3fa9-4f2f-bbac-69f12bcac9f1",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Zavajt",
+    "zipCode": 73305
+  },
+  {
+    "_id": "c480f945-3ee0-4a84-a93a-6d4e9b561be1",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Zavidovići",
+    "zipCode": 72220
+  },
+  {
+    "_id": "37c20df4-08a6-4e43-b3d3-30cff7f7854f",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Zborište",
+    "zipCode": 74451
+  },
+  {
+    "_id": "777610db-f402-4bd8-9412-acf01a70ecc0",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Zborište",
+    "zipCode": 77236
+  },
+  {
+    "_id": "0b5e3c5c-ad78-4254-bb0c-1d56ffdffda2",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Zelinja",
+    "zipCode": 76259
+  },
+  {
+    "_id": "c14d1c46-0db1-4346-b35c-535bab9421a7",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Zenica",
+    "zipCode": 72000
+  },
+  {
+    "_id": "de6522a1-0efc-45b8-8007-738995cc6a00",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Zovi Do",
+    "zipCode": 88286
+  },
+  {
+    "_id": "6426c9f7-b019-41aa-bf67-3123a88a194f",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Zvornik",
+    "zipCode": 75400
+  },
+  {
+    "_id": "f0470c73-eb41-4ef7-90c3-9b0d55b318cd",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Žabar Donji",
+    "zipCode": 76273
+  },
+  {
+    "_id": "94683b3d-e9cb-4a34-808e-2b743bb5301e",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Željezno Polje",
+    "zipCode": 72236
+  },
+  {
+    "_id": "32f9634b-11fa-4908-9ca7-6522da5e7c88",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Žepče",
+    "zipCode": 72230
+  },
+  {
+    "_id": "e75e21a2-e610-4998-ab75-ef271124c478",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Živinice",
+    "zipCode": 75270
+  },
+  {
+    "_id": "1367404a-bbbf-4a09-9981-a5fb2fde19ca",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Župča",
+    "zipCode": 71373
+  },
+  {
+    "_id": "9d6de84c-692e-4b1c-9103-ef239cf37743",
+    "countryId": "770f6103-302b-4a84-a374-246fbcc663f9",
+    "name": "Zagreb",
+    "zipCode": 10000
+  },
+  {
+    "_id": "d173e479-94c3-4892-a3b2-f1b90c72a312",
+    "countryId": "770f6103-302b-4a84-a374-246fbcc663f9",
+    "name": "Split",
+    "zipCode": 21000
+  },
+  {
+    "_id": "1adf9bc3-0cb0-4b36-a067-8f3243f58734",
+    "countryId": "770f6103-302b-4a84-a374-246fbcc663f9",
+    "name": "Rijeka",
+    "zipCode": 51000
+  },
+  {
+    "_id": "308107a1-2b57-41c3-b580-6b1a004fd5bf",
+    "countryId": "770f6103-302b-4a84-a374-246fbcc663f9",
+    "name": "Osijek",
+    "zipCode": 31000
+  },
+  {
+    "_id": "092df58f-a5f6-47ca-92b3-642a383ac5be",
+    "countryId": "770f6103-302b-4a84-a374-246fbcc663f9",
+    "name": "Zadar",
+    "zipCode": 23000
+  },
+  {
+    "_id": "65a68020-eea3-47f0-9479-3b836c726097",
+    "countryId": "770f6103-302b-4a84-a374-246fbcc663f9",
+    "name": "Slavonski Brod",
+    "zipCode": 35000
+  },
+  {
+    "_id": "bdf843e3-81ac-4c8d-88df-16006d0c5177",
+    "countryId": "770f6103-302b-4a84-a374-246fbcc663f9",
+    "name": "Pula",
+    "zipCode": 52000
+  },
+  {
+    "_id": "bb6cbbe7-f465-4959-8df8-93d0bc63c724",
+    "countryId": "770f6103-302b-4a84-a374-246fbcc663f9",
+    "name": "Karlovac",
+    "zipCode": 47000
+  },
+  {
+    "_id": "04ebe519-21dc-4994-93ef-3a7845422fd5",
+    "countryId": "770f6103-302b-4a84-a374-246fbcc663f9",
+    "name": "Sisak",
+    "zipCode": 44000
+  },
+  {
+    "_id": "04056925-9018-4da8-858e-81f1c01f2ac3",
+    "countryId": "770f6103-302b-4a84-a374-246fbcc663f9",
+    "name": "Šibenik",
+    "zipCode": 22000
+  },
+  {
+    "_id": "98a0a910-f8e1-48e7-8346-920b5706ee95",
+    "countryId": "770f6103-302b-4a84-a374-246fbcc663f9",
+    "name": "Varaždin",
+    "zipCode": 42000
+  },
+  {
+    "_id": "9cc80e78-d5e1-4699-b832-f86f5226ca47",
+    "countryId": "770f6103-302b-4a84-a374-246fbcc663f9",
+    "name": "Dubrovnik",
+    "zipCode": 20000
+  },
+  {
+    "_id": "e766f15d-cd2c-4ca3-bb9d-634d051c6eb2",
+    "countryId": "770f6103-302b-4a84-a374-246fbcc663f9",
+    "name": "Bjelovar",
+    "zipCode": 43000
+  },
+  {
+    "_id": "a32ca682-f18f-4b78-b1e9-9a57abb022c0",
+    "countryId": "770f6103-302b-4a84-a374-246fbcc663f9",
+    "name": "Velika Gorica",
+    "zipCode": 10410
+  },
+  {
+    "_id": "38b2ca14-bde8-45ff-9142-d6500b79c413",
+    "countryId": "770f6103-302b-4a84-a374-246fbcc663f9",
+    "name": "Koprivnica",
+    "zipCode": 48000
+  },
+  {
+    "_id": "d45608ee-97e9-48c8-8efb-87af1abbbc94",
+    "countryId": "770f6103-302b-4a84-a374-246fbcc663f9",
+    "name": "Poreč",
+    "zipCode": 52440
+  },
+  {
+    "_id": "c24e3dbe-9646-4297-9e81-8b3a3abf7d61",
+    "countryId": "770f6103-302b-4a84-a374-246fbcc663f9",
+    "name": "Vinkovci",
+    "zipCode": 32100
+  },
+  {
+    "_id": "d5d7ce8b-df13-422f-bf0e-898ea4d7cc49",
+    "countryId": "770f6103-302b-4a84-a374-246fbcc663f9",
+    "name": "Samobor",
+    "zipCode": 10430
+  },
+  {
+    "_id": "f3ad2f15-62ad-4af5-9e8a-442315e619f4",
+    "countryId": "770f6103-302b-4a84-a374-246fbcc663f9",
+    "name": "Solin",
+    "zipCode": 21210
+  },
+  {
+    "_id": "ed5683e1-74f9-44a1-a9c0-9aaa15e444d3",
+    "countryId": "770f6103-302b-4a84-a374-246fbcc663f9",
+    "name": "Kaštela",
+    "zipCode": 21210
+  },
+  {
+    "_id": "2376307c-2406-490e-a5bd-a1a1dd335002",
+    "countryId": "9014e8d0-4878-4ec2-8166-0e0284698171",
+    "name": "Belgrade",
+    "zipCode": 11000
+  },
+  {
+    "_id": "eda78a6c-d6a9-40a2-bb2a-a90d7c57321b",
+    "countryId": "9014e8d0-4878-4ec2-8166-0e0284698171",
+    "name": "Novi Sad",
+    "zipCode": 21000
+  },
+  {
+    "_id": "925f55ba-cd80-4e43-a475-5f7bc7a049e6",
+    "countryId": "9014e8d0-4878-4ec2-8166-0e0284698171",
+    "name": "Niš",
+    "zipCode": 18000
+  },
+  {
+    "_id": "0cfb4f77-11a7-483a-8a05-65b6f9b465c9",
+    "countryId": "9014e8d0-4878-4ec2-8166-0e0284698171",
+    "name": "Kragujevac",
+    "zipCode": 34000
+  },
+  {
+    "_id": "758109ad-a379-447e-8af9-1fefe7156e56",
+    "countryId": "9014e8d0-4878-4ec2-8166-0e0284698171",
+    "name": "Subotica",
+    "zipCode": 24000
+  },
+  {
+    "_id": "adf2231f-4e97-4c7f-9d3b-d086ad7d90b0",
+    "countryId": "9014e8d0-4878-4ec2-8166-0e0284698171",
+    "name": "Zrenjanin",
+    "zipCode": 23000
+  },
+  {
+    "_id": "51eba96c-8805-4b6b-99c7-fb52ff3eaf01",
+    "countryId": "9014e8d0-4878-4ec2-8166-0e0284698171",
+    "name": "Pančevo",
+    "zipCode": 26000
+  },
+  {
+    "_id": "6145cb7d-5525-474e-81b6-0e0f847d0f0a",
+    "countryId": "9014e8d0-4878-4ec2-8166-0e0284698171",
+    "name": "Čačak",
+    "zipCode": 32000
+  },
+  {
+    "_id": "d3014cfa-2c85-44f5-88e1-c7d31c8f2033",
+    "countryId": "9014e8d0-4878-4ec2-8166-0e0284698171",
+    "name": "Novi Pazar",
+    "zipCode": 36300
+  },
+  {
+    "_id": "d05f2e26-bc2d-4bb5-87dc-63540f3bfcfd",
+    "countryId": "9014e8d0-4878-4ec2-8166-0e0284698171",
+    "name": "Kraljevo",
+    "zipCode": 36000
+  },
+  {
+    "_id": "93cb37b8-5a0f-4ac6-b4ac-5b5295b74248",
+    "countryId": "9014e8d0-4878-4ec2-8166-0e0284698171",
+    "name": "Leskovac",
+    "zipCode": 16000
+  },
+  {
+    "_id": "d1cd6984-83f8-4027-92d2-693d963c4d39",
+    "countryId": "9014e8d0-4878-4ec2-8166-0e0284698171",
+    "name": "Valjevo",
+    "zipCode": 14000
+  },
+  {
+    "_id": "0510df82-bd4b-4e0d-bc04-b481e1a40e06",
+    "countryId": "9014e8d0-4878-4ec2-8166-0e0284698171",
+    "name": "Smederevo",
+    "zipCode": 11300
+  },
+  {
+    "_id": "52a18658-68b0-41c7-b0f2-7bac242fdeac",
+    "countryId": "9014e8d0-4878-4ec2-8166-0e0284698171",
+    "name": "Užice",
+    "zipCode": 31000
+  },
+  {
+    "_id": "3c51988c-6d92-409b-a003-9a96c768e87c",
+    "countryId": "9014e8d0-4878-4ec2-8166-0e0284698171",
+    "name": "Vranje",
+    "zipCode": 17500
+  },
+  {
+    "_id": "93cd2a2b-b8c1-469d-bde3-b771b446856e",
+    "countryId": "9014e8d0-4878-4ec2-8166-0e0284698171",
+    "name": "Šabac",
+    "zipCode": 15000
+  },
+  {
+    "_id": "81976c93-e448-4a0c-bf3b-8a9d95bbe2f1",
+    "countryId": "9014e8d0-4878-4ec2-8166-0e0284698171",
+    "name": "Sombor",
+    "zipCode": 25000
+  },
+  {
+    "_id": "9b5124fb-8f0d-40c1-97bd-411c3106559b",
+    "countryId": "9014e8d0-4878-4ec2-8166-0e0284698171",
+    "name": "Požarevac",
+    "zipCode": 12000
+  },
+  {
+    "_id": "5f58374f-2f40-45e8-80e9-686d5849e149",
+    "countryId": "9014e8d0-4878-4ec2-8166-0e0284698171",
+    "name": "Pirot",
+    "zipCode": 18300
+  },
+  {
+    "_id": "d06aa2fc-1e97-4f88-a293-5a3fd60b3aac",
+    "countryId": "9014e8d0-4878-4ec2-8166-0e0284698171",
+    "name": "Zaječar",
+    "zipCode": 19000
+  }
+]

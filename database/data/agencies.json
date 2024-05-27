@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "ef7c6ed0-7076-4ada-bb3f-e134b5671ab2",
+    "cityId": "c14d1c46-0db1-4346-b35c-535bab9421a7",
+    "name": "Babić-Bisstours d.o.o.",
+    "address": "Školska 10",
+    "website": "https://www.biss-tours.ba/",
+    "email": "agencijazenica@biss-tours.ba",
+    "phoneNumber": "+38732245451"
+  },
+  {
+    "_id": "01725935-140e-4207-b0c9-71810125d6e4",
+    "cityId": "fd48d1d5-47ad-4f45-99cf-a54f1ebe1b17",
+    "name": "Centrotrans d.d. Sarajevo",
+    "address": "Kurta Schorka 14",
+    "website": "https://centrotrans.com/",
+    "email": "info@centrotrans.com",
+    "phoneNumber": "+38733213100"
+  }
+]

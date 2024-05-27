@@ -1,0 +1,31 @@
+[
+  {
+    "_id": "a32a39a0-2200-41a3-b7a3-c6ecbdefbd57",
+    "name": "newroute",
+    "agencyId": "ef7c6ed0-7076-4ada-bb3f-e134b5671ab2",
+    "duration": "12",
+    "stations": [
+      {
+        "stationId": "7c91fb3a-13e6-46c3-9903-eae10de01e94",
+        "departureTime": ["11:50", "12:50", "13:50", "14:50", "15:50"],
+        "returnTime": ["11:50", "12:50", "13:50", "14:50", "15:50"]
+      },
+      {
+        "stationId": "f8be5465-1377-43ca-941a-958cee1743ce",
+        "departureTime": ["11:50", "12:50", "13:50", "14:50", "15:50"],
+        "returnTime": ["11:50", "12:50", "13:50", "14:50", "15:50"]
+      },
+      {
+        "stationId": "a9e7e598-38b4-4ad6-af0e-4304397f92c7",
+        "departureTime": ["11:50", "12:50", "13:50", "14:50", "15:50"],
+        "returnTime": ["11:50", "12:50", "13:50", "14:50", "15:50"]
+      }
+    ],
+    "activeDays": {
+      "Thursday": true,
+      "Friday": true
+    },
+    "returnDays": {},
+    "type": 1
+  }
+]

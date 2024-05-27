@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "_id": {
+      "type": "string"
+    },
+    "cityId": {
+      "type": "string",
+      "description": "ID of the city where the station is located",
+      "minLength": 1
+    },
+    "name": {
+      "type": "string",
+      "description": "Name of the station"
+    },
+    "coordinaters": {
+      "type": "string",
+      "description": "Coordinates of the station"
+    }
+  },
+  "required": ["cityId", "name"],
+  "additionalProperties": false
+}
