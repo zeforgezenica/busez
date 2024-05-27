@@ -11,6 +11,7 @@ import { Station } from "../models/station.model";
 import Head from "next/head";
 import RoutesTable from "./RoutesTable";
 import RouteForm from "./RouteForm";
+import Weekdays from "../models/weekdays.model";
 
 const RoutesPage: React.FC = () => {
   const [routes, setRoutes] = useState<Route[]>([]);
@@ -88,6 +89,22 @@ const RoutesPage: React.FC = () => {
       console.error("Error fetching routes:", error);
     }
   };
+  const areDaysDifferent = (
+    activeDays: Weekdays,
+    returnDays: Weekdays
+  ): boolean => {
+    const activeDayKeys = Object.keys(activeDays) as (keyof Weekdays)[];
+    const returnDayKeys = Object.keys(returnDays) as (keyof Weekdays)[];
+    if (activeDayKeys.length !== returnDayKeys.length) {
+      return true;
+    }
+    for (const key of activeDayKeys) {
+      if (activeDays[key] !== returnDays[key]) {
+        return true;
+      }
+    }
+    return false;
+  };
 
   return (
     <>
@@ -101,20 +118,19 @@ const RoutesPage: React.FC = () => {
           agencies={agencies}
           onRouteAdded={handleRouteAdded}
         />
-
         {routes.map((route) => (
           <Card key={route._id} shadow="sm" className="p-6 mb-4">
             <h2 className="text-xl mb-2">{route.name}</h2>
             <p>Agency: {agencyNames[route.agencyId]}</p>
             <p>Active Days: {renderWeekdays(route.activeDays)}</p>
             {route.returnDays &&
-              Object.values(route.returnDays).some(Boolean) && (
+              areDaysDifferent(route.activeDays, route.returnDays) && (
                 <p>Return Days: {renderWeekdays(route.returnDays)}</p>
               )}
             <p>Duration: {route.duration}</p>
             <p>Type: {getRouteType(route.type)}</p>
             <br />
-            <RoutesTable routes={routes} stations={stations} />
+            <RoutesTable route={route} stations={stations} />
           </Card>
         ))}
       </div>

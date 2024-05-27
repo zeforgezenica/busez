@@ -26,7 +26,7 @@ const WeekdaySelector: React.FC<WeekdaySelectorProps> = ({
     };
 
     setSelectedDays(updatedDays);
-    onChange(updatedDays); // Notify the parent component about the change
+    onChange(updatedDays);
   };
 
   const days: Array<keyof Weekdays> = [
