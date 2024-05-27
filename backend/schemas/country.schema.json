@@ -1,0 +1,10 @@
+{
+  "type": "object",
+  "properties": {
+    "_id": { "type": "string" },
+    "name": { "type": "string" },
+    "code": { "type": "string" },
+    "acronym": { "type": "string" }
+  },
+  "required": ["name", "code", "acronym"]
+}

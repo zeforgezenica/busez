@@ -1,0 +1,177 @@
+[
+  {
+    "_id": "7c91fb3a-13e6-46c3-9903-eae10de01e94",
+    "cityId": "c14d1c46-0db1-4346-b35c-535bab9421a7",
+    "name": "Bolnica"
+  },
+  {
+    "_id": "10136326-8ae9-4543-921e-d71e27f326e2",
+    "cityId": "c14d1c46-0db1-4346-b35c-535bab9421a7",
+    "name": "Crkvice"
+  },
+  {
+    "_id": "f8be5465-1377-43ca-941a-958cee1743ce",
+    "cityId": "c14d1c46-0db1-4346-b35c-535bab9421a7",
+    "name": "Crkvice \"R\""
+  },
+  {
+    "_id": "ca3fc100-a94d-4bd2-a0fa-8b6d18de013d",
+    "cityId": "c14d1c46-0db1-4346-b35c-535bab9421a7",
+    "name": "Donje Crkvice \"R\""
+  },
+  {
+    "_id": "d5722eaf-bc02-4ce0-9baa-2492eb92fc30",
+    "cityId": "c14d1c46-0db1-4346-b35c-535bab9421a7",
+    "name": "Garnizon"
+  },
+  {
+    "_id": "a02f6eb3-02c6-4a48-addf-e2a91f097b95",
+    "cityId": "c14d1c46-0db1-4346-b35c-535bab9421a7",
+    "name": "Novi Most"
+  },
+  {
+    "_id": "e8275fad-f4fe-483c-bb98-9d723edab90c",
+    "cityId": "c14d1c46-0db1-4346-b35c-535bab9421a7",
+    "name": "Džamija"
+  },
+  {
+    "_id": "67dd07c0-42b5-4326-b5d2-4e6c2fff2b7e",
+    "cityId": "c14d1c46-0db1-4346-b35c-535bab9421a7",
+    "name": "Stara Pijaca"
+  },
+  {
+    "_id": "a74ce02e-47c0-4570-9b63-ab0c13cfd0ef",
+    "cityId": "c14d1c46-0db1-4346-b35c-535bab9421a7",
+    "name": "Hotel \"Metalurg\""
+  },
+  {
+    "_id": "a9e7e598-38b4-4ad6-af0e-4304397f92c7",
+    "cityId": "c14d1c46-0db1-4346-b35c-535bab9421a7",
+    "name": "Zenica \"AS\""
+  },
+  {
+    "_id": "e0bd9801-a13e-4a90-87f8-6f4d22a867c0",
+    "cityId": "c14d1c46-0db1-4346-b35c-535bab9421a7",
+    "name": "Nova Zenica"
+  },
+  {
+    "_id": "0ee1473b-0216-4dad-81a2-5ea68fb616f4",
+    "cityId": "c14d1c46-0db1-4346-b35c-535bab9421a7",
+    "name": "Preporod"
+  },
+  {
+    "_id": "f4f8821c-295c-4a30-8af7-88f05e1ff479",
+    "cityId": "c14d1c46-0db1-4346-b35c-535bab9421a7",
+    "name": "Brana 2"
+  },
+  {
+    "_id": "1308ea17-5abb-4fd7-8d78-467b7e5ecbe2",
+    "cityId": "c14d1c46-0db1-4346-b35c-535bab9421a7",
+    "name": "Kanal"
+  },
+  {
+    "_id": "ee8b498b-bb99-41fc-b83c-bd04201d7988",
+    "cityId": "c14d1c46-0db1-4346-b35c-535bab9421a7",
+    "name": "Ričice (Džamija)"
+  },
+  {
+    "_id": "07f306ac-738f-4f50-80bf-74188429a115",
+    "cityId": "c14d1c46-0db1-4346-b35c-535bab9421a7",
+    "name": "Pehare (Sviće)"
+  },
+  {
+    "_id": "3ef8861a-61de-4abc-95ce-fa266ad4c6e9",
+    "cityId": "c14d1c46-0db1-4346-b35c-535bab9421a7",
+    "name": "Paviljon"
+  },
+  {
+    "_id": "4fb5aeaa-38f7-46a2-9c5b-c091ec45d5cc",
+    "cityId": "c14d1c46-0db1-4346-b35c-535bab9421a7",
+    "name": "Babina Rijeka"
+  },
+  {
+    "_id": "6c46acbe-8098-40da-98e0-d5e1810b1d61",
+    "cityId": "c14d1c46-0db1-4346-b35c-535bab9421a7",
+    "name": "Komplex \"A\""
+  },
+  {
+    "_id": "3a33fe20-c8d2-4c21-9a00-8305b9b473fc",
+    "cityId": "c14d1c46-0db1-4346-b35c-535bab9421a7",
+    "name": "Otpad"
+  },
+  {
+    "_id": "705837c1-38cc-452c-b131-69daae381c57",
+    "cityId": "c14d1c46-0db1-4346-b35c-535bab9421a7",
+    "name": "DC ZPP"
+  },
+  {
+    "_id": "d92c36fd-e755-440f-bb07-491a6c9ecbbe",
+    "cityId": "c14d1c46-0db1-4346-b35c-535bab9421a7",
+    "name": "Rampa"
+  },
+  {
+    "_id": "2a928cfe-f4b0-4bb5-b60b-608f7b49a55c",
+    "cityId": "c14d1c46-0db1-4346-b35c-535bab9421a7",
+    "name": "Lukovo Polje"
+  },
+  {
+    "_id": "6267b2c7-1af4-4a42-bd49-4f8b04f3bbb8",
+    "cityId": "c14d1c46-0db1-4346-b35c-535bab9421a7",
+    "name": "Donja Gračanica"
+  },
+  {
+    "_id": "b922e8ca-476c-4aea-8401-3a17cb493686",
+    "cityId": "fd48d1d5-47ad-4f45-99cf-a54f1ebe1b17",
+    "name": "Sarajevo \"AS\""
+  },
+  {
+    "_id": "75aa417e-e58e-4b34-8ae6-350d51d3d814",
+    "cityId": "66da3a55-7d9a-4203-973c-c76603be1b8e",
+    "name": "Kakanj \"AS\""
+  },
+  {
+    "_id": "f58b3a03-297e-4b30-9b4f-22e57be86d22",
+    "cityId": "d4873226-2d80-4e46-b879-bd0cb1467bc2",
+    "name": "Visoko \"AS\""
+  },
+  {
+    "_id": "3cbd8004-cee1-4006-be54-59d488b98687",
+    "cityId": "32f9634b-11fa-4908-9ca7-6522da5e7c88",
+    "name": "Žepče \"AS\""
+  },
+  {
+    "_id": "689959cb-6aca-492c-a7f6-34866ea171bc",
+    "cityId": "f6c34bd4-c8eb-464e-afbf-c5b8758d1702",
+    "name": "Maglaj \"AS\""
+  },
+  {
+    "_id": "18d77f75-519b-4a53-afa7-10b6137a33c7",
+    "cityId": "e80d0e8c-904e-46f7-9fd7-b08c729d5bb4",
+    "name": "Bosanski Brod \"AS\""
+  },
+  {
+    "_id": "44d61bbe-ab1a-41f8-b115-d2bb7f6354b8",
+    "cityId": "65a68020-eea3-47f0-9479-3b836c726097",
+    "name": "Autobusni Kolodvor Slavonski Brod"
+  },
+  {
+    "_id": "5581180d-9e39-4286-89df-269d1836ee65",
+    "cityId": "9d6de84c-692e-4b1c-9103-ef239cf37743",
+    "name": "Autobusni kolodvor Zagreb"
+  },
+  {
+    "_id": "445a7ed4-00b0-4ba0-bc98-da775652af3f",
+    "cityId": "bb6cbbe7-f465-4959-8df8-93d0bc63c724",
+    "name": "Autobusni kolodvor Karlovac"
+  },
+  {
+    "_id": "ac2157ba-0f28-4ed7-b8b1-e7e020972a5c",
+    "cityId": "1adf9bc3-0cb0-4b36-a067-8f3243f58734",
+    "name": "Autobusni kolodvor Rijeka"
+  },
+  {
+    "_id": "28aa0c61-9a00-4e61-9ea2-4312b3602e9c",
+    "cityId": "bdf843e3-81ac-4c8d-88df-16006d0c5177",
+    "name": "Autobusni kolodvor Pula"
+  }
+]
