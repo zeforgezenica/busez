@@ -1,0 +1,11 @@
+{
+  "type": "object",
+  "properties": {
+    "_id": { "type": "string" },
+    "countryId": { "type": "string" },
+    "name": { "type": "string" },
+    "zipCode": { "type": "number" },
+    "coordinates": { "type": ["string", "null"] }
+  },
+  "required": ["countryId", "name", "zipCode"]
+}
