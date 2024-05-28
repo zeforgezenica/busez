@@ -173,5 +173,11 @@
     "_id": "28aa0c61-9a00-4e61-9ea2-4312b3602e9c",
     "cityId": "bdf843e3-81ac-4c8d-88df-16006d0c5177",
     "name": "Autobusni kolodvor Pula"
+  },
+  {
+    "_id": "acccc268-9536-4ff9-a096-7abfd77efd11",
+    "cityId": "8745d890-9ebc-4811-a0ec-493a20c7a131",
+    "name": "new station",
+    "coordinates": "2231"
   }
 ]

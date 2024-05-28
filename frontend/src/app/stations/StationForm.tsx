@@ -3,7 +3,11 @@ import { Card, Input, Button } from "@nextui-org/react";
 import dynamic from "next/dynamic";
 import { Station } from "../models/station.model";
 import { City } from "../models/city.model";
-import StationService from "../services/station.service";
+import {
+  handleInputChange,
+  handleCitySelect,
+  handleSubmit,
+} from "../handlers/station.form.handler";
 
 const Select = dynamic(() => import("react-select"), { ssr: false });
 
@@ -21,38 +25,6 @@ const StationForm: React.FC<StationFormProps> = ({
     name: "",
     coordinates: "",
   });
-
-  const handleInputChange = (
-    event: React.ChangeEvent<HTMLInputElement>
-  ): void => {
-    const { name, value } = event.target;
-    setStationData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  };
-
-  const handleCitySelect = (selectedOption: any): void => {
-    setStationData((prevData) => ({
-      ...prevData,
-      cityId: selectedOption.value,
-    }));
-  };
-
-  const handleSubmit = async (): Promise<void> => {
-    try {
-      const newStation = await StationService.post(stationData as Station);
-      console.log("Station added successfully!", newStation);
-      setStationData({
-        cityId: "",
-        name: "",
-        coordinates: "",
-      });
-      onStationAdded(newStation);
-    } catch (error) {
-      console.error("Error adding station:", error);
-    }
-  };
 
   const customSelectStyles = {
     control: (provided: any) => ({
@@ -89,7 +61,9 @@ const StationForm: React.FC<StationFormProps> = ({
               value: city._id,
               label: city.name,
             }))}
-            onChange={handleCitySelect}
+            onChange={(selectedOption) =>
+              handleCitySelect(selectedOption, setStationData)
+            }
             placeholder="Select City"
             styles={customSelectStyles}
           />
@@ -100,7 +74,7 @@ const StationForm: React.FC<StationFormProps> = ({
             id="stationName"
             name="name"
             value={stationData.name}
-            onChange={handleInputChange}
+            onChange={(e) => handleInputChange(e, setStationData)}
           />
         </div>
         <div>
@@ -109,10 +83,16 @@ const StationForm: React.FC<StationFormProps> = ({
             id="stationCoordinates"
             name="coordinates"
             value={stationData.coordinates || ""}
-            onChange={handleInputChange}
+            onChange={(e) => handleInputChange(e, setStationData)}
           />
         </div>
-        <Button onClick={handleSubmit}>Add Station</Button>
+        <Button
+          onClick={() =>
+            handleSubmit(stationData, setStationData, onStationAdded)
+          }
+        >
+          Add Station
+        </Button>
       </div>
     </Card>
   );

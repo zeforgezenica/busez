@@ -1,49 +1,90 @@
 {
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
   "properties": {
-    "_id": { "type": "string" },
-    "agencyId": { "type": "string" },
-    "name": { "type": "string" },
+    "_id": {
+      "type": "string"
+    },
+    "agencyId": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "type": {
+      "type": "integer",
+      "enum": [1, 2, 3]
+    },
     "activeDays": {
       "$ref": "#/definitions/Weekdays"
     },
     "returnDays": {
-      "anyOf": [{ "$ref": "#/definitions/Weekdays" }, { "type": "null" }]
+      "$ref": "#/definitions/Weekdays"
     },
     "stations": {
       "type": "array",
       "items": {
         "type": "object",
         "properties": {
-          "stationId": { "type": "string" },
+          "stationId": {
+            "type": "string"
+          },
           "departureTime": {
             "type": "array",
-            "items": { "type": "string" }
+            "items": {
+              "type": "string"
+            }
           },
           "returnTime": {
             "type": "array",
-            "items": { "type": "string" }
+            "items": {
+              "type": "string"
+            }
           }
         },
         "required": ["stationId", "departureTime", "returnTime"]
       }
     },
-    "duration": { "type": "string" }
+    "duration": {
+      "type": "string"
+    }
   },
-  "required": ["agencyId", "name", "activeDays", "stations", "duration"],
+  "required": ["agencyId", "name", "type", "activeDays", "stations"],
   "definitions": {
     "Weekdays": {
       "type": "object",
       "properties": {
-        "Monday": { "type": ["boolean", "null"] },
-        "Tuesday": { "type": ["boolean", "null"] },
-        "Wednesday": { "type": ["boolean", "null"] },
-        "Thursday": { "type": ["boolean", "null"] },
-        "Friday": { "type": ["boolean", "null"] },
-        "Saturday": { "type": ["boolean", "null"] },
-        "Sunday": { "type": ["boolean", "null"] }
+        "sunday": {
+          "type": "boolean"
+        },
+        "monday": {
+          "type": "boolean"
+        },
+        "tuesday": {
+          "type": "boolean"
+        },
+        "wednesday": {
+          "type": "boolean"
+        },
+        "thursday": {
+          "type": "boolean"
+        },
+        "friday": {
+          "type": "boolean"
+        },
+        "saturday": {
+          "type": "boolean"
+        }
       },
-      "required": []
+      "required": [
+        "sunday",
+        "monday",
+        "tuesday",
+        "wednesday",
+        "thursday",
+        "friday",
+        "saturday"
+      ]
     }
   }
 }

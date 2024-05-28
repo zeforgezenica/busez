@@ -12,14 +12,16 @@
       "type": "string"
     },
     "website": {
-      "type": "string"
+      "type": "string",
+      "pattern": "^https?://(?:www\\.)?[a-zA-Z0-9-]+(?:\\.[a-zA-Z]+)+$"
     },
     "email": {
       "type": "string",
       "pattern": "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$"
     },
     "phoneNumber": {
-      "type": "string"
+      "type": "string",
+      "pattern": "^\\+?[0-9]+$"
     }
   },
   "required": ["cityId", "address", "website", "email", "phoneNumber"]

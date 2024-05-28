@@ -1,12 +1,22 @@
+// components/RouteForm.tsx
 import React, { useState } from "react";
 import { Card, Input, Button, Switch, Textarea } from "@nextui-org/react";
 import dynamic from "next/dynamic";
 import { Station } from "../models/station.model";
 import { Agency } from "../models/agency.model";
-import { Route, RouteType, StationTimes } from "../models/route.model";
-import { Weekdays } from "../models/weekdays.model";
-import RouteService from "../services/route.service";
+import { Route, RouteType } from "../models/route.model";
 import WeekdaySelector from "../components/WeekdaySelector";
+import {
+  handleInputChange,
+  handleAgencySelect,
+  handleRouteTypeSelect,
+  handleActiveDaysChange,
+  handleReturnDaysChange,
+  handleStationSelect,
+  handleAddStation,
+  handleSubmit,
+  handleUseCustomReturnDaysChange,
+} from "../handlers/route.form.handler";
 
 const Select = dynamic(() => import("react-select"), { ssr: false });
 
@@ -35,107 +45,6 @@ const RouteForm: React.FC<RouteFormProps> = ({
   const [departureTime, setDepartureTime] = useState<string>("");
   const [returnTime, setReturnTime] = useState<string>("");
   const [useCustomReturnDays, setUseCustomReturnDays] = useState(false);
-
-  const handleInputChange = (
-    event: React.ChangeEvent<HTMLInputElement>
-  ): void => {
-    const { name, value } = event.target;
-    setRouteData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  };
-
-  const handleAgencySelect = (selectedOption: any): void => {
-    setRouteData((prevData) => ({
-      ...prevData,
-      agencyId: selectedOption.value,
-    }));
-  };
-
-  const handleRouteTypeSelect = (selectedOption: any): void => {
-    setRouteData((prevData) => ({
-      ...prevData,
-      type: selectedOption.value,
-    }));
-  };
-
-  const handleActiveDaysChange = (selectedDays: Weekdays): void => {
-    setRouteData((prevData) => ({
-      ...prevData,
-      activeDays: selectedDays,
-    }));
-    if (!useCustomReturnDays) {
-      setRouteData((prevData) => ({
-        ...prevData,
-        returnDays: { ...selectedDays },
-      }));
-    }
-  };
-
-  const handleReturnDaysChange = (selectedDays: Weekdays): void => {
-    setRouteData((prevData) => ({
-      ...prevData,
-      returnDays: selectedDays,
-    }));
-  };
-
-  const handleStationSelect = (selectedOption: any): void => {
-    setStationSelection(selectedOption);
-  };
-
-  const handleAddStation = (): void => {
-    if (stationSelection && departureTime && returnTime) {
-      const newStationTimes: StationTimes = {
-        stationId: stationSelection.value,
-        departureTime: departureTime.split(/\n/).map((time) => time.trim()),
-        returnTime: returnTime.split(/\n/).map((time) => time.trim()),
-      };
-      setRouteData((prevData: Partial<Route>) => ({
-        ...prevData,
-        stations: [...(prevData.stations || []), newStationTimes],
-      }));
-      setStationSelection(null);
-      setDepartureTime("");
-      setReturnTime("");
-    }
-  };
-
-  const handleSubmit = async (): Promise<void> => {
-    try {
-      const newRoute = await RouteService.post(routeData as Route);
-      console.log("Route added successfully!", newRoute);
-
-      setRouteData({
-        name: "",
-        agencyId: "",
-        duration: "",
-        stations: [],
-        activeDays: {},
-        returnDays: {},
-        type: undefined,
-      });
-
-      onRouteAdded();
-    } catch (error) {
-      console.error("Error adding route:", error);
-    }
-  };
-
-  const handleUseCustomReturnDaysChange = (): void => {
-    setUseCustomReturnDays((prevValue) => !prevValue);
-    if (!useCustomReturnDays) {
-      setRouteData((prevData) => ({
-        ...prevData,
-        returnDays: { ...prevData.activeDays },
-      }));
-    } else {
-      setRouteData((prevData) => ({
-        ...prevData,
-        returnDays: {},
-      }));
-    }
-  };
 
   const customSelectStyles = {
     control: (provided: any) => ({
@@ -175,7 +84,7 @@ const RouteForm: React.FC<RouteFormProps> = ({
             id="routeName"
             name="name"
             value={routeData.name}
-            onChange={handleInputChange}
+            onChange={(e) => handleInputChange(e, setRouteData)}
           />
         </div>
         <div>
@@ -187,7 +96,9 @@ const RouteForm: React.FC<RouteFormProps> = ({
               value: agency._id,
               label: agency.name,
             }))}
-            onChange={handleAgencySelect}
+            onChange={(selectedOption) =>
+              handleAgencySelect(selectedOption, setRouteData)
+            }
             placeholder="Select Agency"
             styles={customSelectStyles}
           />
@@ -198,7 +109,9 @@ const RouteForm: React.FC<RouteFormProps> = ({
             id="routeType"
             name="type"
             options={routeTypeOptions}
-            onChange={handleRouteTypeSelect}
+            onChange={(selectedOption) =>
+              handleRouteTypeSelect(selectedOption, setRouteData)
+            }
             placeholder="Select Route Type"
             styles={customSelectStyles}
           />
@@ -209,13 +122,19 @@ const RouteForm: React.FC<RouteFormProps> = ({
             id="routeDuration"
             name="duration"
             value={routeData.duration}
-            onChange={handleInputChange}
+            onChange={(e) => handleInputChange(e, setRouteData)}
           />
         </div>
         <div className="mx-auto text-center">
           <label>Active Days:</label>
           <WeekdaySelector
-            onChange={handleActiveDaysChange}
+            onChange={(selectedDays) =>
+              handleActiveDaysChange(
+                selectedDays,
+                setRouteData,
+                useCustomReturnDays
+              )
+            }
             initialDays={routeData.activeDays}
             disabled={false}
           />
@@ -223,7 +142,9 @@ const RouteForm: React.FC<RouteFormProps> = ({
         <div className="mx-auto text-center">
           <label>Return Days:</label>
           <WeekdaySelector
-            onChange={handleReturnDaysChange}
+            onChange={(selectedDays) =>
+              handleReturnDaysChange(selectedDays, setRouteData)
+            }
             initialDays={routeData.returnDays}
             disabled={!useCustomReturnDays}
           />
@@ -232,7 +153,13 @@ const RouteForm: React.FC<RouteFormProps> = ({
           <Switch
             id="useCustomReturnDays"
             checked={useCustomReturnDays}
-            onChange={handleUseCustomReturnDaysChange}
+            onChange={() =>
+              handleUseCustomReturnDaysChange(
+                setUseCustomReturnDays,
+                setRouteData,
+                routeData.activeDays || {} // Ensure activeDays is always defined
+              )
+            }
           />
           <label htmlFor="useCustomReturnDays" className="text-sm">
             Use Custom Return Days
@@ -246,7 +173,9 @@ const RouteForm: React.FC<RouteFormProps> = ({
               value: station._id,
               label: station.name,
             }))}
-            onChange={handleStationSelect}
+            onChange={(selectedOption) =>
+              handleStationSelect(selectedOption, setStationSelection)
+            }
             value={stationSelection}
             placeholder="Select Station"
             styles={customSelectStyles}
@@ -275,7 +204,21 @@ const RouteForm: React.FC<RouteFormProps> = ({
             className="w-25"
           />
 
-          <Button onClick={handleAddStation}>Add Station</Button>
+          <Button
+            onClick={() =>
+              handleAddStation(
+                stationSelection,
+                departureTime,
+                returnTime,
+                setRouteData,
+                setStationSelection,
+                setDepartureTime,
+                setReturnTime
+              )
+            }
+          >
+            Add Station
+          </Button>
         </div>
 
         <div>
@@ -289,7 +232,11 @@ const RouteForm: React.FC<RouteFormProps> = ({
             </div>
           ))}
         </div>
-        <Button onClick={handleSubmit}>Add Route</Button>
+        <Button
+          onClick={() => handleSubmit(routeData, setRouteData, onRouteAdded)}
+        >
+          Add Route
+        </Button>
       </div>
     </Card>
   );

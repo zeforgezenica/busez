@@ -1,9 +1,15 @@
 import React, { useState } from "react";
 import { Card, Input, Button } from "@nextui-org/react";
-import Select from "react-select";
+import dynamic from "next/dynamic";
 import { Agency } from "../models/agency.model";
 import { City } from "../models/city.model";
-import AgencyService from "../services/agency.service";
+import {
+  handleInputChange,
+  handleCitySelect,
+  handleSubmit,
+} from "../handlers/agency.form.handler";
+
+const Select = dynamic(() => import("react-select"), { ssr: false });
 
 interface AgencyFormProps {
   cities: City[];
@@ -19,41 +25,6 @@ const AgencyForm: React.FC<AgencyFormProps> = ({ cities, onAgencyAdded }) => {
     email: "",
     phoneNumber: "",
   });
-
-  const handleInputChange = (
-    event: React.ChangeEvent<HTMLInputElement>
-  ): void => {
-    const { name, value } = event.target;
-    setAgencyData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  };
-
-  const handleCitySelect = (selectedOption: any): void => {
-    setAgencyData((prevData) => ({
-      ...prevData,
-      cityId: selectedOption.value,
-    }));
-  };
-
-  const handleSubmit = async (): Promise<void> => {
-    try {
-      await AgencyService.post(agencyData as Agency);
-      console.log("Agency added successfully!");
-      setAgencyData({
-        cityId: "",
-        name: "",
-        address: "",
-        website: "",
-        email: "",
-        phoneNumber: "",
-      });
-      onAgencyAdded();
-    } catch (error) {
-      console.error("Error adding agency:", error);
-    }
-  };
 
   const customSelectStyles = {
     control: (provided: any) => ({
@@ -90,9 +61,12 @@ const AgencyForm: React.FC<AgencyFormProps> = ({ cities, onAgencyAdded }) => {
               value: city._id,
               label: city.name,
             }))}
-            onChange={handleCitySelect}
+            onChange={(selectedOption) =>
+              handleCitySelect(selectedOption, setAgencyData)
+            }
             placeholder="Select City"
             styles={customSelectStyles}
+            key={cities.length} // Use key to force re-rendering
           />
         </div>
         <div>
@@ -101,7 +75,7 @@ const AgencyForm: React.FC<AgencyFormProps> = ({ cities, onAgencyAdded }) => {
             id="agencyName"
             name="name"
             value={agencyData.name}
-            onChange={handleInputChange}
+            onChange={(e) => handleInputChange(e, setAgencyData)}
           />
         </div>
         <div>
@@ -110,7 +84,7 @@ const AgencyForm: React.FC<AgencyFormProps> = ({ cities, onAgencyAdded }) => {
             id="agencyAddress"
             name="address"
             value={agencyData.address}
-            onChange={handleInputChange}
+            onChange={(e) => handleInputChange(e, setAgencyData)}
           />
         </div>
         <div>
@@ -119,7 +93,7 @@ const AgencyForm: React.FC<AgencyFormProps> = ({ cities, onAgencyAdded }) => {
             id="agencyWebsite"
             name="website"
             value={agencyData.website || ""}
-            onChange={handleInputChange}
+            onChange={(e) => handleInputChange(e, setAgencyData)}
           />
         </div>
         <div>
@@ -128,7 +102,7 @@ const AgencyForm: React.FC<AgencyFormProps> = ({ cities, onAgencyAdded }) => {
             id="agencyEmail"
             name="email"
             value={agencyData.email || ""}
-            onChange={handleInputChange}
+            onChange={(e) => handleInputChange(e, setAgencyData)}
           />
         </div>
         <div>
@@ -137,10 +111,14 @@ const AgencyForm: React.FC<AgencyFormProps> = ({ cities, onAgencyAdded }) => {
             id="agencyPhoneNumber"
             name="phoneNumber"
             value={agencyData.phoneNumber || ""}
-            onChange={handleInputChange}
+            onChange={(e) => handleInputChange(e, setAgencyData)}
           />
         </div>
-        <Button onClick={handleSubmit}>Add Agency</Button>
+        <Button
+          onClick={() => handleSubmit(agencyData, setAgencyData, onAgencyAdded)}
+        >
+          Add Agency
+        </Button>
       </div>
     </Card>
   );
