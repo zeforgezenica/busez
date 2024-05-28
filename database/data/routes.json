@@ -610,63 +610,111 @@
     "stations": [
       {
         "stationId": "b922e8ca-476c-4aea-8401-3a17cb493686",
-        "departureTime": ["16:00"],
-        "returnTime": ["2:45"]
+        "departureTime": [
+          "16:00"
+        ],
+        "returnTime": [
+          "2:45"
+        ]
       },
       {
         "stationId": "f58b3a03-297e-4b30-9b4f-22e57be86d22",
-        "departureTime": ["16:30"],
-        "returnTime": ["2:15"]
+        "departureTime": [
+          "16:30"
+        ],
+        "returnTime": [
+          "2:15"
+        ]
       },
       {
         "stationId": "75aa417e-e58e-4b34-8ae6-350d51d3d814",
-        "departureTime": ["17:00"],
-        "returnTime": ["1:45"]
+        "departureTime": [
+          "17:00"
+        ],
+        "returnTime": [
+          "1:45"
+        ]
       },
       {
         "stationId": "a9e7e598-38b4-4ad6-af0e-4304397f92c7",
-        "departureTime": ["17:30"],
-        "returnTime": ["1:15"]
+        "departureTime": [
+          "17:30"
+        ],
+        "returnTime": [
+          "1:15"
+        ]
       },
       {
         "stationId": "3cbd8004-cee1-4006-be54-59d488b98687",
-        "departureTime": ["18:15"],
-        "returnTime": ["00:30"]
+        "departureTime": [
+          "18:15"
+        ],
+        "returnTime": [
+          "00:30"
+        ]
       },
       {
         "stationId": "689959cb-6aca-492c-a7f6-34866ea171bc",
-        "departureTime": ["18:30"],
-        "returnTime": ["00:15"]
+        "departureTime": [
+          "18:30"
+        ],
+        "returnTime": [
+          "00:15"
+        ]
       },
       {
         "stationId": "18d77f75-519b-4a53-afa7-10b6137a33c7",
-        "departureTime": ["20:30"],
-        "returnTime": ["22:00"]
+        "departureTime": [
+          "20:30"
+        ],
+        "returnTime": [
+          "22:00"
+        ]
       },
       {
         "stationId": "44d61bbe-ab1a-41f8-b115-d2bb7f6354b8",
-        "departureTime": ["21:00"],
-        "returnTime": ["21:30"]
+        "departureTime": [
+          "21:00"
+        ],
+        "returnTime": [
+          "21:30"
+        ]
       },
       {
         "stationId": "5581180d-9e39-4286-89df-269d1836ee65",
-        "departureTime": ["23:55"],
-        "returnTime": ["18:50"]
+        "departureTime": [
+          "23:55"
+        ],
+        "returnTime": [
+          "18:50"
+        ]
       },
       {
         "stationId": "445a7ed4-00b0-4ba0-bc98-da775652af3f",
-        "departureTime": ["00:50"],
-        "returnTime": ["17:55"]
+        "departureTime": [
+          "00:50"
+        ],
+        "returnTime": [
+          "17:55"
+        ]
       },
       {
         "stationId": "ac2157ba-0f28-4ed7-b8b1-e7e020972a5c",
-        "departureTime": ["2:50"],
-        "returnTime": ["16:00"]
+        "departureTime": [
+          "2:50"
+        ],
+        "returnTime": [
+          "16:00"
+        ]
       },
       {
         "stationId": "28aa0c61-9a00-4e61-9ea2-4312b3602e9c",
-        "departureTime": ["4:30"],
-        "returnTime": ["14:30"]
+        "departureTime": [
+          "4:30"
+        ],
+        "returnTime": [
+          "14:30"
+        ]
       }
     ],
     "activeDays": {
@@ -683,5 +731,55 @@
       "Wednesday": true
     },
     "type": 2
+  },
+  {
+    "_id": "bbfeb8e8-1ec8-411e-a2db-9cc6428a9806",
+    "name": "new route2",
+    "agencyId": "01725935-140e-4207-b0c9-71810125d6e4",
+    "duration": "12 min",
+    "stations": [
+      {
+        "stationId": "7c91fb3a-13e6-46c3-9903-eae10de01e94",
+        "departureTime": [
+          "12"
+        ],
+        "returnTime": [
+          "122"
+        ]
+      }
+    ],
+    "activeDays": {
+      "Thursday": true
+    },
+    "returnDays": {
+      "Wednesday": true
+    },
+    "type": 1
+  },
+  {
+    "_id": "c4d2635d-ef61-4a19-8a8b-2d61b3bc9c56",
+    "name": "new routr",
+    "agencyId": "",
+    "duration": "as",
+    "stations": [
+      {
+        "stationId": "7c91fb3a-13e6-46c3-9903-eae10de01e94",
+        "departureTime": [
+          "24"
+        ],
+        "returnTime": [
+          "34"
+        ]
+      }
+    ],
+    "activeDays": {
+      "Thursday": true,
+      "Friday": true,
+      "Saturday": true
+    },
+    "returnDays": {
+      "Wednesday": true,
+      "Friday": true
+    }
   }
 ]
