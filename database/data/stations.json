@@ -131,56 +131,67 @@
   {
     "_id": "b922e8ca-476c-4aea-8401-3a17cb493686",
     "cityId": "fd48d1d5-47ad-4f45-99cf-a54f1ebe1b17",
-    "name": "Sarajevo \"AS\""
-  },
-  {
-    "_id": "75aa417e-e58e-4b34-8ae6-350d51d3d814",
-    "cityId": "66da3a55-7d9a-4203-973c-c76603be1b8e",
-    "name": "Kakanj \"AS\""
+    "name": "Sarajevo \"AS\"",
+    "coordinates": [43.858685, 18.396548]
   },
   {
     "_id": "f58b3a03-297e-4b30-9b4f-22e57be86d22",
     "cityId": "d4873226-2d80-4e46-b879-bd0cb1467bc2",
-    "name": "Visoko \"AS\""
+    "name": "Visoko \"AS\"",
+    "coordinates": [43.991154, 18.184403]
+  },
+  {
+    "_id": "75aa417e-e58e-4b34-8ae6-350d51d3d814",
+    "cityId": "66da3a55-7d9a-4203-973c-c76603be1b8e",
+    "name": "Kakanj \"AS\"",
+    "coordinates": [44.122270, 18.111181]
   },
   {
     "_id": "3cbd8004-cee1-4006-be54-59d488b98687",
     "cityId": "32f9634b-11fa-4908-9ca7-6522da5e7c88",
-    "name": "Žepče \"AS\""
+    "name": "Žepče \"AS\"",
+    "coordinates": [44.422574, 18.040288]
   },
   {
     "_id": "689959cb-6aca-492c-a7f6-34866ea171bc",
     "cityId": "f6c34bd4-c8eb-464e-afbf-c5b8758d1702",
-    "name": "Maglaj \"AS\""
+    "name": "Maglaj \"AS\"",
+    "coordinates": [44.545561, 18.093679]
   },
   {
     "_id": "18d77f75-519b-4a53-afa7-10b6137a33c7",
     "cityId": "e80d0e8c-904e-46f7-9fd7-b08c729d5bb4",
-    "name": "Bosanski Brod \"AS\""
+    "name": "Bosanski Brod \"AS\"",
+    "coordinates": [45.147034, 18.003818]
   },
   {
     "_id": "44d61bbe-ab1a-41f8-b115-d2bb7f6354b8",
     "cityId": "65a68020-eea3-47f0-9479-3b836c726097",
-    "name": "Autobusni Kolodvor Slavonski Brod"
+    "name": "Autobusni Kolodvor Slavonski Brod",
+    "coordinates": [45.162435, 18.009776]
   },
   {
     "_id": "5581180d-9e39-4286-89df-269d1836ee65",
     "cityId": "9d6de84c-692e-4b1c-9103-ef239cf37743",
-    "name": "Autobusni kolodvor Zagreb"
+    "name": "Autobusni kolodvor Zagreb",
+    "coordinates": [45.804224, 15.992635]
   },
   {
     "_id": "445a7ed4-00b0-4ba0-bc98-da775652af3f",
     "cityId": "bb6cbbe7-f465-4959-8df8-93d0bc63c724",
-    "name": "Autobusni kolodvor Karlovac"
+    "name": "Autobusni kolodvor Karlovac",
+    "coordinates": [45.488380, 15.550240]
   },
   {
     "_id": "ac2157ba-0f28-4ed7-b8b1-e7e020972a5c",
     "cityId": "1adf9bc3-0cb0-4b36-a067-8f3243f58734",
-    "name": "Autobusni kolodvor Rijeka"
+    "name": "Autobusni kolodvor Rijeka",
+    "coordinates": [45.327926, 14.436903]
   },
   {
     "_id": "28aa0c61-9a00-4e61-9ea2-4312b3602e9c",
     "cityId": "bdf843e3-81ac-4c8d-88df-16006d0c5177",
-    "name": "Autobusni kolodvor Pula"
+    "name": "Autobusni kolodvor Pula",
+    "coordinates": [44.876702, 13.854257]
   }
 ]
