@@ -9,6 +9,10 @@ import {
 } from "@nextui-org/react";
 import { Route, StationTimes } from "../models/route.model";
 import Station from "../models/station.model";
+import dynamic from "next/dynamic";
+import { LatLngExpression } from "leaflet";
+
+const MapComponent = dynamic(() => import("../components/map/Map"), { ssr:false });
 
 interface RoutesTableProps {
   route: Route;
@@ -21,9 +25,19 @@ const RoutesTable: React.FC<RoutesTableProps> = ({ route, stations }) => {
     return station ? station.name : "Unknown Station";
   };
 
+
+  const departureCoordinates = (id: string) => {
+    return stations.find((s) => s._id === id);
+  };
+
   const departureStationIds = route.stations.map(
     (station) => station.stationId
   );
+
+  const getStationCoordinates = departureStationIds.map(
+    (stationId) => departureCoordinates(stationId)
+  );
+
   const returnStationIds = [...departureStationIds].reverse();
 
   const maxTimes = Math.max(
@@ -34,6 +48,7 @@ const RoutesTable: React.FC<RoutesTableProps> = ({ route, stations }) => {
 
   return (
     <div>
+      <MapComponent coordinates={[44.201133, 17.908600]} zoom={6} scrollWheelZoom={true} locations={getStationCoordinates} route={true}/>
       <h2 style={{ marginTop: "10px", marginBottom: "10px" }}>
         Departure Times
       </h2>

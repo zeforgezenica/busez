@@ -5,3 +5,11 @@
 * {
   text-align: center;
 }
+
+.leaflet-container .leaflet-touch {
+  height: 50vh;
+}
+
+.leaflet-top.leaflet-right {
+  display: none;
+}

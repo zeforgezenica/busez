@@ -19,7 +19,7 @@ const StationForm: React.FC<StationFormProps> = ({
   const [stationData, setStationData] = useState<Partial<Station>>({
     cityId: "",
     name: "",
-    coordinates: "",
+    coordinates: undefined,
   });
 
   const handleInputChange = (
@@ -46,7 +46,7 @@ const StationForm: React.FC<StationFormProps> = ({
       setStationData({
         cityId: "",
         name: "",
-        coordinates: "",
+        coordinates: undefined,
       });
       onStationAdded(newStation);
     } catch (error) {

@@ -3,7 +3,8 @@
     "_id": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
     "name": "Bosnia and Herzegovina",
     "code": 387,
-    "acronym": "BIH"
+    "acronym": "BIH",
+    "coordinates": [44.0, 18.0]
   },
   {
     "_id": "770f6103-302b-4a84-a374-246fbcc663f9",
