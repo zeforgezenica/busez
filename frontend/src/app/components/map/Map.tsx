@@ -59,6 +59,7 @@ const RoutingControl = ({ waypoints }: { waypoints: { latLng: LatLngExpression; 
 
       routeControl.addTo(map);
 
+      //TODO: Throws error on map if this line is active (map and app still works normal) - so need to investigate if this is required or not
       // return () => {
       //   map.removeControl(routeControl);
       // };
