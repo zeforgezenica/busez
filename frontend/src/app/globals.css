@@ -5,3 +5,11 @@
 * {
   text-align: center;
 }
+
+.leaflet-container.leaflet-touch.leaflet-fade-anim.leaflet-grab.leaflet-touch-drag.leaflet-touch-zoom {
+  height: 50vh!important;
+}
+
+.leaflet-top.leaflet-right {
+  display: none;
+}

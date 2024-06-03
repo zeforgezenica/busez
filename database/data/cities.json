@@ -2661,7 +2661,8 @@
     "_id": "fd48d1d5-47ad-4f45-99cf-a54f1ebe1b17",
     "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
     "name": "Sarajevo",
-    "zipCode": 71000
+    "zipCode": 71000,
+    "coordinates": [43.856258, 18.413076]
   },
   {
     "_id": "03754a39-9fe3-4348-becf-b8036dc96ce1",
@@ -3129,7 +3130,8 @@
     "_id": "9b017b1d-a94b-450f-9a1d-fdd568f16fd8",
     "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
     "name": "Tuzla",
-    "zipCode": 75000
+    "zipCode": 75000,
+    "coordinates": [44.538040, 18.672180]
   },
   {
     "_id": "1f482e19-567d-4c4f-b90e-0d017366bd46",
@@ -3477,7 +3479,8 @@
     "_id": "c14d1c46-0db1-4346-b35c-535bab9421a7",
     "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
     "name": "Zenica",
-    "zipCode": 72000
+    "zipCode": 72000,
+    "coordinates": [44.203438, 17.907743]
   },
   {
     "_id": "de6522a1-0efc-45b8-8007-738995cc6a00",
