@@ -10,7 +10,6 @@ import {
 import { Route, StationTimes } from "../models/route.model";
 import Station from "../models/station.model";
 import dynamic from "next/dynamic";
-import { LatLngExpression } from "leaflet";
 
 const MapComponent = dynamic(() => import("../components/map/Map"), { ssr:false });
 

@@ -4,7 +4,7 @@ export interface Station {
   _id?: string;
   cityId: string;
   name: string;
-  coordinates?: LatLngExpression | undefined;
+  coordinates?: LatLngExpression;
 }
 
 export default Station;
