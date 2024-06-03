@@ -23,9 +23,41 @@ const StationForm: React.FC<StationFormProps> = ({
   const [stationData, setStationData] = useState<Partial<Station>>({
     cityId: "",
     name: "",
-    coordinates: "",
+    coordinates: undefined,
   });
 
+  const handleInputChange = (
+    event: React.ChangeEvent<HTMLInputElement>
+  ): void => {
+    const { name, value } = event.target;
+    setStationData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  const handleCitySelect = (selectedOption: any): void => {
+    setStationData((prevData) => ({
+      ...prevData,
+      cityId: selectedOption.value,
+    }));
+  };
+
+  const handleSubmit = async (): Promise<void> => {
+    try {
+      const newStation = await StationService.post(stationData as Station);
+      console.log("Station added successfully!", newStation);
+      setStationData({
+        cityId: "",
+        name: "",
+        coordinates: undefined,
+      });
+      onStationAdded(newStation);
+    } catch (error) {
+      console.error("Error adding station:", error);
+    }
+  };
+    
   const customSelectStyles = {
     control: (provided: any) => ({
       ...provided,

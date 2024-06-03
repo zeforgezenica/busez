@@ -9,6 +9,9 @@ import { Country } from "../models/country.model";
 import Head from "next/head";
 import DynamicTable from "../components/DynamicTable";
 import CityForm from "./CityForm";
+import dynamic from "next/dynamic";
+
+const MapComponent = dynamic(() => import("../components/map/Map"), { ssr:false });
 
 const CitiesPage: React.FC = () => {
   const [cities, setCities] = useState<City[]>([]);
@@ -75,6 +78,7 @@ const CitiesPage: React.FC = () => {
         <h1 className="text-3xl font-bold text-center mb-4">Cities</h1>
         <CityForm countries={countries} onCityAdded={handleCityAdded} />
         <Card shadow="sm" className="p-6">
+          <MapComponent coordinates={[44.201133, 17.908600]} zoom={6} scrollWheelZoom={true} locations={citiesWithCountryNames} />
           <DynamicTable columns={columns} data={citiesWithCountryNames} />
         </Card>
       </div>

@@ -2,17 +2,20 @@
   {
     "_id": "7c91fb3a-13e6-46c3-9903-eae10de01e94",
     "cityId": "c14d1c46-0db1-4346-b35c-535bab9421a7",
-    "name": "Bolnica"
+    "name": "Bolnica",
+    "coordinates": [44.207131, 17.923959]
   },
   {
     "_id": "10136326-8ae9-4543-921e-d71e27f326e2",
     "cityId": "c14d1c46-0db1-4346-b35c-535bab9421a7",
-    "name": "Crkvice"
+    "name": "Crkvice",
+    "coordinates": [44.202728, 17.921218]
   },
   {
     "_id": "f8be5465-1377-43ca-941a-958cee1743ce",
     "cityId": "c14d1c46-0db1-4346-b35c-535bab9421a7",
-    "name": "Crkvice \"R\""
+    "name": "Crkvice \"R\"",
+    "coordinates": [44.200771, 17.920205]
   },
   {
     "_id": "ca3fc100-a94d-4bd2-a0fa-8b6d18de013d",
@@ -22,7 +25,8 @@
   {
     "_id": "d5722eaf-bc02-4ce0-9baa-2492eb92fc30",
     "cityId": "c14d1c46-0db1-4346-b35c-535bab9421a7",
-    "name": "Garnizon"
+    "name": "Garnizon",
+    "coordinates": [44.194757, 17.922221]
   },
   {
     "_id": "a02f6eb3-02c6-4a48-addf-e2a91f097b95",
@@ -37,7 +41,8 @@
   {
     "_id": "67dd07c0-42b5-4326-b5d2-4e6c2fff2b7e",
     "cityId": "c14d1c46-0db1-4346-b35c-535bab9421a7",
-    "name": "Stara Pijaca"
+    "name": "Stara Pijaca",
+    "coordinates": [44.200236, 17.910875]
   },
   {
     "_id": "a74ce02e-47c0-4570-9b63-ab0c13cfd0ef",
@@ -52,12 +57,14 @@
   {
     "_id": "e0bd9801-a13e-4a90-87f8-6f4d22a867c0",
     "cityId": "c14d1c46-0db1-4346-b35c-535bab9421a7",
-    "name": "Nova Zenica"
+    "name": "Nova Zenica",
+    "coordinates": [44.207191, 17.907235]
   },
   {
     "_id": "0ee1473b-0216-4dad-81a2-5ea68fb616f4",
     "cityId": "c14d1c46-0db1-4346-b35c-535bab9421a7",
-    "name": "Preporod"
+    "name": "Preporod",
+    "coordinates": [44.207545, 17.906051]
   },
   {
     "_id": "f4f8821c-295c-4a30-8af7-88f05e1ff479",
@@ -67,7 +74,8 @@
   {
     "_id": "1308ea17-5abb-4fd7-8d78-467b7e5ecbe2",
     "cityId": "c14d1c46-0db1-4346-b35c-535bab9421a7",
-    "name": "Kanal"
+    "name": "Kanal",
+    "coordinates": [44.230430, 17.905492]
   },
   {
     "_id": "ee8b498b-bb99-41fc-b83c-bd04201d7988",
@@ -117,67 +125,73 @@
   {
     "_id": "6267b2c7-1af4-4a42-bd49-4f8b04f3bbb8",
     "cityId": "c14d1c46-0db1-4346-b35c-535bab9421a7",
-    "name": "Donja Gračanica"
+    "name": "Donja Gračanica",
+    "coordinates": [44.230105, 17.906746]
   },
   {
     "_id": "b922e8ca-476c-4aea-8401-3a17cb493686",
     "cityId": "fd48d1d5-47ad-4f45-99cf-a54f1ebe1b17",
-    "name": "Sarajevo \"AS\""
-  },
-  {
-    "_id": "75aa417e-e58e-4b34-8ae6-350d51d3d814",
-    "cityId": "66da3a55-7d9a-4203-973c-c76603be1b8e",
-    "name": "Kakanj \"AS\""
+    "name": "Sarajevo \"AS\"",
+    "coordinates": [43.858685, 18.396548]
   },
   {
     "_id": "f58b3a03-297e-4b30-9b4f-22e57be86d22",
     "cityId": "d4873226-2d80-4e46-b879-bd0cb1467bc2",
-    "name": "Visoko \"AS\""
+    "name": "Visoko \"AS\"",
+    "coordinates": [43.991154, 18.184403]
+  },
+  {
+    "_id": "75aa417e-e58e-4b34-8ae6-350d51d3d814",
+    "cityId": "66da3a55-7d9a-4203-973c-c76603be1b8e",
+    "name": "Kakanj \"AS\"",
+    "coordinates": [44.122270, 18.111181]
   },
   {
     "_id": "3cbd8004-cee1-4006-be54-59d488b98687",
     "cityId": "32f9634b-11fa-4908-9ca7-6522da5e7c88",
-    "name": "Žepče \"AS\""
+    "name": "Žepče \"AS\"",
+    "coordinates": [44.422574, 18.040288]
   },
   {
     "_id": "689959cb-6aca-492c-a7f6-34866ea171bc",
     "cityId": "f6c34bd4-c8eb-464e-afbf-c5b8758d1702",
-    "name": "Maglaj \"AS\""
+    "name": "Maglaj \"AS\"",
+    "coordinates": [44.545561, 18.093679]
   },
   {
     "_id": "18d77f75-519b-4a53-afa7-10b6137a33c7",
     "cityId": "e80d0e8c-904e-46f7-9fd7-b08c729d5bb4",
-    "name": "Bosanski Brod \"AS\""
+    "name": "Bosanski Brod \"AS\"",
+    "coordinates": [45.147034, 18.003818]
   },
   {
     "_id": "44d61bbe-ab1a-41f8-b115-d2bb7f6354b8",
     "cityId": "65a68020-eea3-47f0-9479-3b836c726097",
-    "name": "Autobusni Kolodvor Slavonski Brod"
+    "name": "Autobusni Kolodvor Slavonski Brod",
+    "coordinates": [45.162435, 18.009776]
   },
   {
     "_id": "5581180d-9e39-4286-89df-269d1836ee65",
     "cityId": "9d6de84c-692e-4b1c-9103-ef239cf37743",
-    "name": "Autobusni kolodvor Zagreb"
+    "name": "Autobusni kolodvor Zagreb",
+    "coordinates": [45.804224, 15.992635]
   },
   {
     "_id": "445a7ed4-00b0-4ba0-bc98-da775652af3f",
     "cityId": "bb6cbbe7-f465-4959-8df8-93d0bc63c724",
-    "name": "Autobusni kolodvor Karlovac"
+    "name": "Autobusni kolodvor Karlovac",
+    "coordinates": [45.488380, 15.550240]
   },
   {
     "_id": "ac2157ba-0f28-4ed7-b8b1-e7e020972a5c",
     "cityId": "1adf9bc3-0cb0-4b36-a067-8f3243f58734",
-    "name": "Autobusni kolodvor Rijeka"
+    "name": "Autobusni kolodvor Rijeka",
+    "coordinates": [45.327926, 14.436903]
   },
   {
     "_id": "28aa0c61-9a00-4e61-9ea2-4312b3602e9c",
     "cityId": "bdf843e3-81ac-4c8d-88df-16006d0c5177",
     "name": "Autobusni kolodvor Pula"
-  },
-  {
-    "_id": "acccc268-9536-4ff9-a096-7abfd77efd11",
-    "cityId": "8745d890-9ebc-4811-a0ec-493a20c7a131",
-    "name": "new station",
-    "coordinates": "2231"
+    "coordinates": [44.876702, 13.854257]
   }
 ]
