@@ -3,8 +3,16 @@
   "properties": {
     "_id": { "type": "string" },
     "name": { "type": "string" },
-    "code": { "type": "string" },
-    "acronym": { "type": "string" }
+    "code": {
+      "type": "string",
+      "pattern": "^[0-9]+$",
+      "transform": ["toUpperCase"]
+    },
+    "acronym": {
+      "type": "string",
+      "pattern": "^[a-zA-Z]{1,3}$",
+      "transform": ["toUpperCase"]
+    }
   },
   "required": ["name", "code", "acronym"]
 }

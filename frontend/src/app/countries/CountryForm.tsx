@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Card, Input, Button } from "@nextui-org/react";
 import { Country } from "../models/country.model";
-import CountryService from "../services/country.service";
+import { handleCountrySubmit } from "../handlers/country.form.handler";
 
 interface CountryFormProps {
   onCountryAdded: (country: Country) => void;
@@ -12,30 +12,23 @@ const CountryForm: React.FC<CountryFormProps> = ({ onCountryAdded }) => {
   const [countryCode, setCountryCode] = useState<number | "">("");
   const [countryAcronym, setCountryAcronym] = useState("");
 
-  const handleCountrySubmit = async (event: React.FormEvent) => {
+  const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
-    const newCountry: Omit<Country, "_id"> = {
-      name: countryName,
-      code: countryCode as number,
-      acronym: countryAcronym,
-    };
-
-    try {
-      const response = await CountryService.post(newCountry);
-      console.log("Country added successfully:", response);
-      onCountryAdded(response);
-      setCountryName("");
-      setCountryCode("");
-      setCountryAcronym("");
-    } catch (error) {
-      console.error("Error creating country:", error);
-    }
+    handleCountrySubmit(
+      countryName,
+      countryCode,
+      countryAcronym,
+      onCountryAdded,
+      setCountryName,
+      setCountryCode,
+      setCountryAcronym
+    );
   };
 
   return (
     <Card shadow="sm" className="p-6 mb-4">
       <h2 className="text-xl mb-2">Add New Country</h2>
-      <form onSubmit={handleCountrySubmit} className="space-y-4">
+      <form onSubmit={handleSubmit} className="space-y-4">
         <div>
           <label htmlFor="countryName" className="block mb-1">
             Name:

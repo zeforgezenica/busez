@@ -3,7 +3,11 @@ import { Card, Input, Button } from "@nextui-org/react";
 import dynamic from "next/dynamic";
 import { Station } from "../models/station.model";
 import { City } from "../models/city.model";
-import StationService from "../services/station.service";
+import {
+  handleInputChange,
+  handleCitySelect,
+  handleSubmit,
+} from "../handlers/station.form.handler";
 
 const Select = dynamic(() => import("react-select"), { ssr: false });
 
@@ -53,7 +57,7 @@ const StationForm: React.FC<StationFormProps> = ({
       console.error("Error adding station:", error);
     }
   };
-
+    
   const customSelectStyles = {
     control: (provided: any) => ({
       ...provided,
@@ -89,7 +93,9 @@ const StationForm: React.FC<StationFormProps> = ({
               value: city._id,
               label: city.name,
             }))}
-            onChange={handleCitySelect}
+            onChange={(selectedOption) =>
+              handleCitySelect(selectedOption, setStationData)
+            }
             placeholder="Select City"
             styles={customSelectStyles}
           />
@@ -100,7 +106,7 @@ const StationForm: React.FC<StationFormProps> = ({
             id="stationName"
             name="name"
             value={stationData.name}
-            onChange={handleInputChange}
+            onChange={(e) => handleInputChange(e, setStationData)}
           />
         </div>
         <div>
@@ -109,10 +115,16 @@ const StationForm: React.FC<StationFormProps> = ({
             id="stationCoordinates"
             name="coordinates"
             value={stationData.coordinates || ""}
-            onChange={handleInputChange}
+            onChange={(e) => handleInputChange(e, setStationData)}
           />
         </div>
-        <Button onClick={handleSubmit}>Add Station</Button>
+        <Button
+          onClick={() =>
+            handleSubmit(stationData, setStationData, onStationAdded)
+          }
+        >
+          Add Station
+        </Button>
       </div>
     </Card>
   );

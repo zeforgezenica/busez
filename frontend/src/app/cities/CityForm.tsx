@@ -3,7 +3,11 @@ import { Card, Input, Button } from "@nextui-org/react";
 import Select from "react-select";
 import { City } from "../models/city.model";
 import { Country } from "../models/country.model";
-import CityService from "../services/city.service";
+import {
+  handleInputChange,
+  handleCountrySelect,
+  handleSubmit,
+} from "../handlers/city.form.handler";
 
 interface CityFormProps {
   countries: Country[];
@@ -17,39 +21,6 @@ const CityForm: React.FC<CityFormProps> = ({ countries, onCityAdded }) => {
     zipCode: 0,
     coordinates: "",
   });
-
-  const handleInputChange = (
-    event: React.ChangeEvent<HTMLInputElement>
-  ): void => {
-    const { name, value } = event.target;
-    setCityData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  };
-
-  const handleCountrySelect = (selectedOption: any): void => {
-    setCityData((prevData) => ({
-      ...prevData,
-      countryId: selectedOption.value,
-    }));
-  };
-
-  const handleSubmit = async (): Promise<void> => {
-    try {
-      await CityService.post(cityData as City);
-      console.log("City added successfully!");
-      setCityData({
-        countryId: "",
-        name: "",
-        zipCode: 0,
-        coordinates: "",
-      });
-      onCityAdded();
-    } catch (error) {
-      console.error("Error adding city:", error);
-    }
-  };
 
   const customSelectStyles = {
     control: (provided: any) => ({
@@ -86,7 +57,9 @@ const CityForm: React.FC<CityFormProps> = ({ countries, onCityAdded }) => {
               value: country._id,
               label: country.name,
             }))}
-            onChange={handleCountrySelect}
+            onChange={(selectedOption) =>
+              handleCountrySelect(selectedOption, setCityData)
+            }
             placeholder="Select Country"
             styles={customSelectStyles}
           />
@@ -97,7 +70,7 @@ const CityForm: React.FC<CityFormProps> = ({ countries, onCityAdded }) => {
             id="cityName"
             name="name"
             value={cityData.name}
-            onChange={handleInputChange}
+            onChange={(e) => handleInputChange(e, setCityData)}
           />
         </div>
         <div>
@@ -107,7 +80,7 @@ const CityForm: React.FC<CityFormProps> = ({ countries, onCityAdded }) => {
             name="zipCode"
             type="number"
             value={cityData.zipCode ? cityData.zipCode.toString() : ""}
-            onChange={handleInputChange}
+            onChange={(e) => handleInputChange(e, setCityData)}
           />
         </div>
         <div>
@@ -116,10 +89,14 @@ const CityForm: React.FC<CityFormProps> = ({ countries, onCityAdded }) => {
             id="cityCoordinates"
             name="coordinates"
             value={cityData.coordinates || ""}
-            onChange={handleInputChange}
+            onChange={(e) => handleInputChange(e, setCityData)}
           />
         </div>
-        <Button onClick={handleSubmit}>Add City</Button>
+        <Button
+          onClick={() => handleSubmit(cityData, setCityData, onCityAdded)}
+        >
+          Add City
+        </Button>
       </div>
     </Card>
   );

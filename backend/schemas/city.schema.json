@@ -5,7 +5,10 @@
     "countryId": { "type": "string" },
     "name": { "type": "string" },
     "zipCode": { "type": "number" },
-    "coordinates": { "type": ["string", "null"] }
+    "coordinates": {
+      "type": ["string", "null"],
+      "pattern": "^(-?\\d+(\\.\\d+)?),\\s*(-?\\d+(\\.\\d+)?)$"
+    }
   },
   "required": ["countryId", "name", "zipCode"]
 }
