@@ -3,8 +3,6 @@
 import React, { useState, useEffect } from "react";
 import { Card } from "@nextui-org/react";
 import Head from "next/head";
-import { DateValue } from "@react-types/calendar";
-
 import RouteService from "../services/route.service";
 import AgencyService from "../services/agency.service";
 import StationService from "../services/station.service";
@@ -13,7 +11,7 @@ import { Agency } from "../models/agency.model";
 import { Station } from "../models/station.model";
 import RoutesTable from "./RoutesTable";
 import RouteForm from "./RouteForm";
-import { Weekdays, Week } from "../models/weekdays.model";
+import { Weekdays } from "../models/weekdays.model";
 
 const RoutesPage: React.FC = () => {
   const [routes, setRoutes] = useState<Route[]>([]);
