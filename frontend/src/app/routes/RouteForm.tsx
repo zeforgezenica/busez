@@ -1,4 +1,3 @@
-// components/RouteForm.tsx
 import React, { useState } from "react";
 import { Card, Input, Button, Switch, Textarea } from "@nextui-org/react";
 import dynamic from "next/dynamic";
@@ -79,16 +78,16 @@ const RouteForm: React.FC<RouteFormProps> = ({
       <h2 className="text-xl mb-2">Add New Route</h2>
       <div className="flex flex-col space-y-4">
         <div>
-          <label htmlFor="routeName">Name:</label>
           <Input
             id="routeName"
             name="name"
+            label="Route Name"
+            placeholder="Please enter the route name"
             value={routeData.name}
             onChange={(e) => handleInputChange(e, setRouteData)}
           />
         </div>
         <div>
-          <label htmlFor="routeAgency">Agency:</label>
           <Select
             id="routeAgency"
             name="agencyId"
@@ -104,7 +103,6 @@ const RouteForm: React.FC<RouteFormProps> = ({
           />
         </div>
         <div>
-          <label htmlFor="routeType">Route Type:</label>
           <Select
             id="routeType"
             name="type"
@@ -117,10 +115,11 @@ const RouteForm: React.FC<RouteFormProps> = ({
           />
         </div>
         <div>
-          <label htmlFor="routeDuration">Duration:</label>
           <Input
             id="routeDuration"
             name="duration"
+            label="Duration"
+            placeholder="Please enter the travel duration"
             value={routeData.duration}
             onChange={(e) => handleInputChange(e, setRouteData)}
           />
@@ -157,7 +156,7 @@ const RouteForm: React.FC<RouteFormProps> = ({
               handleUseCustomReturnDaysChange(
                 setUseCustomReturnDays,
                 setRouteData,
-                routeData.activeDays || {} // Ensure activeDays is always defined
+                routeData.activeDays || {}
               )
             }
           />

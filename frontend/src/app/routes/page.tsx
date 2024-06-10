@@ -2,16 +2,18 @@
 
 import React, { useState, useEffect } from "react";
 import { Card } from "@nextui-org/react";
+import Head from "next/head";
+import { DateValue } from "@react-types/calendar";
+
 import RouteService from "../services/route.service";
 import AgencyService from "../services/agency.service";
 import StationService from "../services/station.service";
 import { Route, RouteType } from "../models/route.model";
 import { Agency } from "../models/agency.model";
 import { Station } from "../models/station.model";
-import Head from "next/head";
 import RoutesTable from "./RoutesTable";
 import RouteForm from "./RouteForm";
-import Weekdays from "../models/weekdays.model";
+import { Weekdays, Week } from "../models/weekdays.model";
 
 const RoutesPage: React.FC = () => {
   const [routes, setRoutes] = useState<Route[]>([]);
@@ -89,22 +91,6 @@ const RoutesPage: React.FC = () => {
       console.error("Error fetching routes:", error);
     }
   };
-  const areDaysDifferent = (
-    activeDays: Weekdays,
-    returnDays: Weekdays
-  ): boolean => {
-    const activeDayKeys = Object.keys(activeDays) as (keyof Weekdays)[];
-    const returnDayKeys = Object.keys(returnDays) as (keyof Weekdays)[];
-    if (activeDayKeys.length !== returnDayKeys.length) {
-      return true;
-    }
-    for (const key of activeDayKeys) {
-      if (activeDays[key] !== returnDays[key]) {
-        return true;
-      }
-    }
-    return false;
-  };
 
   return (
     <>
@@ -118,6 +104,7 @@ const RoutesPage: React.FC = () => {
           agencies={agencies}
           onRouteAdded={handleRouteAdded}
         />
+
         {routes.map((route) => (
           <Card key={route._id} shadow="sm" className="p-6 mb-4">
             <h2 className="text-xl mb-2">{route.name}</h2>
@@ -138,7 +125,7 @@ const RoutesPage: React.FC = () => {
   );
 };
 
-const renderWeekdays = (weekdays: any): string => {
+const renderWeekdays = (weekdays: Weekdays): string => {
   const days = Object.keys(weekdays).filter(
     (day) => weekdays[day as keyof typeof weekdays]
   );
@@ -156,6 +143,23 @@ const getRouteType = (type: RouteType): string => {
     default:
       return "Unknown";
   }
+};
+
+const areDaysDifferent = (
+  activeDays: Weekdays,
+  returnDays: Weekdays
+): boolean => {
+  const activeDayKeys = Object.keys(activeDays) as (keyof Weekdays)[];
+  const returnDayKeys = Object.keys(returnDays) as (keyof Weekdays)[];
+  if (activeDayKeys.length !== returnDayKeys.length) {
+    return true;
+  }
+  for (const key of activeDayKeys) {
+    if (activeDays[key] !== returnDays[key]) {
+      return true;
+    }
+  }
+  return false;
 };
 
 export default RoutesPage;

@@ -2661,7 +2661,11 @@
     "_id": "fd48d1d5-47ad-4f45-99cf-a54f1ebe1b17",
     "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
     "name": "Sarajevo",
-    "zipCode": 71000
+    "zipCode": 71000,
+    "coordinates": [
+      43.856258,
+      18.413076
+    ]
   },
   {
     "_id": "03754a39-9fe3-4348-becf-b8036dc96ce1",
@@ -3129,7 +3133,11 @@
     "_id": "9b017b1d-a94b-450f-9a1d-fdd568f16fd8",
     "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
     "name": "Tuzla",
-    "zipCode": 75000
+    "zipCode": 75000,
+    "coordinates": [
+      44.53804,
+      18.67218
+    ]
   },
   {
     "_id": "1f482e19-567d-4c4f-b90e-0d017366bd46",
@@ -3477,7 +3485,11 @@
     "_id": "c14d1c46-0db1-4346-b35c-535bab9421a7",
     "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
     "name": "Zenica",
-    "zipCode": 72000
+    "zipCode": 72000,
+    "coordinates": [
+      44.203438,
+      17.907743
+    ]
   },
   {
     "_id": "de6522a1-0efc-45b8-8007-738995cc6a00",
@@ -3760,5 +3772,35 @@
     "countryId": "9014e8d0-4878-4ec2-8166-0e0284698171",
     "name": "Zaječar",
     "zipCode": 19000
+  },
+  {
+    "_id": "f158f61d-f390-4951-9736-abd92e966115",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Travnik",
+    "zipCode": "72270",
+    "coordinates": [
+      44.2257001,
+      17.6245312
+    ]
+  },
+  {
+    "_id": "cc08f914-4395-4f09-86fd-bd3bc6f68c8f",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Travnik",
+    "zipCode": "72270",
+    "coordinates": [
+      44.2257001,
+      17.6245312
+    ]
+  },
+  {
+    "_id": "670aa99b-6ac7-40b4-a066-ea1a864033c8",
+    "countryId": "a35d23d3-5b50-44b9-9a8d-e4befd94c765",
+    "name": "Travnik",
+    "zipCode": "72270",
+    "coordinates": [
+      44.2257001,
+      17.6245312
+    ]
   }
 ]
