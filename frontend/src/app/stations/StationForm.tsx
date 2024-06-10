@@ -8,6 +8,7 @@ import {
   handleCitySelect,
   handleSubmit,
 } from "../handlers/station.form.handler";
+import { LatLngTuple, LatLngExpression } from "leaflet";
 
 const Select = dynamic(() => import("react-select"), { ssr: false });
 
@@ -23,41 +24,9 @@ const StationForm: React.FC<StationFormProps> = ({
   const [stationData, setStationData] = useState<Partial<Station>>({
     cityId: "",
     name: "",
-    coordinates: undefined,
+    coordinates: [0, 0] as LatLngTuple,
   });
 
-  const handleInputChange = (
-    event: React.ChangeEvent<HTMLInputElement>
-  ): void => {
-    const { name, value } = event.target;
-    setStationData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  };
-
-  const handleCitySelect = (selectedOption: any): void => {
-    setStationData((prevData) => ({
-      ...prevData,
-      cityId: selectedOption.value,
-    }));
-  };
-
-  const handleSubmit = async (): Promise<void> => {
-    try {
-      const newStation = await StationService.post(stationData as Station);
-      console.log("Station added successfully!", newStation);
-      setStationData({
-        cityId: "",
-        name: "",
-        coordinates: undefined,
-      });
-      onStationAdded(newStation);
-    } catch (error) {
-      console.error("Error adding station:", error);
-    }
-  };
-    
   const customSelectStyles = {
     control: (provided: any) => ({
       ...provided,
@@ -80,12 +49,57 @@ const StationForm: React.FC<StationFormProps> = ({
     }),
   };
 
+  const handleLatitudeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const latitude = parseFloat(e.target.value);
+    setStationData((prevData) => ({
+      ...prevData,
+      coordinates: [latitude, (prevData.coordinates as LatLngTuple)[1]],
+    }));
+  };
+
+  const handleLongitudeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const longitude = parseFloat(e.target.value);
+    setStationData((prevData) => ({
+      ...prevData,
+      coordinates: [(prevData.coordinates as LatLngTuple)[0], longitude],
+    }));
+  };
+
+  const isCoordinatesValid = (
+    coordinates: LatLngExpression
+  ): coordinates is LatLngTuple => {
+    return Array.isArray(coordinates) && coordinates.length === 2;
+  };
+
+  const getLatitude = (): string => {
+    return (stationData.coordinates as LatLngTuple)?.[0]?.toString() ?? "";
+  };
+
+  const getLongitude = (): string => {
+    return (stationData.coordinates as LatLngTuple)?.[1]?.toString() ?? "";
+  };
+
+  const handleFormSubmit = () => {
+    const { cityId, name, coordinates } = stationData;
+    if (
+      !cityId ||
+      !name ||
+      !coordinates ||
+      !isCoordinatesValid(coordinates) ||
+      coordinates[0] === 0 ||
+      coordinates[1] === 0
+    ) {
+      alert("Please fill out all fields.");
+      return;
+    }
+    handleSubmit(stationData, setStationData, onStationAdded);
+  };
+
   return (
     <Card shadow="sm" className="p-6 mb-4">
       <h2 className="text-xl mb-2">Add New Station</h2>
       <div className="flex flex-col space-y-4">
         <div>
-          <label htmlFor="stationCity">City:</label>
           <Select
             id="stationCity"
             name="cityId"
@@ -101,30 +115,37 @@ const StationForm: React.FC<StationFormProps> = ({
           />
         </div>
         <div>
-          <label htmlFor="stationName">Name:</label>
           <Input
             id="stationName"
             name="name"
-            value={stationData.name}
+            label="Station name"
+            placeholder="Please enter the station name"
+            value={stationData.name || ""}
             onChange={(e) => handleInputChange(e, setStationData)}
           />
         </div>
         <div>
-          <label htmlFor="stationCoordinates">Coordinates (optional):</label>
-          <Input
-            id="stationCoordinates"
-            name="coordinates"
-            value={stationData.coordinates || ""}
-            onChange={(e) => handleInputChange(e, setStationData)}
-          />
+          <label htmlFor="coordinates">Coordinates:</label>
+          <div className="flex space-x-4">
+            <Input
+              type="number"
+              step="any"
+              label="Latitude"
+              value={getLatitude()}
+              onChange={handleLatitudeChange}
+              required
+            />
+            <Input
+              type="number"
+              step="any"
+              label="Longitude"
+              value={getLongitude()}
+              onChange={handleLongitudeChange}
+              required
+            />
+          </div>
         </div>
-        <Button
-          onClick={() =>
-            handleSubmit(stationData, setStationData, onStationAdded)
-          }
-        >
-          Add Station
-        </Button>
+        <Button onClick={handleFormSubmit}>Add Station</Button>
       </div>
     </Card>
   );
