@@ -53,9 +53,10 @@ const RoutingControl: React.FC<{
 
       routeControl.addTo(map);
 
-      return () => {
-        map.removeControl(routeControl);
-      };
+      //TODO: Throws error on map if this line is active (map and app still works normal) - so need to investigate if this is required or not
+      // return () => {
+      //   map.removeControl(routeControl);
+      // };
     }
   }, [map, waypoints]);
 
