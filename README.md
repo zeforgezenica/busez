@@ -21,3 +21,5 @@ From the repo root directory please run the following
 `cd backend`
 
 `npm i`
+
+`npm run server`
