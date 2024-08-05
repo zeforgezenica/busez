@@ -53,7 +53,6 @@ const AgencyForm: React.FC<AgencyFormProps> = ({ cities, onAgencyAdded }) => {
       <h2 className="text-xl mb-2">Add New Agency</h2>
       <div className="flex flex-col space-y-4">
         <div>
-          <label htmlFor="agencyCity">City:</label>
           <Select
             id="agencyCity"
             name="cityId"
@@ -66,50 +65,55 @@ const AgencyForm: React.FC<AgencyFormProps> = ({ cities, onAgencyAdded }) => {
             }
             placeholder="Select City"
             styles={customSelectStyles}
-            key={cities.length} // Use key to force re-rendering
+            key={cities.length}
           />
         </div>
         <div>
-          <label htmlFor="agencyName">Name:</label>
           <Input
             id="agencyName"
             name="name"
+            label="Agency name"
+            placeholder="Please enter the agency name"
             value={agencyData.name}
             onChange={(e) => handleInputChange(e, setAgencyData)}
           />
         </div>
         <div>
-          <label htmlFor="agencyAddress">Address:</label>
           <Input
             id="agencyAddress"
             name="address"
+            label="Address"
+            placeholder="Please enter the agency address"
             value={agencyData.address}
             onChange={(e) => handleInputChange(e, setAgencyData)}
           />
         </div>
         <div>
-          <label htmlFor="agencyWebsite">Website (optional):</label>
           <Input
             id="agencyWebsite"
             name="website"
+            label="Website (optional)"
+            placeholder="Please enter the agency website"
             value={agencyData.website || ""}
             onChange={(e) => handleInputChange(e, setAgencyData)}
           />
         </div>
         <div>
-          <label htmlFor="agencyEmail">Email (optional):</label>
           <Input
             id="agencyEmail"
             name="email"
+            label="Email (optional)"
+            placeholder="Please enter the agency email"
             value={agencyData.email || ""}
             onChange={(e) => handleInputChange(e, setAgencyData)}
           />
         </div>
         <div>
-          <label htmlFor="agencyPhoneNumber">Phone Number (optional):</label>
           <Input
             id="agencyPhoneNumber"
             name="phoneNumber"
+            label="Phone Number (optional)"
+            placeholder="Please enter the agency phone number"
             value={agencyData.phoneNumber || ""}
             onChange={(e) => handleInputChange(e, setAgencyData)}
           />

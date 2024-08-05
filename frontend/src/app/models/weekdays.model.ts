@@ -8,4 +8,14 @@ export interface Weekdays {
   Sunday?: boolean;
 }
 
+export const Week: string[] = [
+  "monday",
+  "tuesday",
+  "wednesday",
+  "thursday",
+  "friday",
+  "saturday",
+  "sunday",
+];
+
 export default Weekdays;

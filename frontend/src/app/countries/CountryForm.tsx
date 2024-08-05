@@ -30,11 +30,10 @@ const CountryForm: React.FC<CountryFormProps> = ({ onCountryAdded }) => {
       <h2 className="text-xl mb-2">Add New Country</h2>
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
-          <label htmlFor="countryName" className="block mb-1">
-            Name:
-          </label>
           <Input
             id="countryName"
+            label="Country Name"
+            placeholder="Please enter the country name"
             value={countryName}
             onChange={(e) => setCountryName(e.target.value)}
             fullWidth
@@ -42,24 +41,22 @@ const CountryForm: React.FC<CountryFormProps> = ({ onCountryAdded }) => {
         </div>
         <div className="flex space-x-4">
           <div className="flex-1">
-            <label htmlFor="countryCode" className="block mb-1">
-              Code:
-            </label>
             <Input
               id="countryCode"
               type="number"
+              label="Country code"
+              placeholder="Please enter the country code"
               value={countryCode.toString()}
               onChange={(e) => setCountryCode(e.target.valueAsNumber || "")}
               fullWidth
             />
           </div>
           <div className="flex-1">
-            <label htmlFor="countryAcronym" className="block mb-1">
-              Acronym:
-            </label>
             <Input
               id="countryAcronym"
               value={countryAcronym}
+              label="Acronym"
+              placeholder="Please enter the country acronym"
               onChange={(e) => setCountryAcronym(e.target.value)}
               fullWidth
             />
