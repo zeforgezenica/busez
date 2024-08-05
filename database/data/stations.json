@@ -114,12 +114,14 @@
   {
     "_id": "3ef8861a-61de-4abc-95ce-fa266ad4c6e9",
     "cityId": "c14d1c46-0db1-4346-b35c-535bab9421a7",
-    "name": "Paviljon"
+    "name": "Paviljon",
+    "coordinates": [44.204085, 17.927456]
   },
   {
     "_id": "4fb5aeaa-38f7-46a2-9c5b-c091ec45d5cc",
     "cityId": "c14d1c46-0db1-4346-b35c-535bab9421a7",
-    "name": "Babina Rijeka"
+    "name": "Babina Rijeka",
+    "coordinates": [44.197628, 17.922569]
   },
   {
     "_id": "6c46acbe-8098-40da-98e0-d5e1810b1d61",
@@ -144,7 +146,8 @@
   {
     "_id": "2a928cfe-f4b0-4bb5-b60b-608f7b49a55c",
     "cityId": "c14d1c46-0db1-4346-b35c-535bab9421a7",
-    "name": "Lukovo Polje"
+    "name": "Lukovo Polje",
+    "coordinates": [44.19073, 17.94530] 
   },
   {
     "_id": "6267b2c7-1af4-4a42-bd49-4f8b04f3bbb8",
