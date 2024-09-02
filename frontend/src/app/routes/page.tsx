@@ -7,22 +7,38 @@ import RouteService from "../services/route.service";
 import AgencyService from "../services/agency.service";
 import StationService from "../services/station.service";
 import { Route, RouteType } from "../models/route.model";
-import { Agency } from "../models/agency.model";
-import { Station } from "../models/station.model";
 import RoutesTable from "./RoutesTable";
 import RouteForm from "./RouteForm";
-import { Weekdays } from "../models/weekdays.model";
+import RouteSearch from "./RouteSearch";
+import { Week, Weekdays } from "../models/weekdays.model";
+import Agency from "../models/agency.model";
+import Station from "../models/station.model";
 
 const RoutesPage: React.FC = () => {
   const [routes, setRoutes] = useState<Route[]>([]);
+  const [originalRoutes, setOriginalRoutes] = useState<Route[]>([]);
   const [stations, setStations] = useState<Station[]>([]);
   const [agencies, setAgencies] = useState<Agency[]>([]);
+
+  const [selectedDepartureStation, setSelectedDepartureStation] = useState<
+    string | null
+  >(null);
+  const [selectedArrivalStation, setSelectedArrivalStation] = useState<
+    string | null
+  >(null);
+  const [selectedDepartureDate, setSelectedDepartureDate] = useState<
+    number | null
+  >(null);
+  const [selectedReturnDate, setSelectedReturnDate] = useState<number | null>(
+    null
+  );
 
   useEffect(() => {
     const fetchRoutes = async () => {
       try {
         const fetchedRoutes = await RouteService.getRoutes();
         setRoutes(fetchedRoutes);
+        setOriginalRoutes(fetchedRoutes);
       } catch (error) {
         console.error("Error fetching routes:", error);
       }
@@ -85,9 +101,72 @@ const RoutesPage: React.FC = () => {
     try {
       const fetchedRoutes = await RouteService.getRoutes();
       setRoutes(fetchedRoutes);
+      setOriginalRoutes(fetchedRoutes);
     } catch (error) {
       console.error("Error fetching routes:", error);
     }
+  };
+
+  const handleFilterRoutes = () => {
+    const departureStationName = selectedDepartureStation
+      ? stations.find((station) => station._id === selectedDepartureStation)
+          ?.name
+      : "None";
+    const arrivalStationName = selectedArrivalStation
+      ? stations.find((station) => station._id === selectedArrivalStation)?.name
+      : "None";
+
+    const departureDay =
+      selectedDepartureDate !== null ? Week[selectedDepartureDate] : "None";
+    const returnDay =
+      selectedReturnDate !== null ? Week[selectedReturnDate] : "None";
+
+    const filteredRoutes = originalRoutes.filter((route) => {
+      const departureStationIndex = route.stations.findIndex(
+        (station) => station.stationId === selectedDepartureStation
+      );
+      const arrivalStationIndex = route.stations.findIndex(
+        (station) => station.stationId === selectedArrivalStation
+      );
+
+      const isReversedOrder = arrivalStationIndex < departureStationIndex;
+
+      const isActiveOnDepartureDay = isReversedOrder
+        ? returnDay !== "None"
+          ? route.activeDays[returnDay as keyof Weekdays] ?? false
+          : true
+        : departureDay !== "None"
+        ? route.activeDays[departureDay as keyof Weekdays] ?? false
+        : true;
+
+      const isActiveOnReturnDay = isReversedOrder
+        ? departureDay !== "None"
+          ? route.returnDays?.[departureDay as keyof Weekdays] ?? false
+          : true
+        : returnDay !== "None"
+        ? route.returnDays?.[returnDay as keyof Weekdays] ?? false
+        : true;
+
+      if (
+        selectedDepartureStation &&
+        !route.stations.some(
+          (station) => station.stationId === selectedDepartureStation
+        )
+      ) {
+        return false;
+      }
+      if (
+        selectedArrivalStation &&
+        !route.stations.some(
+          (station) => station.stationId === selectedArrivalStation
+        )
+      ) {
+        return false;
+      }
+      return isActiveOnDepartureDay && isActiveOnReturnDay;
+    });
+
+    setRoutes(filteredRoutes);
   };
 
   return (
@@ -101,6 +180,19 @@ const RoutesPage: React.FC = () => {
           stations={stations}
           agencies={agencies}
           onRouteAdded={handleRouteAdded}
+        />
+
+        <RouteSearch
+          stations={stations}
+          selectedDepartureStation={selectedDepartureStation}
+          selectedArrivalStation={selectedArrivalStation}
+          selectedDepartureDate={selectedDepartureDate}
+          selectedReturnDate={selectedReturnDate}
+          setSelectedDepartureDate={setSelectedDepartureDate}
+          setSelectedReturnDate={setSelectedReturnDate}
+          setSelectedDepartureStation={setSelectedDepartureStation}
+          setSelectedArrivalStation={setSelectedArrivalStation}
+          onFilter={handleFilterRoutes}
         />
 
         {routes.map((route) => (

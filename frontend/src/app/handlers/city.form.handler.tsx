@@ -35,7 +35,7 @@ export const handleSubmit = async (
       countryId: "",
       name: "",
       zipCode: 0,
-      coordinates: "",
+      coordinates: undefined,
     });
     onCityAdded();
   } catch (error) {
