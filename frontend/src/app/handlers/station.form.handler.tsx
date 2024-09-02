@@ -33,7 +33,7 @@ export const handleSubmit = async (
     setStationData({
       cityId: "",
       name: "",
-      coordinates: "",
+      coordinates: undefined,
     });
     onStationAdded(newStation);
   } catch (error) {
