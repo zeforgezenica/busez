@@ -49,7 +49,8 @@ From the repo root directory please run the following
     
 7. **Create a Pull Request**:
     - Go to your forked repository on GitHub.
-    - Click the **Compare & pull request** button.
+    - Click the **Contribute** button.
+    Click the **Open pull request** button.
     - Compare your changes with the main branch of the original repository.
     - Add a description of your changes and click **Create pull request**.
 
