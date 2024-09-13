@@ -229,8 +229,15 @@ const HomePage: React.FC = () => {
             departureTime,
           };
         })
-        .filter((result) => result !== null);
+        .filter((result) => result !== null) as RouteLap[];
     });
+
+    if (!isTodayDeparture) {
+      setRouteResults(filteredRoutes);
+      setSelectedDepartureStation(tempDepartureStation);
+      setSelectedArrivalStation(tempArrivalStation);
+      return;
+    }
 
     if (!isTodayDeparture) {
       setRouteResults(filteredRoutes);

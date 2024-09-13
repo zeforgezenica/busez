@@ -32,42 +32,6 @@ export const darkTheme = createTheme({
         },
       },
     },
-    MuiDayCalendar: {
-      styleOverrides: {
-        weekDayLabel: {
-          color: "#b3b3b3",
-        },
-      },
-    },
-    MuiPickersCalendarHeader: {
-      styleOverrides: {
-        root: {
-          backgroundColor: "#333",
-        },
-        iconButton: {
-          color: "#b3b3b3",
-          "&:hover": {
-            backgroundColor: "#555",
-          },
-        },
-      },
-    },
-    MuiPickersDay: {
-      styleOverrides: {
-        root: {
-          color: "#b3b3b3",
-          backgroundColor: "#333",
-          "&:hover": {
-            backgroundColor: "#555",
-          },
-        },
-        dayToday: {
-          borderRadius: "50%",
-          border: "2px solid #b3b3b3",
-          color: "#b3b3b3",
-        },
-      },
-    },
     MuiPaper: {
       styleOverrides: {
         root: {
