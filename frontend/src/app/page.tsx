@@ -42,7 +42,6 @@ const HomePage: React.FC = () => {
   const [pastDepartures, setPastDepartures] = useState<RouteLap[]>([]);
 
   const isToday = (date: dayjs.Dayjs | null): boolean => {
-    return true;
     return date ? date.isSame(dayjs(), "day") : false;
   };
 

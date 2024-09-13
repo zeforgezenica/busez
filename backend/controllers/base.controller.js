@@ -67,7 +67,7 @@ class BaseController {
 
     try {
       let items = await this.readFromFile();
-      const index = items.findIndex((item) => item.id === id);
+      const index = items.findIndex((item) => item._id === id);
       if (index === -1) {
         return res.status(404).send({ message: "Item not found" });
       }
@@ -86,7 +86,7 @@ class BaseController {
     const id = req.params.id;
     try {
       let items = await this.readFromFile();
-      const index = items.findIndex((item) => item.id === id);
+      const index = items.findIndex((item) => item._id === id);
       if (index === -1) {
         return res.status(404).send({ message: "Item not found" });
       }

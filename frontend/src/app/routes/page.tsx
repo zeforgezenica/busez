@@ -12,7 +12,6 @@ import Station from "../models/station.model";
 
 const RoutesPage: React.FC = () => {
   const [routes, setRoutes] = useState<Route[]>([]);
-  const [originalRoutes, setOriginalRoutes] = useState<Route[]>([]);
   const [stations, setStations] = useState<Station[]>([]);
   const [agencies, setAgencies] = useState<Agency[]>([]);
 
@@ -21,7 +20,6 @@ const RoutesPage: React.FC = () => {
       try {
         const fetchedRoutes = await RouteService.getRoutes();
         setRoutes(fetchedRoutes);
-        setOriginalRoutes(fetchedRoutes);
       } catch (error) {
         console.error("Error fetching routes:", error);
       }
@@ -50,8 +48,6 @@ const RoutesPage: React.FC = () => {
     fetchAgencies();
   }, []);
 
-  const [agencyNames, setAgencyNames] = useState<Record<string, string>>({});
-
   useEffect(() => {
     const fetchAgencyNames = async () => {
       const agencyIds = routes.map((route) => route.agencyId);
@@ -70,7 +66,6 @@ const RoutesPage: React.FC = () => {
       Promise.all(agencyNamePromises)
         .then((agencyNameObjects) => {
           const mergedAgencyNames = Object.assign({}, ...agencyNameObjects);
-          setAgencyNames(mergedAgencyNames);
         })
         .catch((error) => console.error("Error fetching agency names:", error));
     };
@@ -84,7 +79,6 @@ const RoutesPage: React.FC = () => {
     try {
       const fetchedRoutes = await RouteService.getRoutes();
       setRoutes(fetchedRoutes);
-      setOriginalRoutes(fetchedRoutes);
     } catch (error) {
       console.error("Error fetching routes:", error);
     }
