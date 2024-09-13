@@ -23,4 +23,20 @@ export interface Route {
   duration?: string;
 }
 
+export interface StationTime {
+  stationId: string;
+  time: string;
+}
+
+export interface RouteLap {
+  _id?: string;
+  agencyId: string;
+  name: string;
+  type: RouteType;
+  activeDays: Weekdays;
+  returnDays?: Weekdays;
+  stations: StationTime[];
+  duration?: string;
+}
+
 export default Route;

@@ -2,12 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --primary-blue: #048ba8;
+  --accent-orange: #fe7f2d;
+}
+
 * {
   text-align: center;
 }
 
 .leaflet-container.leaflet-touch.leaflet-fade-anim.leaflet-grab.leaflet-touch-drag.leaflet-touch-zoom {
-  height: 50vh!important;
+  height: 50vh !important;
 }
 
 .leaflet-top.leaflet-right {

@@ -9,20 +9,23 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@emotion/react": "^11.11.4",
-    "@emotion/styled": "^11.11.5",
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
+    "@mui/icons-material": "^6.1.0",
+    "@mui/material": "^6.1.0",
+    "@mui/x-date-pickers": "^7.16.0",
     "@nextui-org/react": "^2.3.6",
-    "axios": "^1.7.2",
+    "axios": "^1.7.5",
     "busez": "file:",
+    "date-fns": "^3.6.0",
+    "dayjs": "^1.11.13",
     "framer-motion": "^11.1.9",
-    "leaflet": "^1.9.4",
-    "leaflet-defaulticon-compatibility": "^0.1.2",
-    "leaflet-routing-machine": "^3.2.12",
     "next": "^14.2.3",
     "react": "^18",
     "react-dom": "^18",
     "react-leaflet": "^4.2.1",
-    "react-select": "^5.8.0"
+    "react-select": "^5.8.0",
+    "rsuite": "^5.70.0"
   },
   "devDependencies": {
     "@types/leaflet": "^1.9.12",

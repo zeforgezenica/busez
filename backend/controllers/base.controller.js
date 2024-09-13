@@ -68,7 +68,6 @@ class BaseController {
     try {
       let items = await this.readFromFile();
       const index = items.findIndex((item) => item._id === id);
-      console.log(id);
       if (index === -1) {
         return res.status(404).send({ message: "Item not found" });
       }

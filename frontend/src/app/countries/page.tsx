@@ -7,9 +7,6 @@ import { Country } from "../models/country.model";
 import Head from "next/head";
 import { Card } from "@nextui-org/react";
 import CountryForm from "./CountryForm";
-import dynamic from "next/dynamic";
-
-const MapComponent = dynamic(() => import("../components/map/Map"), { ssr:false });
 
 const CountriesPage: React.FC = () => {
   const [countries, setCountries] = useState<Country[]>([]);
@@ -46,7 +43,6 @@ const CountriesPage: React.FC = () => {
         <h1 className="text-3xl font-bold text-center mb-4">Countries</h1>
         <CountryForm onCountryAdded={handleCountryAdded} />
         <Card shadow="sm" className="p-6">
-          <MapComponent coordinates={[44.201133, 17.908600]} zoom={6} scrollWheelZoom={true} locations={countries} />
           <DynamicTable columns={columns} data={countries} />
         </Card>
       </div>
