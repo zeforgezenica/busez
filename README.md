@@ -1,52 +1,61 @@
-*WIP*
+# Zenica Bus Tracking Application
 
-This is application for bus tracking in the city of Zenica, BA.
+This application is designed for tracking buses in the city of Zenica, Bosnia and Herzegovina.
 
+## Getting Started
 
-Please use following after cloning repo:
+Follow these instructions to set up and run the project on your local machine.
 
+### Prerequisites
 
-FRONTEND SETUP
-From the repo root directory please run the following
+Make sure you have the following installed:
+- Node.js
+- npm
 
-`cd frontend`
+### Installation
 
-`npm i`
+1. **Set up the Frontend:**
+    ```bash
+    cd frontend
+    npm i
+    npm run dev
+    ```
 
-`npm run dev`
+2. **Set up the Backend:**
+    ```bash
+    cd backend
+    npm i
+    npm run server
+    ```
+    
+### Running the Application
 
-BACKEND SETUP
-From the repo root directory please run the following
+After setting up the frontend and backend, you can access the application at:
 
-`cd backend`
-
-`npm i`
-
-`npm run server`
-
+http://localhost:3000
 
 ## How to Contribute
 
 1. Click the **Fork** button at the top right corner of the repository page on GitHub.
 2. GitHub will create a copy (fork) of the project in your account.
 2. **Clone** the forked repository to your local machine:
-    
+    ```bash
     git clone https://github.com/your-username/project-name.git
-    
+    ```
 3. **Create a new branch** for your changes:
     
     git checkout -b branch-name
     
 4. **Make your changes** to the code.
 5. **Add and commit** your changes:
-    
+    ```bash
     git add .
     git commit -m "Description of your changes"
-    
+    ```
 6. **Push** your changes to your fork:
-    
+    ```bash
     git push origin branch-name
-    
+    ```
 7. **Create a Pull Request**:
     - Go to your forked repository on GitHub.
     - Click the **Contribute** button.
