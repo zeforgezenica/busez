@@ -8,7 +8,7 @@ import {
   handleCitySelect,
   handleSubmit,
 } from "../handlers/station.form.handler";
-import { LatLngTuple, LatLngExpression } from "leaflet";
+import { LatLngTuple } from "leaflet";
 
 const Select = dynamic(() => import("react-select"), { ssr: false });
 
@@ -65,12 +65,6 @@ const StationForm: React.FC<StationFormProps> = ({
     }));
   };
 
-  const isCoordinatesValid = (
-    coordinates: LatLngExpression
-  ): coordinates is LatLngTuple => {
-    return Array.isArray(coordinates) && coordinates.length === 2;
-  };
-
   const getLatitude = (): string => {
     return (stationData.coordinates as LatLngTuple)?.[0]?.toString() ?? "";
   };
@@ -81,14 +75,7 @@ const StationForm: React.FC<StationFormProps> = ({
 
   const handleFormSubmit = () => {
     const { cityId, name, coordinates } = stationData;
-    if (
-      !cityId ||
-      !name ||
-      !coordinates ||
-      !isCoordinatesValid(coordinates) ||
-      coordinates[0] === 0 ||
-      coordinates[1] === 0
-    ) {
+    if (!cityId || !name) {
       alert("Please fill out all fields.");
       return;
     }
