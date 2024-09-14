@@ -37,10 +37,24 @@ const RouteSearch: React.FC<RouteSearchProps> = ({
 }) => {
   const [error, setError] = useState<string | null>(null);
 
+  const removeDiacritics = (str: string) => {
+    return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+  };
+
+  const normalizeString = (str: string) => removeDiacritics(str).toLowerCase();
+
   const stationOptions = stations.map((station) => ({
     value: station._id ?? "",
     label: station.name,
   }));
+
+  const handleChange = (
+    selectedOption: any,
+    setSelectedStation: (stationId: string | null) => void
+  ) => {
+    const selectedValue = selectedOption ? selectedOption.value : null;
+    setSelectedStation(selectedValue);
+  };
 
   return (
     <>
@@ -49,13 +63,13 @@ const RouteSearch: React.FC<RouteSearchProps> = ({
         <Select
           options={stationOptions}
           value={stationOptions.find(
-            (option) => option.value === selectedDepartureStation
+            (option) =>
+              normalizeString(option.value) ===
+              normalizeString(selectedDepartureStation ?? "")
           )}
-          onChange={(selectedOption) => {
-            setSelectedDepartureStation(
-              selectedOption ? selectedOption.value : null
-            );
-          }}
+          onChange={(selectedOption) =>
+            handleChange(selectedOption, setSelectedDepartureStation)
+          }
           placeholder="Select Departure Station"
           styles={customSelectStyles}
           className="w-full md:w-2/3 lg:w-1/2 mx-auto"
@@ -78,13 +92,13 @@ const RouteSearch: React.FC<RouteSearchProps> = ({
         <Select
           options={stationOptions}
           value={stationOptions.find(
-            (option) => option.value === selectedArrivalStation
+            (option) =>
+              normalizeString(option.value) ===
+              normalizeString(selectedArrivalStation ?? "")
           )}
-          onChange={(selectedOption) => {
-            setSelectedArrivalStation(
-              selectedOption ? selectedOption.value : null
-            );
-          }}
+          onChange={(selectedOption) =>
+            handleChange(selectedOption, setSelectedArrivalStation)
+          }
           placeholder="Select Arrival Station"
           styles={customSelectStyles}
           className="w-full md:w-2/3 lg:w-1/2 mx-auto"
