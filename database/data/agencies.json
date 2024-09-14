@@ -16,22 +16,5 @@
     "website": "https://centrotrans.com/",
     "email": "info@centrotrans.com",
     "phoneNumber": "+38733213100"
-  },
-  {
-    "_id": "1eb843a0-ed5b-4ef3-9603-68cac0c54c1a",
-    "cityId": "ce7e28c5-4df7-4907-a4e4-8afff553f599",
-    "name": "My new Agency",
-    "address": "adresa2",
-    "website": "adresa.com",
-    "email": "mejl@mejl.com",
-    "phoneNumber": "233322"
-  },
-  {
-    "_id": "db8e1125-cb13-41ce-8641-9f1a3753a57b",
-    "name": "My Transport Agency",
-    "address": "adresa123",
-    "website": "adresa.ba",
-    "email": "transport@gmail.com",
-    "phoneNumber": "555333"
   }
 ]

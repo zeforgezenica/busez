@@ -8,7 +8,6 @@ import StationService from "./services/station.service";
 import { Route, RouteLap, StationTime } from "./models/route.model";
 import RouteSearch from "./routes/RouteSearch";
 import { Week, Weekdays } from "./models/weekdays.model";
-import Agency from "./models/agency.model";
 import Station from "./models/station.model";
 import RouteSearchResult from "./routes/RouteSearchResult";
 import dayjs from "dayjs";
@@ -18,7 +17,6 @@ const HomePage: React.FC = () => {
   const [routeResults, setRouteResults] = useState<RouteLap[]>([]);
   const [originalRoutes, setOriginalRoutes] = useState<Route[]>([]);
   const [stations, setStations] = useState<Station[]>([]);
-  const [agencies, setAgencies] = useState<Agency[]>([]);
   const [selectedDepartureStation, setSelectedDepartureStation] = useState<
     string | null
   >(null);
@@ -77,18 +75,8 @@ const HomePage: React.FC = () => {
       }
     };
 
-    const fetchAgencies = async () => {
-      try {
-        const fetchedAgencies = await AgencyService.getAgencies();
-        setAgencies(fetchedAgencies);
-      } catch (error) {
-        console.error("Error fetching agencies:", error);
-      }
-    };
-
     fetchRoutes();
     fetchStations();
-    fetchAgencies();
   }, []);
 
   const [agencyNames, setAgencyNames] = useState<Record<string, string>>({});
