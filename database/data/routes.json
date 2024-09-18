@@ -9014,5 +9014,195 @@
       "Friday": true
     },
     "type": 3
+  },
+  {
+    "_id": "4d95e56b-d046-480e-bd7c-ab9e98bf3410",
+    "name": "Zenica \"AS\" - Vjetrenice",
+    "agencyId": "ef7c6ed0-7076-4ada-bb3f-e134b5671ab2",
+    "duration": "24 min",
+    "stations": [
+      {
+        "stationId": "759cb8c9-4ea8-49ff-ac58-9544df0fa558",
+        "departureTime": ["23:20"],
+        "returnTime": ["22:54"]
+      },
+      {
+        "stationId": "ba5e91a4-8e8a-46b9-8ff9-b7d1ed58e3b4",
+        "departureTime": ["23:23"],
+        "returnTime": ["22:52"]
+      },
+      {
+        "stationId": "3d4bbcf7-78fd-4a47-8be6-bbf0c9a11610",
+        "departureTime": ["23:25"],
+        "returnTime": ["22:50"]
+      },
+      {
+        "stationId": "9c5bfbcd-12e3-43bb-b06b-38afbe6837e3",
+        "departureTime": ["23:26"],
+        "returnTime": ["22:48"]
+      },
+      {
+        "stationId": "7a1b2a6b-43e4-4f30-a75b-d0d60fd0ac69",
+        "departureTime": ["23:27"],
+        "returnTime": ["22:47"]
+      },
+      {
+        "stationId": "cde073b7-678d-4e44-8bff-b76e2686e7c7",
+        "departureTime": ["23:29"],
+        "returnTime": ["22:46"]
+      },
+      {
+        "stationId": "7b99f3b4-3d79-4081-9828-5ed1792c02ba",
+        "departureTime": ["23:31"],
+        "returnTime": ["22:44"]
+      },
+      {
+        "stationId": "471d9acb-bba4-4828-9bda-89d3ac33e0d1",
+        "departureTime": ["23:33"],
+        "returnTime": ["22:42"]
+      },
+      {
+        "stationId": "e4f1fafa-3787-4cd2-98af-b4990d72ff96",
+        "departureTime": ["23:34"],
+        "returnTime": ["22:41"]
+      },
+      {
+        "stationId": "37eae83d-6c12-4a1a-8597-404f617496e7",
+        "departureTime": ["23:35"],
+        "returnTime": ["22:40"]
+      },
+      {
+        "stationId": "ca3031d5-7c35-457b-8e69-509f1d65b9a0",
+        "departureTime": ["23:37"],
+        "returnTime": ["22:38"]
+      },
+      {
+        "stationId": "578897de-2ff5-49a6-98bb-64ab530d6f11",
+        "departureTime": ["23:38"],
+        "returnTime": ["22:37"]
+      },
+      {
+        "stationId": "2ab9b77b-8d4d-4c5b-9f4f-c4d34bfa1b78",
+        "departureTime": ["23:39"],
+        "returnTime": ["22:36"]
+      },
+      {
+        "stationId": "8c9f81ae-c13b-44ad-9a96-33b0c137b0f4",
+        "departureTime": ["23:44"],
+        "returnTime": ["22:30"]
+      }
+    ],
+    "activeDays": {
+      "Monday": true,
+      "Tuesday": true,
+      "Wednesday": true,
+      "Thursday": true,
+      "Friday": true,
+      "Saturday": true,
+      "Sunday": true
+    },
+    "returnDays": {
+      "Monday": true,
+      "Tuesday": true,
+      "Wednesday": true,
+      "Thursday": true,
+      "Friday": true,
+      "Saturday": true,
+      "Sunday": true
+    },
+    "type": 3
+  },
+  {
+    "_id": "dcff907f-9aa8-48b9-a810-bd5dfb82e726",
+    "name": "Zenica \"AS\" - Vjetrenice",
+    "agencyId": "ef7c6ed0-7076-4ada-bb3f-e134b5671ab2",
+    "duration": "24 min",
+    "stations": [
+      {
+        "stationId": "759cb8c9-4ea8-49ff-ac58-9544df0fa558",
+        "departureTime": ["11:15", "15:40"],
+        "returnTime": ["7:34", "12:04"]
+      },
+      {
+        "stationId": "ba5e91a4-8e8a-46b9-8ff9-b7d1ed58e3b4",
+        "departureTime": ["11:18", "15:43"],
+        "returnTime": ["07:32", "12:02"]
+      },
+      {
+        "stationId": "3d4bbcf7-78fd-4a47-8be6-bbf0c9a11610",
+        "departureTime": ["11:20", "15:45"],
+        "returnTime": ["07:30", "12:00"]
+      },
+      {
+        "stationId": "9c5bfbcd-12e3-43bb-b06b-38afbe6837e3",
+        "departureTime": ["11:21", "15:46"],
+        "returnTime": ["07:28", "11:58"]
+      },
+      {
+        "stationId": "7a1b2a6b-43e4-4f30-a75b-d0d60fd0ac69",
+        "departureTime": ["11:22", "15:47"],
+        "returnTime": ["07:27", "11:57"]
+      },
+      {
+        "stationId": "cde073b7-678d-4e44-8bff-b76e2686e7c7",
+        "departureTime": ["11:24", "15:49"],
+        "returnTime": ["07:26", "11:56"]
+      },
+      {
+        "stationId": "7b99f3b4-3d79-4081-9828-5ed1792c02ba",
+        "departureTime": ["11:26", "15:51"],
+        "returnTime": ["07:24", "11:54"]
+      },
+      {
+        "stationId": "471d9acb-bba4-4828-9bda-89d3ac33e0d1",
+        "departureTime": ["11:28", "15:53"],
+        "returnTime": ["07:22", "11:52"]
+      },
+      {
+        "stationId": "e4f1fafa-3787-4cd2-98af-b4990d72ff96",
+        "departureTime": ["11:29", "15:54"],
+        "returnTime": ["07:21", "11:51"]
+      },
+      {
+        "stationId": "37eae83d-6c12-4a1a-8597-404f617496e7",
+        "departureTime": ["11:30", "15:55"],
+        "returnTime": ["07:20", "11:50"]
+      },
+      {
+        "stationId": "ca3031d5-7c35-457b-8e69-509f1d65b9a0",
+        "departureTime": ["11:32", "15:57"],
+        "returnTime": ["07:18", "11:48"]
+      },
+      {
+        "stationId": "578897de-2ff5-49a6-98bb-64ab530d6f11",
+        "departureTime": ["11:33", "15:58"],
+        "returnTime": ["07:17", "11:47"]
+      },
+      {
+        "stationId": "2ab9b77b-8d4d-4c5b-9f4f-c4d34bfa1b78",
+        "departureTime": ["11:34", "15:59"],
+        "returnTime": ["07:16", "11:46"]
+      },
+      {
+        "stationId": "8c9f81ae-c13b-44ad-9a96-33b0c137b0f4",
+        "departureTime": ["11:39", "16:04"],
+        "returnTime": ["07:10", "11:40"]
+      }
+    ],
+    "activeDays": {
+      "Monday": true,
+      "Tuesday": true,
+      "Wednesday": true,
+      "Thursday": true,
+      "Friday": true
+    },
+    "returnDays": {
+      "Monday": true,
+      "Tuesday": true,
+      "Wednesday": true,
+      "Thursday": true,
+      "Friday": true
+    },
+    "type": 3
   }
 ]
