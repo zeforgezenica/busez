@@ -1,7 +1,7 @@
 import axios, { AxiosResponse } from "axios";
 
 export default class BaseService<T> {
-  protected url = "http://localhost:3001";
+  protected url = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3001";
   protected path: string;
 
   constructor(path: string) {

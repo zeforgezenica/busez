@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "dev": "dotenv -e .env.local -- next dev",
+    "build": "dotenv -e .env.production -- next build",
+    "start": "dotenv -e .env.production -- next start",
     "lint": "next lint"
   },
   "dependencies": {
@@ -19,6 +19,8 @@
     "busez": "file:",
     "date-fns": "^3.6.0",
     "dayjs": "^1.11.13",
+    "dotenv": "^16.4.5",
+    "dotenv-cli": "^7.4.2",
     "framer-motion": "^11.1.9",
     "next": "^14.2.3",
     "react": "^18",
