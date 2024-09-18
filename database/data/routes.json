@@ -9204,5 +9204,265 @@
       "Friday": true
     },
     "type": 3
+  },
+  {
+    "_id": "1054969d-5be7-442b-8358-3e6b2fef445d",
+    "name": "Zenica \"AS\" - Lokvine",
+    "agencyId": "ef7c6ed0-7076-4ada-bb3f-e134b5671ab2",
+    "duration": "20 min",
+    "stations": [
+      {
+        "stationId": "759cb8c9-4ea8-49ff-ac58-9544df0fa558",
+        "departureTime": ["6:20", "13:00", "16:30"],
+        "returnTime": ["7:00", "13:50", "17:20"]
+      },
+      {
+        "stationId": "ba5e91a4-8e8a-46b9-8ff9-b7d1ed58e3b4",
+        "departureTime": ["06:23", "13:03", "16:33"],
+        "returnTime": ["06:58", "13:48", "17:18"]
+      },
+      {
+        "stationId": "3d4bbcf7-78fd-4a47-8be6-bbf0c9a11610",
+        "departureTime": ["06:25", "13:05", "16:35"],
+        "returnTime": ["06:55", "13:45", "17:15"]
+      },
+      {
+        "stationId": "9c5bfbcd-12e3-43bb-b06b-38afbe6837e3",
+        "departureTime": ["06:26", "13:06", "16:36"],
+        "returnTime": ["06:54", "13:44", "17:14"]
+      },
+      {
+        "stationId": "7a1b2a6b-43e4-4f30-a75b-d0d60fd0ac69",
+        "departureTime": ["06:27", "13:07", "16:37"],
+        "returnTime": ["06:53", "13:43", "17:13"]
+      },
+      {
+        "stationId": "cde073b7-678d-4e44-8bff-b76e2686e7c7",
+        "departureTime": ["06:29", "13:09", "16:39"],
+        "returnTime": ["06:52", "13:42", "17:12"]
+      },
+      {
+        "stationId": "7b99f3b4-3d79-4081-9828-5ed1792c02ba",
+        "departureTime": ["06:31", "13:11", "16:41"],
+        "returnTime": ["06:49", "13:39", "17:09"]
+      },
+      {
+        "stationId": "471d9acb-bba4-4828-9bda-89d3ac33e0d1",
+        "departureTime": ["06:33", "13:13", "16:43"],
+        "returnTime": ["06:48", "13:38", "17:08"]
+      },
+      {
+        "stationId": "e4f1fafa-3787-4cd2-98af-b4990d72ff96",
+        "departureTime": ["06:34", "13:14", "16:44"],
+        "returnTime": ["06:46", "13:36", "17:06"]
+      },
+      {
+        "stationId": "51230fd1-1f65-48f7-90de-b2f545d76e5d",
+        "departureTime": ["06:36", "13:16", "16:46"],
+        "returnTime": ["06:45", "13:35", "17:05"]
+      },
+      {
+        "stationId": "ff75e528-b684-4000-88d2-3be3d7994b50",
+        "departureTime": ["06:37", "13:17", "16:47"],
+        "returnTime": ["06:43", "13:33", "17:03"]
+      },
+      {
+        "stationId": "1ae7a3f3-c309-463d-89d4-05ecbe4dfb6d",
+        "departureTime": ["06:39", "13:19", "16:49"],
+        "returnTime": ["06:42", "13:32", "17:02"]
+      },
+      {
+        "stationId": "5f4cf842-5d58-4877-ae87-bb9de57d9cc3",
+        "departureTime": ["06:40", "13:20", "16:50"],
+        "returnTime": ["06:40", "13:30", "17:00"]
+      }
+    ],
+    "activeDays": {
+      "Monday": true,
+      "Tuesday": true,
+      "Wednesday": true,
+      "Thursday": true,
+      "Friday": true,
+      "Saturday": true
+    },
+    "returnDays": {
+      "Monday": true,
+      "Tuesday": true,
+      "Wednesday": true,
+      "Thursday": true,
+      "Friday": true,
+      "Saturday": true
+    },
+    "type": 3
+  },
+  {
+    "_id": "23f4b62e-6523-4d84-97ba-c9bbc8550045",
+    "name": "Zenica \"AS\" - Lokvine",
+    "agencyId": "ef7c6ed0-7076-4ada-bb3f-e134b5671ab2",
+    "duration": "20 min",
+    "stations": [
+      {
+        "stationId": "759cb8c9-4ea8-49ff-ac58-9544df0fa558",
+        "departureTime": ["14:30"],
+        "returnTime": ["15:20"]
+      },
+      {
+        "stationId": "ba5e91a4-8e8a-46b9-8ff9-b7d1ed58e3b4",
+        "departureTime": ["14:33"],
+        "returnTime": ["15:18"]
+      },
+      {
+        "stationId": "3d4bbcf7-78fd-4a47-8be6-bbf0c9a11610",
+        "departureTime": ["14:35"],
+        "returnTime": ["15:15"]
+      },
+      {
+        "stationId": "9c5bfbcd-12e3-43bb-b06b-38afbe6837e3",
+        "departureTime": ["14:36"],
+        "returnTime": ["15:14"]
+      },
+      {
+        "stationId": "7a1b2a6b-43e4-4f30-a75b-d0d60fd0ac69",
+        "departureTime": ["14:37"],
+        "returnTime": ["15:13"]
+      },
+      {
+        "stationId": "cde073b7-678d-4e44-8bff-b76e2686e7c7",
+        "departureTime": ["14:39"],
+        "returnTime": ["15:12"]
+      },
+      {
+        "stationId": "7b99f3b4-3d79-4081-9828-5ed1792c02ba",
+        "departureTime": ["14:41"],
+        "returnTime": ["15:09"]
+      },
+      {
+        "stationId": "471d9acb-bba4-4828-9bda-89d3ac33e0d1",
+        "departureTime": ["14:43"],
+        "returnTime": ["15:08"]
+      },
+      {
+        "stationId": "e4f1fafa-3787-4cd2-98af-b4990d72ff96",
+        "departureTime": ["14:44"],
+        "returnTime": ["15:06"]
+      },
+      {
+        "stationId": "51230fd1-1f65-48f7-90de-b2f545d76e5d",
+        "departureTime": ["14:46"],
+        "returnTime": ["15:05"]
+      },
+      {
+        "stationId": "ff75e528-b684-4000-88d2-3be3d7994b50",
+        "departureTime": ["14:47"],
+        "returnTime": ["15:03"]
+      },
+      {
+        "stationId": "1ae7a3f3-c309-463d-89d4-05ecbe4dfb6d",
+        "departureTime": ["14:49"],
+        "returnTime": ["15:02"]
+      },
+      {
+        "stationId": "5f4cf842-5d58-4877-ae87-bb9de57d9cc3",
+        "departureTime": ["14:50"],
+        "returnTime": ["15:00"]
+      }
+    ],
+    "activeDays": {
+      "Monday": true,
+      "Tuesday": true,
+      "Wednesday": true,
+      "Thursday": true,
+      "Friday": true
+    },
+    "returnDays": {
+      "Monday": true,
+      "Tuesday": true,
+      "Wednesday": true,
+      "Thursday": true,
+      "Friday": true
+    },
+    "type": 3
+  },
+  {
+    "_id": "96279c0a-d4b8-41f7-b19d-01d1fea9a38d",
+    "name": "Zenica \"AS\" - Lokvine",
+    "agencyId": "ef7c6ed0-7076-4ada-bb3f-e134b5671ab2",
+    "duration": "20 min",
+    "stations": [
+      {
+        "stationId": "759cb8c9-4ea8-49ff-ac58-9544df0fa558",
+        "departureTime": ["7:30", "11:15"],
+        "returnTime": ["08:20", "12:20"]
+      },
+      {
+        "stationId": "ba5e91a4-8e8a-46b9-8ff9-b7d1ed58e3b4",
+        "departureTime": ["07:33", "11:18"],
+        "returnTime": ["08:18", "12:18"]
+      },
+      {
+        "stationId": "3d4bbcf7-78fd-4a47-8be6-bbf0c9a11610",
+        "departureTime": ["07:35", "11:20"],
+        "returnTime": ["08:15", "12:15"]
+      },
+      {
+        "stationId": "9c5bfbcd-12e3-43bb-b06b-38afbe6837e3",
+        "departureTime": ["07:36", "11:21"],
+        "returnTime": ["08:14", "12:14"]
+      },
+      {
+        "stationId": "7a1b2a6b-43e4-4f30-a75b-d0d60fd0ac69",
+        "departureTime": ["07:37", "11:22"],
+        "returnTime": ["08:13", "12:13"]
+      },
+      {
+        "stationId": "cde073b7-678d-4e44-8bff-b76e2686e7c7",
+        "departureTime": ["07:39", "11:24"],
+        "returnTime": ["08:12", "12:12"]
+      },
+      {
+        "stationId": "7b99f3b4-3d79-4081-9828-5ed1792c02ba",
+        "departureTime": ["07:41", "11:26"],
+        "returnTime": ["08:09", "12:09"]
+      },
+      {
+        "stationId": "471d9acb-bba4-4828-9bda-89d3ac33e0d1",
+        "departureTime": ["07:43", "11:28"],
+        "returnTime": ["08:08", "12:08"]
+      },
+      {
+        "stationId": "e4f1fafa-3787-4cd2-98af-b4990d72ff96",
+        "departureTime": ["07:44", "11:29"],
+        "returnTime": ["08:06", "12:06"]
+      },
+      {
+        "stationId": "51230fd1-1f65-48f7-90de-b2f545d76e5d",
+        "departureTime": ["07:46", "11:31"],
+        "returnTime": ["08:05", "12:05"]
+      },
+      {
+        "stationId": "ff75e528-b684-4000-88d2-3be3d7994b50",
+        "departureTime": ["07:47", "11:32"],
+        "returnTime": ["08:03", "12:03"]
+      },
+      {
+        "stationId": "1ae7a3f3-c309-463d-89d4-05ecbe4dfb6d",
+        "departureTime": ["07:49", "11:34"],
+        "returnTime": ["08:02", "12:02"]
+      },
+      {
+        "stationId": "5f4cf842-5d58-4877-ae87-bb9de57d9cc3",
+        "departureTime": ["07:50", "11:35"],
+        "returnTime": ["08:00", "12:00"]
+      }
+    ],
+    "activeDays": {
+      "Wednesday": true,
+      "Saturday": true
+    },
+    "returnDays": {
+      "Wednesday": true,
+      "Saturday": true
+    },
+    "type": 3
   }
 ]
