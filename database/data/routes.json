@@ -10503,5 +10503,52 @@
       "Friday": true
     },
     "type": 3
+  },
+  {
+    "_id": "4c88a953-dd99-40b5-8735-64d4e7ae1ce3",
+    "name": "Bukovica \"R\" - Bukovica (Okretaljka)",
+    "agencyId": "ef7c6ed0-7076-4ada-bb3f-e134b5671ab2",
+    "duration": "7 min",
+    "stations": [
+      {
+        "stationId": "e66f8b60-6f7e-4b82-b47d-906b3e6430c3",
+        "departureTime": ["8:00", "9:50", "13:20", "16:00"],
+        "returnTime": ["8:22", "10:07", "13:37", "16:22"]
+      },
+      {
+        "stationId": "d9275a62-f4d1-4cc9-917f-9d6c9e26463e",
+        "departureTime": ["08:02", "09:52", "13:22", "16:02"],
+        "returnTime": ["08:20", "10:05", "13:35", "16:20"]
+      },
+      {
+        "stationId": "38e0f6de-8140-4ff4-8b9c-53e2c084a8f0",
+        "departureTime": ["08:06", "09:56", "13:26", "16:06"],
+        "returnTime": ["08:16", "10:01", "13:31", "16:16"]
+      },
+      {
+        "stationId": "14b4a48c-d2f1-4e41-918d-bd48b733e15b",
+        "departureTime": ["08:07", "09:57", "13:27", "16:07"],
+        "returnTime": ["08:15", "10:00", "13:30", "16:15"]
+      }
+    ],
+    "activeDays": {
+      "Monday": true,
+      "Tuesday": true,
+      "Wednesday": true,
+      "Thursday": true,
+      "Friday": true,
+      "Saturday": true,
+      "Sunday": true
+    },
+    "returnDays": {
+      "Monday": true,
+      "Tuesday": true,
+      "Wednesday": true,
+      "Thursday": true,
+      "Friday": true,
+      "Saturday": true,
+      "Sunday": true
+    },
+    "type": 3
   }
 ]
