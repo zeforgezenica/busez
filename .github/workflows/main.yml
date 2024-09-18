@@ -1,4 +1,4 @@
-name: Deploy Next.js site to Pages
+name: Deploy Next.js Frontend
 
 on:
   push:
@@ -12,6 +12,9 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+
+      - name: Navigate to frontend directory
+        run: cd frontend
 
       - name: Install dependencies
         run: npm install
