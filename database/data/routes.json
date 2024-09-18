@@ -8754,5 +8754,265 @@
       "Friday": true
     },
     "type": 3
+  },
+  {
+    "_id": "65fb5655-55c7-4f23-a774-b3868ac932dd",
+    "name": "Zenica \"AS\" - Mošćanica",
+    "agencyId": "ef7c6ed0-7076-4ada-bb3f-e134b5671ab2",
+    "duration": "40 min",
+    "stations": [
+      {
+        "stationId": "759cb8c9-4ea8-49ff-ac58-9544df0fa558",
+        "departureTime": ["7:40", "12:50", "15:40", "17:00", "19:40", "23:40"],
+        "returnTime": ["6:00", "9:10", "14:20", "17:00", "18:20", "22:20"]
+      },
+      {
+        "stationId": "89f7d316-3e56-4a0f-94f8-7bc43d6d1b43",
+        "departureTime": ["07:43", "12:53", "15:43", "17:03", "19:43", "23:43"],
+        "returnTime": ["05:58", "09:08", "14:18", "16:58", "18:18", "22:18"]
+      },
+      {
+        "stationId": "4a53c3b8-3cc1-4e18-982e-97002a0c4d09",
+        "departureTime": ["07:44", "12:54", "15:44", "17:04", "19:44", "23:44"],
+        "returnTime": ["05:56", "09:06", "14:16", "16:56", "18:16", "22:16"]
+      },
+      {
+        "stationId": "f0b3f882-bb84-4297-b541-71daec750ad3",
+        "departureTime": ["07:46", "12:56", "15:46", "17:06", "19:46", "23:46"],
+        "returnTime": ["05:55", "09:05", "14:15", "16:55", "18:15", "22:15"]
+      },
+      {
+        "stationId": "d87ae29f-92f7-48af-aacf-133df0f934df",
+        "departureTime": ["07:47", "12:57", "15:47", "17:07", "19:47", "23:47"],
+        "returnTime": ["05:53", "09:03", "14:13", "16:53", "18:13", "22:13"]
+      },
+      {
+        "stationId": "11b43998-9921-45f4-9c45-100fb505f7b1",
+        "departureTime": ["07:48", "12:58", "15:48", "17:08", "19:48", "23:48"],
+        "returnTime": ["05:52", "09:02", "14:12", "16:52", "18:12", "22:12"]
+      },
+      {
+        "stationId": "f8a5f929-71cf-4bfb-a290-41929ef655c6",
+        "departureTime": ["07:51", "13:01", "15:51", "17:11", "19:51", "23:51"],
+        "returnTime": ["05:49", "08:59", "14:09", "16:49", "18:09", "22:09"]
+      },
+      {
+        "stationId": "b3b7baca-972e-4567-9373-47f634af60e9",
+        "departureTime": ["07:53", "13:03", "15:53", "17:13", "19:53", "23:53"],
+        "returnTime": ["05:48", "08:58", "14:08", "16:48", "18:08", "22:08"]
+      },
+      {
+        "stationId": "f6b27357-6881-4e67-9d8b-0fcf77a94c64",
+        "departureTime": ["07:54", "13:04", "15:54", "17:14", "19:54", "23:54"],
+        "returnTime": ["05:46", "08:56", "14:06", "16:46", "18:06", "22:06"]
+      },
+      {
+        "stationId": "2d92e5a4-e3db-488a-8dbd-8bfcf2ba6203",
+        "departureTime": ["07:55", "13:05", "15:55", "17:15", "19:55", "23:55"],
+        "returnTime": ["05:45", "08:55", "14:05", "16:45", "18:05", "22:05"]
+      },
+      {
+        "stationId": "f9037c7f-3b1f-4f2b-b2a0-6018b18cb67d",
+        "departureTime": ["07:57", "13:07", "15:57", "17:17", "19:57", "23:57"],
+        "returnTime": ["05:42", "08:52", "14:02", "16:42", "18:02", "22:02"]
+      },
+      {
+        "stationId": "65c48182-bb11-4f2e-84aa-4eb2d6a3621c",
+        "departureTime": ["07:59", "13:09", "15:59", "17:19", "19:59", "23:59"],
+        "returnTime": ["05:41", "08:51", "14:01", "16:41", "18:01", "22:01"]
+      },
+      {
+        "stationId": "d3e0b08c-9f1c-45ea-a404-46d739fb8f95",
+        "departureTime": ["08:00", "13:10", "16:00", "17:20", "20:00", "00:00"],
+        "returnTime": ["05:40", "08:50", "14:00", "16:40", "18:00", "22:00"]
+      },
+      {
+        "stationId": "2c132f6e-0190-4e4d-9f44-e6e9467b064f",
+        "departureTime": ["08:02", "13:12", "16:02", "17:22", "20:02", "00:02"],
+        "returnTime": ["05:39", "08:49", "13:59", "16:39", "17:59", "21:59"]
+      },
+      {
+        "stationId": "0a9d5ac6-bb55-455d-8c99-b37d402d229a",
+        "departureTime": ["08:04", "13:14", "16:04", "17:24", "20:04", "00:04"],
+        "returnTime": ["05:36", "08:46", "13:56", "16:36", "17:56", "21:56"]
+      },
+      {
+        "stationId": "92fd871b-ef15-4670-b278-333007197468",
+        "departureTime": ["08:07", "13:17", "16:07", "17:27", "20:07", "00:07"],
+        "returnTime": ["05:34", "08:44", "13:54", "16:34", "17:54", "21:54"]
+      },
+      {
+        "stationId": "c1a1f860-5b49-46ad-9c07-827669cdced7",
+        "departureTime": ["08:08", "13:18", "16:08", "17:28", "20:08", "00:08"],
+        "returnTime": ["05:32", "08:42", "13:52", "16:32", "17:52", "21:52"]
+      },
+      {
+        "stationId": "95d1e53f-0f92-4aa2-98de-cf76de9ba672",
+        "departureTime": ["08:12", "13:22", "16:12", "17:32", "20:12", "00:12"],
+        "returnTime": ["05:29", "08:39", "13:49", "16:29", "17:49", "21:49"]
+      },
+      {
+        "stationId": "aa369a8b-75f4-4ae0-b7cf-bcd269761573",
+        "departureTime": ["08:14", "13:24", "16:14", "17:34", "20:14", "00:14"],
+        "returnTime": ["05:26", "08:36", "13:46", "16:26", "17:46", "21:46"]
+      },
+      {
+        "stationId": "d7f379e3-7f20-4d78-a937-7cf4fd9ed204",
+        "departureTime": ["08:19", "13:29", "16:19", "17:39", "20:19", "00:19"],
+        "returnTime": ["05:22", "08:32", "13:42", "16:22", "17:42", "21:42"]
+      },
+      {
+        "stationId": "4b477b17-4b4e-49d6-abb9-f1923b22df77",
+        "departureTime": ["08:20", "13:30", "16:20", "17:40", "20:20", "00:20"],
+        "returnTime": ["05:20", "08:30", "13:40", "16:20", "17:40", "21:40"]
+      }
+    ],
+    "activeDays": {
+      "Monday": true,
+      "Tuesday": true,
+      "Wednesday": true,
+      "Thursday": true,
+      "Friday": true,
+      "Saturday": true,
+      "Sunday": true
+    },
+    "returnDays": {
+      "Monday": true,
+      "Tuesday": true,
+      "Wednesday": true,
+      "Thursday": true,
+      "Friday": true,
+      "Saturday": true,
+      "Sunday": true
+    },
+    "type": 3
+  },
+  {
+    "_id": "2a1fce9d-b680-4fb5-ba42-2bb83d586c8b",
+    "name": "Zenica \"AS\" - Mošćanica",
+    "agencyId": "ef7c6ed0-7076-4ada-bb3f-e134b5671ab2",
+    "duration": "40 min",
+    "stations": [
+      {
+        "stationId": "759cb8c9-4ea8-49ff-ac58-9544df0fa558",
+        "departureTime": ["6:10", "11:10", "18:30"],
+        "returnTime": ["7:20", "12:40", "19:50"]
+      },
+      {
+        "stationId": "89f7d316-3e56-4a0f-94f8-7bc43d6d1b43",
+        "departureTime": ["06:13", "11:13", "18:33"],
+        "returnTime": ["07:18", "12:38", "19:48"]
+      },
+      {
+        "stationId": "4a53c3b8-3cc1-4e18-982e-97002a0c4d09",
+        "departureTime": ["06:14", "11:14", "18:34"],
+        "returnTime": ["07:16", "12:36", "19:46"]
+      },
+      {
+        "stationId": "f0b3f882-bb84-4297-b541-71daec750ad3",
+        "departureTime": ["06:16", "11:16", "18:36"],
+        "returnTime": ["07:15", "12:35", "19:45"]
+      },
+      {
+        "stationId": "d87ae29f-92f7-48af-aacf-133df0f934df",
+        "departureTime": ["06:17", "11:17", "18:37"],
+        "returnTime": ["07:13", "12:33", "19:43"]
+      },
+      {
+        "stationId": "11b43998-9921-45f4-9c45-100fb505f7b1",
+        "departureTime": ["06:18", "11:18", "18:38"],
+        "returnTime": ["07:12", "12:32", "19:42"]
+      },
+      {
+        "stationId": "f8a5f929-71cf-4bfb-a290-41929ef655c6",
+        "departureTime": ["06:21", "11:21", "18:41"],
+        "returnTime": ["07:09", "12:29", "19:39"]
+      },
+      {
+        "stationId": "b3b7baca-972e-4567-9373-47f634af60e9",
+        "departureTime": ["06:23", "11:23", "18:43"],
+        "returnTime": ["07:08", "12:28", "19:38"]
+      },
+      {
+        "stationId": "f6b27357-6881-4e67-9d8b-0fcf77a94c64",
+        "departureTime": ["06:24", "11:24", "18:44"],
+        "returnTime": ["07:06", "12:26", "19:36"]
+      },
+      {
+        "stationId": "2d92e5a4-e3db-488a-8dbd-8bfcf2ba6203",
+        "departureTime": ["06:25", "11:25", "18:45"],
+        "returnTime": ["07:05", "12:25", "19:35"]
+      },
+      {
+        "stationId": "f9037c7f-3b1f-4f2b-b2a0-6018b18cb67d",
+        "departureTime": ["06:27", "11:27", "18:47"],
+        "returnTime": ["07:02", "12:22", "19:32"]
+      },
+      {
+        "stationId": "65c48182-bb11-4f2e-84aa-4eb2d6a3621c",
+        "departureTime": ["06:29", "11:29", "18:49"],
+        "returnTime": ["07:01", "12:21", "19:31"]
+      },
+      {
+        "stationId": "d3e0b08c-9f1c-45ea-a404-46d739fb8f95",
+        "departureTime": ["06:30", "11:30", "18:50"],
+        "returnTime": ["07:00", "12:20", "19:30"]
+      },
+      {
+        "stationId": "2c132f6e-0190-4e4d-9f44-e6e9467b064f",
+        "departureTime": ["06:32", "11:32", "18:52"],
+        "returnTime": ["06:59", "12:19", "19:29"]
+      },
+      {
+        "stationId": "0a9d5ac6-bb55-455d-8c99-b37d402d229a",
+        "departureTime": ["06:34", "11:34", "18:54"],
+        "returnTime": ["06:56", "12:16", "19:26"]
+      },
+      {
+        "stationId": "92fd871b-ef15-4670-b278-333007197468",
+        "departureTime": ["06:37", "11:37", "18:57"],
+        "returnTime": ["06:54", "12:14", "19:24"]
+      },
+      {
+        "stationId": "c1a1f860-5b49-46ad-9c07-827669cdced7",
+        "departureTime": ["06:38", "11:38", "18:58"],
+        "returnTime": ["06:52", "12:12", "19:22"]
+      },
+      {
+        "stationId": "95d1e53f-0f92-4aa2-98de-cf76de9ba672",
+        "departureTime": ["06:42", "11:42", "19:02"],
+        "returnTime": ["06:49", "12:09", "19:19"]
+      },
+      {
+        "stationId": "aa369a8b-75f4-4ae0-b7cf-bcd269761573",
+        "departureTime": ["06:44", "11:44", "19:04"],
+        "returnTime": ["06:46", "12:06", "19:16"]
+      },
+      {
+        "stationId": "d7f379e3-7f20-4d78-a937-7cf4fd9ed204",
+        "departureTime": ["06:49", "11:49", "19:09"],
+        "returnTime": ["06:42", "12:02", "19:12"]
+      },
+      {
+        "stationId": "4b477b17-4b4e-49d6-abb9-f1923b22df77",
+        "departureTime": ["06:50", "11:50", "19:10"],
+        "returnTime": ["06:40", "12:00", "19:10"]
+      }
+    ],
+    "activeDays": {
+      "Monday": true,
+      "Tuesday": true,
+      "Wednesday": true,
+      "Thursday": true,
+      "Friday": true
+    },
+    "returnDays": {
+      "Monday": true,
+      "Tuesday": true,
+      "Wednesday": true,
+      "Thursday": true,
+      "Friday": true
+    },
+    "type": 3
   }
 ]

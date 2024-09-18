@@ -1118,5 +1118,10 @@
     "_id": "f9037c7f-3b1f-4f2b-b2a0-6018b18cb67d",
     "cityId": "c14d1c46-0db1-4346-b35c-535bab9421a7",
     "name": "Bare (Klopče)"
+  },
+  {
+    "_id": "c1a1f860-5b49-46ad-9c07-827669cdced7",
+    "cityId": "c14d1c46-0db1-4346-b35c-535bab9421a7",
+    "name": "Dvor"
   }
 ]
