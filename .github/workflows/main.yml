@@ -16,9 +16,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Navigate to frontend directory
-        run: cd frontend
-
       - name: Install dependencies
         run: npm install
 
