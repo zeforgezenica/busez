@@ -1,6 +1,5 @@
 const express = require("express");
 const app = express();
-const path = require("path");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 
@@ -9,6 +8,7 @@ var cityRoutes = require("./routes/city.routes");
 var agencyRoutes = require("./routes/agency.routes");
 var stationRoutes = require("./routes/station.routes");
 var routeRoutes = require("./routes/route.routes");
+var emailRoutes = require("./routes/resend.routes");
 
 app.use(bodyParser.json());
 app.use(cors());
@@ -18,6 +18,7 @@ app.use("/cities", cityRoutes);
 app.use("/agencies", agencyRoutes);
 app.use("/stations", stationRoutes);
 app.use("/routes", routeRoutes);
+app.use("/sendEmail", emailRoutes);
 
 const port = 3001;
 app.listen(port, () => {

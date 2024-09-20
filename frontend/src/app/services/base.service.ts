@@ -1,4 +1,5 @@
 import axios, { AxiosResponse } from "axios";
+import { EmailPayload } from "./email.service";
 
 export default class BaseService<T> {
   protected url = "http://localhost:3001";
@@ -89,10 +90,25 @@ export default class BaseService<T> {
     }
   };
 
+  public async sendEmail(payload: EmailPayload): Promise<void> {
+    try {
+      await axios.post(`${this.url}/sendEmail`, payload, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      console.log("Email sent successfully");
+    } catch (error) {
+      console.error("Failed to send email", error);
+      throw error;
+    }
+  }
+
   public get = this.getItems;
   public getById = this.getItemById;
   public getByIds = this.getItemsById;
   public post = this.postItem;
   public put = this.updateItem;
   public delete = this.deleteItem;
+  public mail = this.sendEmail;
 }
