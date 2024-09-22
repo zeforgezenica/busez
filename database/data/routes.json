@@ -11677,5 +11677,63 @@
       "Friday": true
     },
     "type": 3
+  },
+  {
+    "_id": "2564122f-fefe-4504-a178-2170aabe7334",
+    "name": "Nemila - Babići (Škola)",
+    "agencyId": "ef7c6ed0-7076-4ada-bb3f-e134b5671ab2",
+    "duration": "17 min",
+    "stations": [
+      {
+        "stationId": "f19afee7-d98e-4729-8a99-dfa4c7e3482b",
+        "departureTime": ["17:50", "18:40"],
+        "returnTime": ["12:17", "13:07"]
+      },
+      {
+        "stationId": "b3c171b7-1c5d-4e5a-b9d8-cf8a40390c53",
+        "departureTime": ["17:54", "18:44"],
+        "returnTime": ["12:14", "13:04"]
+      },
+      {
+        "stationId": "4a3a3f80-e289-4811-8612-04b90f709b57",
+        "departureTime": ["17:58", "18:48"],
+        "returnTime": ["12:09", "12:59"]
+      },
+      {
+        "stationId": "d2a46fa3-b914-4b13-b3a9-10be595354ab",
+        "departureTime": ["18:01", "18:51"],
+        "returnTime": ["12:07", "12:57"]
+      },
+      {
+        "stationId": "997d27c9-6781-460a-9641-718def1d4f4a",
+        "departureTime": ["18:02", "18:52"],
+        "returnTime": ["12:05", "12:55"]
+      },
+      {
+        "stationId": "7b8bdfd2-262b-4bc6-8b9a-1889b8c1869e",
+        "departureTime": ["18:05", "18:55"],
+        "returnTime": ["12:03", "12:53"]
+      },
+      {
+        "stationId": "07fa6634-3e36-4e50-8262-738482cb68f9",
+        "departureTime": ["18:07", "18:57"],
+        "returnTime": ["12:00", "12:50"]
+      }
+    ],
+    "activeDays": {
+      "Monday": true,
+      "Tuesday": true,
+      "Wednesday": true,
+      "Thursday": true,
+      "Friday": true
+    },
+    "returnDays": {
+      "Monday": true,
+      "Tuesday": true,
+      "Wednesday": true,
+      "Thursday": true,
+      "Friday": true
+    },
+    "type": 3
   }
 ]
