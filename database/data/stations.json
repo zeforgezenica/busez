@@ -247,7 +247,7 @@
   {
     "_id": "d3e0b08c-9f1c-45ea-a404-46d739fb8f95",
     "cityId": "c14d1c46-0db1-4346-b35c-535bab9421a7",
-    "name": "Škola"
+    "name": "Škola (Klopče)"
   },
   {
     "_id": "2c132f6e-0190-4e4d-9f44-e6e9467b064f",
@@ -448,11 +448,6 @@
     "_id": "8c9f81ae-c13b-44ad-9a96-33b0c137b0f4",
     "cityId": "c14d1c46-0db1-4346-b35c-535bab9421a7",
     "name": "Počulica \"R\""
-  },
-  {
-    "_id": "e1f55ef1-0fb2-4042-b1ea-63d1a78b2c91",
-    "cityId": "c14d1c46-0db1-4346-b35c-535bab9421a7",
-    "name": "Nemila"
   },
   {
     "_id": "95d1e53f-0f92-4aa2-98de-cf76de9ba672",
@@ -1123,5 +1118,10 @@
     "_id": "c1a1f860-5b49-46ad-9c07-827669cdced7",
     "cityId": "c14d1c46-0db1-4346-b35c-535bab9421a7",
     "name": "Dvor"
+  },
+  {
+    "_id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+    "cityId": "c14d1c46-0db1-4346-b35c-535bab9421a7",
+    "name": "Škola (Gornja Graćanica)"
   }
 ]

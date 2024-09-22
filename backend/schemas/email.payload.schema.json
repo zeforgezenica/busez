@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "subject": {
+      "type": "string"
+    },
+    "text": {
+      "type": "string"
+    },
+    "senderName": {
+      "type": "string"
+    },
+    "senderContact": {
+      "type": "string",
+      "oneOf": [
+        {
+          "format": "email"
+        },
+        {
+          "pattern": "^\\+?[1-9]\\d{1,14}$"
+        }
+      ]
+    }
+  },
+  "required": ["subject", "text", "senderName", "senderContact"]
+}
