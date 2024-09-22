@@ -11178,5 +11178,62 @@
       "Friday": true
     },
     "type": 3
+  },
+  {
+    "_id": "290bc5d7-83cf-4a6b-afbb-8287351af502",
+    "name": "Zenica \"AS\" - Plahovići",
+    "agencyId": "ef7c6ed0-7076-4ada-bb3f-e134b5671ab2",
+    "duration": "19 min",
+    "stations": [
+      {
+        "stationId": "759cb8c9-4ea8-49ff-ac58-9544df0fa558",
+        "departureTime": ["6:20", "12:35", "18:00"],
+        "returnTime": ["6:59", "13:19", "18:49"]
+      },
+      {
+        "stationId": "e6de1b58-d36b-448a-86c2-2a7b8f3e1f7e",
+        "departureTime": ["06:28", "12:43", "18:08"],
+        "returnTime": ["06:52", "13:12", "18:42"]
+      },
+      {
+        "stationId": "cf6d27a6-458c-41bc-bcb7-5d7d2822c4ea",
+        "departureTime": ["06:29", "12:44", "18:09"],
+        "returnTime": ["06:51", "13:11", "18:41"]
+      },
+      {
+        "stationId": "8dc776b5-3427-4c6d-8d1d-202b5ae56b2e",
+        "departureTime": ["06:31", "12:46", "18:11"],
+        "returnTime": ["06:49", "13:09", "18:39"]
+      },
+      {
+        "stationId": "0d0b6743-1d2f-48ef-bc7b-4f6e0d69076e",
+        "departureTime": ["06:32", "12:47", "18:12"],
+        "returnTime": ["06:48", "13:08", "18:38"]
+      },
+      {
+        "stationId": "95b7e0f1-7733-4872-82e2-70cfc9b8310b",
+        "departureTime": ["06:39", "12:54", "18:19"],
+        "returnTime": ["06:40", "13:00", "18:30"]
+      }
+    ],
+    "activeDays": {
+      "Monday": true,
+      "Tuesday": true,
+      "Wednesday": true,
+      "Thursday": true,
+      "Friday": true,
+      "Saturday": true,
+      "Sunday": true
+    },
+    "returnDays": {
+      "Monday": true,
+      "Tuesday": true,
+      "Wednesday": true,
+      "Thursday": true,
+      "Friday": true,
+      "Saturday": true,
+      "Sunday": true
+    },
+    "type": 3
   }
 ]
