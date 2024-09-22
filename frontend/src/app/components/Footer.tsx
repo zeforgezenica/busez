@@ -49,21 +49,21 @@ const Footer: React.FC = () => {
 
     try {
       await emailService.sendEmail({
-        from: "info@zeforge.com",
-        to: "info@zeforge.ba",
         subject: formData.subject,
         text: `
           Name: ${formData.name}
-          Contact Info: ${formData.contactInfo}
+          Contact Info: ${formData.contactInfo || "N/A"}
           Details: ${formData.details}
         `,
+        senderName: formData.name,
+        senderContact: formData.contactInfo,
       });
 
       setSuccess("Your message has been sent successfully.");
+      setError("");
       setFormData({ name: "", contactInfo: "", subject: "", details: "" });
     } catch (error) {
       setError("An error occurred while sending the message.");
-      console.log(error);
     }
   };
 

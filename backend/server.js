@@ -8,7 +8,7 @@ var cityRoutes = require("./routes/city.routes");
 var agencyRoutes = require("./routes/agency.routes");
 var stationRoutes = require("./routes/station.routes");
 var routeRoutes = require("./routes/route.routes");
-var emailRoutes = require("./routes/resend.routes");
+var emailRoutes = require("./routes/email.routes");
 
 app.use(bodyParser.json());
 app.use(cors());

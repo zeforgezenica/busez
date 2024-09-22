@@ -1,10 +1,10 @@
 import BaseService from "./base.service";
 
 export interface EmailPayload {
-  from: string;
-  to: string;
   subject: string;
   text: string;
+  senderName: string;
+  senderContact: string;
 }
 
 class EmailService extends BaseService<EmailPayload> {
@@ -13,7 +13,7 @@ class EmailService extends BaseService<EmailPayload> {
   }
 
   async sendEmail(payload: EmailPayload): Promise<void> {
-    await this.post(payload, "");
+    await this.post(payload);
   }
 }
 
