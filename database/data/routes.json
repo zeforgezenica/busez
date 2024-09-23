@@ -12589,5 +12589,165 @@
       "Sunday": true
     },
     "type": 3
+  },
+  {
+    "_id": "80aec05e-eb30-4eb0-b7a5-23bee091a8a5",
+    "name": "Zenica \"AS\" - Koprivna - Nemila (Naselje)",
+    "agencyId": "ef7c6ed0-7076-4ada-bb3f-e134b5671ab2",
+    "duration": "35 min",
+    "stations": [
+      {
+        "stationId": "759cb8c9-4ea8-49ff-ac58-9544df0fa558",
+        "departureTime": ["6:40"],
+        "returnTime": ["6:45"]
+      },
+      {
+        "stationId": "b925d6d1-5b8d-489b-a05f-8f2450cfa854",
+        "departureTime": ["06:48"],
+        "returnTime": ["06:38"]
+      },
+      {
+        "stationId": "1e3c8a3d-24b3-4db0-9d58-6fe1fffc243d",
+        "departureTime": ["06:49"],
+        "returnTime": ["06:36"]
+      },
+      {
+        "stationId": "9243082c-8944-4c8f-aac5-64bc5f0c3a23",
+        "departureTime": ["06:56"],
+        "returnTime": ["06:30"]
+      },
+      {
+        "stationId": "dc902bf1-622f-42af-bc6c-6bbab53b71fc",
+        "departureTime": ["06:57"],
+        "returnTime": ["06:28"]
+      },
+      {
+        "stationId": "e108b105-78a7-49d1-8ae1-f3c505dfed5e",
+        "departureTime": ["07:01"],
+        "returnTime": ["06:25"]
+      },
+      {
+        "stationId": "fa3b9146-6db2-4728-b342-64d47f3bfa9e",
+        "departureTime": ["07:03"],
+        "returnTime": ["06:22"]
+      },
+      {
+        "stationId": "b597fdda-01e0-4e05-97a5-169f24d9376a",
+        "departureTime": ["07:05"],
+        "returnTime": ["06:21"]
+      },
+      {
+        "stationId": "676d46fc-ecdb-4246-b91e-03e557080310",
+        "departureTime": ["07:10"],
+        "returnTime": ["06:15"]
+      },
+      {
+        "stationId": "4a8b54ae-f9f7-4c1e-8478-5e8480d4411b",
+        "departureTime": ["07:13"],
+        "returnTime": ["06:13"]
+      },
+      {
+        "stationId": "f19afee7-d98e-4729-8a99-dfa4c7e3482b",
+        "departureTime": ["07:15"],
+        "returnTime": ["06:10"]
+      }
+    ],
+    "activeDays": {
+      "Monday": true,
+      "Tuesday": true,
+      "Wednesday": true,
+      "Thursday": true,
+      "Friday": true,
+      "Saturday": true,
+      "Sunday": true
+    },
+    "returnDays": {
+      "Monday": true,
+      "Tuesday": true,
+      "Wednesday": true,
+      "Thursday": true,
+      "Friday": true,
+      "Saturday": true,
+      "Sunday": true
+    },
+    "type": 3
+  },
+  {
+    "_id": "b9e29384-dde3-43a7-838a-54380e790edd",
+    "name": "Zenica \"AS\" - Koprivna - Nemila (Naselje)",
+    "agencyId": "ef7c6ed0-7076-4ada-bb3f-e134b5671ab2",
+    "duration": "35 min",
+    "stations": [
+      {
+        "stationId": "759cb8c9-4ea8-49ff-ac58-9544df0fa558",
+        "departureTime": ["15:10", "18:00"],
+        "returnTime": ["11:15", "19:05"]
+      },
+      {
+        "stationId": "b925d6d1-5b8d-489b-a05f-8f2450cfa854",
+        "departureTime": ["15:18", "18:08"],
+        "returnTime": ["11:08", "18:58"]
+      },
+      {
+        "stationId": "1e3c8a3d-24b3-4db0-9d58-6fe1fffc243d",
+        "departureTime": ["15:19", "18:09"],
+        "returnTime": ["11:06", "18:56"]
+      },
+      {
+        "stationId": "9243082c-8944-4c8f-aac5-64bc5f0c3a23",
+        "departureTime": ["15:26", "18:16"],
+        "returnTime": ["11:00", "18:50"]
+      },
+      {
+        "stationId": "dc902bf1-622f-42af-bc6c-6bbab53b71fc",
+        "departureTime": ["15:27", "18:17"],
+        "returnTime": ["10:58", "18:48"]
+      },
+      {
+        "stationId": "e108b105-78a7-49d1-8ae1-f3c505dfed5e",
+        "departureTime": ["15:31", "18:21"],
+        "returnTime": ["10:55", "18:45"]
+      },
+      {
+        "stationId": "fa3b9146-6db2-4728-b342-64d47f3bfa9e",
+        "departureTime": ["15:33", "18:23"],
+        "returnTime": ["10:52", "18:42"]
+      },
+      {
+        "stationId": "b597fdda-01e0-4e05-97a5-169f24d9376a",
+        "departureTime": ["15:35", "18:25"],
+        "returnTime": ["10:51", "18:41"]
+      },
+      {
+        "stationId": "676d46fc-ecdb-4246-b91e-03e557080310",
+        "departureTime": ["15:40", "18:30"],
+        "returnTime": ["10:45", "18:35"]
+      },
+      {
+        "stationId": "4a8b54ae-f9f7-4c1e-8478-5e8480d4411b",
+        "departureTime": ["15:43", "18:33"],
+        "returnTime": ["10:43", "18:33"]
+      },
+      {
+        "stationId": "f19afee7-d98e-4729-8a99-dfa4c7e3482b",
+        "departureTime": ["15:45", "18:35"],
+        "returnTime": ["10:40", "18:30"]
+      }
+    ],
+    "activeDays": {
+      "Monday": true,
+      "Tuesday": true,
+      "Wednesday": true,
+      "Thursday": true,
+      "Friday": true
+    },
+    "returnDays": {
+      "Monday": true,
+      "Tuesday": true,
+      "Wednesday": true,
+      "Thursday": true,
+      "Friday": true
+    },
+    "type": 3
   }
 ]

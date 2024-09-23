@@ -1123,5 +1123,10 @@
     "_id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
     "cityId": "c14d1c46-0db1-4346-b35c-535bab9421a7",
     "name": "Škola (Gornja Graćanica)"
+  },
+  {
+    "_id": "676d46fc-ecdb-4246-b91e-03e557080310",
+    "cityId": "c14d1c46-0db1-4346-b35c-535bab9421a7",
+    "name": "Koprivna \"R\""
   }
 ]
