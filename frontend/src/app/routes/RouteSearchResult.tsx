@@ -137,7 +137,7 @@ const RouteSearchResult: React.FC<RouteSearchResultProps> = ({
         {isToday && eta && (
           <p style={{ color: "var(--accent-orange)" }}>ETA: {eta}</p>
         )}
-        <Button variant="flat" color="warning" onPress={onOpen}>
+        <Button variant="flat" onPress={onOpen}>
           See Route Details
         </Button>
 
@@ -176,7 +176,21 @@ const RouteSearchResult: React.FC<RouteSearchResultProps> = ({
                     </div>
                   )}
 
-                  <Button color="danger" variant="light" onPress={onClose}>
+                  <Button
+                    variant="light"
+                    style={{
+                      color: "var(--warning-red)",
+                      backgroundColor: "transparent",
+                    }}
+                    onPress={onClose}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.backgroundColor =
+                        "rgba(255, 0, 0, 0.1)";
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.backgroundColor = "transparent";
+                    }}
+                  >
                     Close
                   </Button>
                 </ModalFooter>

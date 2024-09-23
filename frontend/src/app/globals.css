@@ -5,6 +5,7 @@
 :root {
   --primary-blue: #048ba8;
   --accent-orange: #fe7f2d;
+  --warning-red: #d9534f;
 }
 
 * {
