@@ -45,6 +45,7 @@ const RouteSearchResult: React.FC<RouteSearchResultProps> = ({
 
   const [currentTime, setCurrentTime] = useState(dayjs().format("HH:mm:ss"));
   const [isToday, setIsToday] = useState<boolean | null>(initialIsToday);
+  const [eta, setEta] = useState<string>("");
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -57,6 +58,44 @@ const RouteSearchResult: React.FC<RouteSearchResultProps> = ({
   useEffect(() => {
     setIsToday(initialIsToday);
   }, [initialIsToday]);
+
+  useEffect(() => {
+    calculateETA();
+  }, [currentTime, departureTime]);
+
+  const calculateETA = () => {
+    const current = dayjs();
+    const currentFormatted = current.format("YYYY-MM-DD");
+    const departure = dayjs(
+      `${currentFormatted} ${departureTime}`,
+      "YYYY-MM-DD HH:mm"
+    );
+
+    if (departure.isBefore(current)) {
+      setEta("Departure time has passed");
+    } else {
+      const totalSecondsDiff = departure.diff(current, "second");
+
+      const hours = Math.floor(totalSecondsDiff / 3600);
+      const minutes = Math.floor((totalSecondsDiff % 3600) / 60);
+      const seconds = totalSecondsDiff % 60;
+
+      let etaString = "";
+
+      if (hours > 0) {
+        etaString += `${hours} hours `;
+      }
+      if (minutes > 0 || hours > 0) {
+        etaString += `${minutes} minutes `;
+      }
+
+      if (hours === 0 && minutes < 60) {
+        etaString += `${seconds} seconds`;
+      }
+
+      setEta(`${etaString}`);
+    }
+  };
 
   const departureStation = stations.find(
     (station) => station._id === departureStationId
@@ -71,10 +110,19 @@ const RouteSearchResult: React.FC<RouteSearchResultProps> = ({
 
   return (
     <Card shadow="sm" className="p-6 mb-4 w-full md:w-2/3 lg:w-1/2 mx-auto">
-      <div style={{ display: "flex", flexDirection: "column" }}>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+        }}
+      >
         <h2 className="text-2xl mb-2">{route.name}</h2>
         <p
-          style={{ textDecoration: "underline", cursor: "pointer" }}
+          style={{
+            textDecoration: "underline",
+            color: "var(--primary-blue)",
+            cursor: "pointer",
+          }}
           onClick={handleNavigate}
         >
           {agencyName}
@@ -86,6 +134,9 @@ const RouteSearchResult: React.FC<RouteSearchResultProps> = ({
           {arrivalStation?.name || "Unknown Arrival Station"}: {arrivalTime}
         </h3>
         <p>Duration: {deltaTime} minutes</p>
+        {isToday && eta && (
+          <p style={{ color: "var(--accent-orange)" }}>ETA: {eta}</p>
+        )}
         <Button variant="flat" color="warning" onPress={onOpen}>
           See Route Details
         </Button>
@@ -112,7 +163,19 @@ const RouteSearchResult: React.FC<RouteSearchResultProps> = ({
                     isToday={isToday}
                   />
                 </ModalBody>
-                <ModalFooter>
+                <ModalFooter
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                  }}
+                >
+                  {isToday && eta && (
+                    <div style={{ color: "var(--accent-orange)" }}>
+                      <p>{eta}</p>
+                    </div>
+                  )}
+
                   <Button color="danger" variant="light" onPress={onClose}>
                     Close
                   </Button>
