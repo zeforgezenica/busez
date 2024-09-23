@@ -2,14 +2,12 @@ var express = require("express");
 var router = express.Router();
 var CityController = require("../controllers/city.controller");
 
+// Commenting out unused routes for deployment version
+// router.post("/", CityController.create); // Redundant for deployment version
+// router.put("/:id", CityController.update); // Redundant for deployment version
+// router.delete("/:id", CityController.delete); // Redundant for deployment version
+
 router.get("/", CityController.getAll);
-
-router.post("/", CityController.create);
-
 router.get("/:id", CityController.getById);
-
-router.put("/:id", CityController.update);
-
-router.delete("/:id", CityController.delete);
 
 module.exports = router;
