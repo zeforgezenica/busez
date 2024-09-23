@@ -1128,5 +1128,35 @@
     "_id": "676d46fc-ecdb-4246-b91e-03e557080310",
     "cityId": "c14d1c46-0db1-4346-b35c-535bab9421a7",
     "name": "Koprivna \"R\""
+  },
+  {
+    "_id": "3e5f57f3-6cc8-49b1-bf38-d43fefed2a6c",
+    "cityId": "c14d1c46-0db1-4346-b35c-535bab9421a7",
+    "name": "Vranduk (Dom)"
+  },
+  {
+    "_id": "e0f2459d-884f-423f-8765-7c20dfaee5af",
+    "cityId": "c14d1c46-0db1-4346-b35c-535bab9421a7",
+    "name": "Varošište 1"
+  },
+  {
+    "_id": "bc5e5c0a-b02e-416b-9a93-e4822940536d",
+    "cityId": "c14d1c46-0db1-4346-b35c-535bab9421a7",
+    "name": "Polje"
+  },
+  {
+    "_id": "4f43cddb-5212-411f-8d8e-ee6a28d9e854",
+    "cityId": "c14d1c46-0db1-4346-b35c-535bab9421a7",
+    "name": "Lipice"
+  },
+  {
+    "_id": "e7320140-87a6-4fa2-b288-7295e50b73cc",
+    "cityId": "c14d1c46-0db1-4346-b35c-535bab9421a7",
+    "name": "Loznički put"
+  },
+  {
+    "_id": "c891838e-58db-4bb0-ac20-8c18fac9f93a",
+    "cityId": "c14d1c46-0db1-4346-b35c-535bab9421a7",
+    "name": "Kahrimani"
   }
 ]
