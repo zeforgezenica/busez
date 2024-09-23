@@ -11,7 +11,12 @@ var routeRoutes = require("./routes/route.routes");
 var emailRoutes = require("./routes/email.routes");
 
 app.use(bodyParser.json());
-app.use(cors());
+
+app.use(cors({
+  origin: 'https://busez-20xmwceg4-bamboochs-projects.vercel.app/', // Replace with your frontend URL
+  methods: ['GET', 'POST'], // Allowed methods
+  credentials: true // If you need to send cookies
+}));
 
 app.use("/countries", countryRoutes);
 app.use("/cities", cityRoutes);
