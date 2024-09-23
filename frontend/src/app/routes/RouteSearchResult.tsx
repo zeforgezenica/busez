@@ -63,6 +63,24 @@ const RouteSearchResult: React.FC<RouteSearchResultProps> = ({
     calculateETA();
   }, [currentTime, departureTime]);
 
+  const getGrammaticalForm = (
+    count: number,
+    singular: string,
+    few: string,
+    plural: string
+  ) => {
+    const remainder = count % 10;
+    const isTeens = count % 100 >= 11 && count % 100 <= 19;
+
+    if (remainder === 1 && !isTeens) {
+      return singular;
+    } else if (remainder >= 2 && remainder <= 4 && !isTeens) {
+      return few;
+    } else {
+      return plural;
+    }
+  };
+
   const calculateETA = () => {
     const current = dayjs();
     const currentFormatted = current.format("YYYY-MM-DD");
@@ -72,7 +90,7 @@ const RouteSearchResult: React.FC<RouteSearchResultProps> = ({
     );
 
     if (departure.isBefore(current)) {
-      setEta("Departure time has passed");
+      setEta("Vrijeme polaska je prošlo.");
     } else {
       const totalSecondsDiff = departure.diff(current, "second");
 
@@ -83,14 +101,26 @@ const RouteSearchResult: React.FC<RouteSearchResultProps> = ({
       let etaString = "";
 
       if (hours > 0) {
-        etaString += `${hours} hours `;
+        const hourForm = getGrammaticalForm(hours, "sat", "sata", "sati");
+        etaString += `${hours} ${hourForm} `;
       }
       if (minutes > 0 || hours > 0) {
-        etaString += `${minutes} minutes `;
+        const minuteForm = getGrammaticalForm(
+          minutes,
+          "minuta",
+          "minute",
+          "minuta"
+        );
+        etaString += `${minutes} ${minuteForm} `;
       }
-
       if (hours === 0 && minutes < 60) {
-        etaString += `${seconds} seconds`;
+        const secondForm = getGrammaticalForm(
+          seconds,
+          "sekunda",
+          "sekunde",
+          "sekundi"
+        );
+        etaString += `${seconds} ${secondForm}`;
       }
 
       setEta(`${etaString}`);
@@ -128,17 +158,23 @@ const RouteSearchResult: React.FC<RouteSearchResultProps> = ({
           {agencyName}
         </p>
         <h3>
-          {departureStation?.name || "Unknown Departure Station"}:{" "}
+          {departureStation?.name || "Nepoznata polazna stanica"}:{" "}
           {departureTime}
           <ArrowRightAltIcon />
-          {arrivalStation?.name || "Unknown Arrival Station"}: {arrivalTime}
+          {arrivalStation?.name || "Nepoznata odredišna stanica"}: {arrivalTime}
         </h3>
-        <p>Duration: {deltaTime} minutes</p>
+        <p>
+          Trajanje:{" "}
+          {getGrammaticalForm(deltaTime, "minuta", "minute", "minuta")}
+        </p>
+
         {isToday && eta && (
-          <p style={{ color: "var(--accent-orange)" }}>ETA: {eta}</p>
+          <p style={{ color: "var(--accent-orange)" }}>
+            Preostalo vrijeme: {eta}
+          </p>
         )}
         <Button variant="flat" onPress={onOpen}>
-          See Route Details
+          Pogledaj detaljnije
         </Button>
 
         <Modal backdrop="opaque" isOpen={isOpen} onClose={onClose}>
@@ -146,7 +182,7 @@ const RouteSearchResult: React.FC<RouteSearchResultProps> = ({
             {(onClose) => (
               <>
                 <ModalHeader className="flex flex-col gap-1">
-                  Route Details
+                  Detalji Linije
                 </ModalHeader>
                 <ModalBody
                   style={{
@@ -191,7 +227,7 @@ const RouteSearchResult: React.FC<RouteSearchResultProps> = ({
                       e.currentTarget.style.backgroundColor = "transparent";
                     }}
                   >
-                    Close
+                    Zatvori
                   </Button>
                 </ModalFooter>
               </>

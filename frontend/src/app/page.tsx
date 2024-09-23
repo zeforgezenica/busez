@@ -121,16 +121,6 @@ const HomePage: React.FC = () => {
       setTempDepartureDate(new Date().getDay());
     }
 
-    if (!tempDepartureStation || !tempArrivalStation) {
-      setError("Please select both departure and arrival stations.");
-      return;
-    }
-
-    if (tempDepartureStation === tempArrivalStation) {
-      setError("Please select different departure and arrival stations.");
-      return;
-    }
-
     setError(null);
 
     const departureDayIndex =
@@ -239,7 +229,7 @@ const HomePage: React.FC = () => {
 
     const getDepartureTimeForStation = (
       stations: StationTime[],
-      stationId: string
+      stationId: string | null
     ) => {
       const station = stations.find((st) => st.stationId === stationId);
       return station ? station.time : "00:00";
@@ -322,7 +312,7 @@ const HomePage: React.FC = () => {
         {error && <div className="error">{error}</div>}
 
         {hasSearched && fixedIsToday && (
-          <div className="text-xl font-semibold mb-4">Upcoming Departures</div>
+          <div className="text-xl font-semibold mb-4">Nadolazeći Polasci</div>
         )}
 
         {hasSearched &&
@@ -357,11 +347,11 @@ const HomePage: React.FC = () => {
               );
             })
           ) : (
-            <div className="no-results">No routes found.</div>
+            <div className="no-results">Nema pronađenih linija.</div>
           ))}
         {hasSearched && fixedIsToday && pastDepartures.length > 0 && (
           <>
-            <div className="text-xl font-semibold mb-4">Past Departures</div>
+            <div className="text-xl font-semibold mb-4">Prošli Polasci</div>
             {pastDepartures.map((routeLap) => {
               const departureStationIndex = routeLap.stations.findIndex(
                 (station) => station.stationId === selectedDepartureStation
