@@ -2,7 +2,19 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+First, you need to create two environment files in the root directory of the `frontend` folder:
+
+1. **For local development**, create a `.env.local` file:
+    ```env
+    API_URL=http://localhost:3001
+    ```
+
+2. **For production builds**, create a `.env.production` file:
+    ```env
+    API_URL=https://production-server-url.com
+    ```
+
+Once the environment variables are set, run the development server:
 
 ```bash
 npm run dev
