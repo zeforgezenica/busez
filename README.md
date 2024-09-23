@@ -4,7 +4,21 @@ This application is designed for tracking buses in the city of Zenica, Bosnia an
 
 ## Getting Started
 
-Follow these instructions to set up and run the project on your local machine.
+Before running the project, make sure to set up the necessary environment variables for the frontend:
+
+### Create the following environment files in the `frontend` folder:
+
+1. **For local development**, create a `.env.local` file with the following content:
+    ```env
+    API_URL=http://localhost:3001
+    ```
+
+2. **For production**, create a `.env.production` file with the following content:
+    ```env
+    API_URL=https://production-server-url.com
+    ```
+
+These environment files are necessary to configure the API URL based on the environment you're working in.
 
 ### Prerequisites
 
