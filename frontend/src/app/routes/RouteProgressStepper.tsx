@@ -20,6 +20,39 @@ const Dot = styled("div")<{ isPast: boolean; isToday: boolean }>(
   })
 );
 
+const StopTime = styled("div")<{
+  isPast: boolean;
+  isToday: boolean;
+  isArrivalOrDeparture: boolean;
+}>(({ isPast, isToday, isArrivalOrDeparture }) => ({
+  width: "15%",
+  textAlign: "left",
+  fontWeight: isArrivalOrDeparture ? "bold" : "normal",
+  color: isArrivalOrDeparture
+    ? "var(--accent-orange)"
+    : isPast && isToday
+    ? "var(--primary-blue)"
+    : "#eee",
+}));
+
+const StopName = styled("div")<{
+  isPast: boolean;
+  isToday: boolean;
+  isArrivalOrDeparture: boolean;
+}>(({ isPast, isToday, isArrivalOrDeparture }) => ({
+  width: "65%",
+  textAlign: "left",
+  whiteSpace: "nowrap",
+  overflow: "hidden",
+  textOverflow: "ellipsis",
+  fontWeight: isArrivalOrDeparture ? "bold" : "normal",
+  color: isArrivalOrDeparture
+    ? "var(--accent-orange)"
+    : isPast && isToday
+    ? "var(--primary-blue)"
+    : "#eee",
+}));
+
 interface RouteProgressStepperProps {
   stations: StationTime[];
   currentTime: string;
@@ -76,13 +109,9 @@ const RouteProgressStepper: React.FC<RouteProgressStepperProps> = ({
         const stationName =
           stationData.find((s) => s._id === station.stationId)?.name ||
           "Unknown Station";
-        const isDeparture = station.stationId === departureStationId;
-        const isArrival = station.stationId === arrivalStationId;
-
-        const stationNameStyle =
-          isDeparture || isArrival
-            ? { fontWeight: "bold", color: "var(--accent-orange)" }
-            : { fontWeight: "normal", color: "inherit" };
+        const isDepartureOrArrival =
+          station.stationId === departureStationId ||
+          station.stationId === arrivalStationId;
 
         return (
           <div
@@ -108,27 +137,30 @@ const RouteProgressStepper: React.FC<RouteProgressStepperProps> = ({
                     isToday={isToday || false}
                   />
                 </div>
-                <div
-                  style={{
-                    width: "15%",
-                    textAlign: "left",
-                    fontWeight: "bold",
-                  }}
+                <StopTime
+                  isPast={isTimePast(
+                    station.time,
+                    currentTime,
+                    firstTime,
+                    lastTime
+                  )}
+                  isToday={isToday || false}
+                  isArrivalOrDeparture={isDepartureOrArrival}
                 >
                   {station.time}
-                </div>
-                <div
-                  style={{
-                    width: "65%",
-                    textAlign: "left",
-                    whiteSpace: "nowrap",
-                    overflow: "hidden",
-                    textOverflow: "ellipsis",
-                    ...stationNameStyle,
-                  }}
+                </StopTime>
+                <StopName
+                  isPast={isTimePast(
+                    station.time,
+                    currentTime,
+                    firstTime,
+                    lastTime
+                  )}
+                  isToday={isToday || false}
+                  isArrivalOrDeparture={isDepartureOrArrival}
                 >
                   {stationName}
-                </div>
+                </StopName>
               </>
             ) : (
               <>
@@ -137,6 +169,9 @@ const RouteProgressStepper: React.FC<RouteProgressStepperProps> = ({
                     variant="determinate"
                     value={progress}
                     sx={{
+                      "& .MuiLinearProgress-bar": {
+                        backgroundColor: "var(--primary-blue)",
+                      },
                       transform: "rotate(90deg)",
                       height: 2,
                       width: "36px",
@@ -159,27 +194,30 @@ const RouteProgressStepper: React.FC<RouteProgressStepperProps> = ({
                     isToday={isToday || false}
                   />
                 </div>
-                <div
-                  style={{
-                    width: "15%",
-                    textAlign: "left",
-                    fontWeight: "bold",
-                  }}
+                <StopTime
+                  isPast={isTimePast(
+                    station.time,
+                    currentTime,
+                    firstTime,
+                    lastTime
+                  )}
+                  isToday={isToday || false}
+                  isArrivalOrDeparture={isDepartureOrArrival}
                 >
                   {station.time}
-                </div>
-                <div
-                  style={{
-                    width: "65%",
-                    textAlign: "left",
-                    whiteSpace: "nowrap",
-                    overflow: "hidden",
-                    textOverflow: "ellipsis",
-                    ...stationNameStyle,
-                  }}
+                </StopTime>
+                <StopName
+                  isPast={isTimePast(
+                    station.time,
+                    currentTime,
+                    firstTime,
+                    lastTime
+                  )}
+                  isToday={isToday || false}
+                  isArrivalOrDeparture={isDepartureOrArrival}
                 >
                   {stationName}
-                </div>
+                </StopName>
               </>
             )}
           </div>

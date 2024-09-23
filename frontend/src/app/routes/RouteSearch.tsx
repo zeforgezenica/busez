@@ -58,7 +58,7 @@ const RouteSearch: React.FC<RouteSearchProps> = ({
 
   return (
     <>
-      <h1>Search Routes</h1>
+      <h1>Pretraži Linije</h1>
       <div className="flex flex-col items-center space-y-4 my-4">
         <Select
           options={stationOptions}
@@ -70,7 +70,7 @@ const RouteSearch: React.FC<RouteSearchProps> = ({
           onChange={(selectedOption) =>
             handleChange(selectedOption, setSelectedDepartureStation)
           }
-          placeholder="Select Departure Station"
+          placeholder="Odaberite Stanicu Polaska"
           styles={customSelectStyles}
           className="w-full md:w-2/3 lg:w-1/2 mx-auto"
         />
@@ -86,6 +86,7 @@ const RouteSearch: React.FC<RouteSearchProps> = ({
           }
           isDisabled={!selectedDepartureStation || !selectedArrivalStation}
         >
+          Obrni
           <SwapVertIcon />
         </Button>
 
@@ -99,7 +100,7 @@ const RouteSearch: React.FC<RouteSearchProps> = ({
           onChange={(selectedOption) =>
             handleChange(selectedOption, setSelectedArrivalStation)
           }
-          placeholder="Select Arrival Station"
+          placeholder="Odaberite Odredišnu Stanicu"
           styles={customSelectStyles}
           className="w-full md:w-2/3 lg:w-1/2 mx-auto"
         />
@@ -108,7 +109,7 @@ const RouteSearch: React.FC<RouteSearchProps> = ({
         <ThemeProvider theme={darkTheme}>
           <LocalizationProvider dateAdapter={AdapterDayjs}>
             <MUIDatePicker
-              label="Select Departure Date"
+              label="Odaberite Datum Polaska"
               className="w-full md:w-2/3 lg:w-1/2 mx-auto"
               value={dateOfDeparture}
               onChange={(date) => {
@@ -135,7 +136,7 @@ const RouteSearch: React.FC<RouteSearchProps> = ({
             )
           }
         >
-          Search
+          Pretraži
         </Button>
       </div>
     </>

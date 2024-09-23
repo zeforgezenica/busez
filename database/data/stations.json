@@ -1123,5 +1123,85 @@
     "_id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
     "cityId": "c14d1c46-0db1-4346-b35c-535bab9421a7",
     "name": "Škola (Gornja Graćanica)"
+  },
+  {
+    "_id": "676d46fc-ecdb-4246-b91e-03e557080310",
+    "cityId": "c14d1c46-0db1-4346-b35c-535bab9421a7",
+    "name": "Koprivna \"R\""
+  },
+  {
+    "_id": "3e5f57f3-6cc8-49b1-bf38-d43fefed2a6c",
+    "cityId": "c14d1c46-0db1-4346-b35c-535bab9421a7",
+    "name": "Vranduk (Dom)"
+  },
+  {
+    "_id": "e0f2459d-884f-423f-8765-7c20dfaee5af",
+    "cityId": "c14d1c46-0db1-4346-b35c-535bab9421a7",
+    "name": "Varošište 1"
+  },
+  {
+    "_id": "bc5e5c0a-b02e-416b-9a93-e4822940536d",
+    "cityId": "c14d1c46-0db1-4346-b35c-535bab9421a7",
+    "name": "Polje"
+  },
+  {
+    "_id": "4f43cddb-5212-411f-8d8e-ee6a28d9e854",
+    "cityId": "c14d1c46-0db1-4346-b35c-535bab9421a7",
+    "name": "Lipice"
+  },
+  {
+    "_id": "e7320140-87a6-4fa2-b288-7295e50b73cc",
+    "cityId": "c14d1c46-0db1-4346-b35c-535bab9421a7",
+    "name": "Loznički put"
+  },
+  {
+    "_id": "c891838e-58db-4bb0-ac20-8c18fac9f93a",
+    "cityId": "c14d1c46-0db1-4346-b35c-535bab9421a7",
+    "name": "Kahrimani"
+  },
+  {
+    "_id": "8e17717e-52b6-43ef-8577-41dfb7f608e4",
+    "cityId": "c14d1c46-0db1-4346-b35c-535bab9421a7",
+    "name": "Mokušnice"
+  },
+  {
+    "_id": "d70f40f7-4a7d-408b-ba54-43b8a0b5ff94",
+    "cityId": "c14d1c46-0db1-4346-b35c-535bab9421a7",
+    "name": "Prodavnica (Mokušnice)"
+  },
+  {
+    "_id": "22e71c04-4455-490d-a888-84c91e1a408e",
+    "cityId": "c14d1c46-0db1-4346-b35c-535bab9421a7",
+    "name": "Turbe (Mokušnice)"
+  },
+  {
+    "_id": "5a74c1a0-7102-4800-8f3e-ce70e5449d27",
+    "cityId": "c14d1c46-0db1-4346-b35c-535bab9421a7",
+    "name": "Luke (Gornja Zenica)"
+  },
+  {
+    "_id": "f37ebb5f-9876-4cf6-8a8b-ba7f3405179b",
+    "cityId": "c14d1c46-0db1-4346-b35c-535bab9421a7",
+    "name": "Voljevac"
+  },
+  {
+    "_id": "decee72f-d80e-4ea9-bb04-dd43d8fa2ff0",
+    "cityId": "c14d1c46-0db1-4346-b35c-535bab9421a7",
+    "name": "Široka stijena"
+  },
+  {
+    "_id": "84ef9c4d-5ec9-4166-b67c-7e587d70d4dc",
+    "cityId": "c14d1c46-0db1-4346-b35c-535bab9421a7",
+    "name": "Urije (Dom)"
+  },
+  {
+    "_id": "99672aed-5cd7-49dd-82d9-9f010ea5da56",
+    "cityId": "c14d1c46-0db1-4346-b35c-535bab9421a7",
+    "name": "Bare (Gornja Zenica)"
+  },
+  {
+    "_id": "382a165b-2600-46de-97fe-030e4f92910d",
+    "cityId": "c14d1c46-0db1-4346-b35c-535bab9421a7",
+    "name": "Gornja Zenica"
   }
 ]

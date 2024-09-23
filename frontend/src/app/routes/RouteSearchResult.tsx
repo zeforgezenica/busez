@@ -45,6 +45,7 @@ const RouteSearchResult: React.FC<RouteSearchResultProps> = ({
 
   const [currentTime, setCurrentTime] = useState(dayjs().format("HH:mm:ss"));
   const [isToday, setIsToday] = useState<boolean | null>(initialIsToday);
+  const [eta, setEta] = useState<string>("");
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -57,6 +58,74 @@ const RouteSearchResult: React.FC<RouteSearchResultProps> = ({
   useEffect(() => {
     setIsToday(initialIsToday);
   }, [initialIsToday]);
+
+  useEffect(() => {
+    calculateETA();
+  }, [currentTime, departureTime]);
+
+  const getGrammaticalForm = (
+    count: number,
+    singular: string,
+    few: string,
+    plural: string
+  ) => {
+    const remainder = count % 10;
+    const isTeens = count % 100 >= 11 && count % 100 <= 19;
+
+    if (remainder === 1 && !isTeens) {
+      return singular;
+    } else if (remainder >= 2 && remainder <= 4 && !isTeens) {
+      return few;
+    } else {
+      return plural;
+    }
+  };
+
+  const calculateETA = () => {
+    const current = dayjs();
+    const currentFormatted = current.format("YYYY-MM-DD");
+    const departure = dayjs(
+      `${currentFormatted} ${departureTime}`,
+      "YYYY-MM-DD HH:mm"
+    );
+
+    if (departure.isBefore(current)) {
+      setEta("Vrijeme polaska je prošlo.");
+    } else {
+      const totalSecondsDiff = departure.diff(current, "second");
+
+      const hours = Math.floor(totalSecondsDiff / 3600);
+      const minutes = Math.floor((totalSecondsDiff % 3600) / 60);
+      const seconds = totalSecondsDiff % 60;
+
+      let etaString = "";
+
+      if (hours > 0) {
+        const hourForm = getGrammaticalForm(hours, "sat", "sata", "sati");
+        etaString += `${hours} ${hourForm} `;
+      }
+      if (minutes > 0 || hours > 0) {
+        const minuteForm = getGrammaticalForm(
+          minutes,
+          "minuta",
+          "minute",
+          "minuta"
+        );
+        etaString += `${minutes} ${minuteForm} `;
+      }
+      if (hours === 0 && minutes < 60) {
+        const secondForm = getGrammaticalForm(
+          seconds,
+          "sekunda",
+          "sekunde",
+          "sekundi"
+        );
+        etaString += `${seconds} ${secondForm}`;
+      }
+
+      setEta(`${etaString}`);
+    }
+  };
 
   const departureStation = stations.find(
     (station) => station._id === departureStationId
@@ -71,23 +140,41 @@ const RouteSearchResult: React.FC<RouteSearchResultProps> = ({
 
   return (
     <Card shadow="sm" className="p-6 mb-4 w-full md:w-2/3 lg:w-1/2 mx-auto">
-      <div style={{ display: "flex", flexDirection: "column" }}>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+        }}
+      >
         <h2 className="text-2xl mb-2">{route.name}</h2>
         <p
-          style={{ textDecoration: "underline", cursor: "pointer" }}
+          style={{
+            textDecoration: "underline",
+            color: "var(--primary-blue)",
+            cursor: "pointer",
+          }}
           onClick={handleNavigate}
         >
           {agencyName}
         </p>
         <h3>
-          {departureStation?.name || "Unknown Departure Station"}:{" "}
+          {departureStation?.name || "Nepoznata polazna stanica"}:{" "}
           {departureTime}
           <ArrowRightAltIcon />
-          {arrivalStation?.name || "Unknown Arrival Station"}: {arrivalTime}
+          {arrivalStation?.name || "Nepoznata odredišna stanica"}: {arrivalTime}
         </h3>
-        <p>Duration: {deltaTime} minutes</p>
-        <Button variant="flat" color="warning" onPress={onOpen}>
-          See Route Details
+        <p>
+          Trajanje:{" "}
+          {getGrammaticalForm(deltaTime, "minuta", "minute", "minuta")}
+        </p>
+
+        {isToday && eta && (
+          <p style={{ color: "var(--accent-orange)" }}>
+            Preostalo vrijeme: {eta}
+          </p>
+        )}
+        <Button variant="flat" onPress={onOpen}>
+          Pogledaj detaljnije
         </Button>
 
         <Modal backdrop="opaque" isOpen={isOpen} onClose={onClose}>
@@ -95,7 +182,7 @@ const RouteSearchResult: React.FC<RouteSearchResultProps> = ({
             {(onClose) => (
               <>
                 <ModalHeader className="flex flex-col gap-1">
-                  Route Details
+                  Detalji Linije
                 </ModalHeader>
                 <ModalBody
                   style={{
@@ -112,9 +199,35 @@ const RouteSearchResult: React.FC<RouteSearchResultProps> = ({
                     isToday={isToday}
                   />
                 </ModalBody>
-                <ModalFooter>
-                  <Button color="danger" variant="light" onPress={onClose}>
-                    Close
+                <ModalFooter
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                  }}
+                >
+                  {isToday && eta && (
+                    <div style={{ color: "var(--accent-orange)" }}>
+                      <p>{eta}</p>
+                    </div>
+                  )}
+
+                  <Button
+                    variant="light"
+                    style={{
+                      color: "var(--warning-red)",
+                      backgroundColor: "transparent",
+                    }}
+                    onPress={onClose}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.backgroundColor =
+                        "rgba(255, 0, 0, 0.1)";
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.backgroundColor = "transparent";
+                    }}
+                  >
+                    Zatvori
                   </Button>
                 </ModalFooter>
               </>

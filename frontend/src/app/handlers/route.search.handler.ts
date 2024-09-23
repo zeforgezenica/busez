@@ -5,12 +5,12 @@ export const handleFilterClick = (
   setError: (error: string | null) => void
 ) => {
   if (!selectedDepartureStation || !selectedArrivalStation) {
-    setError("Please select both departure and arrival stations.");
+    setError("Molimo odaberite i polaznu i dolaznu stanicu.");
     return;
   }
 
   if (selectedDepartureStation === selectedArrivalStation) {
-    setError("Please select different departure and arrival stations.");
+    setError("Molimo odaberite različite stanice polaska i dolaska.");
     return;
   }
 

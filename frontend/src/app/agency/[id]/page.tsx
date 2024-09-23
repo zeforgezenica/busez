@@ -37,11 +37,11 @@ const AgencyPage: React.FC = () => {
   }, [id]);
 
   if (loading) {
-    return <p>Loading...</p>;
+    return <p>Učitavanje...</p>;
   }
 
   if (error || !agency) {
-    return <p>Agency not found.</p>;
+    return <p>Agencija nije pronađena.</p>;
   }
 
   return (
@@ -49,7 +49,7 @@ const AgencyPage: React.FC = () => {
       <h1 className="text-3xl font-bold text-center mb-4">{agency.name}</h1>
       <Card shadow="sm" className="p-6">
         <p>
-          <strong>Address:</strong>{" "}
+          <strong>Adresa:</strong>{" "}
           <a
             href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
               agency.address + " " + (city?.name || "")
@@ -65,7 +65,7 @@ const AgencyPage: React.FC = () => {
           </a>
         </p>
         <p>
-          <strong>Website:</strong>{" "}
+          <strong>Web stranica:</strong>{" "}
           {agency.website ? (
             <a
               href={agency.website}
@@ -83,7 +83,7 @@ const AgencyPage: React.FC = () => {
           )}
         </p>
         <p>
-          <strong>Email:</strong>{" "}
+          <strong>E-pošta:</strong>{" "}
           <a
             href={`mailto:${agency.email}`}
             style={{
@@ -95,7 +95,7 @@ const AgencyPage: React.FC = () => {
           </a>
         </p>
         <p>
-          <strong>Phone Number:</strong>{" "}
+          <strong>Broj telefona:</strong>{" "}
           <a
             href={`tel:${agency.phoneNumber}`}
             style={{
@@ -107,7 +107,7 @@ const AgencyPage: React.FC = () => {
           </a>
         </p>
         <p>
-          <strong>City:</strong>{" "}
+          <strong>Grad:</strong>{" "}
           <span
             style={{
               color: "var(--primary-blue)",

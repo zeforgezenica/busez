@@ -9,14 +9,15 @@ Before running the project, make sure to set up the necessary environment variab
 ### Create the following environment files in the `frontend` folder:
 
 1. **For local development**, create a `.env.local` file with the following content:
-    ```env
-    API_URL=http://localhost:3001
-    ```
+
+   ```env
+   API_URL=http://localhost:3001
+   ```
 
 2. **For production**, create a `.env.production` file with the following content:
-    ```env
-    API_URL=https://production-server-url.com
-    ```
+   ```env
+   API_URL=https://production-server-url.com
+   ```
 
 These environment files are necessary to configure the API URL based on the environment you're working in.
 
@@ -34,7 +35,30 @@ Make sure you have the following installed:
    ```bash
    cd frontend
    npm i
+   ```
+
+   **For local development**, create a `.env.local` file:
+
+   ```env
+   API_URL=http://localhost:3001
+   ```
+
+   **For production builds**, create a `.env.production` file:
+
+   `env
+API_URL=https://production-server-url.com
+`
+
+   Once the environment variables are set, run the development server:
+
+   ```bash
    npm run dev
+   # or
+   yarn dev
+   # or
+   pnpm dev
+   # or
+   bun dev
    ```
 
 2. **Set up the Backend:**
@@ -58,6 +82,12 @@ Make sure you have the following installed:
 
    ```bash
    npm run server
+   # or
+   yarn server
+   # or
+   pnpm server
+   # or
+   bun server
    ```
 
 ### Running the Application

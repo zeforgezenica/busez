@@ -43,7 +43,7 @@ const Footer: React.FC = () => {
     const { name, subject, details } = formData;
 
     if (!name || !subject || !details) {
-      setError("Please fill out all required fields.");
+      setError("Molimo popunite sva obavezna polja (*).");
       return;
     }
 
@@ -51,19 +51,19 @@ const Footer: React.FC = () => {
       await emailService.sendEmail({
         subject: formData.subject,
         text: `
-          Name: ${formData.name}
-          Contact Info: ${formData.contactInfo || "N/A"}
-          Details: ${formData.details}
+          Ime: ${formData.name}
+          Kontakt: ${formData.contactInfo || "N/A"}
+          Detalji: ${formData.details}
         `,
         senderName: formData.name,
         senderContact: formData.contactInfo,
       });
 
-      setSuccess("Your message has been sent successfully.");
+      setSuccess("Vaša poruka je uspješno poslana.");
       setError("");
       setFormData({ name: "", contactInfo: "", subject: "", details: "" });
     } catch (error) {
-      setError("An error occurred while sending the message.");
+      setError("Došlo je do greške prilikom slanja poruke.");
     }
   };
 
@@ -87,14 +87,16 @@ const Footer: React.FC = () => {
                   ZeForge Zenica
                 </a>
               </p>
-              <p className="text-gray-300">App for searching bus routes</p>
+              <p className="text-gray-300">
+                Aplikacija za pretraživanje autobusnih linija
+              </p>
             </div>
             <div className="mt-4 sm:mt-0 text-left">
               <p className="text-left sm:text-center">
-                <strong>Contact Us:</strong>
+                <strong>Kontaktirajte nas:</strong>
               </p>
               <p className="text-gray-300 text-left">
-                Email:{" "}
+                E-pošta:{" "}
                 <a
                   href={`mailto:${"info@zeforge.ba"}`}
                   style={{
@@ -106,7 +108,7 @@ const Footer: React.FC = () => {
                 </a>
               </p>
               <p className="text-gray-300 text-left">
-                Phone:{" "}
+                Broj telefona:{" "}
                 <a
                   href={`tel:${"+38732979844"}`}
                   style={{
@@ -119,14 +121,14 @@ const Footer: React.FC = () => {
               </p>
 
               <Button onPress={handleOpen} color="primary" className="mt-4">
-                Report Problem / Suggest Feature
+                Prijavite problem / Predložite funkciju
               </Button>
             </div>
           </div>
           <div className="my-4 border-t border-gray-300" />
           <div className="text-center">
             <p className="text-gray-300">
-              Made with ❤️ by the open source community of Zenica
+              Napravljeno sa ❤️ od strane open source zajednice Zenice
             </p>
           </div>
         </div>
@@ -136,53 +138,53 @@ const Footer: React.FC = () => {
         <ModalContent>
           <>
             <ModalHeader className="flex flex-col gap-1">
-              Report Problem / Suggest Feature
+              Prijavite problem / Predložite funkciju
             </ModalHeader>
             <ModalBody>
               {error && <p className="text-red-500">{error}</p>}
               {success && <p className="text-green-500">{success}</p>}
               <Input
                 autoFocus
-                label="Name *"
+                label="Ime *"
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
-                placeholder="Enter your name"
+                placeholder="Unesite Vaše ime"
                 variant="bordered"
                 required
               />
               <Input
-                label="Contact Info (Optional)"
+                label="Kontakt Informacije (Nije obavezno)"
                 name="contactInfo"
                 value={formData.contactInfo}
                 onChange={handleChange}
-                placeholder="Email or Phone (Optional)"
+                placeholder="E-pošta ili Telefon (Nije obavezno)"
                 variant="bordered"
               />
               <Input
-                label="Subject *"
+                label="Predmet *"
                 name="subject"
                 value={formData.subject}
                 onChange={handleChange}
-                placeholder="Enter the subject"
+                placeholder="Unesite naslov poruke"
                 variant="bordered"
                 required
               />
               <Textarea
-                label="Details *"
+                label="Detalji *"
                 name="details"
                 value={formData.details}
                 onChange={handleChange}
-                placeholder="Describe the issue or suggestion"
+                placeholder="Opišite problem ili prijedlog"
                 required
               />
             </ModalBody>
             <ModalFooter>
               <Button color="danger" variant="flat" onPress={handleClose}>
-                Close
+                Zatvori
               </Button>
               <Button color="primary" onPress={handleSubmit}>
-                Submit
+                Pošalji
               </Button>
             </ModalFooter>
           </>
