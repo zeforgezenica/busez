@@ -12357,5 +12357,145 @@
       "Friday": true
     },
     "type": 3
+  },
+  {
+    "_id": "62b262ee-b0c8-476b-bd63-4ce48584b16d",
+    "name": "Nemila (Naselje) - Bistrica - Starina",
+    "agencyId": "ef7c6ed0-7076-4ada-bb3f-e134b5671ab2",
+    "duration": "28 min",
+    "stations": [
+      {
+        "stationId": "f19afee7-d98e-4729-8a99-dfa4c7e3482b",
+        "departureTime": ["00:05"],
+        "returnTime": ["21:28"]
+      },
+      {
+        "stationId": "6b92ad17-8a6a-4b34-8b84-d89a3d5f49a5",
+        "departureTime": ["00:07"],
+        "returnTime": ["21:27"]
+      },
+      {
+        "stationId": "0b3c01d5-e6de-4ff2-8a47-5b46d708c81e",
+        "departureTime": ["00:08"],
+        "returnTime": ["21:25"]
+      },
+      {
+        "stationId": "f9dd5bb2-7d30-4f42-bc1e-e8b9250b50db",
+        "departureTime": ["00:11"],
+        "returnTime": ["21:23"]
+      },
+      {
+        "stationId": "1a5e4f32-b2a0-4a3a-91f5-7c35f3213e50",
+        "departureTime": ["00:12"],
+        "returnTime": ["21:21"]
+      },
+      {
+        "stationId": "3489e41e-1f9b-463b-8c3c-4f90a5659978",
+        "departureTime": ["00:18"],
+        "returnTime": ["21:16"]
+      },
+      {
+        "stationId": "36c01b6d-9476-4d5d-b8ac-bd1c5101c08d",
+        "departureTime": ["00:20"],
+        "returnTime": ["21:13"]
+      },
+      {
+        "stationId": "ad7879f2-7f72-4a63-bf3f-293ac7159303",
+        "departureTime": ["00:26"],
+        "returnTime": ["21:08"]
+      },
+      {
+        "stationId": "7b5ebc70-916e-4481-b94f-bcf7b36c7a53",
+        "departureTime": ["00:33"],
+        "returnTime": ["21:00"]
+      }
+    ],
+    "activeDays": {
+      "Monday": true,
+      "Wednesday": true,
+      "Tuesday": true,
+      "Thursday": true,
+      "Friday": true,
+      "Saturday": true,
+      "Sunday": true
+    },
+    "returnDays": {
+      "Monday": true,
+      "Wednesday": true,
+      "Tuesday": true,
+      "Thursday": true,
+      "Friday": true,
+      "Saturday": true,
+      "Sunday": true
+    },
+    "type": 3
+  },
+  {
+    "_id": "470773e3-1b3f-4f71-9cb9-f8d649f2bb62",
+    "name": "Nemila (Naselje) - Bistrica - Starina",
+    "agencyId": "ef7c6ed0-7076-4ada-bb3f-e134b5671ab2",
+    "duration": "28 min",
+    "stations": [
+      {
+        "stationId": "f19afee7-d98e-4729-8a99-dfa4c7e3482b",
+        "departureTime": ["10:30", "13:30", "18:30"],
+        "returnTime": ["7:18", "11:28", "17:58"]
+      },
+      {
+        "stationId": "6b92ad17-8a6a-4b34-8b84-d89a3d5f49a5",
+        "departureTime": ["10:32", "13:32", "18:32"],
+        "returnTime": ["07:17", "11:27", "17:57"]
+      },
+      {
+        "stationId": "0b3c01d5-e6de-4ff2-8a47-5b46d708c81e",
+        "departureTime": ["10:33", "13:33", "18:33"],
+        "returnTime": ["07:15", "11:25", "17:55"]
+      },
+      {
+        "stationId": "f9dd5bb2-7d30-4f42-bc1e-e8b9250b50db",
+        "departureTime": ["10:36", "13:36", "18:36"],
+        "returnTime": ["07:13", "11:23", "17:53"]
+      },
+      {
+        "stationId": "1a5e4f32-b2a0-4a3a-91f5-7c35f3213e50",
+        "departureTime": ["10:37", "13:37", "18:37"],
+        "returnTime": ["07:11", "11:21", "17:51"]
+      },
+      {
+        "stationId": "3489e41e-1f9b-463b-8c3c-4f90a5659978",
+        "departureTime": ["10:43", "13:43", "18:43"],
+        "returnTime": ["07:06", "11:16", "17:46"]
+      },
+      {
+        "stationId": "36c01b6d-9476-4d5d-b8ac-bd1c5101c08d",
+        "departureTime": ["10:45", "13:45", "18:45"],
+        "returnTime": ["07:03", "11:13", "17:43"]
+      },
+      {
+        "stationId": "ad7879f2-7f72-4a63-bf3f-293ac7159303",
+        "departureTime": ["10:51", "13:51", "18:51"],
+        "returnTime": ["06:58", "11:08", "17:38"]
+      },
+      {
+        "stationId": "7b5ebc70-916e-4481-b94f-bcf7b36c7a53",
+        "departureTime": ["10:58", "13:58", "18:58"],
+        "returnTime": ["06:50", "11:00", "17:30"]
+      }
+    ],
+    "activeDays": {
+      "Monday": true,
+      "Wednesday": true,
+      "Tuesday": true,
+      "Thursday": true,
+      "Friday": true
+    },
+    "returnDays": {
+      "Monday": true,
+      "Wednesday": true,
+      "Tuesday": true,
+      "Thursday": true,
+      "Friday": true
+    },
+    "type": 3
   }
 ]
