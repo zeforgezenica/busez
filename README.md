@@ -23,25 +23,43 @@ These environment files are necessary to configure the API URL based on the envi
 ### Prerequisites
 
 Make sure you have the following installed:
+
 - Node.js
 - npm
 
 ### Installation
 
 1. **Set up the Frontend:**
-    ```bash
-    cd frontend
-    npm i
-    npm run dev
-    ```
+
+   ```bash
+   cd frontend
+   npm i
+   npm run dev
+   ```
 
 2. **Set up the Backend:**
-    ```bash
-    cd backend
-    npm i
-    npm run server
-    ```
-    
+
+   ```bash
+   cd backend
+   npm i
+   ```
+
+   Create a `.env` file in `/backend/` and add the following environment variables:
+
+   ```plaintext
+   MAILJET_API_KEY=your-mailjet-api-key
+   MAILJET_API_SECRET=your-mailjet-api-secret
+   SENDER_EMAIL=your-sender-email
+   DEFAULT_RECEIVER_EMAIL=default-receiver-email
+   DEFAULT_RECEIVER_NAME=default-receiver-name
+   ```
+
+   Once the `.env` file is added, run the server:
+
+   ```bash
+   npm run server
+   ```
+
 ### Running the Application
 
 After setting up the frontend and backend, you can access the application at:
@@ -52,30 +70,30 @@ http://localhost:3000
 
 1. Click the **Fork** button at the top right corner of the repository page on GitHub.
 2. GitHub will create a copy (fork) of the project in your account.
-2. **Clone** the forked repository to your local machine:
-    ```bash
-    git clone https://github.com/your-username/project-name.git
-    ```
-3. **Create a new branch** for your changes:
-    
-    git checkout -b branch-name
-    
-4. **Make your changes** to the code.
-5. **Add and commit** your changes:
-    ```bash
-    git add .
-    git commit -m "Description of your changes"
-    ```
-6. **Push** your changes to your fork:
-    ```bash
-    git push origin branch-name
-    ```
-7. **Create a Pull Request**:
-    - Go to your forked repository on GitHub.
-    - Click the **Contribute** button.
-    Click the **Open pull request** button.
-    - Compare your changes with the main branch of the original repository.
-    - Add a description of your changes and click **Create pull request**.
+3. **Clone** the forked repository to your local machine:
+   ```bash
+   git clone https://github.com/your-username/project-name.git
+   ```
+4. **Create a new branch** for your changes:
+
+   git checkout -b branch-name
+
+5. **Make your changes** to the code.
+6. **Add and commit** your changes:
+   ```bash
+   git add .
+   git commit -m "Description of your changes"
+   ```
+7. **Push** your changes to your fork:
+   ```bash
+   git push origin branch-name
+   ```
+8. **Create a Pull Request**:
+   - Go to your forked repository on GitHub.
+   - Click the **Contribute** button.
+     Click the **Open pull request** button.
+   - Compare your changes with the main branch of the original repository.
+   - Add a description of your changes and click **Create pull request**.
 
 ## Contribution Guidelines
 
