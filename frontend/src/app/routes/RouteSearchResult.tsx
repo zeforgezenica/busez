@@ -104,8 +104,10 @@ const RouteSearchResult: React.FC<RouteSearchResultProps> = ({
 
     if (departure.isBefore(current)) {
       setEta("Vrijeme polaska je prošlo.");
+      return null;
     } else {
       const totalSecondsDiff = departure.diff(current, "second");
+      const remainingMinutes = Math.floor(totalSecondsDiff / 60);
 
       const hours = Math.floor(totalSecondsDiff / 3600);
       const minutes = Math.floor((totalSecondsDiff % 3600) / 60);
@@ -137,8 +139,16 @@ const RouteSearchResult: React.FC<RouteSearchResultProps> = ({
       }
 
       setEta(`${etaString}`);
+      return remainingMinutes;
     }
   };
+
+  const [remainingMinutes, setRemainingMinutes] = useState<number | null>(null);
+
+  useEffect(() => {
+    const minutes = calculateETA();
+    setRemainingMinutes(minutes);
+  }, [currentTime, departureTime]);
 
   const departureStation = stations.find(
     (station) => station._id === departureStationId
@@ -157,6 +167,15 @@ const RouteSearchResult: React.FC<RouteSearchResultProps> = ({
     marginTop: "0",
     padding: screenWidth <= 375 ? "0" : "16px",
   };
+
+  const etaColor =
+    remainingMinutes !== null
+      ? remainingMinutes > 10
+        ? "var(--calm-green)"
+        : remainingMinutes > 3
+        ? "var(--accent-orange)"
+        : "var(--warning-red)"
+      : "inherit";
 
   return (
     <Card shadow="sm" className="p-6 mb-4 w-full md:w-2/3 lg:w-1/2 mx-auto">
@@ -184,14 +203,12 @@ const RouteSearchResult: React.FC<RouteSearchResultProps> = ({
           {arrivalStation?.name || "Nepoznata odredišna stanica"}: {arrivalTime}
         </h3>
         <p>
-          Trajanje:{" "}
+          Trajanje: {deltaTime}{" "}
           {getGrammaticalForm(deltaTime, "minuta", "minute", "minuta")}
         </p>
 
         {isToday && eta && (
-          <p style={{ color: "var(--accent-orange)" }}>
-            Preostalo vrijeme: {eta}
-          </p>
+          <p style={{ color: etaColor }}>Preostalo vrijeme: {eta}</p>
         )}
         <Button variant="flat" onPress={onOpen}>
           Pogledaj detaljnije
