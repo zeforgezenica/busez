@@ -20,11 +20,18 @@ const Dot = styled("div")<{ isPast: boolean; isToday: boolean }>(
   })
 );
 
+const DotContainer = styled("div")(({ theme }) => ({
+  width: "20%",
+  [theme.breakpoints.down("sm")]: {
+    width: "15%",
+  },
+}));
+
 const StopTime = styled("div")<{
   isPast: boolean;
   isToday: boolean;
   isArrivalOrDeparture: boolean;
-}>(({ isPast, isToday, isArrivalOrDeparture }) => ({
+}>(({ isPast, isToday, isArrivalOrDeparture, theme }) => ({
   width: "15%",
   textAlign: "left",
   fontWeight: isArrivalOrDeparture ? "bold" : "normal",
@@ -33,6 +40,9 @@ const StopTime = styled("div")<{
     : isPast && isToday
     ? "var(--primary-blue)"
     : "#eee",
+  [theme.breakpoints.down("sm")]: {
+    width: "20%",
+  },
 }));
 
 const StopName = styled("div")<{
@@ -45,7 +55,6 @@ const StopName = styled("div")<{
   whiteSpace: "nowrap",
   overflow: "hidden",
   textOverflow: "ellipsis",
-  fontWeight: isArrivalOrDeparture ? "bold" : "normal",
   color: isArrivalOrDeparture
     ? "var(--accent-orange)"
     : isPast && isToday
@@ -125,7 +134,7 @@ const RouteProgressStepper: React.FC<RouteProgressStepperProps> = ({
           >
             {index === 0 ? (
               <>
-                <div style={{ width: "20%" }}>
+                <DotContainer>
                   <Dot
                     style={{ bottom: "7px" }}
                     isPast={isTimePast(
@@ -136,7 +145,7 @@ const RouteProgressStepper: React.FC<RouteProgressStepperProps> = ({
                     )}
                     isToday={isToday || false}
                   />
-                </div>
+                </DotContainer>
                 <StopTime
                   isPast={isTimePast(
                     station.time,
@@ -164,27 +173,38 @@ const RouteProgressStepper: React.FC<RouteProgressStepperProps> = ({
               </>
             ) : (
               <>
-                <div style={{ width: "20%", height: "100%" }}>
-                  <LinearProgress
-                    variant="determinate"
-                    value={progress}
-                    sx={{
-                      "& .MuiLinearProgress-bar": {
-                        backgroundColor: "var(--primary-blue)",
-                      },
-                      transform: "rotate(90deg)",
-                      height: 2,
-                      width: "36px",
-                      position: "relative",
-                      zIndex: 1000,
+                <DotContainer>
+                  <div
+                    style={{
+                      height: "38px",
+                      width: "2px",
                       marginInline: "auto",
-                      marginTop: "auto",
-                      marginBottom: "0",
-                      top: "10px",
+                      position: "relative",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      top: "-6px",
+                      overflow: "hidden",
                     }}
-                  />
+                  >
+                    <LinearProgress
+                      variant="determinate"
+                      value={progress}
+                      sx={{
+                        "& .MuiLinearProgress-bar": {
+                          backgroundColor: "var(--primary-blue)",
+                        },
+                        transform: "rotate(90deg)",
+                        height: "2px",
+                        width: "38px",
+                        zIndex: 90,
+                        margin: "0 -18px",
+                      }}
+                    />
+                  </div>
+
                   <Dot
-                    style={{ bottom: "-27px" }}
+                    style={{ bottom: "7px" }}
                     isPast={isTimePast(
                       station.time,
                       currentTime,
@@ -193,7 +213,7 @@ const RouteProgressStepper: React.FC<RouteProgressStepperProps> = ({
                     )}
                     isToday={isToday || false}
                   />
-                </div>
+                </DotContainer>
                 <StopTime
                   isPast={isTimePast(
                     station.time,
