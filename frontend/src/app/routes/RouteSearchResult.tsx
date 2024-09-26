@@ -170,7 +170,7 @@ const RouteSearchResult: React.FC<RouteSearchResultProps> = ({
 
   const etaColor =
     remainingMinutes !== null
-      ? remainingMinutes > 10
+      ? remainingMinutes > 9
         ? "var(--calm-green)"
         : remainingMinutes > 3
         ? "var(--accent-orange)"
