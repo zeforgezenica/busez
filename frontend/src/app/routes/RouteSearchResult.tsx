@@ -46,6 +46,19 @@ const RouteSearchResult: React.FC<RouteSearchResultProps> = ({
   const [currentTime, setCurrentTime] = useState(dayjs().format("HH:mm:ss"));
   const [isToday, setIsToday] = useState<boolean | null>(initialIsToday);
   const [eta, setEta] = useState<string>("");
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setScreenWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -91,8 +104,10 @@ const RouteSearchResult: React.FC<RouteSearchResultProps> = ({
 
     if (departure.isBefore(current)) {
       setEta("Vrijeme polaska je prošlo.");
+      return null;
     } else {
       const totalSecondsDiff = departure.diff(current, "second");
+      const remainingMinutes = Math.floor(totalSecondsDiff / 60);
 
       const hours = Math.floor(totalSecondsDiff / 3600);
       const minutes = Math.floor((totalSecondsDiff % 3600) / 60);
@@ -124,8 +139,16 @@ const RouteSearchResult: React.FC<RouteSearchResultProps> = ({
       }
 
       setEta(`${etaString}`);
+      return remainingMinutes;
     }
   };
+
+  const [remainingMinutes, setRemainingMinutes] = useState<number | null>(null);
+
+  useEffect(() => {
+    const minutes = calculateETA();
+    setRemainingMinutes(minutes);
+  }, [currentTime, departureTime]);
 
   const departureStation = stations.find(
     (station) => station._id === departureStationId
@@ -137,6 +160,22 @@ const RouteSearchResult: React.FC<RouteSearchResultProps> = ({
   const handleNavigate = () => {
     router.push(`/agency/${route.agencyId}`);
   };
+
+  const modalBodyStyle: React.CSSProperties = {
+    maxHeight: "calc(100vh * 0.7)",
+    overflowY: "auto" as "auto",
+    marginTop: "0",
+    padding: screenWidth <= 375 ? "0" : "16px",
+  };
+
+  const etaColor =
+    remainingMinutes !== null
+      ? remainingMinutes > 9
+        ? "var(--calm-green)"
+        : remainingMinutes > 3
+        ? "var(--accent-orange)"
+        : "var(--warning-red)"
+      : "inherit";
 
   return (
     <Card shadow="sm" className="p-6 mb-4 w-full md:w-2/3 lg:w-1/2 mx-auto">
@@ -164,14 +203,12 @@ const RouteSearchResult: React.FC<RouteSearchResultProps> = ({
           {arrivalStation?.name || "Nepoznata odredišna stanica"}: {arrivalTime}
         </h3>
         <p>
-          Trajanje:{" "}
+          Trajanje: {deltaTime}{" "}
           {getGrammaticalForm(deltaTime, "minuta", "minute", "minuta")}
         </p>
 
         {isToday && eta && (
-          <p style={{ color: "var(--accent-orange)" }}>
-            Preostalo vrijeme: {eta}
-          </p>
+          <p style={{ color: etaColor }}>Preostalo vrijeme: {eta}</p>
         )}
         <Button variant="flat" onPress={onOpen}>
           Pogledaj detaljnije
@@ -184,13 +221,7 @@ const RouteSearchResult: React.FC<RouteSearchResultProps> = ({
                 <ModalHeader className="flex flex-col gap-1">
                   Detalji Linije
                 </ModalHeader>
-                <ModalBody
-                  style={{
-                    maxHeight: "calc(100vh * .7)",
-                    overflowY: "auto",
-                    marginTop: "0",
-                  }}
-                >
+                <ModalBody style={modalBodyStyle}>
                   <RouteProgressStepper
                     stations={route.stations}
                     currentTime={currentTime}
