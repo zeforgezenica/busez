@@ -28,9 +28,9 @@ Make sure you have the following installed:
 
    **For production builds**, create a `.env.production` file:
 
-   `env
-NEXT_PUBLIC_API_URL=https://production-server-url.com
-`
+   ```env
+   NEXT_PUBLIC_API_URL=https://production-server-url.com
+   ```
 
    Once the environment variables are set, run the development server:
 
