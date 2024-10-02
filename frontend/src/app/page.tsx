@@ -129,6 +129,14 @@ const HomePage: React.FC = () => {
         : (new Date().getDay() + 6) % 7;
     const departureDay = Week[departureDayIndex];
 
+    const getDepartureTimeForStation = (
+      stations: StationTime[],
+      stationId: string | null
+    ) => {
+      const station = stations.find((st) => st.stationId === stationId);
+      return station ? station.time : "00:00";
+    };
+
     const filteredRoutes = originalRoutes.flatMap((route) => {
       const departureStationIndex = route.stations.findIndex(
         (station) => station.stationId === tempDepartureStation
@@ -211,14 +219,23 @@ const HomePage: React.FC = () => {
     });
 
     if (!isTodayDeparture) {
-      setRouteResults(filteredRoutes);
-      setSelectedDepartureStation(tempDepartureStation);
-      setSelectedArrivalStation(tempArrivalStation);
-      return;
-    }
+      const sortedRoutes = filteredRoutes.sort((a, b) => {
+        const timeA = getDepartureTimeForStation(
+          a.stations,
+          tempDepartureStation
+        )
+          .split(":")
+          .map(Number);
+        const timeB = getDepartureTimeForStation(
+          b.stations,
+          tempDepartureStation
+        )
+          .split(":")
+          .map(Number);
+        return timeA[0] * 60 + timeA[1] - (timeB[0] * 60 + timeB[1]);
+      });
 
-    if (!isTodayDeparture) {
-      setRouteResults(filteredRoutes);
+      setRouteResults(sortedRoutes);
       setSelectedDepartureStation(tempDepartureStation);
       setSelectedArrivalStation(tempArrivalStation);
       return;
@@ -226,14 +243,6 @@ const HomePage: React.FC = () => {
 
     const now = dayjs();
     const nowMinutes = now.hour() * 60 + now.minute();
-
-    const getDepartureTimeForStation = (
-      stations: StationTime[],
-      stationId: string | null
-    ) => {
-      const station = stations.find((st) => st.stationId === stationId);
-      return station ? station.time : "00:00";
-    };
 
     const { futureRoutes, pastRoutes } = filteredRoutes.reduce(
       (acc, routeLap) => {
@@ -267,7 +276,17 @@ const HomePage: React.FC = () => {
       return timeA[0] * 60 + timeA[1] - (timeB[0] * 60 + timeB[1]);
     });
 
-    setPastDepartures(pastRoutes);
+    const sortedPastRoutes = pastRoutes.sort((a, b) => {
+      const timeA = getDepartureTimeForStation(a.stations, tempDepartureStation)
+        .split(":")
+        .map(Number);
+      const timeB = getDepartureTimeForStation(b.stations, tempDepartureStation)
+        .split(":")
+        .map(Number);
+      return timeA[0] * 60 + timeA[1] - (timeB[0] * 60 + timeB[1]);
+    });
+
+    setPastDepartures(sortedPastRoutes);
     setRouteResults(sortedFutureRoutes);
 
     setSelectedDepartureStation(tempDepartureStation);
@@ -290,6 +309,7 @@ const HomePage: React.FC = () => {
     <>
       <Head>
         <title>kadJeBus</title>
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="container mx-auto p-4">
         <h1 className="text-3xl font-bold text-center mb-4">kadJeBus</h1>
