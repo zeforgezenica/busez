@@ -43,6 +43,13 @@ const HomePage: React.FC = () => {
     return date ? date.isSame(dayjs(), "day") : false;
   };
 
+  const [isPastDeparturesExpanded, setIsPastDeparturesExpanded] =
+    useState(false);
+
+  const togglePastDepartures = () => {
+    setIsPastDeparturesExpanded((prevState) => !prevState);
+  };
+
   const handleDateChange = (date: dayjs.Dayjs | null) => {
     setDateOfDeparture(date);
 
@@ -371,36 +378,59 @@ const HomePage: React.FC = () => {
           ))}
         {hasSearched && fixedIsToday && pastDepartures.length > 0 && (
           <>
-            <div className="text-xl font-semibold mb-4">Prošli Polasci</div>
-            {pastDepartures.map((routeLap) => {
-              const departureStationIndex = routeLap.stations.findIndex(
-                (station) => station.stationId === selectedDepartureStation
-              );
-              const arrivalStationIndex = routeLap.stations.findIndex(
-                (station) => station.stationId === selectedArrivalStation
-              );
+            <div
+              className="p-6 mb-4 w-full md:w-2/3 lg:w-1/2 mx-auto text-xl font-semibold flex justify-between items-center cursor-pointer"
+              onClick={togglePastDepartures}
+            >
+              <span>Prošli Polasci</span>
+              <div className="flex justify-between items-center cursor-pointer">
+                <span className="text-sm underline">
+                  {isPastDeparturesExpanded ? "Sakrij" : "Prikaži"}
+                </span>
+                <span className="ml-1">
+                  {isPastDeparturesExpanded ? "▲" : "▼"}
+                </span>
+              </div>
+            </div>
 
-              const departureTime =
-                routeLap.stations[departureStationIndex]?.time || "";
-              const arrivalTime =
-                routeLap.stations[arrivalStationIndex]?.time || "";
-              const deltatime = calculateDuration(departureTime, arrivalTime);
+            <hr className="border-t border-gray-300 mb-4 w-full md:w-2/3 lg:w-1/2 mx-auto" />
 
-              return (
-                <RouteSearchResult
-                  key={`${routeLap._id}-${departureTime}-${arrivalTime}`}
-                  route={routeLap}
-                  agencyName={agencyNames[routeLap.agencyId]}
-                  stations={stations}
-                  departureStationId={selectedDepartureStation}
-                  arrivalStationId={selectedArrivalStation}
-                  departureTime={departureTime}
-                  arrivalTime={arrivalTime}
-                  deltaTime={deltatime}
-                  isToday={fixedIsToday}
-                />
-              );
-            })}
+            {isPastDeparturesExpanded && (
+              <>
+                {pastDepartures.map((routeLap) => {
+                  const departureStationIndex = routeLap.stations.findIndex(
+                    (station) => station.stationId === selectedDepartureStation
+                  );
+                  const arrivalStationIndex = routeLap.stations.findIndex(
+                    (station) => station.stationId === selectedArrivalStation
+                  );
+
+                  const departureTime =
+                    routeLap.stations[departureStationIndex]?.time || "";
+                  const arrivalTime =
+                    routeLap.stations[arrivalStationIndex]?.time || "";
+                  const deltatime = calculateDuration(
+                    departureTime,
+                    arrivalTime
+                  );
+
+                  return (
+                    <RouteSearchResult
+                      key={`${routeLap._id}-${departureTime}-${arrivalTime}`}
+                      route={routeLap}
+                      agencyName={agencyNames[routeLap.agencyId]}
+                      stations={stations}
+                      departureStationId={selectedDepartureStation}
+                      arrivalStationId={selectedArrivalStation}
+                      departureTime={departureTime}
+                      arrivalTime={arrivalTime}
+                      deltaTime={deltatime}
+                      isToday={fixedIsToday}
+                    />
+                  );
+                })}
+              </>
+            )}
           </>
         )}
       </div>
