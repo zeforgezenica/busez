@@ -17,6 +17,20 @@ class StationService extends BaseService<Station> {
   async getStationsByIds(ids: string[]): Promise<Station[]> {
     return this.getByIds(ids);
   }
+
+  async getStationConnections(stationId: string): Promise<Station[]> {
+    return this.getItems(`${stationId}/connections`);
+  }
+
+  async doStationsConnect(
+    stationAId: string,
+    stationBId: string
+  ): Promise<boolean> {
+    const response = await this.getItems(
+      `/connect/${stationAId}/${stationBId}`
+    );
+    return response.length > 0;
+  }
 }
 
 const stationServiceInstance = new StationService();
