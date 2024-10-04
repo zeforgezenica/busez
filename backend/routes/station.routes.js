@@ -11,8 +11,11 @@ var StationRelationshipController = require("../controllers/station.relationship
 router.get("/", StationController.getAll);
 router.get("/:id", StationController.getById);
 
-// Get all connections for a specific station
-router.get("/:id/connections", StationRelationshipController.getAllConnections);
+// Get all stations connected to a specific station
+router.get(
+  "/:id/connections",
+  StationRelationshipController.getStationsByConnection
+);
 
 // Check if two stations are connected
 router.get(

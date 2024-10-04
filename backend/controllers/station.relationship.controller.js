@@ -7,8 +7,11 @@ class StationController extends BaseController {
     const filePath = path.join(__dirname, "../../database/data/stations.json");
     const stationSchema = require("../schemas/station.schema.json");
     super(filePath, stationSchema);
+
     this.getAllConnections = this.getAllConnections.bind(this);
     this.doStationsConnect = this.doStationsConnect.bind(this);
+    this.readFromFileRelationships = this.readFromFileRelationships.bind(this);
+    this.getStationsByConnection = this.getStationsByConnection.bind(this);
   }
 
   async readFromFileRelationships() {
@@ -41,6 +44,29 @@ class StationController extends BaseController {
     } catch (error) {
       console.error(error);
       res.status(500).send({ message: "Error retrieving connections." });
+    }
+  }
+
+  async getStationsByConnection(req, res) {
+    const stationId = req.params.id;
+
+    try {
+      const relationships = await this.readFromFileRelationships();
+
+      const connectionIds = relationships
+        .filter((rel) => rel.stationA === stationId)
+        .map((rel) => rel.stationB);
+
+      const allStations = await this.readFromFile();
+
+      const connectedStations = allStations.filter((station) =>
+        connectionIds.includes(station._id)
+      );
+
+      res.status(200).json(connectedStations);
+    } catch (error) {
+      console.error(error);
+      res.status(500).send({ message: "Error retrieving connected stations." });
     }
   }
 
