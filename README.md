@@ -53,13 +53,20 @@ Make sure you have the following installed:
 
    Create a `.env` file in `/backend/` and add the following environment variables:
 
-   ```plaintext
-   MAILJET_API_KEY=your-mailjet-api-key
-   MAILJET_API_SECRET=your-mailjet-api-secret
-   SENDER_EMAIL=your-sender-email
-   DEFAULT_RECEIVER_EMAIL=default-receiver-email
-   DEFAULT_RECEIVER_NAME=default-receiver-name
+   ```env
+   SMTP_HOST=your-smtp-host                # e.g., smtp.gmail.com
+   SMTP_PORT=your-smtp-port                # e.g., 587 for TLS or 465 for SSL
+   SMTP_USER=your-email@gmail.com           # Your email address
+   SMTP_PASS=your-app-password              # Your app password for the email account
+   SENDER_EMAIL=your-sender-email           # Email address from which the emails will be sent
+   DEFAULT_RECEIVER_EMAIL=recipient@example.com # Default recipient email address
+   DEFAULT_RECEIVER_NAME=your-receiver-name     # Name of the default recipient
    ```
+
+   Make sure to replace the placeholders with your actual values.
+
+   **NOTE**
+   If you are using Gmail, you need to enable "Less secure app access" or use an App Password to authenticate.
 
    Once the `.env` file is added, run the server:
 
