@@ -33,6 +33,6 @@ class StationService extends BaseService<Station> {
   }
 }
 
-const stationServiceInstance = new StationService();
+const stationService = new StationService();
 
-export default stationServiceInstance;
+export default stationService;
