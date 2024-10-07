@@ -1,0 +1,18 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "stationA": {
+      "type": "string",
+      "format": "uuid",
+      "description": "The ID of the first station in the relationship."
+    },
+    "stationB": {
+      "type": "string",
+      "format": "uuid",
+      "description": "The ID of the second station in the relationship."
+    }
+  },
+  "required": ["stationA", "stationB"],
+  "additionalProperties": false
+}

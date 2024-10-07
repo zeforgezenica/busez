@@ -2,7 +2,7 @@ import * as React from "react";
 import LinearProgress from "@mui/material/LinearProgress";
 import { styled } from "@mui/material/styles";
 import { StationTime } from "../models/route.model";
-import stationServiceInstance from "../services/station.service";
+import stationService from "../services/station.service";
 import Station from "../models/station.model";
 import { isTimePast, getProgress } from "../handlers/route.progress.handler";
 
@@ -82,9 +82,7 @@ const RouteProgressStepper: React.FC<RouteProgressStepperProps> = ({
   React.useEffect(() => {
     const fetchStations = async () => {
       const ids = stations.map((station) => station.stationId);
-      const fetchedStations = await stationServiceInstance.getStationsByIds(
-        ids
-      );
+      const fetchedStations = await stationService.getStationsByIds(ids);
       setStationData(fetchedStations);
     };
 
