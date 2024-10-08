@@ -115,6 +115,7 @@ const RouteSearch: React.FC<RouteSearchProps> = ({
               onChange={(date) => {
                 onDateChange(date);
               }}
+              format="DD/MM/YYYY"
             />
           </LocalizationProvider>
         </ThemeProvider>
