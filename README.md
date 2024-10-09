@@ -2,6 +2,8 @@
 
 This application is designed for tracking buses in the city of Zenica, Bosnia and Herzegovina.
 
+Deployment: https://kadjebus.zeforge.ba
+
 ## Getting Started
 
 ### Prerequisites
