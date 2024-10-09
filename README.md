@@ -8,8 +8,8 @@ This application is designed for tracking buses in the city of Zenica, Bosnia an
 
 Make sure you have the following installed:
 
-- Node.js
-- npm
+- Node.js (https://nodejs.org/en/download/package-manager)
+- pnpm (https://pnpm.io/installation)
 
 ### Installation
 
