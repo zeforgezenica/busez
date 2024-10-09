@@ -6,18 +6,21 @@
    ```bash
    git clone https://github.com/your-username/project-name.git
    ```
-
-4. **Make your changes** to the code.
-5. **Add and commit** your changes:
+4. **Checkout a new branch locally**:
+   ```bash
+   git checkout -b branch-name
+   ```
+5. **Make your changes** to the code.
+6. **Add and commit** your changes:
    ```bash
    git add .
    git commit -m "Description of your changes"
    ```
-6. **Push** your changes to your fork:
+7. **Push** your changes to your fork:
    ```bash
    git push origin branch-name
    ```
-7. **Create a Pull Request**:
+8. **Create a Pull Request**:
    - Go to your forked repository on GitHub.
    - Click the **Contribute** button.
      Click the **Open pull request** button.

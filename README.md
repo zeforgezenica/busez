@@ -8,17 +8,19 @@ This application is designed for tracking buses in the city of Zenica, Bosnia an
 
 Make sure you have the following installed:
 
-- Node.js
-- npm
+- Node.js (https://nodejs.org/en/download/package-manager)
+- pnpm (https://pnpm.io/installation)
 
 ### Installation
 
-1. **Set up the Frontend:**
+1. **Install dependencies:**
 
    ```bash
-   cd frontend
-   npm i
+   pnpm install
    ```
+
+2. **Set up the Frontend:**
+ 
 
    **For local development**, create a `.env.local` file:
 
@@ -31,26 +33,10 @@ Make sure you have the following installed:
    ```env
    NEXT_PUBLIC_API_URL=https://production-server-url.com
    ```
-
-   Once the environment variables are set, run the development server:
-
-   ```bash
-   npm run dev
-   # or
-   yarn dev
-   # or
-   pnpm dev
-   # or
-   bun dev
-   ```
+ 
 
 2. **Set up the Backend:**
-
-   ```bash
-   cd backend
-   npm i
-   ```
-
+ 
    Create a `.env` file in `/backend/` and add the following environment variables:
 
    ```env
@@ -69,15 +55,11 @@ Make sure you have the following installed:
    If you are using Gmail, you need to enable "Less secure app access" or use an App Password to authenticate.
 
    Once the `.env` file is added, run the server:
-
+ 
+3. **Run the application:**
+ 
    ```bash
-   npm run server
-   # or
-   yarn server
-   # or
-   pnpm server
-   # or
-   bun server
+   pnpm turbo dev
    ```
 
 ### Running the Application
