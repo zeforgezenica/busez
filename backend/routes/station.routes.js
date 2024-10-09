@@ -1,6 +1,7 @@
 var express = require("express");
 var router = express.Router();
 var StationController = require("../controllers/station.controller");
+var StationRelationshipController = require("../controllers/station.relationship.controller");
 
 // Commenting out unused routes for deployment version
 // router.post("/", StationController.create); Redundant for deployment version
@@ -9,5 +10,17 @@ var StationController = require("../controllers/station.controller");
 
 router.get("/", StationController.getAll);
 router.get("/:id", StationController.getById);
+
+// Get all stations connected to a specific station
+router.get(
+  "/:id/connections",
+  StationRelationshipController.getStationsByConnection
+);
+
+// Check if two stations are connected
+router.get(
+  "/connect/:stationAId/:stationBId",
+  StationRelationshipController.doStationsConnect
+);
 
 module.exports = router;

@@ -1,4 +1,4 @@
-const Mailjet = require("node-mailjet");
+const nodemailer = require("nodemailer");
 require("dotenv").config();
 
 class EmailController {
@@ -12,53 +12,44 @@ class EmailController {
     }
 
     try {
-      const mailjetClient = new Mailjet({
-        apiKey: process.env.MAILJET_API_KEY,
-        apiSecret: process.env.MAILJET_API_SECRET,
+      // Create a Nodemailer transporter
+      const transporter = nodemailer.createTransport({
+        host: process.env.SMTP_HOST,
+        port: process.env.SMTP_PORT,
+        secure: process.env.SMTP_PORT === "465",
+        auth: {
+          user: process.env.SMTP_USER,
+          pass: process.env.SMTP_PASS,
+        },
+        tls: {
+          rejectUnauthorized: false,
+        },
       });
 
-      const request = mailjetClient.post("send", { version: "v3.1" }).request({
-        Messages: [
-          {
-            From: {
-              Email: senderEmail || process.env.SENDER_EMAIL,
-              Name: senderName,
-            },
-            To: [
-              {
-                Email: process.env.DEFAULT_RECEIVER_EMAIL,
-                Name: process.env.DEFAULT_RECEIVER_NAME,
-              },
-            ],
-            Subject: subject,
-            TextPart: text,
-          },
-        ],
-      });
-
-      const result = await request;
-
-      const cleanResult = {
-        status: result.body.Messages[0].Status,
-        to: result.body.Messages[0].To,
+      const mailOptions = {
+        from: `${senderName} <${senderEmail || process.env.SENDER_EMAIL}>`,
+        to: `${process.env.DEFAULT_RECEIVER_NAME} <${process.env.DEFAULT_RECEIVER_EMAIL}>`,
+        subject: subject,
+        text: text,
       };
 
-      console.log("Email sent successfully:", cleanResult);
+      const info = await transporter.sendMail(mailOptions);
+
+      console.log("Email sent successfully:", info.response);
       res
         .status(200)
-        .json({ success: "Email sent successfully.", result: cleanResult });
+        .json({ success: "Email sent successfully.", result: info });
     } catch (error) {
       console.error("Error caught:", error.message);
       let errorMessage = "An error occurred while sending the email.";
-      if (error.statusCode === 401) {
-        errorMessage = "Authentication failed. Check your Mailjet credentials.";
-      } else if (error.statusCode === 404) {
-        errorMessage =
-          "Mailjet service not found. Check your API configuration.";
-      } else if (error.statusCode >= 500) {
+      if (error.code === "EAUTH") {
+        errorMessage = "Authentication failed. Check your SMTP credentials.";
+      } else if (error.responseCode === 404) {
+        errorMessage = "SMTP service not found. Check your API configuration.";
+      } else if (error.responseCode >= 500) {
         errorMessage = "Server error. Please try again later.";
       }
-      res.status(error.statusCode || 500).json({ error: errorMessage });
+      res.status(error.responseCode || 500).json({ error: errorMessage });
     }
   }
 }

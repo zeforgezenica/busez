@@ -9,9 +9,9 @@
   --calm-green: #5cb85c;
 }
 
-* {
+/* * {
   text-align: center;
-}
+} */
 
 .leaflet-container.leaflet-touch.leaflet-fade-anim.leaflet-grab.leaflet-touch-drag.leaflet-touch-zoom {
   height: 50vh !important;
