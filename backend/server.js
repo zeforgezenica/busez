@@ -11,6 +11,7 @@ var routeRoutes = require("./routes/route.routes");
 var emailRoutes = require("./routes/email.routes");
 
 app.use(bodyParser.json());
+
 app.use(cors());
 
 app.use("/countries", countryRoutes);

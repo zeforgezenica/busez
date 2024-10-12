@@ -1,21 +1,21 @@
-"use client";
-import React, { useState, useEffect } from "react";
+'use client';
+import React, { useState, useEffect } from 'react';
 import {
-  Card,
-  Button,
   Modal,
   ModalContent,
   ModalHeader,
   ModalBody,
   ModalFooter,
   useDisclosure,
-} from "@nextui-org/react";
-import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
-import { RouteLap } from "../models/route.model";
-import Station from "../models/station.model";
-import RouteProgressStepper from "./RouteProgressStepper";
-import { useRouter } from "next/navigation";
-import dayjs from "dayjs";
+} from '@nextui-org/react';
+import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
+import { RouteLap } from '../models/route.model';
+import Station from '../models/station.model';
+import RouteProgressStepper from './RouteProgressStepper';
+import { useRouter } from 'next/navigation';
+import dayjs from 'dayjs';
+import { Button } from '@/components/ui/button';
+import { Card } from '@/components/ui/card';
 
 interface RouteSearchResultProps {
   route: RouteLap;
@@ -43,9 +43,9 @@ const RouteSearchResult: React.FC<RouteSearchResultProps> = ({
   const { isOpen, onOpen, onClose } = useDisclosure();
   const router = useRouter();
 
-  const [currentTime, setCurrentTime] = useState(dayjs().format("HH:mm:ss"));
+  const [currentTime, setCurrentTime] = useState(dayjs().format('HH:mm:ss'));
   const [isToday, setIsToday] = useState<boolean | null>(initialIsToday);
-  const [eta, setEta] = useState<string>("");
+  const [eta, setEta] = useState<string>('');
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -53,16 +53,16 @@ const RouteSearchResult: React.FC<RouteSearchResultProps> = ({
       setScreenWidth(window.innerWidth);
     };
 
-    window.addEventListener("resize", handleResize);
+    window.addEventListener('resize', handleResize);
 
     return () => {
-      window.removeEventListener("resize", handleResize);
+      window.removeEventListener('resize', handleResize);
     };
   }, []);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      setCurrentTime(dayjs().format("HH:mm:ss"));
+      setCurrentTime(dayjs().format('HH:mm:ss'));
     }, 1000);
 
     return () => clearInterval(intervalId);
@@ -96,44 +96,44 @@ const RouteSearchResult: React.FC<RouteSearchResultProps> = ({
 
   const calculateETA = () => {
     const current = dayjs();
-    const currentFormatted = current.format("YYYY-MM-DD");
+    const currentFormatted = current.format('YYYY-MM-DD');
     const departure = dayjs(
       `${currentFormatted} ${departureTime}`,
-      "YYYY-MM-DD HH:mm"
+      'YYYY-MM-DD HH:mm'
     );
 
     if (departure.isBefore(current)) {
-      setEta("Vrijeme polaska je prošlo.");
+      setEta('Vrijeme polaska je prošlo.');
       return null;
     } else {
-      const totalSecondsDiff = departure.diff(current, "second");
+      const totalSecondsDiff = departure.diff(current, 'second');
       const remainingMinutes = Math.floor(totalSecondsDiff / 60);
 
       const hours = Math.floor(totalSecondsDiff / 3600);
       const minutes = Math.floor((totalSecondsDiff % 3600) / 60);
       const seconds = totalSecondsDiff % 60;
 
-      let etaString = "";
+      let etaString = '';
 
       if (hours > 0) {
-        const hourForm = getGrammaticalForm(hours, "sat", "sata", "sati");
+        const hourForm = getGrammaticalForm(hours, 'sat', 'sata', 'sati');
         etaString += `${hours} ${hourForm} `;
       }
       if (minutes > 0 || hours > 0) {
         const minuteForm = getGrammaticalForm(
           minutes,
-          "minuta",
-          "minute",
-          "minuta"
+          'minuta',
+          'minute',
+          'minuta'
         );
         etaString += `${minutes} ${minuteForm} `;
       }
       if (hours === 0 && minutes < 60) {
         const secondForm = getGrammaticalForm(
           seconds,
-          "sekunda",
-          "sekunde",
-          "sekundi"
+          'sekunda',
+          'sekunde',
+          'sekundi'
         );
         etaString += `${seconds} ${secondForm}`;
       }
@@ -162,63 +162,53 @@ const RouteSearchResult: React.FC<RouteSearchResultProps> = ({
   };
 
   const modalBodyStyle: React.CSSProperties = {
-    maxHeight: "calc(100vh * 0.7)",
-    overflowY: "auto" as "auto",
-    marginTop: "0",
-    padding: screenWidth <= 375 ? "0" : "16px",
+    maxHeight: 'calc(100vh * 0.7)',
+    overflowY: 'auto' as 'auto',
+    marginTop: '0',
+    padding: screenWidth <= 375 ? '0' : '16px',
   };
 
   const etaColor =
     remainingMinutes !== null
       ? remainingMinutes > 9
-        ? "var(--calm-green)"
+        ? 'var(--calm-green)'
         : remainingMinutes > 3
-        ? "var(--accent-orange)"
-        : "var(--warning-red)"
-      : "inherit";
+        ? 'var(--accent-orange)'
+        : 'var(--warning-red)'
+      : 'inherit';
 
   return (
-    <Card shadow="sm" className="p-6 mb-4 w-full md:w-2/3 lg:w-1/2 mx-auto">
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-        }}
-      >
-        <h2 className="text-2xl mb-2">{route.name}</h2>
-        <p
-          style={{
-            textDecoration: "underline",
-            color: "var(--primary-blue)",
-            cursor: "pointer",
-          }}
+    <Card className='p-6 mb-4 w-full md:w-2/3 lg:w-1/2 mx-auto'>
+      <div className='flex flex-col gap-3'>
+        <h2 className='text-2xl mb-2 font-semibold'>{route.name}</h2>
+        <Button
+          variant='link'
+          className='text-blue-400 underline'
           onClick={handleNavigate}
         >
           {agencyName}
-        </p>
+        </Button>
         <h3>
-          {departureStation?.name || "Nepoznata polazna stanica"}:{" "}
+          {departureStation?.name || 'Nepoznata polazna stanica'}:{' '}
           {departureTime}
           <ArrowRightAltIcon />
-          {arrivalStation?.name || "Nepoznata odredišna stanica"}: {arrivalTime}
+          {arrivalStation?.name || 'Nepoznata odredišna stanica'}: {arrivalTime}
         </h3>
         <p>
-          Trajanje: {deltaTime}{" "}
-          {getGrammaticalForm(deltaTime, "minuta", "minute", "minuta")}
+          Trajanje: {deltaTime}{' '}
+          {getGrammaticalForm(deltaTime, 'minuta', 'minute', 'minuta')}
         </p>
 
         {isToday && eta && (
           <p style={{ color: etaColor }}>Preostalo vrijeme: {eta}</p>
         )}
-        <Button variant="flat" onPress={onOpen}>
-          Pogledaj detaljnije
-        </Button>
+        <Button onClick={onOpen}>Pogledaj detaljnije</Button>
 
-        <Modal backdrop="opaque" isOpen={isOpen} onClose={onClose}>
+        <Modal backdrop='opaque' isOpen={isOpen} onClose={onClose}>
           <ModalContent>
             {(onClose) => (
               <>
-                <ModalHeader className="flex flex-col gap-1">
+                <ModalHeader className='flex flex-col gap-1'>
                   Detalji Linije
                 </ModalHeader>
                 <ModalBody style={modalBodyStyle}>
@@ -232,30 +222,26 @@ const RouteSearchResult: React.FC<RouteSearchResultProps> = ({
                 </ModalBody>
                 <ModalFooter
                   style={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "center",
+                    display: 'flex',
+                    justifyContent: 'space-between',
+                    alignItems: 'center',
                   }}
                 >
                   {isToday && eta && (
-                    <div style={{ color: "var(--accent-orange)" }}>
+                    <div style={{ color: 'var(--accent-orange)' }}>
                       <p>{eta}</p>
                     </div>
                   )}
 
                   <Button
-                    variant="light"
-                    style={{
-                      color: "var(--warning-red)",
-                      backgroundColor: "transparent",
-                    }}
-                    onPress={onClose}
+                    variant='ghost'
+                    onClick={onClose}
                     onMouseEnter={(e) => {
                       e.currentTarget.style.backgroundColor =
-                        "rgba(255, 0, 0, 0.1)";
+                        'rgba(255, 0, 0, 0.1)';
                     }}
                     onMouseLeave={(e) => {
-                      e.currentTarget.style.backgroundColor = "transparent";
+                      e.currentTarget.style.backgroundColor = 'transparent';
                     }}
                   >
                     Zatvori
