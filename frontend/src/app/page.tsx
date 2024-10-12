@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import { Button } from "@nextui-org/react";
 import Head from "next/head";
 import RouteService from "./services/route.service";
 import AgencyService from "./services/agency.service";
@@ -16,6 +17,11 @@ import "dayjs/locale/en";
 const HomePage: React.FC = () => {
   const [routeResults, setRouteResults] = useState<RouteLap[]>([]);
   const [originalRoutes, setOriginalRoutes] = useState<Route[]>([]);
+
+  const [showSearchButton, setShowSearchButton] = useState(false);
+  const [showGame, setShowGame] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
+
   const [stations, setStations] = useState<Station[]>([]);
   const [selectedDepartureStation, setSelectedDepartureStation] = useState<
     string | null
@@ -121,6 +127,7 @@ const HomePage: React.FC = () => {
     setFixedIsToday(isTodayDeparture);
 
     setHasSearched(true);
+    setShowSearchButton(true);
 
     setPastDepartures([]);
 
@@ -300,6 +307,15 @@ const HomePage: React.FC = () => {
     setSelectedArrivalStation(tempArrivalStation);
   };
 
+  const handleSearchButtonClick = () => {
+    setShowGame(!showGame);
+  };
+
+  const toggleExpand = () => {
+    setIsExpanded(!isExpanded);
+  };
+
+
   const calculateDuration = (startTime: string, endTime: string): number => {
     const [startHours, startMinutes] = startTime.split(":").map(Number);
     const [endHours, endMinutes] = endTime.split(":").map(Number);
@@ -324,7 +340,7 @@ const HomePage: React.FC = () => {
           Aplikacija za prikaz informacija o redu vožnje javnog prevoza u
           Zenici.
         </h2>
-
+  
         <RouteSearch
           stations={stations}
           selectedDepartureStation={tempDepartureStation}
@@ -335,47 +351,92 @@ const HomePage: React.FC = () => {
           onDateChange={handleDateChange}
           onFilter={handleFilterRoutes}
         />
-
+  
         {error && <div className="error">{error}</div>}
-
+  
         {hasSearched && fixedIsToday && (
           <div className="text-xl font-semibold mb-4">Nadolazeći Polasci</div>
         )}
-
-        {hasSearched &&
-          (routeResults.length > 0 ? (
-            routeResults.map((routeLap) => {
-              const departureStationIndex = routeLap.stations.findIndex(
-                (station) => station.stationId === selectedDepartureStation
-              );
-              const arrivalStationIndex = routeLap.stations.findIndex(
-                (station) => station.stationId === selectedArrivalStation
-              );
-
-              const departureTime =
-                routeLap.stations[departureStationIndex]?.time || "";
-              const arrivalTime =
-                routeLap.stations[arrivalStationIndex]?.time || "";
-              const deltatime = calculateDuration(departureTime, arrivalTime);
-
-              return (
-                <RouteSearchResult
-                  key={`${routeLap._id}-${departureTime}-${arrivalTime}`}
-                  route={routeLap}
-                  agencyName={agencyNames[routeLap.agencyId]}
-                  stations={stations}
-                  departureStationId={selectedDepartureStation}
-                  arrivalStationId={selectedArrivalStation}
-                  departureTime={departureTime}
-                  arrivalTime={arrivalTime}
-                  deltaTime={deltatime}
-                  isToday={fixedIsToday}
-                />
-              );
-            })
-          ) : (
-            <div className="no-results">Nema pronađenih linija.</div>
-          ))}
+  
+        {hasSearched && (
+          <>
+            {routeResults.length > 0 ? (
+              routeResults.map((routeLap) => {
+                const departureStationIndex = routeLap.stations.findIndex(
+                  (station) => station.stationId === selectedDepartureStation
+                );
+                const arrivalStationIndex = routeLap.stations.findIndex(
+                  (station) => station.stationId === selectedArrivalStation
+                );
+  
+                const departureTime =
+                  routeLap.stations[departureStationIndex]?.time || "";
+                const arrivalTime =
+                  routeLap.stations[arrivalStationIndex]?.time || "";
+                const deltatime = calculateDuration(departureTime, arrivalTime);
+  
+                return (
+                  <RouteSearchResult
+                    key={`${routeLap._id}-${departureTime}-${arrivalTime}`}
+                    route={routeLap}
+                    agencyName={agencyNames[routeLap.agencyId]}
+                    stations={stations}
+                    departureStationId={selectedDepartureStation}
+                    arrivalStationId={selectedArrivalStation}
+                    departureTime={departureTime}
+                    arrivalTime={arrivalTime}
+                    deltaTime={deltatime}
+                    isToday={fixedIsToday}
+                  />
+                );
+              })
+            ) : (
+              <div className="no-results">Nema pronađenih linija.</div>
+            )}
+  
+            {showSearchButton && (
+              <Button
+                color="primary"
+                onClick={handleSearchButtonClick}
+                className="mt-4 mb-4"
+              >
+                {showGame ? "Sakrij igru" : "Igraj Flappy Bird"}
+              </Button>
+            )}
+  
+            {showGame && (
+              <div className="mt-4 mb-4">
+                <h3 className="text-xl font-semibold mb-2">Uživajte u igri dok čekate!</h3>
+                <div 
+                  className={`relative mx-auto transition-all duration-300 ease-in-out ${
+                    isExpanded ? 'w-full h-[80vh]' : 'w-full max-w-[400px] h-[600px]'
+                  }`}
+                >
+                  <iframe
+                    src="https://nebez.github.io/floppybird/"
+                    style={{
+                      position: 'absolute',
+                      top: 0,
+                      left: 0,
+                      width: '100%',
+                      height: '100%',
+                      border: 'none'
+                    }}
+                    title="Flappy Bird Game"
+                  ></iframe>
+                </div>
+                <Button
+                  color="secondary"
+                  onClick={toggleExpand}
+                  className="mt-4"
+                >
+                  {isExpanded ? "Smanji igru" : "Proširi igru"}
+                </Button>
+              </div>
+            )}
+          </>
+        )}
+  
         {hasSearched && fixedIsToday && pastDepartures.length > 0 && (
           <>
             <div
@@ -392,9 +453,9 @@ const HomePage: React.FC = () => {
                 </span>
               </div>
             </div>
-
+  
             <hr className="border-t border-gray-300 mb-4 w-full md:w-2/3 lg:w-1/2 mx-auto" />
-
+  
             {isPastDeparturesExpanded && (
               <>
                 {pastDepartures.map((routeLap) => {
@@ -404,7 +465,7 @@ const HomePage: React.FC = () => {
                   const arrivalStationIndex = routeLap.stations.findIndex(
                     (station) => station.stationId === selectedArrivalStation
                   );
-
+  
                   const departureTime =
                     routeLap.stations[departureStationIndex]?.time || "";
                   const arrivalTime =
@@ -413,7 +474,7 @@ const HomePage: React.FC = () => {
                     departureTime,
                     arrivalTime
                   );
-
+  
                   return (
                     <RouteSearchResult
                       key={`${routeLap._id}-${departureTime}-${arrivalTime}`}
