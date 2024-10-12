@@ -14,6 +14,7 @@ import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { DatePicker as MUIDatePicker } from "@mui/x-date-pickers/DatePicker";
 import { ThemeProvider } from "@mui/material/styles";
 import { darkTheme, customSelectStyles } from "./routeSearchStyles";
+import MapSelector from "../components/MapSelector";
 interface RouteSearchProps {
   stations: Station[];
   selectedDepartureStation: string | null;
@@ -59,6 +60,15 @@ const RouteSearch: React.FC<RouteSearchProps> = ({
   return (
     <>
       <h1>Pretraži Linije</h1>
+      {/* TODO: Uncomment and use MapSelector once station coordinates are gathered
+      <MapSelector
+        stations={stations}
+        setSelectedDepartureStationId={setSelectedDepartureStation}
+        setSelectedDestinationStationId={setSelectedArrivalStation}
+        selectedDepartureStationId={selectedDepartureStation}
+        selectedDestinationStationId={selectedArrivalStation}
+      />
+      */}
       <div className="flex flex-col items-center space-y-4 my-4">
         <Select
           options={stationOptions}
