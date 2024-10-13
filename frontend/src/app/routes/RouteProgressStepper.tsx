@@ -1,66 +1,8 @@
-import * as React from "react";
-import LinearProgress from "@mui/material/LinearProgress";
-import { styled } from "@mui/material/styles";
-import { StationTime } from "../models/route.model";
-import stationService from "../services/station.service";
-import Station from "../models/station.model";
-import { isTimePast, getProgress } from "../handlers/route.progress.handler";
-
-const Dot = styled("div")<{ isPast: boolean; isToday: boolean }>(
-  ({ isPast, isToday }) => ({
-    width: 12,
-    height: 12,
-    borderRadius: "50%",
-    backgroundColor: isPast && isToday ? "var(--primary-blue)" : "#eee",
-    marginInline: "auto",
-    marginTop: "auto",
-    marginBottom: "0px",
-    zIndex: "100",
-    position: "relative",
-  })
-);
-
-const DotContainer = styled("div")(({ theme }) => ({
-  width: "20%",
-  [theme.breakpoints.down("sm")]: {
-    width: "15%",
-  },
-}));
-
-const StopTime = styled("div")<{
-  isPast: boolean;
-  isToday: boolean;
-  isArrivalOrDeparture: boolean;
-}>(({ isPast, isToday, isArrivalOrDeparture, theme }) => ({
-  width: "15%",
-  textAlign: "left",
-  fontWeight: isArrivalOrDeparture ? "bold" : "normal",
-  color: isArrivalOrDeparture
-    ? "var(--accent-orange)"
-    : isPast && isToday
-    ? "var(--primary-blue)"
-    : "#eee",
-  [theme.breakpoints.down("sm")]: {
-    width: "20%",
-  },
-}));
-
-const StopName = styled("div")<{
-  isPast: boolean;
-  isToday: boolean;
-  isArrivalOrDeparture: boolean;
-}>(({ isPast, isToday, isArrivalOrDeparture }) => ({
-  width: "65%",
-  textAlign: "left",
-  whiteSpace: "nowrap",
-  overflow: "hidden",
-  textOverflow: "ellipsis",
-  color: isArrivalOrDeparture
-    ? "var(--accent-orange)"
-    : isPast && isToday
-    ? "var(--primary-blue)"
-    : "#eee",
-}));
+import * as React from 'react';
+import { StationTime } from '../models/route.model';
+import stationService from '../services/station.service';
+import Station from '../models/station.model';
+import StationStep from '@/components/StationStep';
 
 interface RouteProgressStepperProps {
   stations: StationTime[];
@@ -89,158 +31,35 @@ const RouteProgressStepper: React.FC<RouteProgressStepperProps> = ({
     fetchStations();
   }, [stations]);
 
-  const filteredStations = stations.filter((station) => station.time !== "*");
+  const filteredStations = stations.filter((station) => station.time !== '*');
 
   const firstTime = filteredStations[0]?.time;
   const lastTime = filteredStations[filteredStations.length - 1]?.time;
 
   return (
     <div
-      className="p-6 mb-4"
+      className='p-6 mb-4'
       style={{
-        padding: "0px",
-        maxWidth: "420px",
-        margin: "0",
+        padding: '0px',
+        maxWidth: '420px',
+        margin: '0',
       }}
     >
-      {filteredStations.map((station, index) => {
-        const progress = getProgress(
-          index,
-          filteredStations,
-          currentTime,
-          firstTime,
-          lastTime,
-          isToday ?? false
-        );
-
-        const stationName =
-          stationData.find((s) => s._id === station.stationId)?.name ||
-          "Unknown Station";
-        const isDepartureOrArrival =
-          station.stationId === departureStationId ||
-          station.stationId === arrivalStationId;
-
-        return (
-          <div
-            key={station.stationId}
-            style={{
-              display: "flex",
-              alignItems: "flex-end",
-              padding: "0px",
-              height: "48px",
-            }}
-          >
-            {index === 0 ? (
-              <>
-                <DotContainer>
-                  <Dot
-                    style={{ bottom: "7px" }}
-                    isPast={isTimePast(
-                      station.time,
-                      currentTime,
-                      firstTime,
-                      lastTime
-                    )}
-                    isToday={isToday || false}
-                  />
-                </DotContainer>
-                <StopTime
-                  isPast={isTimePast(
-                    station.time,
-                    currentTime,
-                    firstTime,
-                    lastTime
-                  )}
-                  isToday={isToday || false}
-                  isArrivalOrDeparture={isDepartureOrArrival}
-                >
-                  {station.time}
-                </StopTime>
-                <StopName
-                  isPast={isTimePast(
-                    station.time,
-                    currentTime,
-                    firstTime,
-                    lastTime
-                  )}
-                  isToday={isToday || false}
-                  isArrivalOrDeparture={isDepartureOrArrival}
-                >
-                  {stationName}
-                </StopName>
-              </>
-            ) : (
-              <>
-                <DotContainer>
-                  <div
-                    style={{
-                      height: "38px",
-                      width: "2px",
-                      marginInline: "auto",
-                      position: "relative",
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      top: "-6px",
-                      overflow: "hidden",
-                    }}
-                  >
-                    <LinearProgress
-                      variant="determinate"
-                      value={progress}
-                      sx={{
-                        "& .MuiLinearProgress-bar": {
-                          backgroundColor: "var(--primary-blue)",
-                        },
-                        transform: "rotate(90deg)",
-                        height: "2px",
-                        width: "38px",
-                        zIndex: 90,
-                        margin: "0 -18px",
-                      }}
-                    />
-                  </div>
-
-                  <Dot
-                    style={{ bottom: "7px" }}
-                    isPast={isTimePast(
-                      station.time,
-                      currentTime,
-                      firstTime,
-                      lastTime
-                    )}
-                    isToday={isToday || false}
-                  />
-                </DotContainer>
-                <StopTime
-                  isPast={isTimePast(
-                    station.time,
-                    currentTime,
-                    firstTime,
-                    lastTime
-                  )}
-                  isToday={isToday || false}
-                  isArrivalOrDeparture={isDepartureOrArrival}
-                >
-                  {station.time}
-                </StopTime>
-                <StopName
-                  isPast={isTimePast(
-                    station.time,
-                    currentTime,
-                    firstTime,
-                    lastTime
-                  )}
-                  isToday={isToday || false}
-                  isArrivalOrDeparture={isDepartureOrArrival}
-                >
-                  {stationName}
-                </StopName>
-              </>
-            )}
-          </div>
-        );
-      })}
+      {filteredStations.map((station, index) => (
+        <StationStep
+          key={station.stationId}
+          station={station}
+          index={index}
+          filteredStations={filteredStations}
+          currentTime={currentTime}
+          firstTime={firstTime}
+          lastTime={lastTime}
+          isToday={isToday}
+          stationData={stationData}
+          departureStationId={departureStationId}
+          arrivalStationId={arrivalStationId}
+        />
+      ))}
     </div>
   );
 };
