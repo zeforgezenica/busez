@@ -5,6 +5,7 @@ import { Station } from '../models/station.model';
 import {
   handleFilterClick,
   handleSwapStations,
+import MapSelector from "../components/MapSelector";
 } from '../handlers/route.search.handler';
 import dayjs from 'dayjs';
 import StationSelect from '@/components/StationSelect';
@@ -36,12 +37,22 @@ const RouteSearch: React.FC<RouteSearchProps> = ({
   return (
     <>
       <h1>Pretraži Linije</h1>
+      {/* TODO: Uncomment and use MapSelector once station coordinates are gathered
+      <MapSelector
+        stations={stations}
+        setSelectedDepartureStationId={setSelectedDepartureStation}
+        setSelectedDestinationStationId={setSelectedArrivalStation}
+        selectedDepartureStationId={selectedDepartureStation}
+        selectedDestinationStationId={selectedArrivalStation}
+      />
+      */}
       <div className='flex flex-col items-center space-y-4 my-4'>
         <StationSelect
           stations={stations}
           selectedStation={selectedDepartureStation}
           setSelectedStation={setSelectedDepartureStation}
           placeholder='Odaberite Stanicu Polaska'
+
         />
         <Button
           radius='full'

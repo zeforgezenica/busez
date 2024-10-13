@@ -28,6 +28,7 @@
     "framer-motion": "^11.1.9",
     "leaflet": "^1.9.4",
     "lucide-react": "^0.451.0",
+    "leaflet-routing-machine": "^3.2.12",
     "next": "^14.2.3",
     "react": "^18",
     "react-dom": "^18",
