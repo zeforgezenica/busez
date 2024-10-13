@@ -5,11 +5,11 @@ import { Station } from '../models/station.model';
 import {
   handleFilterClick,
   handleSwapStations,
-import MapSelector from "../components/MapSelector";
 } from '../handlers/route.search.handler';
 import dayjs from 'dayjs';
 import StationSelect from '@/components/StationSelect';
 import DateSelector from '@/components/DateSelector';
+import MapSelector from "../components/MapSelector";
 
 interface RouteSearchProps {
   stations: Station[];
