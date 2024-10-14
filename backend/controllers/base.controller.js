@@ -44,8 +44,12 @@ class BaseController {
 
   async create(req, res) {
     const newItemData = { _id: this.generateUniqueId(), ...req.body };
-    if (!this.validateDataAgainstSchema(newItemData)) {
-      return res.status(400).send({ message: "Invalid data format" });
+    const validationResult = this.validateDataAgainstSchema(newItemData);
+    if (!validationResult.isValid) {
+      return res.status(400).send({
+        message: "Invalid data format",
+        errors: validationResult.errors,
+      });
     }
 
     try {
@@ -135,10 +139,30 @@ class BaseController {
   }
 
   validateDataAgainstSchema(data) {
-    // You can implement your validation logic here using the provided schema
-    // For simple validation, you can compare properties of the data object with the schema
-    // For more advanced validation, you can use libraries like 'ajv'
-    return true; // For demonstration purposes, returning true always
+    const schemaName = this.constructor.name
+      .replace("Controller", "")
+      .toLowerCase();
+    const schemaPath = `../schemas/${schemaName}.schema.json`;
+    let schema;
+    try {
+      schema = require(schemaPath);
+    } catch (error) {
+      console.error(`Schema file not found: ${schemaPath}`);
+      return { isValid: false, errors: ["Schema file not found"] };
+    }
+
+    const Ajv = require("ajv");
+    const ajv = new Ajv();
+
+    const validate = ajv.compile(schema);
+    const valid = validate(data);
+
+    if (!valid) {
+      console.error("Validation errors:", validate.errors);
+      return { isValid: false, errors: validate.errors };
+    }
+
+    return { isValid: true, errors: null };
   }
 }
 
