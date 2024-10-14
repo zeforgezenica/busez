@@ -7,8 +7,12 @@
     "name": { "type": "string" },
     "zipCode": { "type": "number" },
     "coordinates": {
-      "type": ["string", "null"],
-      "pattern": "^(-?\\d+(\\.\\d+)?),\\s*(-?\\d+(\\.\\d+)?)$"
+      "type": ["array", "null"],
+      "items": {
+        "type": "number"
+      },
+      "minItems": 2,
+      "maxItems": 2
     }
   },
   "required": ["countryId", "name", "zipCode"]

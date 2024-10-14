@@ -4,6 +4,8 @@
     "dev": "nodemon -r dotenv/config server.js"
   },
   "dependencies": {
+    "ajv": "^8.17.1",
+    "backend": "file:",
     "body-parser": "^1.20.3",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",

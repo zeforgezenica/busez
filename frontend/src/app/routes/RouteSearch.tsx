@@ -1,16 +1,17 @@
-import React, { useState } from "react";
-import Select from "react-select";
-import { Button } from "@nextui-org/react";
-import SwapVertIcon from "@mui/icons-material/SwapVert";
-import { Station } from "../models/station.model";
+import React, { useState } from 'react';
+import { Button } from '@nextui-org/react';
+import SwapVertIcon from '@mui/icons-material/SwapVert';
+import { Station } from '../models/station.model';
 import {
   handleFilterClick,
   handleSwapStations,
 } from "../handlers/route.search.handler";
-import "dayjs/locale/en";
 import { ThemeProvider } from "@mui/material/styles";
 import { darkTheme, customSelectStyles } from "./routeSearchStyles";
 import DatePicker from "@/components/DatePicker";
+import StationSelect from '@/components/StationSelect';
+import DateSelector from '@/components/DateSelector';
+import MapSelector from "../components/MapSelector";
 
 interface RouteSearchProps {
   stations: Station[];
@@ -35,45 +36,28 @@ const RouteSearch: React.FC<RouteSearchProps> = ({
 }) => {
   const [error, setError] = useState<string | null>(null);
 
-  const removeDiacritics = (str: string) => {
-    return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-  };
-
-  const normalizeString = (str: string) => removeDiacritics(str).toLowerCase();
-
-  const stationOptions = stations.map((station) => ({
-    value: station._id ?? "",
-    label: station.name,
-  }));
-
-  const handleChange = (
-    selectedOption: any,
-    setSelectedStation: (stationId: string | null) => void
-  ) => {
-    const selectedValue = selectedOption ? selectedOption.value : null;
-    setSelectedStation(selectedValue);
-  };
-
   return (
     <>
       <h1>Pretraži Linije</h1>
-      <div className="flex flex-col items-center space-y-4 my-4">
-        <Select
-          options={stationOptions}
-          value={stationOptions.find(
-            (option) =>
-              normalizeString(option.value) ===
-              normalizeString(selectedDepartureStation ?? "")
-          )}
-          onChange={(selectedOption) =>
-            handleChange(selectedOption, setSelectedDepartureStation)
-          }
-          placeholder="Odaberite Stanicu Polaska"
-          styles={customSelectStyles}
-          className="w-full md:w-2/3 lg:w-1/2 mx-auto"
+      {/* TODO: Uncomment and use MapSelector once station coordinates are gathered
+      <MapSelector
+        stations={stations}
+        setSelectedDepartureStationId={setSelectedDepartureStation}
+        setSelectedDestinationStationId={setSelectedArrivalStation}
+        selectedDepartureStationId={selectedDepartureStation}
+        selectedDestinationStationId={selectedArrivalStation}
+      />
+      */}
+      <div className='flex flex-col items-center space-y-4 my-4'>
+        <StationSelect
+          stations={stations}
+          selectedStation={selectedDepartureStation}
+          setSelectedStation={setSelectedDepartureStation}
+          placeholder='Odaberite Stanicu Polaska'
+
         />
         <Button
-          radius="full"
+          radius='full'
           onClick={() =>
             handleSwapStations(
               selectedDepartureStation,
@@ -87,20 +71,11 @@ const RouteSearch: React.FC<RouteSearchProps> = ({
           Obrni
           <SwapVertIcon />
         </Button>
-
-        <Select
-          options={stationOptions}
-          value={stationOptions.find(
-            (option) =>
-              normalizeString(option.value) ===
-              normalizeString(selectedArrivalStation ?? "")
-          )}
-          onChange={(selectedOption) =>
-            handleChange(selectedOption, setSelectedArrivalStation)
-          }
-          placeholder="Odaberite Odredišnu Stanicu"
-          styles={customSelectStyles}
-          className="w-full md:w-2/3 lg:w-1/2 mx-auto"
+        <StationSelect
+          stations={stations}
+          selectedStation={selectedArrivalStation}
+          setSelectedStation={setSelectedArrivalStation}
+          placeholder='Odaberite Odredišnu Stanicu'
         />
       </div>
       <div className="flex justify-center space-x-4 my-4">
@@ -115,11 +90,11 @@ const RouteSearch: React.FC<RouteSearchProps> = ({
         </ThemeProvider>
       </div>
       {error && (
-        <div className="flex justify-center my-4">
-          <div style={{ color: "red" }}>{error}</div>
+        <div className='flex justify-center my-4'>
+          <div style={{ color: 'red' }}>{error}</div>
         </div>
       )}
-      <div className="flex justify-center my-4">
+      <div className='flex justify-center my-4'>
         <Button
           isDisabled={!selectedDepartureStation || !selectedArrivalStation}
           onClick={() =>
