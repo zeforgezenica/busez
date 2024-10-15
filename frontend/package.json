@@ -36,6 +36,7 @@
     "leaflet-routing-machine": "^3.2.12",
     "next": "^14.2.3",
     "react": "^18",
+    "react-day-picker": "^8.10.1",
     "react-dom": "^18",
     "react-hook-form": "^7.53.0",
     "react-leaflet": "^4.2.1",

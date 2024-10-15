@@ -84,9 +84,7 @@ const RouteSearch: React.FC<RouteSearchProps> = ({
             date={dateOfDeparture}
             dateFormat="dd/MM/yyyy"
             className="w-full md:w-2/3 lg:w-1/2 mx-auto"
-            onChange={(date) => {
-              onDateChange(date);
-            }} />
+            onChange={onDateChange} />
         </ThemeProvider>
       </div>
       {error && (
