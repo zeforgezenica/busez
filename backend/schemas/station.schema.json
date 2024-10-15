@@ -15,9 +15,12 @@
       "description": "Name of the station"
     },
     "coordinates": {
-      "type": "string",
-      "description": "Coordinates of the station",
-      "pattern": "^\\s*\\-?\\d{1,3}(\\.\\d+)?,\\s*\\-?\\d{1,3}(\\.\\d+)?\\s*$"
+      "type": ["array", "null"],
+      "items": {
+        "type": "number"
+      },
+      "minItems": 2,
+      "maxItems": 2
     }
   },
   "required": ["cityId", "name"],
