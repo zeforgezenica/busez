@@ -1,6 +1,8 @@
 
 node_modules
 .env
+.env.production
+.env.local
 /.pnp
 .pnp.js
 .yarn/install-state.gz

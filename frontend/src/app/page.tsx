@@ -315,7 +315,6 @@ const HomePage: React.FC = () => {
     setIsExpanded(!isExpanded);
   };
 
-
   const calculateDuration = (startTime: string, endTime: string): number => {
     const [startHours, startMinutes] = startTime.split(":").map(Number);
     const [endHours, endMinutes] = endTime.split(":").map(Number);
@@ -340,7 +339,7 @@ const HomePage: React.FC = () => {
           Aplikacija za prikaz informacija o redu vožnje javnog prevoza u
           Zenici.
         </h2>
-  
+
         <RouteSearch
           stations={stations}
           selectedDepartureStation={tempDepartureStation}
@@ -351,13 +350,13 @@ const HomePage: React.FC = () => {
           onDateChange={handleDateChange}
           onFilter={handleFilterRoutes}
         />
-  
+
         {error && <div className="error">{error}</div>}
-  
+
         {hasSearched && fixedIsToday && (
           <div className="text-xl font-semibold mb-4">Nadolazeći Polasci</div>
         )}
-  
+
         {hasSearched && (
           <>
             {routeResults.length > 0 ? (
@@ -368,13 +367,13 @@ const HomePage: React.FC = () => {
                 const arrivalStationIndex = routeLap.stations.findIndex(
                   (station) => station.stationId === selectedArrivalStation
                 );
-  
+
                 const departureTime =
                   routeLap.stations[departureStationIndex]?.time || "";
                 const arrivalTime =
                   routeLap.stations[arrivalStationIndex]?.time || "";
                 const deltatime = calculateDuration(departureTime, arrivalTime);
-  
+
                 return (
                   <RouteSearchResult
                     key={`${routeLap._id}-${departureTime}-${arrivalTime}`}
@@ -393,7 +392,7 @@ const HomePage: React.FC = () => {
             ) : (
               <div className="no-results">Nema pronađenih linija.</div>
             )}
-  
+
             {showSearchButton && (
               <Button
                 color="primary"
@@ -403,24 +402,28 @@ const HomePage: React.FC = () => {
                 {showGame ? "Sakrij igru" : "Igraj Flappy Bird"}
               </Button>
             )}
-  
+
             {showGame && (
               <div className="mt-4 mb-4">
-                <h3 className="text-xl font-semibold mb-2">Uživajte u igri dok čekate!</h3>
-                <div 
+                <h3 className="text-xl font-semibold mb-2">
+                  Uživajte u igri dok čekate!
+                </h3>
+                <div
                   className={`relative mx-auto transition-all duration-300 ease-in-out ${
-                    isExpanded ? 'w-full h-[80vh]' : 'w-full max-w-[400px] h-[600px]'
+                    isExpanded
+                      ? "w-full h-[80vh]"
+                      : "w-full max-w-[400px] h-[600px]"
                   }`}
                 >
                   <iframe
                     src="https://nebez.github.io/floppybird/"
                     style={{
-                      position: 'absolute',
+                      position: "absolute",
                       top: 0,
                       left: 0,
-                      width: '100%',
-                      height: '100%',
-                      border: 'none'
+                      width: "100%",
+                      height: "100%",
+                      border: "none",
                     }}
                     title="Flappy Bird Game"
                   ></iframe>
@@ -436,7 +439,7 @@ const HomePage: React.FC = () => {
             )}
           </>
         )}
-  
+
         {hasSearched && fixedIsToday && pastDepartures.length > 0 && (
           <>
             <div
@@ -453,9 +456,9 @@ const HomePage: React.FC = () => {
                 </span>
               </div>
             </div>
-  
+
             <hr className="border-t border-gray-300 mb-4 w-full md:w-2/3 lg:w-1/2 mx-auto" />
-  
+
             {isPastDeparturesExpanded && (
               <>
                 {pastDepartures.map((routeLap) => {
@@ -465,7 +468,7 @@ const HomePage: React.FC = () => {
                   const arrivalStationIndex = routeLap.stations.findIndex(
                     (station) => station.stationId === selectedArrivalStation
                   );
-  
+
                   const departureTime =
                     routeLap.stations[departureStationIndex]?.time || "";
                   const arrivalTime =
@@ -474,7 +477,7 @@ const HomePage: React.FC = () => {
                     departureTime,
                     arrivalTime
                   );
-  
+
                   return (
                     <RouteSearchResult
                       key={`${routeLap._id}-${departureTime}-${arrivalTime}`}

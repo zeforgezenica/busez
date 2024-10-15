@@ -4,6 +4,7 @@ import { Providers } from "./providers";
 import Footer from "./components/Footer";
 import { Toaster } from "./components/ui/toaster";
 
+
 export const metadata: Metadata = {
   title: "kadJeBus - ZeForge Zenica",
   description: "By ZeForge Zenica",
