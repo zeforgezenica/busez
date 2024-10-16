@@ -332,7 +332,7 @@ const HomePage: React.FC = () => {
     <>
       <Head>
         <title>kadJeBus</title>
-        <link rel="icon" href="/zebusezlogo.png" />
+        <link rel="icon" href="/zebusezlogo.ico" />
       </Head>
       <div className="container mx-auto p-4 text-center">
         <h1 className="text-3xl font-bold text-center mb-4">kadJeBus</h1>
