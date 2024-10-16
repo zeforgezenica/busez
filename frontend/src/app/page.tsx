@@ -13,6 +13,8 @@ import Station from "./models/station.model";
 import RouteSearchResult from "./routes/RouteSearchResult";
 import dayjs from "dayjs";
 import "dayjs/locale/en";
+import { ModeToggle } from "./components/modetoggle";
+import Image from 'next/image'
 
 const HomePage: React.FC = () => {
   const [routeResults, setRouteResults] = useState<RouteLap[]>([]);
@@ -44,6 +46,7 @@ const HomePage: React.FC = () => {
   );
   const [fixedIsToday, setFixedIsToday] = useState<boolean>(false);
   const [pastDepartures, setPastDepartures] = useState<RouteLap[]>([]);
+  // const [light, setLight] = useState<boolean>(false);
 
   const isToday = (date: dayjs.Dayjs | null): boolean => {
     return date ? date.isSame(dayjs(), "day") : false;
@@ -326,6 +329,15 @@ const HomePage: React.FC = () => {
       ? endTotalMinutes - startTotalMinutes
       : 24 * 60 - startTotalMinutes + endTotalMinutes;
   };
+//   const modetoggler = () => {
+//     const {setTheme} = useTheme();
+//     setLight(!light);
+//     if (!light) {
+//         setTheme("dark");
+//     } else {
+//         setTheme("light");
+//     }
+// };
 
   return (
     <>
@@ -334,8 +346,20 @@ const HomePage: React.FC = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="container mx-auto p-4 text-center">
-        <h1 className="text-3xl font-bold text-center mb-4">kadJeBus</h1>
-        <h2 className="text-xl text-center mb-2">
+        <div className="flex justify-between mb-6 items-center">
+          <div className="flex items-center justify-center gap-4">
+            <Image src="/icon.png"
+              width={50}
+              height={50}
+              alt="Picture of the author" 
+            />
+            <h1 className="text-3xl font-black text-center">kadJeBus</h1>
+          </div>
+          <div className="">
+          <ModeToggle />
+          </div>
+        </div>
+        <h2 className="text-xl text-center font-bold mb-2 ">
           Aplikacija za prikaz informacija o redu vožnje javnog prevoza u
           Zenici.
         </h2>
