@@ -1,17 +1,13 @@
-import { useGeolocation } from "@uidotdev/usehooks";
+import { useReverseGeocoding } from "@/hooks/useReverseGeocoding";
 
 export const GeolocationDisplay = () => {
-  const { latitude, longitude, accuracy, loading, error } = useGeolocation({
-    enableHighAccuracy: true,
-  });
-  if (loading) return <div>Loading Geolocation Data...</div>;
-  if (latitude && longitude)
+  const { address, accuracy, isLoading, error } = useReverseGeocoding();
+  if (isLoading) return <div>Loading Geolocation Data...</div>;
+  if (address)
     return (
       <div className="m-4">
         <div>Vaša trenutna lokacija je:</div>
-        <div>
-          Latitude: {latitude}, Longitude: {longitude}
-        </div>
+        <div>{address}</div>
         <AccuracyDisplay accuracy={accuracy} />
       </div>
     );
