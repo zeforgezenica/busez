@@ -1,9 +1,16 @@
+'use client';
+
 import React from 'react';
-import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
-import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
-import { DatePicker } from '@mui/x-date-pickers/DatePicker';
-import { ThemeProvider } from '@mui/material/styles';
-import { darkTheme } from '../routes/routeSearchStyles';
+import { CalendarIcon } from '@radix-ui/react-icons';
+import { format } from 'date-fns';
+import { cn } from '@/lib/utils';
+import { Button } from '@/components/ui/button';
+import { Calendar } from '@/components/ui/calendar';
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from '@/components/ui/popover';
 import dayjs from 'dayjs';
 
 interface DateSelectorProps {
@@ -15,18 +22,38 @@ const DateSelector: React.FC<DateSelectorProps> = ({
   dateOfDeparture,
   onDateChange,
 }) => {
+  const [date, setDate] = React.useState<Date | undefined>(
+    dateOfDeparture ? dateOfDeparture.toDate() : undefined
+  );
+
+  const handleDateChange = (selectedDate: Date | undefined) => {
+    setDate(selectedDate);
+    onDateChange(selectedDate ? dayjs(selectedDate) : null);
+  };
+
   return (
-    <ThemeProvider theme={darkTheme}>
-      <LocalizationProvider dateAdapter={AdapterDayjs}>
-        <DatePicker
-          label='Odaberite Datum Polaska'
-          className='w-full md:w-2/3 lg:w-1/2 mx-auto'
-          value={dateOfDeparture}
-          onChange={onDateChange}
-          format='DD/MM/YYYY'
+    <Popover>
+      <PopoverTrigger asChild>
+        <Button
+          variant={'outline'}
+          className={cn(
+            'w-full justify-start text-left font-normal',
+            !date && 'text-muted-foreground'
+          )}
+        >
+          <CalendarIcon className='mr-2 h-4 w-4' />
+          {date ? format(date, 'PPP') : <span>Pick a date</span>}
+        </Button>
+      </PopoverTrigger>
+      <PopoverContent className='w-auto p-0' align='start'>
+        <Calendar
+          mode="single"
+          selected={date}
+          onSelect={handleDateChange}
+          initialFocus
         />
-      </LocalizationProvider>
-    </ThemeProvider>
+      </PopoverContent>
+    </Popover>
   );
 };
 
