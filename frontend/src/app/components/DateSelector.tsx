@@ -47,7 +47,7 @@ const DateSelector: React.FC<DateSelectorProps> = ({
       </PopoverTrigger>
       <PopoverContent className='w-auto p-0' align='start'>
         <Calendar
-          mode='single'
+          mode="single"
           selected={date}
           onSelect={handleDateChange}
           initialFocus
