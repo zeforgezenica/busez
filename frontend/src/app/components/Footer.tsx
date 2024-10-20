@@ -17,15 +17,20 @@ import { Button } from "./ui/button";
 import { Textarea } from "./ui/textarea";
 import { DialogClose } from "@radix-ui/react-dialog";
 import { useToast } from "@/hooks/use-toast";
+import { EmailPayload } from "../services/email.service"; 
+
 
 const formSchema = z.object({
   name: z.string().min(1, { message: "Obavezno polje" }),
   subject: z.string().min(1, { message: "Obavezno polje" }),
+  contactInfo: z.string().optional(), 
   details: z.string().min(1, { message: "Obavezno polje" })
 });
 
 const Footer: React.FC = () => {
   const { toast } = useToast();
+
+
   const form = useForm({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -36,9 +41,11 @@ const Footer: React.FC = () => {
     }
   });
 
-  const handleSubmit = async (values) => {
+ 
+  const handleSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
-      await emailService.sendEmail({
+     
+      const emailData: EmailPayload = {
         subject: values.subject,
         text: `
           Ime: ${values.name}
@@ -46,14 +53,19 @@ const Footer: React.FC = () => {
           Detalji: ${values.details}
         `,
         senderName: values.name,
-        senderContact: values.contactInfo,
-      });
+        senderContact: values.contactInfo || "N/A",  
+      };
 
+      
+      await emailService.sendEmail(emailData);
+
+      
       toast({
         title: "Vaša poruka je uspješno poslana."
       });
       form.reset();
     } catch (error) {
+      
       toast({
         title: "Došlo je do greške prilikom slanja poruke.",
         variant: "destructive"
