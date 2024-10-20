@@ -36,7 +36,7 @@ const Footer: React.FC = () => {
     }
   });
 
-  const handleSubmit = async (values) => {
+  const handleSubmit = async (values: any) => {
     try {
       await emailService.sendEmail({
         subject: values.subject,
