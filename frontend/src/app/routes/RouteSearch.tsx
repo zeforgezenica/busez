@@ -9,7 +9,7 @@ import {
 import dayjs from 'dayjs';
 import StationSelect from '@/components/StationSelect';
 import DateSelector from '@/components/DateSelector';
-import MapSelector from "../components/MapSelector";
+import MapSelector from '../components/MapSelector';
 
 interface RouteSearchProps {
   stations: Station[];
@@ -46,13 +46,12 @@ const RouteSearch: React.FC<RouteSearchProps> = ({
         selectedDestinationStationId={selectedArrivalStation}
       />
       */}
-      <div className='flex flex-col items-center space-y-4 my-4'>
+      <div className='flex flex-col items-center space-y-4 my-4 max-w-screen-sm mx-auto'>
         <StationSelect
           stations={stations}
           selectedStation={selectedDepartureStation}
           setSelectedStation={setSelectedDepartureStation}
           placeholder='Odaberite Stanicu Polaska'
-
         />
         <Button
           radius='full'
@@ -76,7 +75,7 @@ const RouteSearch: React.FC<RouteSearchProps> = ({
           placeholder='Odaberite Odredišnu Stanicu'
         />
       </div>
-      <div className='flex justify-center space-x-4 my-4'>
+      <div className='flex justify-center space-x-4 my-4 max-w-screen-sm mx-auto'>
         <DateSelector
           dateOfDeparture={dateOfDeparture}
           onDateChange={onDateChange}
