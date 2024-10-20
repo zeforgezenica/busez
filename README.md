@@ -53,6 +53,10 @@ Make sure you have the following installed:
    SENDER_EMAIL=your-sender-email           # Email address from which the emails will be sent
    DEFAULT_RECEIVER_EMAIL=recipient@example.com # Default recipient email address
    DEFAULT_RECEIVER_NAME=your-receiver-name     # Name of the default recipient
+
+   # reCAPTCHA configuration
+   RECAPTCHA_SITE_KEY=your-site-key         # Google reCAPTCHA site key
+   RECAPTCHA_SECRET_KEY=your-secret-key     # Google reCAPTCHA secret key
    ```
 
    Make sure to replace the placeholders with your actual values.
