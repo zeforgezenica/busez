@@ -21,6 +21,7 @@ interface RouteSearchResultProps {
   deltaTime: number;
   stations: Station[];
   isToday: boolean | null;
+  price?: number;
 }
 
 const RouteSearchResult: React.FC<RouteSearchResultProps> = ({
@@ -33,6 +34,7 @@ const RouteSearchResult: React.FC<RouteSearchResultProps> = ({
   deltaTime,
   stations,
   isToday: initialIsToday,
+  price,
 }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const router = useRouter();
@@ -99,6 +101,7 @@ const RouteSearchResult: React.FC<RouteSearchResultProps> = ({
           <ArrowRightAltIcon />
           {arrivalStation?.name || 'Nepoznata odredišna stanica'}: {arrivalTime}
         </h3>
+        <PriceDisplay price={price} />
         <p>
           Trajanje: {deltaTime}{' '}
           {getGrammaticalForm(deltaTime, 'minuta', 'minute', 'minuta')}
@@ -124,3 +127,14 @@ const RouteSearchResult: React.FC<RouteSearchResultProps> = ({
 };
 
 export default RouteSearchResult;
+
+const PriceDisplay = ({ price }: { price?: number }) => {
+  if (price === undefined)
+    return (
+      <p>
+        Cijena trenutno nije dostupna. Za informacije o cijeni kontaktirajte
+        agenciju.
+      </p>
+    );
+  return <p>Cijena: {price} BAM</p>;
+};
