@@ -19,7 +19,6 @@ import { DialogClose } from "@radix-ui/react-dialog";
 import { useToast } from "@/hooks/use-toast";
 import { EmailPayload } from "../services/email.service"; 
 
-
 const formSchema = z.object({
   name: z.string().min(1, { message: "Obavezno polje" }),
   subject: z.string().min(1, { message: "Obavezno polje" }),
@@ -29,7 +28,6 @@ const formSchema = z.object({
 
 const Footer: React.FC = () => {
   const { toast } = useToast();
-
 
   const form = useForm({
     resolver: zodResolver(formSchema),
@@ -41,8 +39,8 @@ const Footer: React.FC = () => {
     }
   });
 
- 
   const handleSubmit = async (values: z.infer<typeof formSchema>) => {
+
     try {
      
       const emailData: EmailPayload = {
@@ -56,9 +54,7 @@ const Footer: React.FC = () => {
         senderContact: values.contactInfo || "N/A",  
       };
 
-      
       await emailService.sendEmail(emailData);
-
       
       toast({
         title: "Vaša poruka je uspješno poslana."
