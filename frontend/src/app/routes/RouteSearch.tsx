@@ -3,10 +3,13 @@ import Select from "react-select";
 import { Button } from "@nextui-org/react";
 import SwapVertIcon from "@mui/icons-material/SwapVert";
 import { Station } from "../models/station.model";
+import { useTranslation } from 'react-i18next'; // Import useTranslation
+import '../i18n'; // Import i18n configuration
 import {
   handleFilterClick,
   handleSwapStations,
 } from "../handlers/route.search.handler";
+
 import dayjs from "dayjs";
 import "dayjs/locale/en";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
@@ -36,7 +39,7 @@ const RouteSearch: React.FC<RouteSearchProps> = ({
   onFilter,
 }) => {
   const [error, setError] = useState<string | null>(null);
-
+  const { t } = useTranslation();
   const removeDiacritics = (str: string) => {
     return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
   };
@@ -58,7 +61,7 @@ const RouteSearch: React.FC<RouteSearchProps> = ({
 
   return (
     <>
-      <h1>Pretraži Linije</h1>
+      <h1>{t('searchLabel')}</h1>
       <div className="flex flex-col items-center space-y-4 my-4">
         <Select
           options={stationOptions}
@@ -70,7 +73,7 @@ const RouteSearch: React.FC<RouteSearchProps> = ({
           onChange={(selectedOption) =>
             handleChange(selectedOption, setSelectedDepartureStation)
           }
-          placeholder="Odaberite Stanicu Polaska"
+          placeholder={t('DepartureStationSelectionPlaceholder')}
           styles={customSelectStyles}
           className="w-full md:w-2/3 lg:w-1/2 mx-auto"
         />
@@ -86,7 +89,7 @@ const RouteSearch: React.FC<RouteSearchProps> = ({
           }
           isDisabled={!selectedDepartureStation || !selectedArrivalStation}
         >
-          Obrni
+          {t('ReverseLabel')}
           <SwapVertIcon />
         </Button>
 
@@ -100,7 +103,7 @@ const RouteSearch: React.FC<RouteSearchProps> = ({
           onChange={(selectedOption) =>
             handleChange(selectedOption, setSelectedArrivalStation)
           }
-          placeholder="Odaberite Odredišnu Stanicu"
+          placeholder={t('ArrivalStationSelectionPlaceholder')}
           styles={customSelectStyles}
           className="w-full md:w-2/3 lg:w-1/2 mx-auto"
         />
@@ -109,7 +112,7 @@ const RouteSearch: React.FC<RouteSearchProps> = ({
         <ThemeProvider theme={darkTheme}>
           <LocalizationProvider dateAdapter={AdapterDayjs}>
             <DatePicker
-              label="Odaberite Datum Polaska"
+              label={t('DepartureDateLabel')}
               className="w-full md:w-2/3 lg:w-1/2 mx-auto"
               value={dateOfDeparture}
               onChange={(date) => {
@@ -133,11 +136,12 @@ const RouteSearch: React.FC<RouteSearchProps> = ({
               selectedDepartureStation,
               selectedArrivalStation,
               onFilter,
-              setError
+              setError,
+              t
             )
           }
         >
-          Pretraži
+          {t('searchButtonLabel')}
         </Button>
       </div>
     </>

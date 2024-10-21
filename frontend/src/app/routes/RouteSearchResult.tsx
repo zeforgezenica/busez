@@ -16,6 +16,7 @@ import { useRouter } from 'next/navigation';
 import dayjs from 'dayjs';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
+import { useTranslation } from 'react-i18next';
 
 interface RouteSearchResultProps {
   route: RouteLap;
@@ -42,6 +43,7 @@ const RouteSearchResult: React.FC<RouteSearchResultProps> = ({
 }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const router = useRouter();
+  const { t } = useTranslation();
 
   const [currentTime, setCurrentTime] = useState(dayjs().format('HH:mm:ss'));
   const [isToday, setIsToday] = useState<boolean | null>(initialIsToday);
@@ -103,7 +105,7 @@ const RouteSearchResult: React.FC<RouteSearchResultProps> = ({
     );
 
     if (departure.isBefore(current)) {
-      setEta('Vrijeme polaska je prošlo.');
+      setEta(t('departureTimePassed'));
       return null;
     } else {
       const totalSecondsDiff = departure.diff(current, 'second');
@@ -122,9 +124,9 @@ const RouteSearchResult: React.FC<RouteSearchResultProps> = ({
       if (minutes > 0 || hours > 0) {
         const minuteForm = getGrammaticalForm(
           minutes,
-          'minuta',
-          'minute',
-          'minuta'
+          t('minutes.singular'),
+          t('minutes.few'),
+          t('minutes.plural')
         );
         etaString += `${minutes} ${minuteForm} `;
       }
@@ -189,27 +191,26 @@ const RouteSearchResult: React.FC<RouteSearchResultProps> = ({
           {agencyName}
         </Button>
         <h3>
-          {departureStation?.name || 'Nepoznata polazna stanica'}:{' '}
-          {departureTime}
+          {departureStation?.name || t('departureStationUnknown')}: {departureTime}
           <ArrowRightAltIcon />
-          {arrivalStation?.name || 'Nepoznata odredišna stanica'}: {arrivalTime}
+          {arrivalStation?.name || t('arrivalStationUnknown')}: {arrivalTime}
         </h3>
         <p>
-          Trajanje: {deltaTime}{' '}
-          {getGrammaticalForm(deltaTime, 'minuta', 'minute', 'minuta')}
+          {t('duration')}: {deltaTime}{' '}
+          {getGrammaticalForm(deltaTime, t('minutes.singular'), t('minutes.few'), t('minutes.plural'))}
         </p>
 
         {isToday && eta && (
-          <p style={{ color: etaColor }}>Preostalo vrijeme: {eta}</p>
+          <p style={{ color: etaColor }}>{t('timeRemaining')}: {eta}</p>
         )}
-        <Button onClick={onOpen}>Pogledaj detaljnije</Button>
+        <Button onClick={onOpen}>{t('viewDetails')}</Button>
 
         <Modal backdrop='opaque' isOpen={isOpen} onClose={onClose}>
           <ModalContent>
             {(onClose) => (
               <>
                 <ModalHeader className='flex flex-col gap-1'>
-                  Detalji Linije
+                  {t('routeDetails')}
                 </ModalHeader>
                 <ModalBody style={modalBodyStyle}>
                   <RouteProgressStepper
@@ -220,13 +221,7 @@ const RouteSearchResult: React.FC<RouteSearchResultProps> = ({
                     isToday={isToday}
                   />
                 </ModalBody>
-                <ModalFooter
-                  style={{
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    alignItems: 'center',
-                  }}
-                >
+                <ModalFooter>
                   {isToday && eta && (
                     <div style={{ color: 'var(--accent-orange)' }}>
                       <p>{eta}</p>
@@ -244,7 +239,7 @@ const RouteSearchResult: React.FC<RouteSearchResultProps> = ({
                       e.currentTarget.style.backgroundColor = 'transparent';
                     }}
                   >
-                    Zatvori
+                    {t('close')}
                   </Button>
                 </ModalFooter>
               </>

@@ -7,6 +7,7 @@ import AgencyService from "../../services/agency.service";
 import { Agency } from "../../models/agency.model";
 import { City } from "../../models/city.model";
 import CityService from "../../services/city.service";
+import { t } from "i18next";
 
 const AgencyPage: React.FC = () => {
   const [agency, setAgency] = useState<Agency | null>(null);
@@ -37,11 +38,11 @@ const AgencyPage: React.FC = () => {
   }, [id]);
 
   if (loading) {
-    return <p>Učitavanje...</p>;
+    return <p>{t('loading')}...</p>;
   }
 
   if (error || !agency) {
-    return <p>Agencija nije pronađena.</p>;
+    return <p>{t('AgencyNotFound')}</p>;
   }
 
   return (
@@ -49,7 +50,7 @@ const AgencyPage: React.FC = () => {
       <h1 className="text-3xl font-bold text-center mb-4">{agency.name}</h1>
       <Card shadow="sm" className="p-6">
         <p>
-          <strong>Adresa:</strong>{" "}
+          <strong>{t('address')}:</strong>{" "}
           <a
             href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
               agency.address + " " + (city?.name || "")
@@ -65,7 +66,7 @@ const AgencyPage: React.FC = () => {
           </a>
         </p>
         <p>
-          <strong>Web stranica:</strong>{" "}
+          <strong>{t('website')}:</strong>{" "}
           {agency.website ? (
             <a
               href={agency.website}
@@ -83,7 +84,7 @@ const AgencyPage: React.FC = () => {
           )}
         </p>
         <p>
-          <strong>E-pošta:</strong>{" "}
+          <strong>{t('emailLabel')}:</strong>{" "}
           <a
             href={`mailto:${agency.email}`}
             style={{
@@ -95,7 +96,7 @@ const AgencyPage: React.FC = () => {
           </a>
         </p>
         <p>
-          <strong>Broj telefona:</strong>{" "}
+          <strong>{t('phoneLabel')}:</strong>{" "}
           <a
             href={`tel:${agency.phoneNumber}`}
             style={{
@@ -107,7 +108,7 @@ const AgencyPage: React.FC = () => {
           </a>
         </p>
         <p>
-          <strong>Grad:</strong>{" "}
+          <strong>{t('city')}:</strong>{" "}
           <span
             style={{
               color: "var(--primary-blue)",

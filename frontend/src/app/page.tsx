@@ -13,11 +13,13 @@ import Station from "./models/station.model";
 import RouteSearchResult from "./routes/RouteSearchResult";
 import dayjs from "dayjs";
 import "dayjs/locale/en";
+import { useTranslation } from 'react-i18next'; // Import useTranslation
+import './i18n'; // Import i18n configuration
 
 const HomePage: React.FC = () => {
   const [routeResults, setRouteResults] = useState<RouteLap[]>([]);
   const [originalRoutes, setOriginalRoutes] = useState<Route[]>([]);
-
+  const { t } = useTranslation();
   const [showSearchButton, setShowSearchButton] = useState(false);
   const [showGame, setShowGame] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
@@ -331,14 +333,13 @@ const HomePage: React.FC = () => {
   return (
     <>
       <Head>
-        <title>kadJeBus</title>
+        <title>{t('appName')}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="container mx-auto p-4 text-center">
         <h1 className="text-3xl font-bold text-center mb-4">kadJeBus</h1>
         <h2 className="text-xl text-center mb-2">
-          Aplikacija za prikaz informacija o redu vožnje javnog prevoza u
-          Zenici.
+          {t('description')}
         </h2>
   
         <RouteSearch
@@ -355,7 +356,7 @@ const HomePage: React.FC = () => {
         {error && <div className="error">{error}</div>}
   
         {hasSearched && fixedIsToday && (
-          <div className="text-xl font-semibold mb-4">Nadolazeći Polasci</div>
+          <div className="text-xl font-semibold mb-4">{t('upcomingDepartures')}</div>
         )}
   
         {hasSearched && (
@@ -391,7 +392,7 @@ const HomePage: React.FC = () => {
                 );
               })
             ) : (
-              <div className="no-results">Nema pronađenih linija.</div>
+              <div className="no-results">{t('nolinesFound')}</div>
             )}
   
             {showSearchButton && (
@@ -400,13 +401,13 @@ const HomePage: React.FC = () => {
                 onClick={handleSearchButtonClick}
                 className="mt-4 mb-4"
               >
-                {showGame ? "Sakrij igru" : "Igraj Flappy Bird"}
+                {showGame ? t('HideGame') : t('PlayGame')}
               </Button>
             )}
   
             {showGame && (
               <div className="mt-4 mb-4">
-                <h3 className="text-xl font-semibold mb-2">Uživajte u igri dok čekate!</h3>
+                <h3 className="text-xl font-semibold mb-2">{t('waitingMSG')}</h3>
                 <div 
                   className={`relative mx-auto transition-all duration-300 ease-in-out ${
                     isExpanded ? 'w-full h-[80vh]' : 'w-full max-w-[400px] h-[600px]'
@@ -443,10 +444,10 @@ const HomePage: React.FC = () => {
               className="p-6 mb-4 w-full md:w-2/3 lg:w-1/2 mx-auto text-xl font-semibold flex justify-between items-center cursor-pointer"
               onClick={togglePastDepartures}
             >
-              <span>Prošli Polasci</span>
+              <span>{t('lastDeparture')}</span>
               <div className="flex justify-between items-center cursor-pointer">
                 <span className="text-sm underline">
-                  {isPastDeparturesExpanded ? "Sakrij" : "Prikaži"}
+                  {isPastDeparturesExpanded ? t('hide') : t('show')}
                 </span>
                 <span className="ml-1">
                   {isPastDeparturesExpanded ? "▲" : "▼"}

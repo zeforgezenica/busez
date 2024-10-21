@@ -1,4 +1,6 @@
 "use client";
+import { useTranslation } from 'react-i18next'; // Import useTranslation
+import '../i18n'; // Import i18n configuration
 import { useState } from "react";
 import {
   Modal,
@@ -14,6 +16,7 @@ import emailService from "../services/email.service";
 
 const Footer: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: "",
     contactInfo: "",
@@ -28,6 +31,7 @@ const Footer: React.FC = () => {
     setError("");
     setSuccess("");
   };
+
   const handleClose = () => setIsOpen(false);
 
   const handleChange = (
@@ -43,7 +47,7 @@ const Footer: React.FC = () => {
     const { name, subject, details } = formData;
 
     if (!name || !subject || !details) {
-      setError("Molimo popunite sva obavezna polja (*).");
+      setError(t('errorRequiredFields')); // Ensure this key exists in your translation file
       return;
     }
 
@@ -51,19 +55,19 @@ const Footer: React.FC = () => {
       await emailService.sendEmail({
         subject: formData.subject,
         text: `
-          Ime: ${formData.name}
-          Kontakt: ${formData.contactInfo || "N/A"}
-          Detalji: ${formData.details}
+          Name: ${formData.name}
+          Contact: ${formData.contactInfo || "N/A"}
+          Details: ${formData.details}
         `,
         senderName: formData.name,
         senderContact: formData.contactInfo,
       });
 
-      setSuccess("Vaša poruka je uspješno poslana.");
+      setSuccess(t('successMessage')); // Use t() for translations
       setError("");
       setFormData({ name: "", contactInfo: "", subject: "", details: "" });
     } catch (error) {
-      setError("Došlo je do greške prilikom slanja poruke.");
+      setError(t('errorMessage')); // Use t() for translations
     }
   };
 
@@ -76,7 +80,7 @@ const Footer: React.FC = () => {
               <p className="text-gray-300">
                 &copy; {new Date().getFullYear()}{" "}
                 <a
-                  href={"https://zeforge.ba"}
+                  href="https://zeforge.ba"
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{
@@ -88,15 +92,15 @@ const Footer: React.FC = () => {
                 </a>
               </p>
               <p className="text-gray-300">
-                Aplikacija za pretraživanje autobusnih linija
+                {t('appNameFooter')}
               </p>
             </div>
             <div className="mt-4 sm:mt-0 text-left">
               <p className="text-left sm:text-center">
-                <strong>Kontaktirajte nas:</strong>
+                <strong>{t('contactUs')}</strong>
               </p>
               <p className="text-gray-300 text-left">
-                E-pošta:{" "}
+                {t('emailLabel')}:{" "}
                 <a
                   href={`mailto:${"info@zeforge.ba"}`}
                   style={{
@@ -108,7 +112,7 @@ const Footer: React.FC = () => {
                 </a>
               </p>
               <p className="text-gray-300 text-left">
-                Broj telefona:{" "}
+                {t('phoneLabel')}:{" "}
                 <a
                   href={`tel:${"+38732979844"}`}
                   style={{
@@ -121,14 +125,14 @@ const Footer: React.FC = () => {
               </p>
 
               <Button onPress={handleOpen} color="primary" className="mt-4">
-                Prijavite problem / Predložite funkciju
+                {t('reportIssue')}
               </Button>
             </div>
           </div>
           <div className="my-4 border-t border-gray-300" />
           <div className="text-center">
             <p className="text-gray-300">
-              Napravljeno sa ❤️ od strane open source zajednice Zenice
+              {t('madeWithLove')}
             </p>
           </div>
         </div>
@@ -138,53 +142,53 @@ const Footer: React.FC = () => {
         <ModalContent>
           <>
             <ModalHeader className="flex flex-col gap-1">
-              Prijavite problem / Predložite funkciju
+              {t('modalHeader')}
             </ModalHeader>
             <ModalBody>
               {error && <p className="text-red-500">{error}</p>}
               {success && <p className="text-green-500">{success}</p>}
               <Input
                 autoFocus
-                label="Ime *"
+                label={t('nameLabel')} // Use translation for label
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
-                placeholder="Unesite Vaše ime"
+                placeholder={t('placeholderName')} // Add this translation key
                 variant="bordered"
                 required
               />
               <Input
-                label="Kontakt Informacije (Nije obavezno)"
+                label={t('contactInfoLabel')} // Use translation for label
                 name="contactInfo"
                 value={formData.contactInfo}
                 onChange={handleChange}
-                placeholder="E-pošta ili Telefon (Nije obavezno)"
+                placeholder={t('placeholderContactInfo')} // Add this translation key
                 variant="bordered"
               />
               <Input
-                label="Predmet *"
+                label={t('subjectLabel')} // Use translation for label
                 name="subject"
                 value={formData.subject}
                 onChange={handleChange}
-                placeholder="Unesite naslov poruke"
+                placeholder={t('placeholderSubject')} // Add this translation key
                 variant="bordered"
                 required
               />
               <Textarea
-                label="Detalji *"
+                label={t('detailsLabel')} // Use translation for label
                 name="details"
                 value={formData.details}
                 onChange={handleChange}
-                placeholder="Opišite problem ili prijedlog"
+                placeholder={t('placeholderDetails')} // Add this translation key
                 required
               />
             </ModalBody>
             <ModalFooter>
               <Button color="danger" variant="flat" onPress={handleClose}>
-                Zatvori
+                {t('closeButton')}
               </Button>
               <Button color="primary" onPress={handleSubmit}>
-                Pošalji
+                {t('sendButton')}
               </Button>
             </ModalFooter>
           </>

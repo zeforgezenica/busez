@@ -1,16 +1,20 @@
+import { TFunction } from 'i18next';
+import '../i18n'; // Import i18n configuration
+
 export const handleFilterClick = (
   selectedDepartureStation: string | null,
   selectedArrivalStation: string | null,
   onFilter: () => void,
-  setError: (error: string | null) => void
+  setError: (error: string | null) => void,
+  t: (key: string) => string
 ) => {
   if (!selectedDepartureStation || !selectedArrivalStation) {
-    setError("Molimo odaberite i polaznu i dolaznu stanicu.");
+    setError(t('pleaseSelectStations'));
     return;
   }
 
   if (selectedDepartureStation === selectedArrivalStation) {
-    setError("Molimo odaberite različite stanice polaska i dolaska.");
+    setError(t('selectDifferentStations'));
     return;
   }
 
