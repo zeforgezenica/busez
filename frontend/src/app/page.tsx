@@ -1,6 +1,7 @@
 "use client";
 
 import { GeolocationDisplay } from "@/components/GeolocationDisplay";
+import { useSearchHistory } from "@/hooks/useSearchHistory";
 import { Button } from "@nextui-org/react";
 import dayjs from "dayjs";
 import "dayjs/locale/en";
@@ -30,6 +31,10 @@ const HomePage: React.FC = () => {
   const [selectedArrivalStation, setSelectedArrivalStation] = useState<
     string | null
   >(null);
+  const { historyDepartureStations, historyArrivalStations } = useSearchHistory(
+    { selectedDepartureStation, selectedArrivalStation }
+  );
+  console.log(historyDepartureStations, historyArrivalStations);
   const [dateOfDeparture, setDateOfDeparture] =
     React.useState<dayjs.Dayjs | null>(dayjs());
   const [error, setError] = useState<string | null>(null);
