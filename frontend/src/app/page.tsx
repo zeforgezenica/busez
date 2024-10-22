@@ -83,7 +83,7 @@ const HomePage: React.FC = () => {
 
     const fetchStations = async () => {
       try {
-        const fetchedStations = (await StationService.getStations());
+        const fetchedStations = await StationService.getStations();
         setStations(toSortedStationsAlphabetically(fetchedStations));
       } catch (error) {
         console.error("Error fetching stations:", error);
