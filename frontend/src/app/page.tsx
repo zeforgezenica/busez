@@ -46,10 +46,6 @@ const HomePage: React.FC = () => {
   const [fixedIsToday, setFixedIsToday] = useState<boolean>(false);
   const [pastDepartures, setPastDepartures] = useState<RouteLap[]>([]);
 
-  const isToday = (date: dayjs.Dayjs | null): boolean => {
-    return date ? date.isSame(dayjs(), "day") : false;
-  };
-
   const [isPastDeparturesExpanded, setIsPastDeparturesExpanded] =
     useState(false);
 
@@ -123,6 +119,10 @@ const HomePage: React.FC = () => {
     }
   }, [originalRoutes]);
 
+  const isToday = (date: dayjs.Dayjs | null): boolean => {
+    return date ? date.isSame(dayjs(), "day") : false;
+  };
+
   const handleFilterRoutes = () => {
     const isTodayDeparture = isToday(dateOfDeparture);
     setFixedIsToday(isTodayDeparture);
@@ -130,34 +130,21 @@ const HomePage: React.FC = () => {
     setHasSearched(true);
     setShowSearchButton(true);
 
-    setPastDepartures([]);
-
     if (!tempDepartureDate) {
       setTempDepartureDate(new Date().getDay());
     }
 
     setError(null);
 
-    const stationIndexMap = FilterService.buildStationIndexMap(tempDepartureStation, tempArrivalStation);
-    const isActiveDayFilter = FilterService.buildIsActiveDayFilter(tempDepartureDate);
-    const routeLapSorter = FilterService.buildRouteLapSorter(tempDepartureStation);
+    const [srcStation, destStation, departDate] = [tempDepartureStation, tempArrivalStation, tempDepartureDate];
+    const validationPass = srcStation !== null && destStation !== null && departDate !== null;
+    if(!validationPass) return
+    const {sortedResults, sortedPastDepartures} = FilterService.getFilterResults(originalRoutes, srcStation, destStation, departDate, isTodayDeparture);
 
-    const routeLaps = originalRoutes.map(stationIndexMap)
-    .filter(FilterService.filterRoutesWithStations)
-    .filter(isActiveDayFilter)
-    .flatMap(FilterService.buildRouteLapArray);
-    
-    if (isTodayDeparture) {
-      const dividePastAndFutureRoutes = FilterService.buildRouteLapReducerNow(tempDepartureStation);
-      const reducerInit = { futureRoutes: [] as RouteLap[], pastRoutes: [] as RouteLap[] };
-      const { futureRoutes, pastRoutes } = routeLaps.reduce(dividePastAndFutureRoutes, reducerInit);
-      setPastDepartures(pastRoutes.sort(routeLapSorter));
-      setRouteResults(futureRoutes.sort(routeLapSorter));
-    } else {
-      setRouteResults(routeLaps.sort(routeLapSorter));
-    }
     setSelectedDepartureStation(tempDepartureStation);
     setSelectedArrivalStation(tempArrivalStation);
+    setRouteResults(sortedResults);
+    setPastDepartures(sortedPastDepartures);
   };
 
   const handleSearchButtonClick = () => {
