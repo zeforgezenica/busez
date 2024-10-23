@@ -9,17 +9,20 @@ export const useSearchHistory = ({
   selectedDepartureStation,
   selectedArrivalStation,
 }: UseSearchHistoryProps) => {
-  const historyDepartureStations = useSearchHistoryForStationType(
+  const historyDepartureStationIds = useSearchHistoryForStation(
     selectedDepartureStation
   );
-  const historyArrivalStations = useSearchHistoryForStationType(
+  const historyArrivalStationIds = useSearchHistoryForStation(
     selectedArrivalStation
   );
 
-  return { historyDepartureStations, historyArrivalStations };
+  return {
+    historyDepartureStationIds,
+    historyArrivalStationIds,
+  };
 };
 
-const useSearchHistoryForStationType = (newStation: string | null) => {
+const useSearchHistoryForStation = (newStation: string | null) => {
   const [stationHistory, setStationHistory] = useState<string[]>([]);
 
   useEffect(() => {
@@ -31,6 +34,8 @@ const useSearchHistoryForStationType = (newStation: string | null) => {
     const existingStationIndex = newStationHistory.indexOf(newStation);
     if (existingStationIndex !== -1)
       newStationHistory.splice(existingStationIndex, 1);
+    // limit history to 5
+    if (newStationHistory.length >= 5) newStationHistory.shift();
     // add the new station on top of history
     setStationHistory([...newStationHistory, newStation]);
 

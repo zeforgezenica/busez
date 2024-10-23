@@ -31,9 +31,10 @@ const HomePage: React.FC = () => {
   const [selectedArrivalStation, setSelectedArrivalStation] = useState<
     string | null
   >(null);
-  const { historyDepartureStations, historyArrivalStations } = useSearchHistory(
-    { selectedDepartureStation, selectedArrivalStation }
-  );
+  const {
+    historyDepartureStationIds: historyDepartureStations,
+    historyArrivalStationIds: historyArrivalStations,
+  } = useSearchHistory({ selectedDepartureStation, selectedArrivalStation });
   console.log(historyDepartureStations, historyArrivalStations);
   const [dateOfDeparture, setDateOfDeparture] =
     React.useState<dayjs.Dayjs | null>(dayjs());
