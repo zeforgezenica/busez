@@ -152,27 +152,31 @@ const HomePage: React.FC = () => {
       return station ? station.time : "00:00";
     };
 
-    const filteredRoutes = originalRoutes.flatMap((route) => {
-      const departureStationIndex = route.stations.findIndex(
+    const routeSearchResults = originalRoutes.map((route) => {
+      const srcStationIndex = route.stations.findIndex(
         (station) => station.stationId === tempDepartureStation
       );
-      const arrivalStationIndex = route.stations.findIndex(
+      const destStationIndex = route.stations.findIndex(
         (station) => station.stationId === tempArrivalStation
       );
-
-      if (departureStationIndex === -1 || arrivalStationIndex === -1) {
-        return [];
+      return {
+        route,
+        srcStationIndex,
+        destStationIndex
       }
+    }).filter((value) => {
+      return value.srcStationIndex !== -1 && value.destStationIndex !== -1;
+    }).filter((value) => {
+      const isBusReturning = value.destStationIndex < value.srcStationIndex;
+      const activityDays = isBusReturning ? value.route.returnDays : value.route.activeDays;
+      return activityDays?.[departureDay as keyof Weekdays] ?? false;
+    });
 
+    const filteredRoutes = routeSearchResults.flatMap((res) => {
+      const route = res.route;
+      const departureStationIndex = res.srcStationIndex;
+      const arrivalStationIndex = res.destStationIndex;
       const isReversedOrder = arrivalStationIndex < departureStationIndex;
-
-      const isActiveOnDepartureDay = isReversedOrder
-        ? route.returnDays?.[departureDay as keyof Weekdays] ?? false
-        : route.activeDays?.[departureDay as keyof Weekdays] ?? false;
-
-      if (!isActiveOnDepartureDay) {
-        return [];
-      }
 
       const times = isReversedOrder
         ? route.stations[arrivalStationIndex]?.returnTime || []
