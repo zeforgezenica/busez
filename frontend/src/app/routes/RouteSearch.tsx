@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
-import { Button } from '@nextui-org/react';
-import SwapVertIcon from '@mui/icons-material/SwapVert';
-import { Station } from '../models/station.model';
+import React, { useState } from "react";
+import { Button } from "@nextui-org/react";
+import SwapVertIcon from "@mui/icons-material/SwapVert";
+import { Station } from "../models/station.model";
 import {
   handleFilterClick,
   handleSwapStations,
-} from '../handlers/route.search.handler';
-import dayjs from 'dayjs';
-import StationSelect from '@/components/StationSelect';
-import DateSelector from '@/components/DateSelector';
-import MapSelector from '../components/MapSelector';
+} from "../handlers/route.search.handler";
+import dayjs from "dayjs";
+import StationSelect from "@/components/StationSelect";
+import DateSelector from "@/components/DateSelector";
+import MapSelector from "../components/MapSelector";
 
 interface RouteSearchProps {
   stations: Station[];
@@ -20,8 +20,8 @@ interface RouteSearchProps {
   dateOfDeparture: dayjs.Dayjs | null;
   onDateChange: (date: dayjs.Dayjs | null) => void;
   onFilter: () => void;
-  historyDepartureStations:string[];
-  historyArrivalStations:string[];
+  historyDepartureStationIds: string[];
+  historyArrivalStationIds: string[];
 }
 
 const RouteSearch: React.FC<RouteSearchProps> = ({
@@ -33,8 +33,8 @@ const RouteSearch: React.FC<RouteSearchProps> = ({
   dateOfDeparture,
   onDateChange,
   onFilter,
-  historyDepartureStations,
-  historyArrivalStations
+  historyDepartureStationIds,
+  historyArrivalStationIds,
 }) => {
   const [error, setError] = useState<string | null>(null);
 
@@ -50,16 +50,16 @@ const RouteSearch: React.FC<RouteSearchProps> = ({
         selectedDestinationStationId={selectedArrivalStation}
       />
       */}
-      <div className='flex flex-col items-center space-y-4 my-4 max-w-screen-sm mx-auto'>
+      <div className="flex flex-col items-center space-y-4 my-4 max-w-screen-sm mx-auto">
         <StationSelect
           stations={stations}
           selectedStation={selectedDepartureStation}
           setSelectedStation={setSelectedDepartureStation}
-          placeholder='Odaberite Stanicu Polaska'
-          history={historyDepartureStations}
+          placeholder="Odaberite Stanicu Polaska"
+          history={historyDepartureStationIds}
         />
         <Button
-          radius='full'
+          radius="full"
           onClick={() =>
             handleSwapStations(
               selectedDepartureStation,
@@ -77,22 +77,22 @@ const RouteSearch: React.FC<RouteSearchProps> = ({
           stations={stations}
           selectedStation={selectedArrivalStation}
           setSelectedStation={setSelectedArrivalStation}
-          placeholder='Odaberite Odredišnu Stanicu'
-          history={historyArrivalStations}
+          placeholder="Odaberite Odredišnu Stanicu"
+          history={historyArrivalStationIds}
         />
       </div>
-      <div className='flex justify-center space-x-4 my-4 max-w-screen-sm mx-auto'>
+      <div className="flex justify-center space-x-4 my-4 max-w-screen-sm mx-auto">
         <DateSelector
           dateOfDeparture={dateOfDeparture}
           onDateChange={onDateChange}
         />
       </div>
       {error && (
-        <div className='flex justify-center my-4'>
-          <div style={{ color: 'red' }}>{error}</div>
+        <div className="flex justify-center my-4">
+          <div style={{ color: "red" }}>{error}</div>
         </div>
       )}
-      <div className='flex justify-center my-4'>
+      <div className="flex justify-center my-4">
         <Button
           isDisabled={!selectedDepartureStation || !selectedArrivalStation}
           onClick={() =>

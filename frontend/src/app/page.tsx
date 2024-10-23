@@ -32,10 +32,10 @@ const HomePage: React.FC = () => {
     string | null
   >(null);
   const {
-    historyDepartureStationIds: historyDepartureStations,
-    historyArrivalStationIds: historyArrivalStations,
-  } = useSearchHistory({ selectedDepartureStation, selectedArrivalStation });
-  console.log(historyDepartureStations, historyArrivalStations);
+    historyDepartureStationIds,
+    historyArrivalStationIds,
+    addStationsToHistory,
+  } = useSearchHistory();
   const [dateOfDeparture, setDateOfDeparture] =
     React.useState<dayjs.Dayjs | null>(dayjs());
   const [error, setError] = useState<string | null>(null);
@@ -259,6 +259,7 @@ const HomePage: React.FC = () => {
       setRouteResults(sortedRoutes);
       setSelectedDepartureStation(tempDepartureStation);
       setSelectedArrivalStation(tempArrivalStation);
+      addStationsToHistory(tempDepartureStation, tempArrivalStation);
       return;
     }
 
@@ -312,6 +313,7 @@ const HomePage: React.FC = () => {
 
     setSelectedDepartureStation(tempDepartureStation);
     setSelectedArrivalStation(tempArrivalStation);
+    addStationsToHistory(tempDepartureStation, tempArrivalStation);
   };
 
   const handleSearchButtonClick = () => {
@@ -356,8 +358,8 @@ const HomePage: React.FC = () => {
           dateOfDeparture={dateOfDeparture}
           onDateChange={handleDateChange}
           onFilter={handleFilterRoutes}
-          historyArrivalStations={historyArrivalStations}
-          historyDepartureStations={historyDepartureStations}
+          historyArrivalStationIds={historyArrivalStationIds}
+          historyDepartureStationIds={historyDepartureStationIds}
         />
 
         {error && <div className="error">{error}</div>}

@@ -1,35 +1,36 @@
 import { useEffect, useState } from "react";
 
-type UseSearchHistoryProps = {
-  selectedDepartureStation: string | null;
-  selectedArrivalStation: string | null;
-};
+export const useSearchHistory = () => {
+  const {
+    history: historyDepartureStationIds,
+    addStation: addDepartureStation,
+  } = useSearchHistoryForStation();
+  const { history: historyArrivalStationIds, addStation: addArrivalStation } =
+    useSearchHistoryForStation();
 
-export const useSearchHistory = ({
-  selectedDepartureStation,
-  selectedArrivalStation,
-}: UseSearchHistoryProps) => {
-  const historyDepartureStationIds = useSearchHistoryForStation(
-    selectedDepartureStation
-  );
-  const historyArrivalStationIds = useSearchHistoryForStation(
-    selectedArrivalStation
-  );
+  function addStationsToHistory(
+    departureStation: string | null,
+    arrivalStation: string | null
+  ) {
+    addDepartureStation(departureStation);
+    addArrivalStation(arrivalStation);
+  }
 
   return {
     historyDepartureStationIds,
     historyArrivalStationIds,
+    addStationsToHistory,
   };
 };
 
-const useSearchHistoryForStation = (newStation: string | null) => {
-  const [stationHistory, setStationHistory] = useState<string[]>([]);
+const useSearchHistoryForStation = () => {
+  const [history, setHistory] = useState<string[]>([]);
 
-  useEffect(() => {
+  function addStation(newStation: string | null) {
     if (!newStation) return;
-    if (newStation === stationHistory[stationHistory.length - 1]) return;
+    if (newStation === history[history.length - 1]) return;
 
-    const newStationHistory = [...stationHistory];
+    const newStationHistory = [...history];
     // remove station from history if it already exists
     const existingStationIndex = newStationHistory.indexOf(newStation);
     if (existingStationIndex !== -1)
@@ -37,10 +38,8 @@ const useSearchHistoryForStation = (newStation: string | null) => {
     // limit history to 5
     if (newStationHistory.length >= 5) newStationHistory.shift();
     // add the new station on top of history
-    setStationHistory([...newStationHistory, newStation]);
+    setHistory([...newStationHistory, newStation]);
+  }
 
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [newStation, setStationHistory]);
-
-  return stationHistory;
+  return { history, addStation };
 };
