@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react';
 import {
   CaretSortIcon,
   CheckIcon,
   CounterClockwiseClockIcon,
-} from "@radix-ui/react-icons";
-import { Button } from "@/components/ui/button";
+} from '@radix-ui/react-icons';
+import { Button } from '@/components/ui/button';
 import {
   Command,
   CommandEmpty,
@@ -12,14 +12,14 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "@/components/ui/command";
+} from '@/components/ui/command';
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/components/ui/popover";
-import { cn } from "@/lib/utils";
-import { Station } from "../models/station.model";
+} from '@/components/ui/popover';
+import { cn } from '@/lib/utils';
+import { Station } from '../models/station.model';
 
 interface StationSelectProps {
   stations: Station[];
@@ -56,18 +56,18 @@ const StationSelect: React.FC<StationSelectProps> = ({
     <Popover open={open} onOpenChange={setOpen}>
       <PopoverTrigger asChild>
         <Button
-          variant="outline"
-          role="combobox"
+          variant='outline'
+          role='combobox'
           aria-expanded={open}
-          className="w-full justify-between"
+          className='w-full justify-between'
         >
           {selectedStation
             ? stations.find((station) => station._id === selectedStation)?.name
             : placeholder}
-          <CaretSortIcon className="ml-2 h-4 w-4 shrink-0 opacity-50" />
+          <CaretSortIcon className='ml-2 h-4 w-4 shrink-0 opacity-50' />
         </Button>
       </PopoverTrigger>
-      <PopoverContent className="w-[240px] p-0">
+      <PopoverContent className='w-[240px] p-0'>
         <Command>
           <CommandInput placeholder={placeholder} />
           <CommandList>
@@ -86,10 +86,10 @@ const StationSelect: React.FC<StationSelectProps> = ({
                   {station.name}
                   <CheckIcon
                     className={cn(
-                      "ml-auto h-4 w-4",
+                      'ml-auto h-4 w-4',
                       selectedStation === station._id
-                        ? "opacity-100"
-                        : "opacity-0"
+                        ? 'opacity-100'
+                        : 'opacity-0'
                     )}
                   />
                 </CommandItem>
@@ -111,8 +111,8 @@ const HistoryCommandGroup = ({
 }) => {
   if (stations.length === 0) return null;
   return (
-    <CommandGroup className={"border-b-3"}>
-      <p className={"select-none text-sm px-2 py-1.5 flex gap-2 items-center"}>
+    <CommandGroup className={'border-b-3'}>
+      <p className={'select-none text-sm px-2 py-1.5 flex gap-2 items-center'}>
         <CounterClockwiseClockIcon />
         Prošle pretrage
       </p>
