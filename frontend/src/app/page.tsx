@@ -138,7 +138,15 @@ const HomePage: React.FC = () => {
 
     const [srcStation, destStation, departDate] = [tempDepartureStation, tempArrivalStation, tempDepartureDate];
     const validationPass = srcStation !== null && destStation !== null && departDate !== null;
-    if(!validationPass) return
+    if(!validationPass) {
+      setSelectedDepartureStation(null);
+      setSelectedArrivalStation(null);
+      setRouteResults([]);
+      setPastDepartures([]);
+      // setError(null); consider giving error message if validation fails?
+      setHasSearched(false);
+      return;
+    }
     const {sortedResults, sortedPastDepartures} = FilterService.getFilterResults(originalRoutes, srcStation, destStation, departDate, isTodayDeparture);
 
     setSelectedDepartureStation(tempDepartureStation);
