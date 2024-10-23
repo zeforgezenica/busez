@@ -1,20 +1,20 @@
-'use client';
+"use client";
 
-import { GeolocationDisplay } from '@/components/GeolocationDisplay';
-import { useSearchHistory } from '@/hooks/useSearchHistory';
-import { Button } from '@nextui-org/react';
-import dayjs from 'dayjs';
-import 'dayjs/locale/en';
-import Head from 'next/head';
-import React, { useEffect, useState } from 'react';
-import { Route, RouteLap, StationTime } from './models/route.model';
-import Station from './models/station.model';
-import { Week, Weekdays } from './models/weekdays.model';
-import RouteSearch from './routes/RouteSearch';
-import RouteSearchResult from './routes/RouteSearchResult';
-import AgencyService from './services/agency.service';
-import RouteService from './services/route.service';
-import StationService from './services/station.service';
+import { GeolocationDisplay } from "@/components/GeolocationDisplay";
+import { useSearchHistory } from "@/hooks/useSearchHistory";
+import { Button } from "@nextui-org/react";
+import dayjs from "dayjs";
+import "dayjs/locale/en";
+import Head from "next/head";
+import React, { useEffect, useState } from "react";
+import { Route, RouteLap, StationTime } from "./models/route.model";
+import Station from "./models/station.model";
+import { Week, Weekdays } from "./models/weekdays.model";
+import RouteSearch from "./routes/RouteSearch";
+import RouteSearchResult from "./routes/RouteSearchResult";
+import AgencyService from "./services/agency.service";
+import RouteService from "./services/route.service";
+import StationService from "./services/station.service";
 
 const HomePage: React.FC = () => {
   const [routeResults, setRouteResults] = useState<RouteLap[]>([]);
@@ -53,7 +53,7 @@ const HomePage: React.FC = () => {
   const [pastDepartures, setPastDepartures] = useState<RouteLap[]>([]);
 
   const isToday = (date: dayjs.Dayjs | null): boolean => {
-    return date ? date.isSame(dayjs(), 'day') : false;
+    return date ? date.isSame(dayjs(), "day") : false;
   };
 
   const [isPastDeparturesExpanded, setIsPastDeparturesExpanded] =
@@ -82,7 +82,7 @@ const HomePage: React.FC = () => {
         const fetchedRoutes = await RouteService.getRoutes();
         setOriginalRoutes(fetchedRoutes);
       } catch (error) {
-        console.error('Error fetching routes:', error);
+        console.error("Error fetching routes:", error);
       }
     };
 
@@ -91,7 +91,7 @@ const HomePage: React.FC = () => {
         const fetchedStations = await StationService.getStations();
         setStations(fetchedStations);
       } catch (error) {
-        console.error('Error fetching stations:', error);
+        console.error("Error fetching stations:", error);
       }
     };
 
@@ -111,8 +111,8 @@ const HomePage: React.FC = () => {
           const agency = await AgencyService.getAgency(agencyId);
           return { [agencyId]: agency.name };
         } catch (error) {
-          console.error('Error fetching agency:', error);
-          return { [agencyId]: 'Unknown Agency' };
+          console.error("Error fetching agency:", error);
+          return { [agencyId]: "Unknown Agency" };
         }
       });
 
@@ -121,7 +121,7 @@ const HomePage: React.FC = () => {
           const mergedAgencyNames = Object.assign({}, ...agencyNameObjects);
           setAgencyNames(mergedAgencyNames);
         })
-        .catch((error) => console.error('Error fetching agency names:', error));
+        .catch((error) => console.error("Error fetching agency names:", error));
     };
 
     if (originalRoutes.length > 0) {
@@ -155,7 +155,7 @@ const HomePage: React.FC = () => {
       stationId: string | null
     ) => {
       const station = stations.find((st) => st.stationId === stationId);
-      return station ? station.time : '00:00';
+      return station ? station.time : "00:00";
     };
 
     const filteredRoutes = originalRoutes.flatMap((route) => {
@@ -184,7 +184,7 @@ const HomePage: React.FC = () => {
         ? route.stations[arrivalStationIndex]?.returnTime || []
         : route.stations[departureStationIndex]?.departureTime || [];
 
-      const validTimes = times.filter((time) => time !== '*');
+      const validTimes = times.filter((time) => time !== "*");
 
       if (validTimes.length === 0) {
         return [];
@@ -193,14 +193,14 @@ const HomePage: React.FC = () => {
       return validTimes
         .map((time, index) => {
           const departureTime = isReversedOrder
-            ? route.stations[arrivalStationIndex]?.returnTime?.[index] || ''
+            ? route.stations[arrivalStationIndex]?.returnTime?.[index] || ""
             : route.stations[departureStationIndex]?.departureTime?.[index] ||
-              '';
+              "";
           const arrivalTime = isReversedOrder
-            ? route.stations[departureStationIndex]?.returnTime?.[index] || ''
-            : route.stations[arrivalStationIndex]?.departureTime?.[index] || '';
+            ? route.stations[departureStationIndex]?.returnTime?.[index] || ""
+            : route.stations[arrivalStationIndex]?.departureTime?.[index] || "";
 
-          if (departureTime === '*' || arrivalTime === '*') {
+          if (departureTime === "*" || arrivalTime === "*") {
             return null;
           }
 
@@ -209,8 +209,8 @@ const HomePage: React.FC = () => {
               const stationTime: StationTime = {
                 stationId: station.stationId,
                 time: isReversedOrder
-                  ? station.returnTime[index] || ''
-                  : station.departureTime[index] || '',
+                  ? station.returnTime[index] || ""
+                  : station.departureTime[index] || "",
               };
 
               if (isReversedOrder) {
@@ -245,13 +245,13 @@ const HomePage: React.FC = () => {
           a.stations,
           tempDepartureStation
         )
-          .split(':')
+          .split(":")
           .map(Number);
         const timeB = getDepartureTimeForStation(
           b.stations,
           tempDepartureStation
         )
-          .split(':')
+          .split(":")
           .map(Number);
         return timeA[0] * 60 + timeA[1] - (timeB[0] * 60 + timeB[1]);
       });
@@ -274,7 +274,7 @@ const HomePage: React.FC = () => {
         );
 
         const [departureHours, departureMinutes] =
-          departureTimeForSelectedStation.split(':').map(Number);
+          departureTimeForSelectedStation.split(":").map(Number);
         const departureTimeInMinutes = departureHours * 60 + departureMinutes;
 
         if (departureTimeInMinutes < nowMinutes) {
@@ -290,20 +290,20 @@ const HomePage: React.FC = () => {
 
     const sortedFutureRoutes = futureRoutes.sort((a, b) => {
       const timeA = getDepartureTimeForStation(a.stations, tempDepartureStation)
-        .split(':')
+        .split(":")
         .map(Number);
       const timeB = getDepartureTimeForStation(b.stations, tempDepartureStation)
-        .split(':')
+        .split(":")
         .map(Number);
       return timeA[0] * 60 + timeA[1] - (timeB[0] * 60 + timeB[1]);
     });
 
     const sortedPastRoutes = pastRoutes.sort((a, b) => {
       const timeA = getDepartureTimeForStation(a.stations, tempDepartureStation)
-        .split(':')
+        .split(":")
         .map(Number);
       const timeB = getDepartureTimeForStation(b.stations, tempDepartureStation)
-        .split(':')
+        .split(":")
         .map(Number);
       return timeA[0] * 60 + timeA[1] - (timeB[0] * 60 + timeB[1]);
     });
@@ -325,8 +325,8 @@ const HomePage: React.FC = () => {
   };
 
   const calculateDuration = (startTime: string, endTime: string): number => {
-    const [startHours, startMinutes] = startTime.split(':').map(Number);
-    const [endHours, endMinutes] = endTime.split(':').map(Number);
+    const [startHours, startMinutes] = startTime.split(":").map(Number);
+    const [endHours, endMinutes] = endTime.split(":").map(Number);
 
     const startTotalMinutes = startHours * 60 + startMinutes;
     const endTotalMinutes = endHours * 60 + endMinutes;
@@ -340,11 +340,11 @@ const HomePage: React.FC = () => {
     <>
       <Head>
         <title>kadJeBus</title>
-        <link rel='icon' href='/favicon.ico' />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className='container mx-auto p-4 text-center'>
-        <h1 className='text-3xl font-bold text-center mb-4'>kadJeBus</h1>
-        <h2 className='text-xl text-center mb-2'>
+      <div className="container mx-auto p-4 text-center">
+        <h1 className="text-3xl font-bold text-center mb-4">kadJeBus</h1>
+        <h2 className="text-xl text-center mb-2">
           Aplikacija za prikaz informacija o redu vožnje javnog prevoza u
           Zenici.
         </h2>
@@ -362,10 +362,10 @@ const HomePage: React.FC = () => {
           historyDepartureStationIds={historyDepartureStationIds}
         />
 
-        {error && <div className='error'>{error}</div>}
+        {error && <div className="error">{error}</div>}
 
         {hasSearched && fixedIsToday && (
-          <div className='text-xl font-semibold mb-4'>Nadolazeći Polasci</div>
+          <div className="text-xl font-semibold mb-4">Nadolazeći Polasci</div>
         )}
 
         {hasSearched && (
@@ -380,9 +380,9 @@ const HomePage: React.FC = () => {
                 );
 
                 const departureTime =
-                  routeLap.stations[departureStationIndex]?.time || '';
+                  routeLap.stations[departureStationIndex]?.time || "";
                 const arrivalTime =
-                  routeLap.stations[arrivalStationIndex]?.time || '';
+                  routeLap.stations[arrivalStationIndex]?.time || "";
                 const deltatime = calculateDuration(departureTime, arrivalTime);
 
                 return (
@@ -401,50 +401,50 @@ const HomePage: React.FC = () => {
                 );
               })
             ) : (
-              <div className='no-results'>Nema pronađenih linija.</div>
+              <div className="no-results">Nema pronađenih linija.</div>
             )}
 
             {showSearchButton && (
               <Button
-                color='primary'
+                color="primary"
                 onClick={handleSearchButtonClick}
-                className='mt-4 mb-4'
+                className="mt-4 mb-4"
               >
-                {showGame ? 'Sakrij igru' : 'Igraj Flappy Bird'}
+                {showGame ? "Sakrij igru" : "Igraj Flappy Bird"}
               </Button>
             )}
 
             {showGame && (
-              <div className='mt-4 mb-4'>
-                <h3 className='text-xl font-semibold mb-2'>
+              <div className="mt-4 mb-4">
+                <h3 className="text-xl font-semibold mb-2">
                   Uživajte u igri dok čekate!
                 </h3>
                 <div
                   className={`relative mx-auto transition-all duration-300 ease-in-out ${
                     isExpanded
-                      ? 'w-full h-[80vh]'
-                      : 'w-full max-w-[400px] h-[600px]'
+                      ? "w-full h-[80vh]"
+                      : "w-full max-w-[400px] h-[600px]"
                   }`}
                 >
                   <iframe
-                    src='https://nebez.github.io/floppybird/'
+                    src="https://nebez.github.io/floppybird/"
                     style={{
-                      position: 'absolute',
+                      position: "absolute",
                       top: 0,
                       left: 0,
-                      width: '100%',
-                      height: '100%',
-                      border: 'none',
+                      width: "100%",
+                      height: "100%",
+                      border: "none",
                     }}
-                    title='Flappy Bird Game'
+                    title="Flappy Bird Game"
                   ></iframe>
                 </div>
                 <Button
-                  color='secondary'
+                  color="secondary"
                   onClick={toggleExpand}
-                  className='mt-4'
+                  className="mt-4"
                 >
-                  {isExpanded ? 'Smanji igru' : 'Proširi igru'}
+                  {isExpanded ? "Smanji igru" : "Proširi igru"}
                 </Button>
               </div>
             )}
@@ -454,21 +454,21 @@ const HomePage: React.FC = () => {
         {hasSearched && fixedIsToday && pastDepartures.length > 0 && (
           <>
             <div
-              className='p-6 mb-4 w-full md:w-2/3 lg:w-1/2 mx-auto text-xl font-semibold flex justify-between items-center cursor-pointer'
+              className="p-6 mb-4 w-full md:w-2/3 lg:w-1/2 mx-auto text-xl font-semibold flex justify-between items-center cursor-pointer"
               onClick={togglePastDepartures}
             >
               <span>Prošli Polasci</span>
-              <div className='flex justify-between items-center cursor-pointer'>
-                <span className='text-sm underline'>
-                  {isPastDeparturesExpanded ? 'Sakrij' : 'Prikaži'}
+              <div className="flex justify-between items-center cursor-pointer">
+                <span className="text-sm underline">
+                  {isPastDeparturesExpanded ? "Sakrij" : "Prikaži"}
                 </span>
-                <span className='ml-1'>
-                  {isPastDeparturesExpanded ? '▲' : '▼'}
+                <span className="ml-1">
+                  {isPastDeparturesExpanded ? "▲" : "▼"}
                 </span>
               </div>
             </div>
 
-            <hr className='border-t border-gray-300 mb-4 w-full md:w-2/3 lg:w-1/2 mx-auto' />
+            <hr className="border-t border-gray-300 mb-4 w-full md:w-2/3 lg:w-1/2 mx-auto" />
 
             {isPastDeparturesExpanded && (
               <>
@@ -481,9 +481,9 @@ const HomePage: React.FC = () => {
                   );
 
                   const departureTime =
-                    routeLap.stations[departureStationIndex]?.time || '';
+                    routeLap.stations[departureStationIndex]?.time || "";
                   const arrivalTime =
-                    routeLap.stations[arrivalStationIndex]?.time || '';
+                    routeLap.stations[arrivalStationIndex]?.time || "";
                   const deltatime = calculateDuration(
                     departureTime,
                     arrivalTime
