@@ -355,6 +355,8 @@ const HomePage: React.FC = () => {
           dateOfDeparture={dateOfDeparture}
           onDateChange={handleDateChange}
           onFilter={handleFilterRoutes}
+          historyArrivalStations={historyArrivalStations}
+          historyDepartureStations={historyDepartureStations}
         />
 
         {error && <div className="error">{error}</div>}
