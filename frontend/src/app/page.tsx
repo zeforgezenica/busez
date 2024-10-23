@@ -149,7 +149,9 @@ const HomePage: React.FC = () => {
       stationId: string | null
     ) => {
       const station = stations.find((st) => st.stationId === stationId);
-      return station ? station.time : "00:00";
+      const timeString = station ? station.time : "00:00";
+      const [hours, minutes] = timeString.split(":").map(Number);
+      return hours * 60 + minutes;
     };
 
     const routeSearchResults = originalRoutes.map((route) => {
@@ -237,23 +239,20 @@ const HomePage: React.FC = () => {
         .filter((result) => result !== null) as RouteLap[];
     });
 
-    if (!isTodayDeparture) {
-      const sortedRoutes = filteredRoutes.sort((a, b) => {
-        const timeA = getDepartureTimeForStation(
-          a.stations,
-          tempDepartureStation
-        )
-          .split(":")
-          .map(Number);
-        const timeB = getDepartureTimeForStation(
-          b.stations,
-          tempDepartureStation
-        )
-          .split(":")
-          .map(Number);
-        return timeA[0] * 60 + timeA[1] - (timeB[0] * 60 + timeB[1]);
-      });
+    const routeLapSorter = (a: RouteLap, b: RouteLap) => {
+      const minutesA = getDepartureTimeForStation(
+        a.stations,
+        tempDepartureStation
+      );
+      const minutesB = getDepartureTimeForStation(
+        b.stations,
+        tempDepartureStation
+      );
+      return minutesA - minutesB;
+    }
 
+    if (!isTodayDeparture) {
+      const sortedRoutes = filteredRoutes.sort(routeLapSorter);
       setRouteResults(sortedRoutes);
       setSelectedDepartureStation(tempDepartureStation);
       setSelectedArrivalStation(tempArrivalStation);
@@ -265,14 +264,10 @@ const HomePage: React.FC = () => {
 
     const { futureRoutes, pastRoutes } = filteredRoutes.reduce(
       (acc, routeLap) => {
-        const departureTimeForSelectedStation = getDepartureTimeForStation(
+        const departureTimeInMinutes = getDepartureTimeForStation(
           routeLap.stations,
           tempDepartureStation
         );
-
-        const [departureHours, departureMinutes] =
-          departureTimeForSelectedStation.split(":").map(Number);
-        const departureTimeInMinutes = departureHours * 60 + departureMinutes;
 
         if (departureTimeInMinutes < nowMinutes) {
           acc.pastRoutes.push(routeLap);
@@ -285,25 +280,8 @@ const HomePage: React.FC = () => {
       { futureRoutes: [] as RouteLap[], pastRoutes: [] as RouteLap[] }
     );
 
-    const sortedFutureRoutes = futureRoutes.sort((a, b) => {
-      const timeA = getDepartureTimeForStation(a.stations, tempDepartureStation)
-        .split(":")
-        .map(Number);
-      const timeB = getDepartureTimeForStation(b.stations, tempDepartureStation)
-        .split(":")
-        .map(Number);
-      return timeA[0] * 60 + timeA[1] - (timeB[0] * 60 + timeB[1]);
-    });
-
-    const sortedPastRoutes = pastRoutes.sort((a, b) => {
-      const timeA = getDepartureTimeForStation(a.stations, tempDepartureStation)
-        .split(":")
-        .map(Number);
-      const timeB = getDepartureTimeForStation(b.stations, tempDepartureStation)
-        .split(":")
-        .map(Number);
-      return timeA[0] * 60 + timeA[1] - (timeB[0] * 60 + timeB[1]);
-    });
+    const sortedFutureRoutes = futureRoutes.sort(routeLapSorter);
+    const sortedPastRoutes = pastRoutes.sort(routeLapSorter);
 
     setPastDepartures(sortedPastRoutes);
     setRouteResults(sortedFutureRoutes);
