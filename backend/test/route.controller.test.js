@@ -1,7 +1,6 @@
 const request = require("supertest");
 const express = require("express");
 const fs = require("fs");
-const RouteController = require("../controllers/route.controller");
 const routeRoutes = require("../routes/route.routes"); 
 
 jest.mock("fs");

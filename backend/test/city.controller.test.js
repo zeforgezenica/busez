@@ -1,7 +1,6 @@
 const request = require('supertest');
 const express = require('express');
 const fs = require('fs');
-const CityController = require('../controllers/city.controller');
 const cityRoutes = require('../routes/city.routes');
 const app = express();
 
