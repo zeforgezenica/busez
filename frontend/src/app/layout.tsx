@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 import { Providers } from "./providers";
 import Footer from "./components/Footer";
@@ -15,16 +16,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
-      <body className="flex flex-col min-h-screen">
-        <div>
-          <Providers>
-            <main>{children}</main>
-            <Toaster />
-          </Providers>
-        </div>
-        <Footer />
-      </body>
-    </html>
+		<html lang="en" className="dark">
+			<body className="flex flex-col min-h-screen">
+				<div>
+					<Providers>
+						<main>{children}</main>
+						<Toaster />
+					</Providers>
+				</div>
+				<Footer />
+				<Analytics />
+			</body>
+		</html>
   );
 }
