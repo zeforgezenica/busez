@@ -13,21 +13,15 @@ This document describes how to install, run, and understand the test cases for t
 2. **Install dependencies:**
 
    ```bash
-   npm install
-   ```
-3. **Install Jest and Supertest:**
-
-   ```bash
-   npm install jest supertest --save-dev
+   pnpm install
    ```
 
 4. **Run Test:**
 
     ```bash
-    npm test
+    pnpm test
     ```
     
-
 
 ## Test Structure
 
