@@ -14,6 +14,7 @@ import RouteSearchResult from "./routes/RouteSearchResult";
 import AgencyService from "./services/agency.service";
 import RouteService from "./services/route.service";
 import StationService from "./services/station.service";
+import { toSortedStationsAlphabetically } from "@/lib/utils";
 
 const HomePage: React.FC = () => {
   const [routeResults, setRouteResults] = useState<RouteLap[]>([]);
@@ -83,7 +84,7 @@ const HomePage: React.FC = () => {
     const fetchStations = async () => {
       try {
         const fetchedStations = await StationService.getStations();
-        setStations(fetchedStations);
+        setStations(toSortedStationsAlphabetically(fetchedStations));
       } catch (error) {
         console.error("Error fetching stations:", error);
       }
