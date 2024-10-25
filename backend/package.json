@@ -1,7 +1,8 @@
 {
   "name": "backend",
   "scripts": {
-    "dev": "nodemon -r dotenv/config server.js"
+    "dev": "nodemon -r dotenv/config server.js",
+    "test": "jest"
   },
   "dependencies": {
     "ajv": "^8.17.1",
@@ -13,5 +14,9 @@
     "nodemailer": "^6.9.15",
     "nodemon": "^3.1.0",
     "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0"
   }
 }
