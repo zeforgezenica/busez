@@ -1,6 +1,6 @@
 # Zenica Bus Tracking Application
 
-This application is designed for real-time tracking of buses in the city of Zenica, Bosnia and Herzegovina.
+This application is designed for tracking buses in the city of Zenica, Bosnia and Herzegovina.
 
 **Deployment**: [Zenica Bus Tracking](https://kadjebus.zeforge.ba)
 
@@ -32,13 +32,13 @@ Make sure you have the following installed:
 
 2. **Frontend Setup**:
 
-   - For local development, create a `.env.local` file with the following:
+   - For local development, create a `.env.local` file in the **frontend** directory with the following:
 
      ```plaintext
      NEXT_PUBLIC_API_URL=http://localhost:3001
      ```
 
-   - For production builds, create a `.env.production` file:
+   - For production builds, create a `.env.production` file in the **frontend** directory:
 
      ```plaintext
      NEXT_PUBLIC_API_URL=https://production-server-url.com
@@ -60,14 +60,16 @@ Make sure you have the following installed:
 
    - Replace placeholders with your actual values. **Note**: If using Gmail, you may need to enable "Less secure app access" or use an App Password to authenticate.
 
-4. **Run the Server**:
+4. **Run the Application**:
+
+   Run both the frontend and backend together:
 
    ```bash
    pnpm turbo dev
    ```
 
-## Running the Application
+## Accessing the Application
 
-After setting up the frontend and backend, you can access the application at:
+After setting up and running the application, you can access it at:
 
 [http://localhost:3000](http://localhost:3000)
