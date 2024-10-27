@@ -4,7 +4,9 @@ This application is designed for tracking buses in the city of Zenica, Bosnia an
 
 Deployment: https://kadjebus.zeforge.ba
 
-Figma Project File Link: https://www.figma.com/design/5fO5ky3p3nOG1QhNoGyefi/Kad-je-bus?node-id=0-1&t=CgSKo3MISOQGqgrU-1
+Figma Idea #1 Project File Link: https://www.figma.com/design/Evsz1Ttu66byoB9j1dneq6/Untitled?node-id=2-2&t=tdBFS2mRirxmebKC-1
+
+Figma Idea #2 Project File Link: https://www.figma.com/design/5fO5ky3p3nOG1QhNoGyefi/Kad-je-bus?node-id=0-1&t=CgSKo3MISOQGqgrU-1
 
 Link to ZeForge Discord server: https://discord.gg/x2enz95pDF
 
