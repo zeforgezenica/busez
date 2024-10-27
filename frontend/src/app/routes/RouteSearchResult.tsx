@@ -85,7 +85,7 @@ const RouteSearchResult: React.FC<RouteSearchResultProps> = ({
       : 'inherit';
 
   return (
-    <Card className='p-6 mb-4 w-full md:w-2/3 lg:w-1/2 mx-auto'>
+    <Card className='p-6 mb-4 w-full bg-white'>
       <div className='flex flex-col gap-3'>
         <h2 className='text-2xl mb-2 font-semibold'>{route.name}</h2>
         <Button
@@ -102,13 +102,15 @@ const RouteSearchResult: React.FC<RouteSearchResultProps> = ({
           {arrivalStation?.name || 'Nepoznata odredišna stanica'}: {arrivalTime}
         </h3>
         <PriceDisplay price={price} />
-        <p>
-          Trajanje: {deltaTime}{' '}
-          {getGrammaticalForm(deltaTime, 'minuta', 'minute', 'minuta')}
-        </p>
-        {isToday && eta && (
-          <p style={{ color: etaColor }}>Preostalo vrijeme: {eta}</p>
-        )}
+        <div className="flex flex-row justify-between">
+          <p>
+            Trajanje: {deltaTime}{' '}
+            {getGrammaticalForm(deltaTime, 'minuta', 'minute', 'minuta')}
+          </p>
+          {isToday && eta && (
+              <p style={{ color: etaColor }}>Preostalo vrijeme: {eta}</p>
+          )}
+        </div>
         <Button onClick={onOpen}>Pogledaj detaljnije</Button>
         <RouteDetailsModal
           isOpen={isOpen}
