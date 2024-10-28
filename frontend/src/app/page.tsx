@@ -143,13 +143,8 @@ const HomePage: React.FC = () => {
 
     setError(null);
 
-    const [srcStation, destStation, departDate] = [
-      tempDepartureStation,
-      tempArrivalStation,
-      tempDepartureDate,
-    ];
-    const validationPass =
-      srcStation !== null && destStation !== null && departDate !== null;
+    const [srcStation, destStation, departDate] = [tempDepartureStation, tempArrivalStation, tempDepartureDate];
+    const validationPass = srcStation !== null && destStation !== null && departDate !== null;
     if (!validationPass) {
       setSelectedDepartureStation(null);
       setSelectedArrivalStation(null);
@@ -159,14 +154,7 @@ const HomePage: React.FC = () => {
       setHasSearched(false);
       return;
     }
-    const { sortedResults, sortedPastDepartures } =
-      FilterService.getFilterResults(
-        originalRoutes,
-        srcStation,
-        destStation,
-        departDate,
-        isTodayDeparture
-      );
+    const {sortedResults, sortedPastDepartures} = FilterService.getFilterResults(originalRoutes, srcStation, destStation, departDate, isTodayDeparture);
 
     setSelectedDepartureStation(tempDepartureStation);
     setSelectedArrivalStation(tempArrivalStation);
