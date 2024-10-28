@@ -22,6 +22,7 @@ interface StationSelectProps {
   selectedStation: string | null;
   setSelectedStation: (stationId: string | null) => void;
   placeholder: string;
+  onStationChange?: (stationId: string | null) => void;
 }
 
 const StationSelect: React.FC<StationSelectProps> = ({
@@ -29,6 +30,7 @@ const StationSelect: React.FC<StationSelectProps> = ({
   selectedStation,
   setSelectedStation,
   placeholder,
+  onStationChange,
 }) => {
   const [open, setOpen] = React.useState(false);
 
@@ -36,6 +38,10 @@ const StationSelect: React.FC<StationSelectProps> = ({
     setOpen(false);
     const callbackValue = comboBoxSelection._id ? comboBoxSelection._id : null;
     setSelectedStation(callbackValue);
+
+    if (onStationChange) {
+      onStationChange(callbackValue);
+    }
   };
 
   return (
@@ -45,12 +51,12 @@ const StationSelect: React.FC<StationSelectProps> = ({
           variant='outline'
           role='combobox'
           aria-expanded={open}
-          className='w-full justify-between'
+          className='text-xl text-gray-500 w-full sm:w-72 h-12 bg-gray-200 shadow-none justify-between'
         >
           {selectedStation
             ? stations.find((station) => station._id === selectedStation)?.name
             : placeholder}
-          <CaretSortIcon className='ml-2 h-4 w-4 shrink-0 opacity-50' />
+          <CaretSortIcon className="ml-2 h-4 w-4 shrink-0 opacity-50" />
         </Button>
       </PopoverTrigger>
       <PopoverContent className='w-[240px] p-0'>

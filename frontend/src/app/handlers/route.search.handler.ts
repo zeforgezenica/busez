@@ -1,15 +1,10 @@
 export const handleFilterClick = (
-  selectedDepartureStation: string | null,
-  selectedArrivalStation: string | null,
-  onFilter: () => void,
-  setError: (error: string | null) => void
+    selectedDepartureStation: string | null,
+    selectedArrivalStation: string | null,
+    onFilter: () => void,
+    setError: (error: string | null) => void
 ) => {
-  if (!selectedDepartureStation || !selectedArrivalStation) {
-    setError("Molimo odaberite i polaznu i dolaznu stanicu.");
-    return;
-  }
-
-  if (selectedDepartureStation === selectedArrivalStation) {
+  if (selectedDepartureStation === selectedArrivalStation && selectedArrivalStation !== null) {
     setError("Molimo odaberite različite stanice polaska i dolaska.");
     return;
   }
@@ -19,13 +14,21 @@ export const handleFilterClick = (
 };
 
 export const handleSwapStations = (
-  selectedDepartureStation: string | null,
-  selectedArrivalStation: string | null,
-  setSelectedDepartureStation: (stationId: string | null) => void,
-  setSelectedArrivalStation: (stationId: string | null) => void
+    selectedDepartureStation: string | null,
+    selectedArrivalStation: string | null,
+    setSelectedDepartureStation: (stationId: string | null) => void,
+    setSelectedArrivalStation: (stationId: string | null) => void
 ) => {
-  const tempDeparture = selectedDepartureStation;
-  const tempArrival = selectedArrivalStation;
-  setSelectedDepartureStation(tempArrival);
-  setSelectedArrivalStation(tempDeparture);
+  if (selectedDepartureStation && !selectedArrivalStation) {
+    setSelectedArrivalStation(selectedDepartureStation);
+    setSelectedDepartureStation(null);
+  } else if (!selectedDepartureStation && selectedArrivalStation) {
+    setSelectedDepartureStation(selectedArrivalStation);
+    setSelectedArrivalStation(null);
+  } else {
+    const tempDeparture = selectedDepartureStation;
+    const tempArrival = selectedArrivalStation;
+    setSelectedDepartureStation(tempArrival);
+    setSelectedArrivalStation(tempDeparture);
+  }
 };

@@ -10,12 +10,13 @@ const Dot = styled('div')<{ isPast: boolean; isToday: boolean }>(
     width: 12,
     height: 12,
     borderRadius: '50%',
-    backgroundColor: isPast && isToday ? 'var(--primary-blue)' : '#eee',
+    backgroundColor: isPast && isToday ? 'var(--primary-blue)' : '#5e5e5e',
     marginInline: 'auto',
     marginTop: 'auto',
     marginBottom: '0px',
     zIndex: '100',
     position: 'relative',
+      color: '#ccc'
   })
 );
 
@@ -38,7 +39,7 @@ const StopTime = styled('div')<{
     ? 'var(--accent-orange)'
     : isPast && isToday
     ? 'var(--primary-blue)'
-    : '#eee',
+    : '#8c8c8c',
   [theme.breakpoints.down('sm')]: {
     width: '20%',
   },
@@ -194,6 +195,7 @@ const StationStep: React.FC<StationStepProps> = ({
             isPast={isTimePast(station.time, currentTime, firstTime, lastTime)}
             isToday={isToday || false}
             isArrivalOrDeparture={isDepartureOrArrival}
+            className="text-gray-500"
           >
             {stationName}
           </StopName>

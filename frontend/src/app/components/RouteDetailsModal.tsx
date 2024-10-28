@@ -44,7 +44,7 @@ const RouteDetailsModal: React.FC<RouteDetailsModalProps> = ({
       <ModalContent>
         {(onClose) => (
           <>
-            <ModalHeader className='flex flex-col gap-1'>
+            <ModalHeader className='flex flex-col gap-1 p-5'>
               Detalji Linije
             </ModalHeader>
             <ModalBody style={modalBodyStyle}>
@@ -56,13 +56,7 @@ const RouteDetailsModal: React.FC<RouteDetailsModalProps> = ({
                 isToday={isToday}
               />
             </ModalBody>
-            <ModalFooter
-              style={{
-                display: 'flex',
-                justifyContent: 'space-between',
-                alignItems: 'center',
-              }}
-            >
+            <ModalFooter className="flex justify-between items-center align-middle">
               {isToday && eta && (
                 <div style={{ color: 'var(--accent-orange)' }}>
                   <p>{eta}</p>
