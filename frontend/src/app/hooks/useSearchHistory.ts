@@ -4,9 +4,9 @@ export const useSearchHistory = () => {
   const {
     history: historyDepartureStationIds,
     addStation: addDepartureStation,
-  } = useSearchHistoryForStation("historyDepartureStationIds");
+  } = useHistoryForStation("historyDepartureStationIds");
   const { history: historyArrivalStationIds, addStation: addArrivalStation } =
-    useSearchHistoryForStation("historyArrivalStationIds");
+    useHistoryForStation("historyArrivalStationIds");
 
   function addStationsToHistory(
     departureStation: string | null,
@@ -23,7 +23,7 @@ export const useSearchHistory = () => {
   };
 };
 
-const useSearchHistoryForStation = (key: string) => {
+const useHistoryForStation = (key: string) => {
   const [history, setHistory] = useLocalStorage<string[]>(key, []);
 
   function addStation(newStation: string | null) {
