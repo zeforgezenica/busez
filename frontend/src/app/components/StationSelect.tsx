@@ -22,7 +22,7 @@ interface StationSelectProps {
   selectedStation: string | null;
   setSelectedStation: (stationId: string | null) => void;
   placeholder: string;
-  onStationChange?: (stationId: string | null) => void; // New callback prop
+  onStationChange?: (stationId: string | null) => void;
 }
 
 const StationSelect: React.FC<StationSelectProps> = ({
@@ -30,7 +30,7 @@ const StationSelect: React.FC<StationSelectProps> = ({
   selectedStation,
   setSelectedStation,
   placeholder,
-  onStationChange, // Receive the callback prop
+  onStationChange,
 }) => {
   const [open, setOpen] = React.useState(false);
 
@@ -39,7 +39,6 @@ const StationSelect: React.FC<StationSelectProps> = ({
     const callbackValue = comboBoxSelection._id ? comboBoxSelection._id : null;
     setSelectedStation(callbackValue);
 
-    // Call onStationChange if it's provided
     if (onStationChange) {
       onStationChange(callbackValue);
     }

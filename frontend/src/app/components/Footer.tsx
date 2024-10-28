@@ -113,8 +113,7 @@ const Footer: React.FC = () => {
                   </a>
                 </p>
                 <Dialog>
-                  <DialogTrigger className="bg-indigo-400 text-white p-2 mt-2 rounded-lg">Prijavite problem / Predložite
-                    funkciju</DialogTrigger>
+                  <DialogTrigger className="bg-indigo-400 text-white p-2 mt-2 rounded-lg">Prijavite problem / Predložite funkciju</DialogTrigger>
                   <DialogContent>
                     <DialogHeader>
                       <DialogTitle>Prijavite problem / Predložite funkciju</DialogTitle>
@@ -141,8 +140,7 @@ const Footer: React.FC = () => {
                             name="contactInfo"
                             render={({field}) => (
                                 <FormItem>
-                                  <FormLabel className="text-sm text-white font-semibold">Kontakt informacije (Nije
-                                    obavezno)</FormLabel>
+                                  <FormLabel className="text-sm text-white font-semibold">Kontakt informacije (Nije obavezno)</FormLabel>
                                   <Input
                                       placeholder="E-pošta ili telefon (Nije obavezno)" {...field}
                                   />
@@ -180,8 +178,7 @@ const Footer: React.FC = () => {
                           <DialogClose asChild>
                             <Button className="bg-red-600 hover:bg-red-500 text-white font-semibold">Zatvori</Button>
                           </DialogClose>
-                          <Button type="submit"
-                                  className="bg-indigo-500 hover:bg-indigo-400 text-white font-semibold">Pošalji</Button>
+                          <Button type="submit" className="bg-indigo-500 hover:bg-indigo-400 text-white font-semibold">Pošalji</Button>
                         </div>
                       </form>
                     </Form>

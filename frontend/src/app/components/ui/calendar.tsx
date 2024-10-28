@@ -18,8 +18,8 @@ function Calendar({
             showOutsideDays={showOutsideDays}
             className={cn("mr-0 sm:mr-20", className)}
             classNames={{
-                months: "", // Flexbox for months
-                month: "flex flex-col space-y-6", // Stack months vertically
+                months: "",
+                month: "flex flex-col space-y-6",
                 caption: "flex justify-center pt-1 relative items-center",
                 caption_label: "text-xl text-neutral-500 font-medium",
                 nav: "space-x-1 flex items-center",
@@ -30,22 +30,22 @@ function Calendar({
                 nav_button_previous: "absolute left-1 bg-gray-500 text-white",
                 nav_button_next: "absolute right-1 bg-gray-500 text-white",
                 table: "w-full border-collapse",
-                head_row: "flex justify-between", // Flex layout for head row
+                head_row: "flex justify-between",
                 head_cell: cn(
                     "text-muted-foreground ml-1.5 font-medium text-center text-[0.8rem]",
-                    "flex-1" // Each head cell takes equal space
+                    "flex-1"
                 ),
-                row: "flex justify-between w-full", // Flex layout for rows
+                row: "flex justify-between w-full",
                 cell: cn(
                     "relative p-1 text-center text-sm focus-within:relative focus-within:z-20",
                     props.mode === "range"
                         ? "[&:has(>.day-range-end)]:rounded-r-md [&:has(>.day-range-start)]:rounded-l-md first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md"
                         : "[&:has([aria-selected])]:rounded-md",
-                    "flex-1 aspect-square sm:h-24 sm:w-24 h-12 w-12" // Larger size on desktop
+                    "flex-1 aspect-square sm:h-24 sm:w-24 h-12 w-12"
                 ),
                 day: cn(
                     buttonVariants({ variant: "ghost" }),
-                    "flex items-center justify-center w-full h-full bg-white font-normal" // Use full width/height
+                    "flex items-center justify-center w-full h-full bg-white font-normal"
                 ),
                 day_range_start: "day-range-start",
                 day_range_end: "day-range-end",

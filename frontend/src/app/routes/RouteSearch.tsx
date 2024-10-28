@@ -121,7 +121,7 @@ const RouteSearch: React.FC<RouteSearchProps> = ({
                 <div className=''>
                     <DateSelector
                         dateOfDeparture={dateOfDeparture}
-                        onDateChange={handleDateChange} // Use the updated handler
+                        onDateChange={handleDateChange}
                     />
                 </div>
                 {error && (
