@@ -1,12 +1,12 @@
-import { useEffect, useState } from 'react';
+import { useLocalStorage } from "@uidotdev/usehooks";
 
 export const useSearchHistory = () => {
   const {
     history: historyDepartureStationIds,
     addStation: addDepartureStation,
-  } = useSearchHistoryForStation();
+  } = useSearchHistoryForStation("historyDepartureStationIds");
   const { history: historyArrivalStationIds, addStation: addArrivalStation } =
-    useSearchHistoryForStation();
+    useSearchHistoryForStation("historyArrivalStationIds");
 
   function addStationsToHistory(
     departureStation: string | null,
@@ -23,8 +23,8 @@ export const useSearchHistory = () => {
   };
 };
 
-const useSearchHistoryForStation = () => {
-  const [history, setHistory] = useState<string[]>([]);
+const useSearchHistoryForStation = (key: string) => {
+  const [history, setHistory] = useLocalStorage<string[]>(key, []);
 
   function addStation(newStation: string | null) {
     if (!newStation) return;
