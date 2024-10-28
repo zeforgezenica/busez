@@ -7,14 +7,15 @@ import dayjs from "dayjs";
 import "dayjs/locale/en";
 import Head from "next/head";
 import React, { useEffect, useState } from "react";
-import { Route, RouteLap, StationTime } from "./models/route.model";
+import { Route, RouteLap } from "./models/route.model";
 import Station from "./models/station.model";
-import { Week, Weekdays } from "./models/weekdays.model";
 import RouteSearch from "./routes/RouteSearch";
 import RouteSearchResult from "./routes/RouteSearchResult";
 import AgencyService from "./services/agency.service";
 import RouteService from "./services/route.service";
 import StationService from "./services/station.service";
+import FilterService from "./handlers/route.filter.handler";
+import { toSortedStationsAlphabetically } from "@/lib/utils";
 
 const HomePage: React.FC = () => {
   const [routeResults, setRouteResults] = useState<RouteLap[]>([]);
@@ -52,10 +53,6 @@ const HomePage: React.FC = () => {
   const [fixedIsToday, setFixedIsToday] = useState<boolean>(false);
   const [pastDepartures, setPastDepartures] = useState<RouteLap[]>([]);
 
-  const isToday = (date: dayjs.Dayjs | null): boolean => {
-    return date ? date.isSame(dayjs(), "day") : false;
-  };
-
   const [isPastDeparturesExpanded, setIsPastDeparturesExpanded] =
     useState(false);
 
@@ -89,7 +86,7 @@ const HomePage: React.FC = () => {
     const fetchStations = async () => {
       try {
         const fetchedStations = await StationService.getStations();
-        setStations(fetchedStations);
+        setStations(toSortedStationsAlphabetically(fetchedStations));
       } catch (error) {
         console.error("Error fetching stations:", error);
       }
@@ -129,6 +126,10 @@ const HomePage: React.FC = () => {
     }
   }, [originalRoutes]);
 
+  const isToday = (date: dayjs.Dayjs | null): boolean => {
+    return date ? date.isSame(dayjs(), "day") : false;
+  };
+
   const handleFilterRoutes = () => {
     const isTodayDeparture = isToday(dateOfDeparture);
     setFixedIsToday(isTodayDeparture);
@@ -136,183 +137,41 @@ const HomePage: React.FC = () => {
     setHasSearched(true);
     setShowSearchButton(true);
 
-    setPastDepartures([]);
-
     if (!tempDepartureDate) {
       setTempDepartureDate(new Date().getDay());
     }
 
     setError(null);
 
-    const departureDayIndex =
-      tempDepartureDate !== null
-        ? tempDepartureDate
-        : (new Date().getDay() + 6) % 7;
-    const departureDay = Week[departureDayIndex];
-
-    const getDepartureTimeForStation = (
-      stations: StationTime[],
-      stationId: string | null
-    ) => {
-      const station = stations.find((st) => st.stationId === stationId);
-      return station ? station.time : "00:00";
-    };
-
-    const filteredRoutes = originalRoutes.flatMap((route) => {
-      const departureStationIndex = route.stations.findIndex(
-        (station) => station.stationId === tempDepartureStation
-      );
-      const arrivalStationIndex = route.stations.findIndex(
-        (station) => station.stationId === tempArrivalStation
-      );
-
-      if (departureStationIndex === -1 || arrivalStationIndex === -1) {
-        return [];
-      }
-
-      const isReversedOrder = arrivalStationIndex < departureStationIndex;
-
-      const isActiveOnDepartureDay = isReversedOrder
-        ? route.returnDays?.[departureDay as keyof Weekdays] ?? false
-        : route.activeDays?.[departureDay as keyof Weekdays] ?? false;
-
-      if (!isActiveOnDepartureDay) {
-        return [];
-      }
-
-      const times = isReversedOrder
-        ? route.stations[arrivalStationIndex]?.returnTime || []
-        : route.stations[departureStationIndex]?.departureTime || [];
-
-      const validTimes = times.filter((time) => time !== "*");
-
-      if (validTimes.length === 0) {
-        return [];
-      }
-
-      return validTimes
-        .map((time, index) => {
-          const departureTime = isReversedOrder
-            ? route.stations[arrivalStationIndex]?.returnTime?.[index] || ""
-            : route.stations[departureStationIndex]?.departureTime?.[index] ||
-              "";
-          const arrivalTime = isReversedOrder
-            ? route.stations[departureStationIndex]?.returnTime?.[index] || ""
-            : route.stations[arrivalStationIndex]?.departureTime?.[index] || "";
-
-          if (departureTime === "*" || arrivalTime === "*") {
-            return null;
-          }
-
-          const stationsWithTimes: StationTime[] = route.stations.reduce(
-            (acc: StationTime[], station, i) => {
-              const stationTime: StationTime = {
-                stationId: station.stationId,
-                time: isReversedOrder
-                  ? station.returnTime[index] || ""
-                  : station.departureTime[index] || "",
-              };
-
-              if (isReversedOrder) {
-                acc.unshift(stationTime);
-              } else {
-                acc.push(stationTime);
-              }
-
-              return acc;
-            },
-            []
-          );
-
-          return {
-            _id: route._id,
-            agencyId: route.agencyId,
-            name: route.name,
-            type: route.type,
-            activeDays: route.activeDays,
-            returnDays: route.returnDays,
-            stations: stationsWithTimes,
-            duration: route.duration,
-            departureTime,
-          };
-        })
-        .filter((result) => result !== null) as RouteLap[];
-    });
-
-    if (!isTodayDeparture) {
-      const sortedRoutes = filteredRoutes.sort((a, b) => {
-        const timeA = getDepartureTimeForStation(
-          a.stations,
-          tempDepartureStation
-        )
-          .split(":")
-          .map(Number);
-        const timeB = getDepartureTimeForStation(
-          b.stations,
-          tempDepartureStation
-        )
-          .split(":")
-          .map(Number);
-        return timeA[0] * 60 + timeA[1] - (timeB[0] * 60 + timeB[1]);
-      });
-
-      setRouteResults(sortedRoutes);
-      setSelectedDepartureStation(tempDepartureStation);
-      setSelectedArrivalStation(tempArrivalStation);
-      addStationsToHistory(tempDepartureStation, tempArrivalStation);
+    const [srcStation, destStation, departDate] = [
+      tempDepartureStation,
+      tempArrivalStation,
+      tempDepartureDate,
+    ];
+    const validationPass =
+      srcStation !== null && destStation !== null && departDate !== null;
+    if (!validationPass) {
+      setSelectedDepartureStation(null);
+      setSelectedArrivalStation(null);
+      setRouteResults([]);
+      setPastDepartures([]);
+      // setError(null); consider giving error message if validation fails?
+      setHasSearched(false);
       return;
     }
-
-    const now = dayjs();
-    const nowMinutes = now.hour() * 60 + now.minute();
-
-    const { futureRoutes, pastRoutes } = filteredRoutes.reduce(
-      (acc, routeLap) => {
-        const departureTimeForSelectedStation = getDepartureTimeForStation(
-          routeLap.stations,
-          tempDepartureStation
-        );
-
-        const [departureHours, departureMinutes] =
-          departureTimeForSelectedStation.split(":").map(Number);
-        const departureTimeInMinutes = departureHours * 60 + departureMinutes;
-
-        if (departureTimeInMinutes < nowMinutes) {
-          acc.pastRoutes.push(routeLap);
-        } else {
-          acc.futureRoutes.push(routeLap);
-        }
-
-        return acc;
-      },
-      { futureRoutes: [] as RouteLap[], pastRoutes: [] as RouteLap[] }
-    );
-
-    const sortedFutureRoutes = futureRoutes.sort((a, b) => {
-      const timeA = getDepartureTimeForStation(a.stations, tempDepartureStation)
-        .split(":")
-        .map(Number);
-      const timeB = getDepartureTimeForStation(b.stations, tempDepartureStation)
-        .split(":")
-        .map(Number);
-      return timeA[0] * 60 + timeA[1] - (timeB[0] * 60 + timeB[1]);
-    });
-
-    const sortedPastRoutes = pastRoutes.sort((a, b) => {
-      const timeA = getDepartureTimeForStation(a.stations, tempDepartureStation)
-        .split(":")
-        .map(Number);
-      const timeB = getDepartureTimeForStation(b.stations, tempDepartureStation)
-        .split(":")
-        .map(Number);
-      return timeA[0] * 60 + timeA[1] - (timeB[0] * 60 + timeB[1]);
-    });
-
-    setPastDepartures(sortedPastRoutes);
-    setRouteResults(sortedFutureRoutes);
+    const { sortedResults, sortedPastDepartures } =
+      FilterService.getFilterResults(
+        originalRoutes,
+        srcStation,
+        destStation,
+        departDate,
+        isTodayDeparture
+      );
 
     setSelectedDepartureStation(tempDepartureStation);
     setSelectedArrivalStation(tempArrivalStation);
+    setRouteResults(sortedResults);
+    setPastDepartures(sortedPastDepartures);
     addStationsToHistory(tempDepartureStation, tempArrivalStation);
   };
 

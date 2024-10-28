@@ -28,5 +28,8 @@ jobs:
       - name: Restore dependencies
         run: pnpm install
 
+      - name: Run Tests
+        run: pnpm turbo run test
+
       - name: Build Turborepo
         run: pnpm turbo run build
