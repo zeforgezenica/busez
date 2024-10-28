@@ -145,7 +145,7 @@ const HomePage: React.FC = () => {
 
     const [srcStation, destStation, departDate] = [tempDepartureStation, tempArrivalStation, tempDepartureDate];
     const validationPass = srcStation !== null && destStation !== null && departDate !== null;
-    if (!validationPass) {
+    if(!validationPass) {
       setSelectedDepartureStation(null);
       setSelectedArrivalStation(null);
       setRouteResults([]);
