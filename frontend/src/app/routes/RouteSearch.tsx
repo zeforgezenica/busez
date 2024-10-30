@@ -20,6 +20,8 @@ interface RouteSearchProps {
   dateOfDeparture: dayjs.Dayjs | null;
   onDateChange: (date: dayjs.Dayjs | null) => void;
   onFilter: () => void;
+  historyDepartureStationIds: string[];
+  historyArrivalStationIds: string[];
 }
 
 const RouteSearch: React.FC<RouteSearchProps> = ({
@@ -31,6 +33,8 @@ const RouteSearch: React.FC<RouteSearchProps> = ({
   dateOfDeparture,
   onDateChange,
   onFilter,
+  historyDepartureStationIds,
+  historyArrivalStationIds,
 }) => {
   const [error, setError] = useState<string | null>(null);
 
@@ -52,6 +56,7 @@ const RouteSearch: React.FC<RouteSearchProps> = ({
           selectedStation={selectedDepartureStation}
           setSelectedStation={setSelectedDepartureStation}
           placeholder='Odaberite Stanicu Polaska'
+          history={historyDepartureStationIds}
         />
         <Button
           radius='full'
@@ -73,6 +78,7 @@ const RouteSearch: React.FC<RouteSearchProps> = ({
           selectedStation={selectedArrivalStation}
           setSelectedStation={setSelectedArrivalStation}
           placeholder='Odaberite Odredišnu Stanicu'
+          history={historyArrivalStationIds}
         />
       </div>
       <div className='flex justify-center space-x-4 my-4 max-w-screen-sm mx-auto'>

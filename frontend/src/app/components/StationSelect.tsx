@@ -1,5 +1,9 @@
 import React from 'react';
-import { CaretSortIcon, CheckIcon } from '@radix-ui/react-icons';
+import {
+  CaretSortIcon,
+  CheckIcon,
+  CounterClockwiseClockIcon,
+} from '@radix-ui/react-icons';
 import { Button } from '@/components/ui/button';
 import {
   Command,
@@ -22,6 +26,7 @@ interface StationSelectProps {
   selectedStation: string | null;
   setSelectedStation: (stationId: string | null) => void;
   placeholder: string;
+  history: string[];
 }
 
 const StationSelect: React.FC<StationSelectProps> = ({
@@ -29,6 +34,7 @@ const StationSelect: React.FC<StationSelectProps> = ({
   selectedStation,
   setSelectedStation,
   placeholder,
+  history,
 }) => {
   const [open, setOpen] = React.useState(false);
 
@@ -37,6 +43,14 @@ const StationSelect: React.FC<StationSelectProps> = ({
     const callbackValue = comboBoxSelection._id ? comboBoxSelection._id : null;
     setSelectedStation(callbackValue);
   };
+
+  const stationsHistory = history
+    .map((stationId) => stations.find((station) => station._id === stationId))
+    .filter((station) => !!station && station._id !== selectedStation)
+    .reverse() as Station[];
+  const stationsNotInHistory = stations.filter(
+    (station) => station._id && !stationsHistory.includes(station)
+  );
 
   return (
     <Popover open={open} onOpenChange={setOpen}>
@@ -58,8 +72,12 @@ const StationSelect: React.FC<StationSelectProps> = ({
           <CommandInput placeholder={placeholder} />
           <CommandList>
             <CommandEmpty>{placeholder}</CommandEmpty>
+            <HistoryCommandGroup
+              stations={stationsHistory}
+              onStationSelect={onStationSelect}
+            />
             <CommandGroup>
-              {stations.map((station) => (
+              {stationsNotInHistory.map((station) => (
                 <CommandItem
                   key={station._id}
                   value={station.name}
@@ -81,6 +99,33 @@ const StationSelect: React.FC<StationSelectProps> = ({
         </Command>
       </PopoverContent>
     </Popover>
+  );
+};
+
+const HistoryCommandGroup = ({
+  stations,
+  onStationSelect,
+}: {
+  stations: Station[];
+  onStationSelect: (comboBoxSelection: Station) => void;
+}) => {
+  if (stations.length === 0) return null;
+  return (
+    <CommandGroup className={'border-b-3'}>
+      <p className={'select-none text-sm px-2 py-1.5 flex gap-2 items-center'}>
+        <CounterClockwiseClockIcon />
+        Prošle pretrage
+      </p>
+      {stations.map((station) => (
+        <CommandItem
+          key={station._id}
+          value={station.name}
+          onSelect={() => onStationSelect(station)}
+        >
+          {station.name}
+        </CommandItem>
+      ))}
+    </CommandGroup>
   );
 };
 
