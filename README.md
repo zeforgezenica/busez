@@ -22,51 +22,56 @@ Make sure you have the following installed:
 - **Node.js**: [Download Node.js](https://nodejs.org/en/download/package-manager)
 - **pnpm**: [Install pnpm](https://pnpm.io/installation)
 
-### Installation
+### Development
 
 1. **Install dependencies**:
 
-   ```bash
-   pnpm install
-   ```
+```bash
+pnpm install
+```
 
 2. **Frontend Setup**:
 
-   - For local development, create a `.env.local` file in the **frontend** directory with the following:
+Setup the `.env.local` or `.env.production` file by copying the `.env.example` and replacing the placeholders values
 
-     ```plaintext
-     NEXT_PUBLIC_API_URL=http://localhost:3001
-     ```
-
-   - For production builds, create a `.env.production` file in the **frontend** directory:
-
-     ```plaintext
-     NEXT_PUBLIC_API_URL=https://production-server-url.com
-     ```
+```bash
+cp ./frontend/.env.example ./frontend/.env.local
+```
 
 3. **Backend Setup**:
 
-   - In the `/backend/` directory, create a `.env` file and add the following environment variables:
+Setup the `.env` file by copying the `.env.example` and replacing the placeholders values
 
-     ```plaintext
-     SMTP_HOST=your-smtp-host                # e.g., smtp.gmail.com
-     SMTP_PORT=your-smtp-port                # e.g., 587 for TLS or 465 for SSL
-     SMTP_USER=your-email@gmail.com           # Your email address
-     SMTP_PASS=your-app-password              # App password for the email account
-     SENDER_EMAIL=your-sender-email           # Email address for outgoing emails
-     DEFAULT_RECEIVER_EMAIL=recipient@example.com # Default recipient email address
-     DEFAULT_RECEIVER_NAME=your-receiver-name     # Name of the default recipient
-     ```
+```bash
+cp ./backend/.env.example ./backend/.env
+```
 
-   - Replace placeholders with your actual values. **Note**: If using Gmail, you may need to enable "Less secure app access" or use an App Password to authenticate.
+> [!NOTE]  
+> If using Gmail, you may need to enable "Less secure app access" or use an App Password to authenticate.
+
 
 4. **Run the Application**:
 
-   Run both the frontend and backend together:
+Run both the frontend and backend together:
 
-   ```bash
-   pnpm turbo dev
-   ```
+```bash
+pnpm turbo dev
+```
+
+5. **Lint and Test (Optional)**:
+
+Before pushing changes consider running the linter and testing the applications locally
+
+```bash
+pnpm turbo run lint
+```
+
+```bash
+pnpm turbo run test
+```
+
+> [!NOTE]  
+> This step is optional as it will be done by a github action on push and pull request
 
 ## Accessing the Application
 
