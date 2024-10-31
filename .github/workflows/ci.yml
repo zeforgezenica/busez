@@ -28,6 +28,9 @@ jobs:
       - name: Restore dependencies
         run: pnpm install
 
+      - name: Run Lint
+        run: pnpm turbo run lint
+
       - name: Run Tests
         run: pnpm turbo run test
 
