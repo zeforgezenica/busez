@@ -4,9 +4,17 @@ on:
   push:
     branches:
       - main
+    paths-ignore:
+      - logo-ideas/*
+      - scripts/*
+      - *.md
   pull_request:
     branches:
       - main
+    paths-ignore:
+      - logo-ideas/*
+      - scripts/*
+      - *.md
 
 jobs:
   build:
@@ -27,6 +35,9 @@ jobs:
 
       - name: Restore dependencies
         run: pnpm install
+
+      - name: Run Lint
+        run: pnpm turbo run lint
 
       - name: Run Tests
         run: pnpm turbo run test
