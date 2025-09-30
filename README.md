@@ -30,7 +30,7 @@ Make sure you have the following installed:
 pnpm install
 ```
 
-2. **Frontend Setup**:
+1. **Frontend Setup**:
 
 Setup the `.env.local` or `.env.production` file by copying the `.env.example` and replacing the placeholders values
 
@@ -38,9 +38,9 @@ Setup the `.env.local` or `.env.production` file by copying the `.env.example` a
 cp ./frontend/.env.example ./frontend/.env.local
 ```
 
-3. **Backend Setup**:
+1. **Backend Setup**:
 
-Setup the `.env` file by copying the `.env.example` and replacing the placeholders values
+Setup the `.env` file by copying the `.env.example` and replacing the placeholder values (including `PORT` if you need to avoid conflicts on your machine)
 
 ```bash
 cp ./backend/.env.example ./backend/.env
@@ -50,7 +50,7 @@ cp ./backend/.env.example ./backend/.env
 > If using Gmail, you may need to enable "Less secure app access" or use an App Password to authenticate.
 
 
-4. **Run the Application**:
+1. **Run the Application**:
 
 Run both the frontend and backend together:
 
@@ -58,7 +58,7 @@ Run both the frontend and backend together:
 pnpm turbo dev
 ```
 
-5. **Lint and Test (Optional)**:
+1. **Lint and Test (Optional)**:
 
 Before pushing changes consider running the linter and testing the applications locally
 

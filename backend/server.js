@@ -21,7 +21,7 @@ app.use("/stations", stationRoutes);
 app.use("/routes", routeRoutes);
 app.use("/sendEmail", emailRoutes);
 
-const port = 3001;
+const port = process.env.PORT || 5000;
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
