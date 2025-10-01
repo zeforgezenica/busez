@@ -11,6 +11,7 @@ import { Route, RouteLap } from "../models/route.model";
 import Station from "../models/station.model";
 import RouteSearch from "../routes/RouteSearch";
 import RouteSearchResult from "../routes/RouteSearchResult";
+import RouteGridView from "./RouteGridView";
 import RouteTableView from './RouteTableView';
 import AgencyService from "../services/agency.service";
 import RouteService from "../services/route.service";
@@ -242,36 +243,16 @@ const HomePage: React.FC = () => {
             {routeResults.length > 0 ? (
               <>
                 {viewMode === 'card' ? (
-                  routeResults.map((routeLap) => {
-                    const departureStationIndex = routeLap.stations.findIndex(
-                      (station) => station.stationId === selectedDepartureStation
-                    );
-                    const arrivalStationIndex = routeLap.stations.findIndex(
-                      (station) => station.stationId === selectedArrivalStation
-                    );
-
-                    const departureTime =
-                      routeLap.stations[departureStationIndex]?.time || "";
-                    const arrivalTime =
-                      routeLap.stations[arrivalStationIndex]?.time || "";
-                    const deltatime = calculateDuration(departureTime, arrivalTime);
-
-                    return (
-                      <RouteSearchResult
-                        key={`${routeLap._id}-${departureTime}-${arrivalTime}`}
-                        route={routeLap}
-                        agencyName={agencyNames[routeLap.agencyId]}
-                        stations={stations}
-                        departureStationId={selectedDepartureStation}
-                        arrivalStationId={selectedArrivalStation}
-                        departureTime={departureTime}
-                        arrivalTime={arrivalTime}
-                        deltaTime={deltatime}
-                        isToday={fixedIsToday}
-                      />
-                    );
-                  })
-                ) : (
+                  <RouteGridView
+                    routes={routeResults}
+                    agencyNames={agencyNames}
+                    stations={stations}
+                    selectedDepartureStation={selectedDepartureStation}
+                    selectedArrivalStation={selectedArrivalStation}
+                    isToday={fixedIsToday}
+                    calculateDuration={calculateDuration}
+                  />
+              ) : (
                   <RouteTableView
                     routes={routeResults}
                     agencyNames={agencyNames}
@@ -355,38 +336,16 @@ const HomePage: React.FC = () => {
 
             {isPastDeparturesExpanded && (
               viewMode === 'card' ? (
-                pastDepartures.map((routeLap) => {
-                  const departureStationIndex = routeLap.stations.findIndex(
-                    (station) => station.stationId === selectedDepartureStation
-                  );
-                  const arrivalStationIndex = routeLap.stations.findIndex(
-                    (station) => station.stationId === selectedArrivalStation
-                  );
-
-                  const departureTime =
-                    routeLap.stations[departureStationIndex]?.time || "";
-                  const arrivalTime =
-                    routeLap.stations[arrivalStationIndex]?.time || "";
-                  const deltatime = calculateDuration(
-                    departureTime,
-                    arrivalTime
-                  );
-                  return (
-                    <RouteSearchResult
-                      key={`${routeLap._id}-${departureTime}-${arrivalTime}`}
-                      route={routeLap}
-                      agencyName={agencyNames[routeLap.agencyId]}
-                      stations={stations}
-                      departureStationId={selectedDepartureStation}
-                      arrivalStationId={selectedArrivalStation}
-                      departureTime={departureTime}
-                      arrivalTime={arrivalTime}
-                      deltaTime={deltatime}
-                      isToday={fixedIsToday}
-                    />
-                  );
-                })
-              ) : (
+                <RouteGridView
+                  routes={pastDepartures}
+                  agencyNames={agencyNames}
+                  stations={stations}
+                  selectedDepartureStation={selectedDepartureStation}
+                  selectedArrivalStation={selectedArrivalStation}
+                  isToday={fixedIsToday}
+                  calculateDuration={calculateDuration}
+                />
+            ) : (
                 <RouteTableView
                   routes={pastDepartures}
                   agencyNames={agencyNames}
