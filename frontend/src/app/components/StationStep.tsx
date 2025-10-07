@@ -4,9 +4,10 @@ import { styled } from '@mui/material/styles';
 import { StationTime } from '../models/route.model';
 import Station from '../models/station.model';
 import { isTimePast, getProgress } from '../handlers/route.progress.handler';
+import { Skeleton } from '@/components/ui/skeleton';
 
 const Dot = styled('div')<{ isPast: boolean; isToday: boolean }>(
-  ({ isPast, isToday }) => ({
+  ({ isPast, isToday }: { isPast: boolean; isToday: boolean }) => ({
     width: 12,
     height: 12,
     borderRadius: '50%',
@@ -30,7 +31,7 @@ const StopTime = styled('div')<{
   isPast: boolean;
   isToday: boolean;
   isArrivalOrDeparture: boolean;
-}>(({ isPast, isToday, isArrivalOrDeparture, theme }) => ({
+}>(({ isPast, isToday, isArrivalOrDeparture, theme }: { isPast: boolean; isToday: boolean; isArrivalOrDeparture: boolean; theme: any }) => ({
   width: '15%',
   textAlign: 'left',
   fontWeight: isArrivalOrDeparture ? 'bold' : 'normal',
@@ -48,7 +49,7 @@ const StopName = styled('div')<{
   isPast: boolean;
   isToday: boolean;
   isArrivalOrDeparture: boolean;
-}>(({ isPast, isToday, isArrivalOrDeparture }) => ({
+}>(({ isPast, isToday, isArrivalOrDeparture }: { isPast: boolean; isToday: boolean; isArrivalOrDeparture: boolean; theme: any }) => ({
   width: '65%',
   textAlign: 'left',
   whiteSpace: 'nowrap',
@@ -72,9 +73,10 @@ interface StationStepProps {
   stationData: Station[];
   departureStationId: string | null;
   arrivalStationId: string | null;
+  loading: boolean;
 }
 
-const StationStep: React.FC<StationStepProps> = ({
+const StationStep = ({
   station,
   index,
   filteredStations,
@@ -85,7 +87,8 @@ const StationStep: React.FC<StationStepProps> = ({
   stationData,
   departureStationId,
   arrivalStationId,
-}) => {
+  loading,
+}: StationStepProps) => {
   const progress = getProgress(
     index,
     filteredStations,
@@ -137,7 +140,7 @@ const StationStep: React.FC<StationStepProps> = ({
             isToday={isToday || false}
             isArrivalOrDeparture={isDepartureOrArrival}
           >
-            {stationName}
+            {loading ? <Skeleton className="h-4 w-32" /> : stationName}
           </StopName>
         </>
       ) : (
@@ -195,7 +198,7 @@ const StationStep: React.FC<StationStepProps> = ({
             isToday={isToday || false}
             isArrivalOrDeparture={isDepartureOrArrival}
           >
-            {stationName}
+            {loading ? <Skeleton className="h-4 w-32" /> : stationName}
           </StopName>
         </>
       )}
