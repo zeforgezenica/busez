@@ -133,7 +133,3 @@ Join us this Hacktoberfest and make your mark in open source!
 **⭐ Support the Project**
 
 If you like this project, please star the repository on GitHub to show your support and help others discover it!
-
-```
-
-```
