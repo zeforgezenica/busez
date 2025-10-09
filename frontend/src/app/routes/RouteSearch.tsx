@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Button } from '@nextui-org/react';
-import RepeatIcon from '@mui/icons-material/Repeat';
+import { Repeat } from '@mui/icons-material';
 import { Station } from '../models/station.model';
 import {
   handleFilterClick,
@@ -71,7 +71,7 @@ const RouteSearch: React.FC<RouteSearchProps> = ({
           isDisabled={!selectedDepartureStation || !selectedArrivalStation}
         >
           Obrni
-          <RepeatIcon sx={{ fontSize: 30 }} />
+          <Repeat sx={{ fontSize: 30 }} />
         </Button>
         <StationSelect
           stations={stations}

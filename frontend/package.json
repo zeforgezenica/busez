@@ -14,7 +14,7 @@
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
     "@hookform/resolvers": "^3.9.0",
-    "@mui/icons-material": "^6.1.0",
+    "@mui/icons-material": "^6.5.0",
     "@mui/material": "^6.1.0",
     "@mui/x-date-pickers": "^7.16.0",
     "@nextui-org/react": "^2.3.6",
