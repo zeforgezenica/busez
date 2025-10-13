@@ -11,6 +11,8 @@ import { Route, RouteLap } from "../models/route.model";
 import Station from "../models/station.model";
 import RouteSearch from "../routes/RouteSearch";
 import RouteSearchResult from "../routes/RouteSearchResult";
+import RouteGridView from "./RouteGridView";
+import RouteTableView from './RouteTableView';
 import AgencyService from "../services/agency.service";
 import RouteService from "../services/route.service";
 import StationService from "../services/station.service";
@@ -20,6 +22,8 @@ import { toSortedStationsAlphabetically } from "@/lib/utils";
 const HomePage: React.FC = () => {
   const [routeResults, setRouteResults] = useState<RouteLap[]>([]);
   const [originalRoutes, setOriginalRoutes] = useState<Route[]>([]);
+
+  const [viewMode, setViewMode] = useState<'card' | 'table'>('card');
 
   const [showSearchButton, setShowSearchButton] = useState(false);
   const [showGame, setShowGame] = useState(false);
@@ -212,41 +216,54 @@ const HomePage: React.FC = () => {
         {error && <div className="error">{error}</div>}
 
         {hasSearched && fixedIsToday && (
-          <div className="text-xl font-semibold mb-4">Nadolazeći Polasci</div>
+         <div className="text-xl font-semibold mb-4">Nadolazeći Polasci</div>
         )}
 
+        {hasSearched && routeResults.length > 0 && (
+          <div className="flex justify-center gap-2 mb-4">
+            <Button
+              color={viewMode === 'card' ? 'primary' : 'default'}
+              variant={viewMode === 'card' ? 'solid' : 'bordered'}
+              onClick={() => setViewMode('card')}
+            >
+              Prikaz Kartica
+            </Button>
+            <Button
+              color={viewMode === 'table' ? 'primary' : 'default'}
+              variant={viewMode === 'table' ? 'solid' : 'bordered'}
+              onClick={() => setViewMode('table')}
+            >
+              Tabela Prikaz
+            </Button>
+          </div>
+        )} 
+     
         {hasSearched && (
-          <>
+           <>
             {routeResults.length > 0 ? (
-              routeResults.map((routeLap) => {
-                const departureStationIndex = routeLap.stations.findIndex(
-                  (station) => station.stationId === selectedDepartureStation
-                );
-                const arrivalStationIndex = routeLap.stations.findIndex(
-                  (station) => station.stationId === selectedArrivalStation
-                );
-
-                const departureTime =
-                  routeLap.stations[departureStationIndex]?.time || "";
-                const arrivalTime =
-                  routeLap.stations[arrivalStationIndex]?.time || "";
-                const deltatime = calculateDuration(departureTime, arrivalTime);
-
-                return (
-                  <RouteSearchResult
-                    key={`${routeLap._id}-${departureTime}-${arrivalTime}`}
-                    route={routeLap}
-                    agencyName={agencyNames[routeLap.agencyId]}
+              <>
+                {viewMode === 'card' ? (
+                  <RouteGridView
+                    routes={routeResults}
+                    agencyNames={agencyNames}
                     stations={stations}
-                    departureStationId={selectedDepartureStation}
-                    arrivalStationId={selectedArrivalStation}
-                    departureTime={departureTime}
-                    arrivalTime={arrivalTime}
-                    deltaTime={deltatime}
+                    selectedDepartureStation={selectedDepartureStation}
+                    selectedArrivalStation={selectedArrivalStation}
                     isToday={fixedIsToday}
+                    calculateDuration={calculateDuration}
                   />
-                );
-              })
+              ) : (
+                  <RouteTableView
+                    routes={routeResults}
+                    agencyNames={agencyNames}
+                    stations={stations}
+                    selectedDepartureStation={selectedDepartureStation}
+                    selectedArrivalStation={selectedArrivalStation}
+                    isToday={fixedIsToday}
+                    calculateDuration={calculateDuration}
+                  />
+                )}
+              </>
             ) : (
               <div className="no-results">Nema pronađenih linija.</div>
             )}
@@ -318,44 +335,31 @@ const HomePage: React.FC = () => {
             <hr className="border-t border-gray-300 mb-4 w-full md:w-2/3 lg:w-1/2 mx-auto" />
 
             {isPastDeparturesExpanded && (
-              <>
-                {pastDepartures.map((routeLap) => {
-                  const departureStationIndex = routeLap.stations.findIndex(
-                    (station) => station.stationId === selectedDepartureStation
-                  );
-                  const arrivalStationIndex = routeLap.stations.findIndex(
-                    (station) => station.stationId === selectedArrivalStation
-                  );
-
-                  const departureTime =
-                    routeLap.stations[departureStationIndex]?.time || "";
-                  const arrivalTime =
-                    routeLap.stations[arrivalStationIndex]?.time || "";
-                  const deltatime = calculateDuration(
-                    departureTime,
-                    arrivalTime
-                  );
-
-                  return (
-                    <RouteSearchResult
-                      key={`${routeLap._id}-${departureTime}-${arrivalTime}`}
-                      route={routeLap}
-                      agencyName={agencyNames[routeLap.agencyId]}
-                      stations={stations}
-                      departureStationId={selectedDepartureStation}
-                      arrivalStationId={selectedArrivalStation}
-                      departureTime={departureTime}
-                      arrivalTime={arrivalTime}
-                      deltaTime={deltatime}
-                      isToday={fixedIsToday}
-                    />
-                  );
-                })}
-              </>
+              viewMode === 'card' ? (
+                <RouteGridView
+                  routes={pastDepartures}
+                  agencyNames={agencyNames}
+                  stations={stations}
+                  selectedDepartureStation={selectedDepartureStation}
+                  selectedArrivalStation={selectedArrivalStation}
+                  isToday={fixedIsToday}
+                  calculateDuration={calculateDuration}
+                />
+            ) : (
+                <RouteTableView
+                  routes={pastDepartures}
+                  agencyNames={agencyNames}
+                  stations={stations}
+                  selectedDepartureStation={selectedDepartureStation}
+                  selectedArrivalStation={selectedArrivalStation}
+                  isToday={fixedIsToday}
+                  calculateDuration={calculateDuration}
+                />
+              )
             )}
           </>
         )}
-      </div>
+      </div>             
     </>
   );
 };

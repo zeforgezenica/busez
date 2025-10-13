@@ -31,15 +31,11 @@ const StopTime = styled('div')<{
   isPast: boolean;
   isToday: boolean;
   isArrivalOrDeparture: boolean;
-}>(({ isPast, isToday, isArrivalOrDeparture, theme }: { isPast: boolean; isToday: boolean; isArrivalOrDeparture: boolean; theme: any }) => ({
+}>(({ isArrivalOrDeparture, theme }: { isPast: boolean; isToday: boolean; isArrivalOrDeparture: boolean; theme: any }) => ({
   width: '15%',
   textAlign: 'left',
   fontWeight: isArrivalOrDeparture ? 'bold' : 'normal',
-  color: isArrivalOrDeparture
-    ? 'var(--accent-orange)'
-    : isPast && isToday
-    ? 'var(--primary-blue)'
-    : '#eee',
+  color: isArrivalOrDeparture ? 'var(--accent-orange)' : '#eee',
   [theme.breakpoints.down('sm')]: {
     width: '20%',
   },
@@ -49,17 +45,13 @@ const StopName = styled('div')<{
   isPast: boolean;
   isToday: boolean;
   isArrivalOrDeparture: boolean;
-}>(({ isPast, isToday, isArrivalOrDeparture }: { isPast: boolean; isToday: boolean; isArrivalOrDeparture: boolean; theme: any }) => ({
+}>(({ isArrivalOrDeparture }: { isPast: boolean; isToday: boolean; isArrivalOrDeparture: boolean; theme: any }) => ({
   width: '65%',
   textAlign: 'left',
   whiteSpace: 'nowrap',
   overflow: 'hidden',
   textOverflow: 'ellipsis',
-  color: isArrivalOrDeparture
-    ? 'var(--accent-orange)'
-    : isPast && isToday
-    ? 'var(--primary-blue)'
-    : '#eee',
+  color: isArrivalOrDeparture ? 'var(--accent-orange)' : '#eee',
 }));
 
 interface StationStepProps {
