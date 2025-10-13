@@ -20,10 +20,10 @@ import { useToast } from "@/hooks/use-toast";
 import { FaGithub, FaLinkedin, FaInstagram, FaTwitter } from "react-icons/fa";
 
 const formSchema = z.object({
-  name: z.string().min(1, { message: "Required field" }),
-  subject: z.string().min(1, { message: "Required field" }),
+  name: z.string().min(1, { message: "Obavezno polje" }),
+  subject: z.string().min(1, { message: "Obavezno polje" }),
   contactInfo: z.string().optional(),
-  details: z.string().min(1, { message: "Required field" }),
+  details: z.string().min(1, { message: "Obavezno polje" }),
 });
 
 const Footer: React.FC = () => {
@@ -38,19 +38,19 @@ const Footer: React.FC = () => {
       const emailData: EmailPayload = {
         subject: values.subject,
         text: `
-          Name: ${values.name}
-          Contact: ${values.contactInfo || "N/A"}
-          Details: ${values.details}
+          Ime: ${values.name}
+          Kontakt: ${values.contactInfo || "N/A"}
+          Detalji: ${values.details}
         `,
         senderName: values.name,
         senderContact: values.contactInfo || "N/A",
       };
       await emailService.sendEmail(emailData);
-      toast({ title: "Message sent successfully ✅" });
+      toast({ title: "Vaša poruka je uspješno poslana ✅" });
       form.reset();
     } catch (error) {
       toast({
-        title: "Failed to send message ❌",
+        title: "Došlo je do greške prilikom slanja poruke ❌",
         variant: "destructive",
       });
     }
@@ -74,9 +74,9 @@ const Footer: React.FC = () => {
 
         {/* Center Section */}
         <div className="flex flex-col gap-3">
-          <h3 className="font-semibold text-white mb-2">Contact Us 📞</h3>
+          <h3 className="font-semibold text-white mb-2">Kontaktirajte nas 📞</h3>
           <p>
-            <span className="font-semibold">Email:</span>{" "}
+            <span className="font-semibold">E-pošta:</span>{" "}
             <a
               href="mailto:info@zeforge.ba"
               className="text-blue-400 hover:underline"
@@ -85,7 +85,7 @@ const Footer: React.FC = () => {
             </a>
           </p>
           <p>
-            <span className="font-semibold">Phone:</span>{" "}
+            <span className="font-semibold">Broj telefona:</span>{" "}
             <a
               href="tel:+38732979844"
               className="text-blue-400 hover:underline"
@@ -96,11 +96,11 @@ const Footer: React.FC = () => {
 
           <Dialog>
             <DialogTrigger className="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 mt-2 rounded-lg">
-              Report Issue / Suggest Feature
+              Prijavite problem / predložite funkcionalnost
             </DialogTrigger>
             <DialogContent>
               <DialogHeader>
-                <DialogTitle>Report Issue / Suggest Feature</DialogTitle>
+                <DialogTitle>Prijavite problem / predložite funkcionalnost</DialogTitle>
               </DialogHeader>
               <Form {...form}>
                 <form
@@ -112,9 +112,9 @@ const Footer: React.FC = () => {
                     name="name"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Name *</FormLabel>
+                        <FormLabel>Ime *</FormLabel>
                         <FormControl>
-                          <Input placeholder="Enter your name" {...field} />
+                          <Input placeholder="Unesite vaše ime" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -124,8 +124,8 @@ const Footer: React.FC = () => {
                     name="contactInfo"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Contact (Optional)</FormLabel>
-                        <Input placeholder="Email or phone" {...field} />
+                        <FormLabel>Kontakt (Opcionalno)</FormLabel>
+                        <Input placeholder="E-pošta ili telefon" {...field} />
                       </FormItem>
                     )}
                   />
@@ -134,9 +134,9 @@ const Footer: React.FC = () => {
                     name="subject"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Subject *</FormLabel>
+                        <FormLabel>Naslov *</FormLabel>
                         <FormControl>
-                          <Input placeholder="Enter subject" {...field} />
+                          <Input placeholder="Unesite naslov" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -147,10 +147,10 @@ const Footer: React.FC = () => {
                     name="details"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Details *</FormLabel>
+                        <FormLabel>Detalji *</FormLabel>
                         <FormControl>
                           <Textarea
-                            placeholder="Describe the issue or suggestion"
+                            placeholder="Opišite problem ili prijedlog"
                             {...field}
                           />
                         </FormControl>
@@ -160,10 +160,10 @@ const Footer: React.FC = () => {
                   />
                   <div className="flex justify-end gap-2">
                     <DialogClose asChild>
-                      <Button variant="destructive">Close</Button>
+                      <Button variant="destructive">Zatvorite</Button>
                     </DialogClose>
                     <Button type="submit" className="bg-blue-600">
-                      Submit
+                      Pošaljite
                     </Button>
                   </div>
                 </form>
@@ -174,7 +174,7 @@ const Footer: React.FC = () => {
 
         {/* Right Section */}
         <div>
-          <h3 className="font-semibold text-white mb-3">Follow Us 🌐</h3>
+          <h3 className="font-semibold text-white mb-3">Pratite nas 🌐</h3>
           <div className="flex gap-5 text-2xl">
             <a
               href="https://github.com/zeforgezenica"
