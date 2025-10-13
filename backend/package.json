@@ -2,7 +2,8 @@
   "name": "backend",
   "scripts": {
     "dev": "nodemon -r dotenv/config server.js",
-    "test": "jest"
+    "test": "jest",
+    "lint": "eslint . --ext .js"
   },
   "dependencies": {
     "ajv": "^8.17.1",
@@ -11,11 +12,18 @@
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
+    "express-rate-limit": "^7.4.1",
+    "helmet": "^8.0.0",
+    "joi": "^17.13.3",
     "nodemailer": "^6.9.15",
     "nodemon": "^3.1.0",
-    "uuid": "^9.0.1"
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1",
+    "uuid": "^9.0.1",
+    "winston": "^3.17.0"
   },
   "devDependencies": {
+    "eslint": "^8.57.0",
     "jest": "^29.7.0",
     "supertest": "^7.0.0"
   }

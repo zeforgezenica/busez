@@ -1,0 +1,14 @@
+# Docker ignore file
+node_modules
+npm-debug.log
+.env
+.env.local
+.env.*.local
+.git
+.gitignore
+README.md
+.next
+.turbo
+coverage
+*.log
+.DS_Store
