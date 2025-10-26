@@ -1,15 +1,47 @@
-# Zenica Bus Tracking Application
+# 🚌 Zenica Bus Tracking Application
 
-This application is designed for tracking buses in the city of Zenica, Bosnia and Herzegovina.
+![Hacktoberfest](https://img.shields.io/badge/Hacktoberfest-2025-blueviolet?style=for-the-badge)
+![Open Source](https://img.shields.io/badge/Open--Source-💻-success?style=for-the-badge)
+![Contributions Welcome](https://img.shields.io/badge/Contributions-Welcome-brightgreen?style=for-the-badge)
+![Made with Love](https://img.shields.io/badge/Made%20with-Love-orange?style=for-the-badge)
 
-**Deployment**: [Zenica Bus Tracking](https://kadjebus.zeforge.ba)
+---
 
-## Project Design
+## 🌐 Live Application
 
-- **Figma Idea #1**: [View Project on Figma](https://www.figma.com/design/Evsz1Ttu66byoB9j1dneq6/Untitled?node-id=2-2&t=tdBFS2mRirxmebKC-1)
-- **Figma Idea #2**: [View Project on Figma](https://www.figma.com/design/5fO5ky3p3nOG1QhNoGyefi/Kad-je-bus?node-id=0-1&t=CgSKo3MISOQGqgrU-1)
+🚍 **Visit Here:** [Zenica Bus Tracking](https://kadjebus.zeforge.ba)
 
-**Join our Community**: [ZeForge Discord server](https://discord.gg/x2enz95pDF)
+Stay informed about **bus schedules and routes** in **Zenica, Bosnia and Herzegovina** with this open-source project.  
+The app provides an easy and modern way to check public transport information across the city.
+
+---
+
+## 💡 About the Project
+
+**Zenica Bus Tracking Application** allows users to:
+
+- View live or scheduled bus routes in Zenica.
+- Access clean and responsive UI built for both mobile and desktop.
+- Experience real-time updates and accurate data visualization.
+
+The project is maintained by **ZeForge Zenica Community** and welcomes open-source contributors!
+
+---
+
+## 🎨 Design Inspiration
+
+Take a look at our design mockups on **Figma**:
+
+- [🎨 Figma Idea #1](https://www.figma.com/design/Evsz1Ttu66byoB9j1dneq6/Untitled?node-id=2-2&t=tdBFS2mRirxmebKC-1)
+- [🎨 Figma Idea #2](https://www.figma.com/design/5fO5ky3p3nOG1QhNoGyefi/Kad-je-bus?node-id=0-1&t=CgSKo3MISOQGqgrU-1)
+
+---
+
+## 🤝 Join the Community
+
+Connect with other developers and contributors:
+
+💬 [Join ZeForge Discord Server](https://discord.gg/x2enz95pDF)
 
 ---
 
@@ -57,11 +89,11 @@ This application is designed for tracking buses in the city of Zenica, Bosnia an
 
 ---
 
-## Getting Started
+## 🛠️ Getting Started
 
 ### Prerequisites
 
-Make sure you have the following installed:
+Make sure you have installed:
 
 - **Node.js**: v20.16.0 or higher - [Download Node.js](https://nodejs.org/en/download/package-manager)
 - **pnpm**: v9.7.1 or higher - [Install pnpm](https://pnpm.io/installation)
@@ -106,6 +138,8 @@ cp ./backend/.env.example ./backend/.env
 ```
 
 Edit `backend/.env` and configure your SMTP settings.
+
+Note: Update the environment variables accordingly (API keys, DB credentials, etc.)
 
 > [!NOTE]  
 > If using Gmail, you may need to enable "Less secure app access" or use an App Password to authenticate.

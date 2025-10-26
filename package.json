@@ -21,6 +21,7 @@
   },
   "packageManager": "pnpm@9.7.1",
   "dependencies": {
-    "busez": "file:"
+    "busez": "file:",
+    "react-icons": "^5.5.0"
   }
 }

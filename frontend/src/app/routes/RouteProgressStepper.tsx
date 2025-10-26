@@ -20,12 +20,15 @@ const RouteProgressStepper: React.FC<RouteProgressStepperProps> = ({
   isToday,
 }) => {
   const [stationData, setStationData] = React.useState<Station[]>([]);
+  const [loading, setLoading] = React.useState<boolean>(true);
 
   React.useEffect(() => {
     const fetchStations = async () => {
+      setLoading(true);
       const ids = stations.map((station) => station.stationId);
       const fetchedStations = await stationService.getStationsByIds(ids);
       setStationData(fetchedStations);
+      setLoading(false);
     };
 
     fetchStations();
@@ -58,6 +61,7 @@ const RouteProgressStepper: React.FC<RouteProgressStepperProps> = ({
           stationData={stationData}
           departureStationId={departureStationId}
           arrivalStationId={arrivalStationId}
+          loading={loading}
         />
       ))}
     </div>
