@@ -85,8 +85,8 @@ const RouteSearchResult: React.FC<RouteSearchResultProps> = ({
       : 'inherit';
 
   return (
-    <Card className='p-6 mb-4 w-full md:w-2/3 lg:w-1/2 mx-auto'>
-      <div className='flex flex-col gap-3'>
+    <Card className='p-6 w-full shadow-md hover:shadow-lg transition-shadow duration-200'>
+      <div className='flex flex-col gap-3 h-full'>
         <h2 className='text-2xl mb-2 font-semibold'>{route.name}</h2>
         <Button
           variant='link'
@@ -109,7 +109,7 @@ const RouteSearchResult: React.FC<RouteSearchResultProps> = ({
         {isToday && eta && (
           <p style={{ color: etaColor }}>Preostalo vrijeme: {eta}</p>
         )}
-        <Button onClick={onOpen}>Pogledaj detaljnije</Button>
+        <Button onClick={onOpen} className="mt-auto">Pogledaj detaljnije</Button>
         <RouteDetailsModal
           isOpen={isOpen}
           onClose={onClose}
