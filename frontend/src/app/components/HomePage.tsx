@@ -11,15 +11,20 @@ import { Route, RouteLap } from "../models/route.model";
 import Station from "../models/station.model";
 import RouteSearch from "../routes/RouteSearch";
 import RouteSearchResult from "../routes/RouteSearchResult";
+import RouteGridView from "./RouteGridView";
+import RouteTableView from './RouteTableView';
 import AgencyService from "../services/agency.service";
 import RouteService from "../services/route.service";
 import StationService from "../services/station.service";
 import FilterService from "../handlers/route.filter.handler";
 import { toSortedStationsAlphabetically } from "@/lib/utils";
+import { useRouter, useSearchParams } from "next/navigation";
 
 const HomePage: React.FC = () => {
   const [routeResults, setRouteResults] = useState<RouteLap[]>([]);
   const [originalRoutes, setOriginalRoutes] = useState<Route[]>([]);
+
+  const [viewMode, setViewMode] = useState<'card' | 'table'>('card');
 
   const [showSearchButton, setShowSearchButton] = useState(false);
   const [showGame, setShowGame] = useState(false);
@@ -47,14 +52,15 @@ const HomePage: React.FC = () => {
   const [tempArrivalStation, setTempArrivalStation] = useState<string | null>(
     null
   );
-  const [tempDepartureDate, setTempDepartureDate] = useState<number | null>(
-    null
-  );
+
   const [fixedIsToday, setFixedIsToday] = useState<boolean>(false);
   const [pastDepartures, setPastDepartures] = useState<RouteLap[]>([]);
 
   const [isPastDeparturesExpanded, setIsPastDeparturesExpanded] =
     useState(false);
+
+  const router = useRouter();
+  const searchParams = useSearchParams();
 
   const togglePastDepartures = () => {
     setIsPastDeparturesExpanded((prevState) => !prevState);
@@ -62,18 +68,9 @@ const HomePage: React.FC = () => {
 
   const handleDateChange = (date: dayjs.Dayjs | null) => {
     setDateOfDeparture(date);
-
-    if (date) {
-      const dayIndex = (date.day() + 6) % 7;
-
-      setTempDepartureDate(dayIndex);
-    }
   };
 
   useEffect(() => {
-    const today = (new Date().getDay() + 6) % 7;
-    setTempDepartureDate(today);
-
     const fetchRoutes = async () => {
       try {
         const fetchedRoutes = await RouteService.getRoutes();
@@ -129,37 +126,69 @@ const HomePage: React.FC = () => {
   const isToday = (date: dayjs.Dayjs | null): boolean => {
     return date ? date.isSame(dayjs(), "day") : false;
   };
+  
+  useEffect(() => {
+    const from = searchParams.get("from");
+    const to = searchParams.get("to");
+    const date = searchParams.get("date");
+
+    if (from && to && date && stations.length > 0 && originalRoutes.length > 0) {
+      const departureDate = dayjs(date);
+
+      setTempDepartureStation(from);
+      setTempArrivalStation(to);
+      setDateOfDeparture(departureDate);
+
+      const isTodayDeparture = isToday(departureDate);
+      const departDayIndex = (departureDate.day() + 6) % 7;
+
+      const { sortedResults, sortedPastDepartures } =
+        FilterService.getFilterResults(
+          originalRoutes,
+          from,
+          to,
+          departDayIndex,
+          isTodayDeparture
+        );
+
+      setSelectedDepartureStation(from);
+      setSelectedArrivalStation(to);
+      setRouteResults(sortedResults);
+      setPastDepartures(sortedPastDepartures);
+      setFixedIsToday(isTodayDeparture);
+      setHasSearched(true);
+      setShowSearchButton(true);
+      setError(null);
+    } else {
+      setRouteResults([]);
+      setPastDepartures([]);
+      setHasSearched(false);
+      setShowSearchButton(false);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [searchParams, stations, originalRoutes]);
 
   const handleFilterRoutes = () => {
-    const isTodayDeparture = isToday(dateOfDeparture);
-    setFixedIsToday(isTodayDeparture);
+    if (!tempDepartureStation || !tempArrivalStation) {
+      setError("Molimo odaberite i polaznu i dolaznu stanicu.");
+      return;
+    }
 
-    setHasSearched(true);
-    setShowSearchButton(true);
-
-    if (!tempDepartureDate) {
-      setTempDepartureDate(new Date().getDay());
+    if (tempDepartureStation === tempArrivalStation) {
+      setError("Molimo odaberite različite stanice polaska i dolaska.");
+      return;
     }
 
     setError(null);
 
-    const [srcStation, destStation, departDate] = [tempDepartureStation, tempArrivalStation, tempDepartureDate];
-    const validationPass = srcStation !== null && destStation !== null && departDate !== null;
-    if(!validationPass) {
-      setSelectedDepartureStation(null);
-      setSelectedArrivalStation(null);
-      setRouteResults([]);
-      setPastDepartures([]);
-      // setError(null); consider giving error message if validation fails?
-      setHasSearched(false);
-      return;
-    }
-    const {sortedResults, sortedPastDepartures} = FilterService.getFilterResults(originalRoutes, srcStation, destStation, departDate, isTodayDeparture);
+    const params = new URLSearchParams({
+      from: tempDepartureStation,
+      to: tempArrivalStation,
+      date:
+        dateOfDeparture?.format("YYYY-MM-DD") || dayjs().format("YYYY-MM-DD"),
+    });
+    router.push(`/?${params.toString()}`, { scroll: false });
 
-    setSelectedDepartureStation(tempDepartureStation);
-    setSelectedArrivalStation(tempArrivalStation);
-    setRouteResults(sortedResults);
-    setPastDepartures(sortedPastDepartures);
     addStationsToHistory(tempDepartureStation, tempArrivalStation);
   };
 
@@ -212,41 +241,54 @@ const HomePage: React.FC = () => {
         {error && <div className="error">{error}</div>}
 
         {hasSearched && fixedIsToday && (
-          <div className="text-xl font-semibold mb-4">Nadolazeći Polasci</div>
+         <div className="text-xl font-semibold mb-4">Nadolazeći Polasci</div>
         )}
 
+        {hasSearched && routeResults.length > 0 && (
+          <div className="flex justify-center gap-2 mb-4">
+            <Button
+              color={viewMode === 'card' ? 'primary' : 'default'}
+              variant={viewMode === 'card' ? 'solid' : 'bordered'}
+              onClick={() => setViewMode('card')}
+            >
+              Prikaz Kartica
+            </Button>
+            <Button
+              color={viewMode === 'table' ? 'primary' : 'default'}
+              variant={viewMode === 'table' ? 'solid' : 'bordered'}
+              onClick={() => setViewMode('table')}
+            >
+              Tabela Prikaz
+            </Button>
+          </div>
+        )} 
+     
         {hasSearched && (
-          <>
+           <>
             {routeResults.length > 0 ? (
-              routeResults.map((routeLap) => {
-                const departureStationIndex = routeLap.stations.findIndex(
-                  (station) => station.stationId === selectedDepartureStation
-                );
-                const arrivalStationIndex = routeLap.stations.findIndex(
-                  (station) => station.stationId === selectedArrivalStation
-                );
-
-                const departureTime =
-                  routeLap.stations[departureStationIndex]?.time || "";
-                const arrivalTime =
-                  routeLap.stations[arrivalStationIndex]?.time || "";
-                const deltatime = calculateDuration(departureTime, arrivalTime);
-
-                return (
-                  <RouteSearchResult
-                    key={`${routeLap._id}-${departureTime}-${arrivalTime}`}
-                    route={routeLap}
-                    agencyName={agencyNames[routeLap.agencyId]}
+              <>
+                {viewMode === 'card' ? (
+                  <RouteGridView
+                    routes={routeResults}
+                    agencyNames={agencyNames}
                     stations={stations}
-                    departureStationId={selectedDepartureStation}
-                    arrivalStationId={selectedArrivalStation}
-                    departureTime={departureTime}
-                    arrivalTime={arrivalTime}
-                    deltaTime={deltatime}
+                    selectedDepartureStation={selectedDepartureStation}
+                    selectedArrivalStation={selectedArrivalStation}
                     isToday={fixedIsToday}
+                    calculateDuration={calculateDuration}
                   />
-                );
-              })
+              ) : (
+                  <RouteTableView
+                    routes={routeResults}
+                    agencyNames={agencyNames}
+                    stations={stations}
+                    selectedDepartureStation={selectedDepartureStation}
+                    selectedArrivalStation={selectedArrivalStation}
+                    isToday={fixedIsToday}
+                    calculateDuration={calculateDuration}
+                  />
+                )}
+              </>
             ) : (
               <div className="no-results">Nema pronađenih linija.</div>
             )}
@@ -318,44 +360,31 @@ const HomePage: React.FC = () => {
             <hr className="border-t border-gray-300 mb-4 w-full md:w-2/3 lg:w-1/2 mx-auto" />
 
             {isPastDeparturesExpanded && (
-              <>
-                {pastDepartures.map((routeLap) => {
-                  const departureStationIndex = routeLap.stations.findIndex(
-                    (station) => station.stationId === selectedDepartureStation
-                  );
-                  const arrivalStationIndex = routeLap.stations.findIndex(
-                    (station) => station.stationId === selectedArrivalStation
-                  );
-
-                  const departureTime =
-                    routeLap.stations[departureStationIndex]?.time || "";
-                  const arrivalTime =
-                    routeLap.stations[arrivalStationIndex]?.time || "";
-                  const deltatime = calculateDuration(
-                    departureTime,
-                    arrivalTime
-                  );
-
-                  return (
-                    <RouteSearchResult
-                      key={`${routeLap._id}-${departureTime}-${arrivalTime}`}
-                      route={routeLap}
-                      agencyName={agencyNames[routeLap.agencyId]}
-                      stations={stations}
-                      departureStationId={selectedDepartureStation}
-                      arrivalStationId={selectedArrivalStation}
-                      departureTime={departureTime}
-                      arrivalTime={arrivalTime}
-                      deltaTime={deltatime}
-                      isToday={fixedIsToday}
-                    />
-                  );
-                })}
-              </>
+              viewMode === 'card' ? (
+                <RouteGridView
+                  routes={pastDepartures}
+                  agencyNames={agencyNames}
+                  stations={stations}
+                  selectedDepartureStation={selectedDepartureStation}
+                  selectedArrivalStation={selectedArrivalStation}
+                  isToday={fixedIsToday}
+                  calculateDuration={calculateDuration}
+                />
+            ) : (
+                <RouteTableView
+                  routes={pastDepartures}
+                  agencyNames={agencyNames}
+                  stations={stations}
+                  selectedDepartureStation={selectedDepartureStation}
+                  selectedArrivalStation={selectedArrivalStation}
+                  isToday={fixedIsToday}
+                  calculateDuration={calculateDuration}
+                />
+              )
             )}
           </>
         )}
-      </div>
+      </div>             
     </>
   );
 };
