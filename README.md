@@ -168,6 +168,12 @@ To enable email functionality (optional):
 - When `ENABLE_EMAIL=false`: POST `/sendEmail` returns HTTP 503 with message "Email functionality is currently disabled"
 - When `ENABLE_EMAIL=true`: POST `/sendEmail` processes email requests normally
 
+**API Documentation Configuration**:
+- **Default**: Swagger API documentation is **enabled** in all environments (development, production, test)
+- **Disable in production**: Set `ENABLE_API_DOCS=false` in your production `.env` file to disable Swagger docs
+- **Access**: When enabled, documentation is available at `/api-docs` endpoint
+- **Features**: Interactive API testing, request/response examples, schema documentation
+
 5. **Run the Application**:
 
 Run both frontend and backend together:
@@ -242,9 +248,11 @@ cd frontend && pnpm run test
 
 ## 📚 API Documentation
 
-Once the backend is running, access the interactive API documentation:
+The API includes comprehensive Swagger/OpenAPI documentation that is **enabled by default** in all environments.
 
 **Swagger UI**: [http://localhost:3001/api-docs](http://localhost:3001/api-docs)
+
+> **Note**: To disable API documentation in production, set `ENABLE_API_DOCS=false` in your environment configuration.
 
 ### API Endpoints
 

@@ -48,6 +48,7 @@ const envSchema = Joi.object({
   LOG_LEVEL: Joi.string()
     .valid("error", "warn", "info", "http", "verbose", "debug", "silly")
     .default("info"),
+  ENABLE_API_DOCS: Joi.string().valid("true", "false").default("true").description("Enable Swagger API documentation"),
 })
   .unknown(true)
   .required();
