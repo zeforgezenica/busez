@@ -1,8 +1,8 @@
 'use client';
 import React from 'react';
 import { Button } from '@nextui-org/react';
-import { RouteLap } from '../app/models/route.model';
-import Station from '../app/models/station.model';
+import { RouteLap } from '../models/route.model';
+import Station from '../models/station.model';
 import { useDisclosure } from '@nextui-org/react';
 import RouteDetailsModal from './RouteDetailsModal';
 import { useRouter } from 'next/navigation';
@@ -104,10 +104,10 @@ const RouteTableView: React.FC<RouteTableViewProps> = ({
         <tbody className="bg-white">
           {routes.map((routeLap, index) => {
             const departureStationIndex = routeLap.stations.findIndex(
-              (station) => station.stationId === selectedDepartureStation
+              (station: { stationId?: string }) => station.stationId === selectedDepartureStation
             );
             const arrivalStationIndex = routeLap.stations.findIndex(
-              (station) => station.stationId === selectedArrivalStation
+              (station: { stationId?: string }) => station.stationId === selectedArrivalStation
             );
 
             const departureTime = routeLap.stations[departureStationIndex]?.time || "";
