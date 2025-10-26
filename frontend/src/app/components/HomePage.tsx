@@ -18,6 +18,7 @@ import RouteService from "../services/route.service";
 import StationService from "../services/station.service";
 import FilterService from "../handlers/route.filter.handler";
 import { toSortedStationsAlphabetically } from "@/lib/utils";
+import { useRouter, useSearchParams } from "next/navigation";
 
 const HomePage: React.FC = () => {
   const [routeResults, setRouteResults] = useState<RouteLap[]>([]);
@@ -51,14 +52,15 @@ const HomePage: React.FC = () => {
   const [tempArrivalStation, setTempArrivalStation] = useState<string | null>(
     null
   );
-  const [tempDepartureDate, setTempDepartureDate] = useState<number | null>(
-    null
-  );
+
   const [fixedIsToday, setFixedIsToday] = useState<boolean>(false);
   const [pastDepartures, setPastDepartures] = useState<RouteLap[]>([]);
 
   const [isPastDeparturesExpanded, setIsPastDeparturesExpanded] =
     useState(false);
+
+  const router = useRouter();
+  const searchParams = useSearchParams();
 
   const togglePastDepartures = () => {
     setIsPastDeparturesExpanded((prevState) => !prevState);
@@ -66,18 +68,9 @@ const HomePage: React.FC = () => {
 
   const handleDateChange = (date: dayjs.Dayjs | null) => {
     setDateOfDeparture(date);
-
-    if (date) {
-      const dayIndex = (date.day() + 6) % 7;
-
-      setTempDepartureDate(dayIndex);
-    }
   };
 
   useEffect(() => {
-    const today = (new Date().getDay() + 6) % 7;
-    setTempDepartureDate(today);
-
     const fetchRoutes = async () => {
       try {
         const fetchedRoutes = await RouteService.getRoutes();
@@ -133,37 +126,69 @@ const HomePage: React.FC = () => {
   const isToday = (date: dayjs.Dayjs | null): boolean => {
     return date ? date.isSame(dayjs(), "day") : false;
   };
+  
+  useEffect(() => {
+    const from = searchParams.get("from");
+    const to = searchParams.get("to");
+    const date = searchParams.get("date");
+
+    if (from && to && date && stations.length > 0 && originalRoutes.length > 0) {
+      const departureDate = dayjs(date);
+
+      setTempDepartureStation(from);
+      setTempArrivalStation(to);
+      setDateOfDeparture(departureDate);
+
+      const isTodayDeparture = isToday(departureDate);
+      const departDayIndex = (departureDate.day() + 6) % 7;
+
+      const { sortedResults, sortedPastDepartures } =
+        FilterService.getFilterResults(
+          originalRoutes,
+          from,
+          to,
+          departDayIndex,
+          isTodayDeparture
+        );
+
+      setSelectedDepartureStation(from);
+      setSelectedArrivalStation(to);
+      setRouteResults(sortedResults);
+      setPastDepartures(sortedPastDepartures);
+      setFixedIsToday(isTodayDeparture);
+      setHasSearched(true);
+      setShowSearchButton(true);
+      setError(null);
+    } else {
+      setRouteResults([]);
+      setPastDepartures([]);
+      setHasSearched(false);
+      setShowSearchButton(false);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [searchParams, stations, originalRoutes]);
 
   const handleFilterRoutes = () => {
-    const isTodayDeparture = isToday(dateOfDeparture);
-    setFixedIsToday(isTodayDeparture);
+    if (!tempDepartureStation || !tempArrivalStation) {
+      setError("Molimo odaberite i polaznu i dolaznu stanicu.");
+      return;
+    }
 
-    setHasSearched(true);
-    setShowSearchButton(true);
-
-    if (!tempDepartureDate) {
-      setTempDepartureDate(new Date().getDay());
+    if (tempDepartureStation === tempArrivalStation) {
+      setError("Molimo odaberite različite stanice polaska i dolaska.");
+      return;
     }
 
     setError(null);
 
-    const [srcStation, destStation, departDate] = [tempDepartureStation, tempArrivalStation, tempDepartureDate];
-    const validationPass = srcStation !== null && destStation !== null && departDate !== null;
-    if(!validationPass) {
-      setSelectedDepartureStation(null);
-      setSelectedArrivalStation(null);
-      setRouteResults([]);
-      setPastDepartures([]);
-      // setError(null); consider giving error message if validation fails?
-      setHasSearched(false);
-      return;
-    }
-    const {sortedResults, sortedPastDepartures} = FilterService.getFilterResults(originalRoutes, srcStation, destStation, departDate, isTodayDeparture);
+    const params = new URLSearchParams({
+      from: tempDepartureStation,
+      to: tempArrivalStation,
+      date:
+        dateOfDeparture?.format("YYYY-MM-DD") || dayjs().format("YYYY-MM-DD"),
+    });
+    router.push(`/?${params.toString()}`, { scroll: false });
 
-    setSelectedDepartureStation(tempDepartureStation);
-    setSelectedArrivalStation(tempArrivalStation);
-    setRouteResults(sortedResults);
-    setPastDepartures(sortedPastDepartures);
     addStationsToHistory(tempDepartureStation, tempArrivalStation);
   };
 
