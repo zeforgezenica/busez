@@ -18,9 +18,7 @@ import RouteService from "../services/route.service";
 import StationService from "../services/station.service";
 import FilterService from "../handlers/route.filter.handler";
 import { toSortedStationsAlphabetically } from "@/lib/utils";
-// START: Import necessary hooks for routing
 import { useRouter, useSearchParams } from "next/navigation";
-// END: Import necessary hooks for routing
 
 const HomePage: React.FC = () => {
   const [routeResults, setRouteResults] = useState<RouteLap[]>([]);
@@ -61,10 +59,8 @@ const HomePage: React.FC = () => {
   const [isPastDeparturesExpanded, setIsPastDeparturesExpanded] =
     useState(false);
 
-  // START: Initialize router and searchParams
   const router = useRouter();
   const searchParams = useSearchParams();
-  // END: Initialize router and searchParams
 
   const togglePastDepartures = () => {
     setIsPastDeparturesExpanded((prevState) => !prevState);
@@ -131,7 +127,6 @@ const HomePage: React.FC = () => {
     return date ? date.isSame(dayjs(), "day") : false;
   };
   
-  // START: New useEffect to sync state with URL
   useEffect(() => {
     const from = searchParams.get("from");
     const to = searchParams.get("to");
@@ -172,9 +167,7 @@ const HomePage: React.FC = () => {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchParams, stations, originalRoutes]);
-  // END: New useEffect
 
-  // START: Modified handleFilterRoutes to update URL
   const handleFilterRoutes = () => {
     if (!tempDepartureStation || !tempArrivalStation) {
       setError("Molimo odaberite i polaznu i dolaznu stanicu.");
@@ -198,7 +191,6 @@ const HomePage: React.FC = () => {
 
     addStationsToHistory(tempDepartureStation, tempArrivalStation);
   };
-  // END: Modified handleFilterRoutes
 
   const handleSearchButtonClick = () => {
     setShowGame(!showGame);
