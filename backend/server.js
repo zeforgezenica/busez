@@ -21,6 +21,15 @@ app.use("/stations", stationRoutes);
 app.use("/routes", routeRoutes);
 app.use("/sendEmail", emailRoutes);
 
+app.use((req,res,next)=>{
+  res.status(404).send({message:'Route Not Found'});
+});
+
+app.use((err,req,res,next)=>{
+  console.error(err.stack);
+  res.status(500).send({message:'internal server error'});
+});
+
 const port = 3001;
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
