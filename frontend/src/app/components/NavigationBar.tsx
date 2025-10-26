@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Bus } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -11,6 +12,7 @@ const NavigationBar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
+  const searchParams = useSearchParams();
 
   const navigationItems = [
     { name: "Home", href: "/" },
@@ -83,11 +85,16 @@ const NavigationBar: React.FC = () => {
 
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center space-x-4">
+            {/* Auth links now use unified /auth route with query mode=login|register */}
             <Button variant="ghost" asChild>
-              <Link href="/login">Login</Link>
+              <Link href={'/auth?mode=login'} className={pathname?.startsWith('/auth') && searchParams?.get('mode') === 'login' ? 'text-primary' : ''}>
+                Login
+              </Link>
             </Button>
             <Button asChild>
-              <Link href="/signup">Sign Up</Link>
+              <Link href={'/auth?mode=register'} className={pathname?.startsWith('/auth') && searchParams?.get('mode') === 'register' ? 'text-primary' : ''}>
+                Sign Up
+              </Link>
             </Button>
           </div>
 
@@ -165,12 +172,12 @@ const NavigationBar: React.FC = () => {
               >
                 <div className="flex flex-col space-y-2 px-3">
                   <Button variant="outline" className="w-full" asChild>
-                    <Link href="/login" onClick={closeMenu}>
+                    <Link href={'/auth?mode=login'} onClick={closeMenu}>
                       Login
                     </Link>
                   </Button>
                   <Button className="w-full" asChild>
-                    <Link href="/signup" onClick={closeMenu}>
+                    <Link href={'/auth?mode=register'} onClick={closeMenu}>
                       Sign Up
                     </Link>
                   </Button>

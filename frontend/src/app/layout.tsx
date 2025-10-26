@@ -1,3 +1,4 @@
+import React from "react";
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
@@ -20,7 +21,9 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <body className="flex flex-col min-h-screen">
         <Providers>
-          <NavigationBar />
+          <React.Suspense fallback={null}>
+            <NavigationBar />
+          </React.Suspense>
           <main className="flex-1 pt-16">{children}</main>
           <Toaster />
         </Providers>
