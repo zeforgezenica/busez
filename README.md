@@ -134,15 +134,39 @@ Edit `frontend/.env.local` and configure your environment variables.
 Setup the `.env` file by copying the `.env.example`:
 
 ```bash
+# Copy the example environment file
 cp ./backend/.env.example ./backend/.env
 ```
 
-Edit `backend/.env` and configure your SMTP settings.
+**Important**: Email functionality is **disabled by default** to allow developers to run the backend without configuring SMTP settings.
 
-Note: Update the environment variables accordingly (API keys, DB credentials, etc.)
+To run the backend without email functionality (default):
+- The `.env` file has `ENABLE_EMAIL=false` by default
+- No SMTP configuration is required
+- The `/sendEmail` endpoint will return a 503 error when called
+
+To enable email functionality (optional):
+1. Set `ENABLE_EMAIL=true` in your `.env` file
+2. Configure all SMTP settings in the `.env` file:
+   - `SMTP_HOST` (e.g., smtp.gmail.com)
+   - `SMTP_PORT` (e.g., 587 for TLS or 465 for SSL)
+   - `SMTP_USER` (your email address)
+   - `SMTP_PASS` (your email password or app password)
+   - `SENDER_EMAIL` (sender email address)
+   - `DEFAULT_RECEIVER_EMAIL` (recipient email address)
+   - `DEFAULT_RECEIVER_NAME` (recipient name)
 
 > [!NOTE]  
 > If using Gmail, you may need to enable "Less secure app access" or use an App Password to authenticate.
+
+**For Testing Email Functionality**:
+- Email tests are automatically disabled when `ENABLE_EMAIL=false`
+- To run email tests, set `ENABLE_EMAIL=true` and configure all SMTP settings
+- This prevents test failures when SMTP credentials are not available
+
+**Email API Endpoint Behavior**:
+- When `ENABLE_EMAIL=false`: POST `/sendEmail` returns HTTP 503 with message "Email functionality is currently disabled"
+- When `ENABLE_EMAIL=true`: POST `/sendEmail` processes email requests normally
 
 5. **Run the Application**:
 
