@@ -45,91 +45,323 @@ Connect with other developers and contributors:
 
 ---
 
+## 🚀 Features
+
+- 🚌 Real-time bus tracking
+- 📍 Station and route management
+- 🏢 Agency information
+- 📧 Contact via email
+- 🗺️ Interactive maps with Leaflet
+- 📱 Responsive design
+- 🔒 Secure API with rate limiting
+- 📝 API documentation with Swagger
+- 🐳 Docker support
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+- **Framework**: Next.js 14 (React 18)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS, Material-UI, NextUI
+- **Maps**: Leaflet, React Leaflet
+- **Forms**: React Hook Form + Zod validation
+- **HTTP Client**: Axios
+- **Date Handling**: Day.js, date-fns
+
+### Backend
+- **Runtime**: Node.js 20+
+- **Framework**: Express.js
+- **Language**: JavaScript
+- **Validation**: JSON Schema (AJV) + Joi for env
+- **Logging**: Winston
+- **Security**: Helmet, Rate Limiting
+- **Email**: Nodemailer
+- **API Docs**: Swagger/OpenAPI
+
+### DevOps
+- **Monorepo**: Turborepo + pnpm workspaces
+- **Testing**: Jest + Supertest
+- **Linting**: ESLint + Prettier
+- **CI/CD**: GitHub Actions
+- **Containerization**: Docker + Docker Compose
+
+---
+
 ## 🛠️ Getting Started
 
 ### Prerequisites
 
 Make sure you have installed:
 
-- [Node.js](https://nodejs.org/en/download/)
-- [pnpm](https://pnpm.io/installation)
+- **Node.js**: v20.16.0 or higher - [Download Node.js](https://nodejs.org/en/download/package-manager)
+- **pnpm**: v9.7.1 or higher - [Install pnpm](https://pnpm.io/installation)
 
----
+Alternatively, use Docker:
+- **Docker**: [Install Docker](https://docs.docker.com/get-docker/)
+- **Docker Compose**: [Install Docker Compose](https://docs.docker.com/compose/install/)
 
-### 🚀 Setup Instructions
+### Development Setup
 
-1. **Clone the Repository**
+#### Option 1: Local Development (Recommended)
+
+1. **Clone the repository**:
 
 ```bash
 git clone https://github.com/zeforgezenica/busez.git
 cd busez
 ```
 
-**Install Dependencies**
+2. **Install dependencies**:
 
 ```bash
 pnpm install
 ```
 
-**Setup Environment Files**
+3. **Frontend Setup**:
 
-For frontend:
+Setup the `.env.local` file by copying the `.env.example`:
 
 ```bash
 cp ./frontend/.env.example ./frontend/.env.local
 ```
 
-For backend:
+Edit `frontend/.env.local` and configure your environment variables.
+
+4. **Backend Setup**:
+
+Setup the `.env` file by copying the `.env.example`:
 
 ```bash
+# Copy the example environment file
 cp ./backend/.env.example ./backend/.env
 ```
 
-Note: Update the environment variables accordingly (API keys, DB credentials, etc.)
+**Important**: Email functionality is **disabled by default** to allow developers to run the backend without configuring SMTP settings.
+
+To run the backend without email functionality (default):
+- The `.env` file has `ENABLE_EMAIL=false` by default
+- No SMTP configuration is required
+- The `/sendEmail` endpoint will return a 503 error when called
+
+To enable email functionality (optional):
+1. Set `ENABLE_EMAIL=true` in your `.env` file
+2. Configure all SMTP settings in the `.env` file:
+   - `SMTP_HOST` (e.g., smtp.gmail.com)
+   - `SMTP_PORT` (e.g., 587 for TLS or 465 for SSL)
+   - `SMTP_USER` (your email address)
+   - `SMTP_PASS` (your email password or app password)
+   - `SENDER_EMAIL` (sender email address)
+   - `DEFAULT_RECEIVER_EMAIL` (recipient email address)
+   - `DEFAULT_RECEIVER_NAME` (recipient name)
 
 > [!NOTE]  
 > If using Gmail, you may need to enable "Less secure app access" or use an App Password to authenticate.
 
-4. **Run the Application**:
+**For Testing Email Functionality**:
+- Email tests are automatically disabled when `ENABLE_EMAIL=false`
+- To run email tests, set `ENABLE_EMAIL=true` and configure all SMTP settings
+- This prevents test failures when SMTP credentials are not available
 
-Run both the frontend and backend together:
+**Email API Endpoint Behavior**:
+- When `ENABLE_EMAIL=false`: POST `/sendEmail` returns HTTP 503 with message "Email functionality is currently disabled"
+- When `ENABLE_EMAIL=true`: POST `/sendEmail` processes email requests normally
+
+**API Documentation Configuration**:
+- **Default**: Swagger API documentation is **enabled** in all environments (development, production, test)
+- **Disable in production**: Set `ENABLE_API_DOCS=false` in your production `.env` file to disable Swagger docs
+- **Access**: When enabled, documentation is available at `/api-docs` endpoint
+- **Features**: Interactive API testing, request/response examples, schema documentation
+
+5. **Run the Application**:
+
+Run both frontend and backend together:
 
 ```bash
 pnpm turbo dev
 ```
 
-5. **Lint and Test (Optional)**:
-
-Before pushing changes consider running the linter and testing the applications locally
+Or run them separately:
 
 ```bash
-pnpm turbo run lint
+# Terminal 1 - Backend
+cd backend
+pnpm run dev
+
+# Terminal 2 - Frontend
+cd frontend
+pnpm run dev
 ```
 
+#### Option 2: Docker Development
+
+1. **Setup environment files** (same as Option 1, steps 3-4)
+
+2. **Run with Docker Compose**:
+
 ```bash
+docker-compose up --build
+```
+
+This will start both frontend and backend in containers.
+
+### Code Quality & Testing
+
+#### Format Code
+
+```bash
+# Format all files
+pnpm run format
+
+# Check formatting
+pnpm run format:check
+```
+
+#### Linting
+
+```bash
+# Lint all packages
+pnpm turbo run lint
+
+# Lint backend only
+cd backend && pnpm run lint
+```
+
+#### Testing
+
+```bash
+# Run all tests
 pnpm turbo run test
+
+# Run backend tests only
+cd backend && pnpm run test
+
+# Run frontend tests only
+cd frontend && pnpm run test
 ```
 
 > [!NOTE]  
-> This step is optional as it will be done by a github action on push and pull request
+> Linting and testing are automatically run by GitHub Actions on push and pull requests.
 
-**🌍 Access the App**
+---
 
-Once running locally, open:
+## 📚 API Documentation
 
-👉 http://localhost:3000
+The API includes comprehensive Swagger/OpenAPI documentation that is **enabled by default** in all environments.
 
-**💪 Contributing**
+**Swagger UI**: [http://localhost:3001/api-docs](http://localhost:3001/api-docs)
 
-We welcome all contributions — whether it’s improving documentation, fixing bugs, or adding new features.
+> **Note**: To disable API documentation in production, set `ENABLE_API_DOCS=false` in your environment configuration.
 
-- Fork the repository
-- Create a branch for your feature
-- Commit and push your changes
-- Open a Pull Request
+### API Endpoints
 
-Join us this Hacktoberfest and make your mark in open source!
+| Endpoint | Method | Description |
+|----------|--------|-------------|
+| `/health` | GET | Health check |
+| `/countries` | GET | Get all countries |
+| `/cities` | GET | Get all cities |
+| `/cities/:id` | GET | Get city by ID |
+| `/agencies` | GET | Get all agencies |
+| `/agencies/:id` | GET | Get agency by ID |
+| `/stations` | GET | Get all stations |
+| `/stations/:id` | GET | Get station by ID |
+| `/routes` | GET | Get all routes |
+| `/routes/:id` | GET | Get route by ID |
+| `/sendEmail` | POST | Send email |
 
-**⭐ Support the Project**
+---
 
-If you like this project, please star the repository on GitHub to show your support and help others discover it!
+## 🔒 Security Features
+
+- **Helmet.js**: Secure HTTP headers
+- **Rate Limiting**: 
+  - General API: 100 requests per 15 minutes
+  - Email endpoint: 5 requests per hour
+- **CORS**: Configured for cross-origin requests
+- **Input Validation**: JSON Schema validation
+- **Environment Validation**: Joi validation on startup
+- **Error Handling**: Centralized error handler with logging
+
+---
+
+## 📁 Project Structure
+
+```
+busez/
+├── backend/              # Express.js backend
+│   ├── controllers/      # Request handlers
+│   ├── routes/          # API routes
+│   ├── schemas/         # JSON schemas
+│   ├── middleware/      # Custom middleware
+│   ├── utils/           # Utilities (logger, validation)
+│   ├── config/          # Configuration files
+│   └── test/            # Backend tests
+├── frontend/            # Next.js frontend
+│   ├── src/
+│   │   ├── app/        # Next.js app directory
+│   │   ├── components/ # React components
+│   │   ├── services/   # API services
+│   │   └── lib/        # Utilities
+│   └── public/         # Static assets
+├── database/            # JSON database files
+│   └── data/           # Data files
+├── docker-compose.yml   # Docker orchestration
+└── turbo.json          # Turborepo configuration
+```
+
+---
+
+## 🌐 Accessing the Application
+
+After setting up and running the application, you can access:
+
+- **Frontend**: [http://localhost:3000](http://localhost:3000)
+- **Backend API**: [http://localhost:3001](http://localhost:3001)
+- **API Documentation**: [http://localhost:3001/api-docs](http://localhost:3001/api-docs)
+- **Health Check**: [http://localhost:3001/health](http://localhost:3001/health)
+
+---
+
+## 🚢 Deployment
+
+### Production Build
+
+```bash
+# Build all packages
+pnpm turbo run build
+
+# Start production server
+cd frontend && pnpm run start
+cd backend && NODE_ENV=production node server.js
+```
+
+### Docker Production
+
+```bash
+# Build production images
+docker-compose -f docker-compose.prod.yml build
+
+# Run production containers
+docker-compose -f docker-compose.prod.yml up -d
+```
+
+---
+
+## 🤝 Contributing
+
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 👥 Team
+
+Developed by **ZeForge** - [zeforge.ba](https://zeforge.ba)
+
+Join our community on [Discord](https://discord.gg/x2enz95pDF)!

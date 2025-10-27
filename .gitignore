@@ -9,6 +9,10 @@ prettier.config.cjs
 # testing
 /coverage
 
+# logs
+logs/
+*.log
+
 # next.js
 .next/
 /out/

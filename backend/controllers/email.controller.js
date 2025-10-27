@@ -1,8 +1,19 @@
 const nodemailer = require("nodemailer");
+const logger = require("../utils/logger");
 require("dotenv").config();
 
 class EmailController {
   async sendEmail(req, res) {
+    // Check if email functionality is enabled
+    if (process.env.ENABLE_EMAIL !== "true") {
+      return res
+        .status(503)
+        .json({ 
+          error: "Email functionality is currently disabled. Please contact the administrator.",
+          code: "EMAIL_DISABLED"
+        });
+    }
+
     const { subject, text, senderName, senderEmail } = req.body;
 
     if (!subject || !text || !senderName) {
@@ -35,12 +46,12 @@ class EmailController {
 
       const info = await transporter.sendMail(mailOptions);
 
-      console.log("Email sent successfully:", info.response);
+      logger.info(`Email sent successfully: ${info.response}`);
       res
         .status(200)
         .json({ success: "Email sent successfully.", result: info });
     } catch (error) {
-      console.error("Error caught:", error.message);
+      logger.error(`Error caught: ${error.message}`);
       let errorMessage = "An error occurred while sending the email.";
       if (error.code === "EAUTH") {
         errorMessage = "Authentication failed. Check your SMTP credentials.";

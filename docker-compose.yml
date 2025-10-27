@@ -1,0 +1,44 @@
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    container_name: busez-backend
+    ports:
+      - "3001:3001"
+    env_file:
+      - backend/.env
+    volumes:
+      - ./backend:/app/backend
+      - ./database:/app/database
+      - /app/backend/node_modules
+      - backend-logs:/app/backend/logs
+    networks:
+      - busez-network
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+    container_name: busez-frontend
+    ports:
+      - "3000:3000"
+    env_file:
+      - frontend/.env.local
+    volumes:
+      - ./frontend:/app/frontend
+      - /app/frontend/node_modules
+      - /app/frontend/.next
+    networks:
+      - busez-network
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+networks:
+  busez-network:
+    driver: bridge
+
+volumes:
+  backend-logs:
