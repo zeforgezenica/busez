@@ -1,0 +1,34 @@
+# Backend specific Docker ignore
+node_modules
+npm-debug.log
+yarn-debug.log*
+yarn-error.log*
+
+# Environment files
+.env
+.env.test
+.env.production
+
+# Logs
+logs
+*.log
+
+# Testing coverage
+coverage
+*.lcov
+
+# Misc
+.DS_Store
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+
+# OS generated files
+Thumbs.db
+
+# Temporary files
+.tmp
+.temp
