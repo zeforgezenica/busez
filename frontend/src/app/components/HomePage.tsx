@@ -17,6 +17,7 @@ import AgencyService from "../services/agency.service";
 import RouteService from "../services/route.service";
 import StationService from "../services/station.service";
 import FilterService from "../handlers/route.filter.handler";
+import GTranslateWidget from "./GTranslateWidget";
 import { toSortedStationsAlphabetically } from "@/lib/utils";
 import { useRouter, useSearchParams } from "next/navigation";
 
@@ -69,6 +70,8 @@ const HomePage: React.FC = () => {
   const handleDateChange = (date: dayjs.Dayjs | null) => {
     setDateOfDeparture(date);
   };
+
+
 
   useEffect(() => {
     const fetchRoutes = async () => {
@@ -212,157 +215,63 @@ const HomePage: React.FC = () => {
       : 24 * 60 - startTotalMinutes + endTotalMinutes;
   };
 
-  return (
-    <>
-      <Head>
-        <title>kadJeBus</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <div className="container mx-auto p-4 text-center">
-        <h1 className="text-3xl font-bold text-center mb-4">kadJeBus</h1>
-        <h2 className="text-xl text-center mb-2">
-          Aplikacija za prikaz informacija o redu vožnje javnog prevoza u
-          Zenici.
-        </h2>
-        <GeolocationDisplay />
-        <RouteSearch
-          stations={stations}
-          selectedDepartureStation={tempDepartureStation}
-          selectedArrivalStation={tempArrivalStation}
-          setSelectedDepartureStation={setTempDepartureStation}
-          setSelectedArrivalStation={setTempArrivalStation}
-          dateOfDeparture={dateOfDeparture}
-          onDateChange={handleDateChange}
-          onFilter={handleFilterRoutes}
-          historyArrivalStationIds={historyArrivalStationIds}
-          historyDepartureStationIds={historyDepartureStationIds}
-        />
+ return (
+  <>
+    <Head>
+      <title>kadJeBus</title>
+      <link rel="icon" href="/favicon.ico" />
+    </Head>
+    <div className="container mx-auto p-4 text-center">
+      <h1 className="text-3xl font-bold text-center mb-4">kadJeBus</h1>
+      <h2 className="text-xl text-center mb-2">
+        Aplikacija za prikaz informacija o redu vožnje javnog prevoza u Zenici.
+      </h2>
+      <GeolocationDisplay />
+      <RouteSearch
+        stations={stations}
+        selectedDepartureStation={tempDepartureStation}
+        selectedArrivalStation={tempArrivalStation}
+        setSelectedDepartureStation={setTempDepartureStation}
+        setSelectedArrivalStation={setTempArrivalStation}
+        dateOfDeparture={dateOfDeparture}
+        onDateChange={handleDateChange}
+        onFilter={handleFilterRoutes}
+        historyArrivalStationIds={historyArrivalStationIds}
+        historyDepartureStationIds={historyDepartureStationIds}
+      />
 
-        {error && <div className="error">{error}</div>}
+      {error && <div className="error">{error}</div>}
 
-        {hasSearched && fixedIsToday && (
-         <div className="text-xl font-semibold mb-4">Nadolazeći Polasci</div>
-        )}
+      {hasSearched && fixedIsToday && (
+        <div className="text-xl font-semibold mb-4">Nadolazeći Polasci</div>
+      )}
 
-        {hasSearched && routeResults.length > 0 && (
-          <div className="flex justify-center gap-2 mb-4">
-            <Button
-              color={viewMode === 'card' ? 'primary' : 'default'}
-              variant={viewMode === 'card' ? 'solid' : 'bordered'}
-              onClick={() => setViewMode('card')}
-            >
-              Prikaz Kartica
-            </Button>
-            <Button
-              color={viewMode === 'table' ? 'primary' : 'default'}
-              variant={viewMode === 'table' ? 'solid' : 'bordered'}
-              onClick={() => setViewMode('table')}
-            >
-              Tabela Prikaz
-            </Button>
-          </div>
-        )} 
-     
-        {hasSearched && (
-           <>
-            {routeResults.length > 0 ? (
-              <>
-                {viewMode === 'card' ? (
-                  <RouteGridView
-                    routes={routeResults}
-                    agencyNames={agencyNames}
-                    stations={stations}
-                    selectedDepartureStation={selectedDepartureStation}
-                    selectedArrivalStation={selectedArrivalStation}
-                    isToday={fixedIsToday}
-                    calculateDuration={calculateDuration}
-                  />
-              ) : (
-                  <RouteTableView
-                    routes={routeResults}
-                    agencyNames={agencyNames}
-                    stations={stations}
-                    selectedDepartureStation={selectedDepartureStation}
-                    selectedArrivalStation={selectedArrivalStation}
-                    isToday={fixedIsToday}
-                    calculateDuration={calculateDuration}
-                  />
-                )}
-              </>
-            ) : (
-              <div className="no-results">Nema pronađenih linija.</div>
-            )}
+      {hasSearched && routeResults.length > 0 && (
+        <div className="flex justify-center gap-2 mb-4">
+          <Button
+            color={viewMode === "card" ? "primary" : "default"}
+            variant={viewMode === "card" ? "solid" : "bordered"}
+            onClick={() => setViewMode("card")}
+          >
+            Prikaz Kartica
+          </Button>
+          <Button
+            color={viewMode === "table" ? "primary" : "default"}
+            variant={viewMode === "table" ? "solid" : "bordered"}
+            onClick={() => setViewMode("table")}
+          >
+            Tabela Prikaz
+          </Button>
+        </div>
+      )}
 
-            {showSearchButton && (
-              <Button
-                color="primary"
-                onClick={handleSearchButtonClick}
-                className="mt-4 mb-4"
-              >
-                {showGame ? "Sakrij igru" : "Igraj Flappy Bird"}
-              </Button>
-            )}
-
-            {showGame && (
-              <div className="mt-4 mb-4">
-                <h3 className="text-xl font-semibold mb-2">
-                  Uživajte u igri dok čekate!
-                </h3>
-                <div
-                  className={`relative mx-auto transition-all duration-300 ease-in-out ${
-                    isExpanded
-                      ? "w-full h-[80vh]"
-                      : "w-full max-w-[400px] h-[600px]"
-                  }`}
-                >
-                  <iframe
-                    src="https://nebez.github.io/floppybird/"
-                    style={{
-                      position: "absolute",
-                      top: 0,
-                      left: 0,
-                      width: "100%",
-                      height: "100%",
-                      border: "none",
-                    }}
-                    title="Flappy Bird Game"
-                  ></iframe>
-                </div>
-                <Button
-                  color="secondary"
-                  onClick={toggleExpand}
-                  className="mt-4"
-                >
-                  {isExpanded ? "Smanji igru" : "Proširi igru"}
-                </Button>
-              </div>
-            )}
-          </>
-        )}
-
-        {hasSearched && fixedIsToday && pastDepartures.length > 0 && (
-          <>
-            <div
-              className="p-6 mb-4 w-full md:w-2/3 lg:w-1/2 mx-auto text-xl font-semibold flex justify-between items-center cursor-pointer"
-              onClick={togglePastDepartures}
-            >
-              <span>Prošli Polasci</span>
-              <div className="flex justify-between items-center cursor-pointer">
-                <span className="text-sm underline">
-                  {isPastDeparturesExpanded ? "Sakrij" : "Prikaži"}
-                </span>
-                <span className="ml-1">
-                  {isPastDeparturesExpanded ? "▲" : "▼"}
-                </span>
-              </div>
-            </div>
-
-            <hr className="border-t border-gray-300 mb-4 w-full md:w-2/3 lg:w-1/2 mx-auto" />
-
-            {isPastDeparturesExpanded && (
-              viewMode === 'card' ? (
+      {hasSearched && (
+        <>
+          {routeResults.length > 0 ? (
+            <>
+              {viewMode === "card" ? (
                 <RouteGridView
-                  routes={pastDepartures}
+                  routes={routeResults}
                   agencyNames={agencyNames}
                   stations={stations}
                   selectedDepartureStation={selectedDepartureStation}
@@ -370,9 +279,9 @@ const HomePage: React.FC = () => {
                   isToday={fixedIsToday}
                   calculateDuration={calculateDuration}
                 />
-            ) : (
+              ) : (
                 <RouteTableView
-                  routes={pastDepartures}
+                  routes={routeResults}
                   agencyNames={agencyNames}
                   stations={stations}
                   selectedDepartureStation={selectedDepartureStation}
@@ -380,13 +289,104 @@ const HomePage: React.FC = () => {
                   isToday={fixedIsToday}
                   calculateDuration={calculateDuration}
                 />
-              )
-            )}
-          </>
-        )}
-      </div>             
-    </>
-  );
+              )}
+            </>
+          ) : (
+            <div className="no-results">Nema pronađenih linija.</div>
+          )}
+
+          {showSearchButton && (
+            <Button
+              color="primary"
+              onClick={handleSearchButtonClick}
+              className="mt-4 mb-4"
+            >
+              {showGame ? "Sakrij igru" : "Igraj Flappy Bird"}
+            </Button>
+          )}
+
+          {showGame && (
+            <div className="mt-4 mb-4">
+              <h3 className="text-xl font-semibold mb-2">
+                Uživajte u igri dok čekate!
+              </h3>
+              <div
+                className={`relative mx-auto transition-all duration-300 ease-in-out ${
+                  isExpanded
+                    ? "w-full h-[80vh]"
+                    : "w-full max-w-[400px] h-[600px]"
+                }`}
+              >
+                <iframe
+                  src="https://nebez.github.io/floppybird/"
+                  style={{
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    width: "100%",
+                    height: "100%",
+                    border: "none",
+                  }}
+                  title="Flappy Bird Game"
+                ></iframe>
+              </div>
+              <Button color="secondary" onClick={toggleExpand} className="mt-4">
+                {isExpanded ? "Smanji igru" : "Proširi igru"}
+              </Button>
+            </div>
+          )}
+        </>
+      )}
+
+      {hasSearched && fixedIsToday && pastDepartures.length > 0 && (
+        <>
+          <div
+            className="p-6 mb-4 w-full md:w-2/3 lg:w-1/2 mx-auto text-xl font-semibold flex justify-between items-center cursor-pointer"
+            onClick={togglePastDepartures}
+          >
+            <span>Prošli Polasci</span>
+            <div className="flex justify-between items-center cursor-pointer">
+              <span className="text-sm underline">
+                {isPastDeparturesExpanded ? "Sakrij" : "Prikaži"}
+              </span>
+              <span className="ml-1">
+                {isPastDeparturesExpanded ? "▲" : "▼"}
+              </span>
+            </div>
+          </div>
+
+          <hr className="border-t border-gray-300 mb-4 w-full md:w-2/3 lg:w-1/2 mx-auto" />
+
+          {isPastDeparturesExpanded &&
+            (viewMode === "card" ? (
+              <RouteGridView
+                routes={pastDepartures}
+                agencyNames={agencyNames}
+                stations={stations}
+                selectedDepartureStation={selectedDepartureStation}
+                selectedArrivalStation={selectedArrivalStation}
+                isToday={fixedIsToday}
+                calculateDuration={calculateDuration}
+              />
+            ) : (
+              <RouteTableView
+                routes={pastDepartures}
+                agencyNames={agencyNames}
+                stations={stations}
+                selectedDepartureStation={selectedDepartureStation}
+                selectedArrivalStation={selectedArrivalStation}
+                isToday={fixedIsToday}
+                calculateDuration={calculateDuration}
+              />
+            ))}
+
+        </>
+      )}
+    </div>
+    <GTranslateWidget />
+  </>
+);
+
 };
 
 export default HomePage;
