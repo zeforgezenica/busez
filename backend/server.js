@@ -1,6 +1,5 @@
 const express = require("express");
 const app = express();
-const bodyParser = require("body-parser");
 const cors = require("cors");
 const helmet = require("helmet");
 const swaggerUi = require("swagger-ui-express");
@@ -27,7 +26,7 @@ const emailRoutes = require("./routes/email.routes");
 
 // Security middleware
 app.use(helmet());
-app.use(bodyParser.json({ limit: "10mb" }));
+app.use(express.json({ limit: "10mb" }));
 app.use(cors());
 
 // Apply rate limiting to all routes

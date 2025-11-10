@@ -8,10 +8,9 @@
   "dependencies": {
     "ajv": "^8.17.1",
     "backend": "file:",
-    "body-parser": "^1.20.3",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
-    "express": "^4.19.2",
+    "express": "^5.1.0",
     "express-rate-limit": "^7.4.1",
     "helmet": "^8.0.0",
     "joi": "^17.13.3",
