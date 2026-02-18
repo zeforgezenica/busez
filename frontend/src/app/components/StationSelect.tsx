@@ -61,9 +61,11 @@ const StationSelect: React.FC<StationSelectProps> = ({
           aria-expanded={open}
           className='w-full justify-between'
         >
-          {selectedStation
-            ? stations.find((station) => station._id === selectedStation)?.name
-            : placeholder}
+          <span className={selectedStation ? 'notranslate' : ''} translate={selectedStation ? 'no' : 'yes'} lang={selectedStation ? 'bs' : 'bs'}>
+            {selectedStation
+              ? stations.find((station) => station._id === selectedStation)?.name
+              : placeholder}
+          </span>
           <CaretSortIcon className='ml-2 h-4 w-4 shrink-0 opacity-50' />
         </Button>
       </PopoverTrigger>
@@ -83,7 +85,7 @@ const StationSelect: React.FC<StationSelectProps> = ({
                   value={station.name}
                   onSelect={() => onStationSelect(station)}
                 >
-                  {station.name}
+                  <span className='notranslate' translate='no' lang='bs'>{station.name}</span>
                   <CheckIcon
                     className={cn(
                       'ml-auto h-4 w-4',
@@ -122,7 +124,7 @@ const HistoryCommandGroup = ({
           value={station.name}
           onSelect={() => onStationSelect(station)}
         >
-          {station.name}
+          <span className='notranslate' translate='no' lang='bs'>{station.name}</span>
         </CommandItem>
       ))}
     </CommandGroup>

@@ -126,7 +126,7 @@ const RouteTableView: React.FC<RouteTableViewProps> = ({
                 className={`${isEven ? 'bg-gray-50' : 'bg-white'} hover:bg-blue-50 transition-all duration-200 border-b border-gray-200`}
               >
                 <td className="p-4 border-r border-gray-200">
-                  <div className="font-bold text-base text-blue-900">{routeLap.name}</div>
+                  <div className="font-bold text-base text-blue-900 notranslate" lang="bs">{routeLap.name}</div>
                 </td>
                 <td className="p-4 border-r border-gray-200">
                   <Button
@@ -135,18 +135,18 @@ const RouteTableView: React.FC<RouteTableViewProps> = ({
                     className="text-blue-600 hover:text-blue-800 hover:bg-blue-100 underline p-0 h-auto min-w-0 font-semibold transition-colors"
                     onClick={() => handleAgencyClick(routeLap.agencyId)}
                   >
-                    {agencyNames[routeLap.agencyId]}
+                    <span className="notranslate" lang="bs">{agencyNames[routeLap.agencyId]}</span>
                   </Button>
                 </td>
-                <td className="p-4 border-r border-gray-200">
+                <td className="p-4 border-r border-gray-200" translate="no" lang="bs">
                   <div className="space-y-1">
-                    <div className="font-semibold text-gray-900 text-sm">{departureStation?.name || 'Nepoznato'}</div>
+                    <div className="font-semibold text-gray-900 text-sm notranslate" lang="bs" translate="no">{departureStation?.name || 'Nepoznato'}</div>
                     <div className="text-blue-700 font-mono font-bold text-base">{departureTime}</div>
                   </div>
                 </td>
-                <td className="p-4 border-r border-gray-200">
+                <td className="p-4 border-r border-gray-200" translate="no" lang="bs">
                   <div className="space-y-1">
-                    <div className="font-semibold text-gray-900 text-sm">{arrivalStation?.name || 'Nepoznato'}</div>
+                    <div className="font-semibold text-gray-900 text-sm notranslate" lang="bs" translate="no">{arrivalStation?.name || 'Nepoznato'}</div>
                     <div className="text-blue-700 font-mono font-bold text-base">{arrivalTime}</div>
                   </div>
                 </td>

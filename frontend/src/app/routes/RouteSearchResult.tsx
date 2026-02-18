@@ -87,19 +87,23 @@ const RouteSearchResult: React.FC<RouteSearchResultProps> = ({
   return (
     <Card className='p-6 w-full shadow-md hover:shadow-lg transition-shadow duration-200'>
       <div className='flex flex-col gap-3 h-full'>
-        <h2 className='text-2xl mb-2 font-semibold'>{route.name}</h2>
+        <h2 className='text-2xl mb-2 font-semibold notranslate' lang='bs'>{route.name}</h2>
         <Button
           variant='link'
           className='text-blue-400 underline'
           onClick={handleNavigate}
         >
-          {agencyName}
+          <span className='notranslate' lang='bs'>{agencyName}</span>
         </Button>
-        <h3>
-          {departureStation?.name || 'Nepoznata polazna stanica'}:{' '}
+        <h3 translate="no" lang="bs">
+          <span className='notranslate' translate='no'>
+            {departureStation?.name || 'Nepoznata polazna stanica'}
+          </span>:{' '}
           {departureTime}
           <ArrowRightAltIcon />
-          {arrivalStation?.name || 'Nepoznata odredišna stanica'}: {arrivalTime}
+          <span className='notranslate' translate='no'>
+            {arrivalStation?.name || 'Nepoznata odredišna stanica'}
+          </span>: {arrivalTime}
         </h3>
         <PriceDisplay price={price} />
         <p>
