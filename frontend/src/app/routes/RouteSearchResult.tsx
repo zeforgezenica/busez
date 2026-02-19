@@ -96,12 +96,12 @@ const RouteSearchResult: React.FC<RouteSearchResultProps> = ({
           <span className='notranslate' lang='bs'>{agencyName}</span>
         </Button>
         <h3 translate="no" lang="bs">
-          <span className='notranslate' translate='no'>
+          <span key={departureStationId} className='notranslate' translate='no'>
             {departureStation?.name || 'Nepoznata polazna stanica'}
           </span>:{' '}
           {departureTime}
           <ArrowRightAltIcon />
-          <span className='notranslate' translate='no'>
+          <span key={arrivalStationId} className='notranslate' translate='no'>
             {arrivalStation?.name || 'Nepoznata odredišna stanica'}
           </span>: {arrivalTime}
         </h3>

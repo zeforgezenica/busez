@@ -61,7 +61,12 @@ const StationSelect: React.FC<StationSelectProps> = ({
           aria-expanded={open}
           className='w-full justify-between'
         >
-          <span className={selectedStation ? 'notranslate' : ''} translate={selectedStation ? 'no' : 'yes'} lang={selectedStation ? 'bs' : 'bs'}>
+          <span 
+            key={selectedStation || 'placeholder'}
+            className={selectedStation ? 'notranslate' : ''} 
+            translate={selectedStation ? 'no' : 'yes'} 
+            lang={selectedStation ? 'bs' : undefined}
+          >
             {selectedStation
               ? stations.find((station) => station._id === selectedStation)?.name
               : placeholder}

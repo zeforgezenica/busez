@@ -140,13 +140,13 @@ const RouteTableView: React.FC<RouteTableViewProps> = ({
                 </td>
                 <td className="p-4 border-r border-gray-200" translate="no" lang="bs">
                   <div className="space-y-1">
-                    <div className="font-semibold text-gray-900 text-sm notranslate" lang="bs" translate="no">{departureStation?.name || 'Nepoznato'}</div>
+                    <div key={selectedDepartureStation} className="font-semibold text-gray-900 text-sm notranslate" lang="bs" translate="no">{departureStation?.name || 'Nepoznato'}</div>
                     <div className="text-blue-700 font-mono font-bold text-base">{departureTime}</div>
                   </div>
                 </td>
                 <td className="p-4 border-r border-gray-200" translate="no" lang="bs">
                   <div className="space-y-1">
-                    <div className="font-semibold text-gray-900 text-sm notranslate" lang="bs" translate="no">{arrivalStation?.name || 'Nepoznato'}</div>
+                    <div key={selectedArrivalStation} className="font-semibold text-gray-900 text-sm notranslate" lang="bs" translate="no">{arrivalStation?.name || 'Nepoznato'}</div>
                     <div className="text-blue-700 font-mono font-bold text-base">{arrivalTime}</div>
                   </div>
                 </td>

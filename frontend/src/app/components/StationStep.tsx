@@ -128,6 +128,7 @@ const StationStep = ({
             {station.time}
           </StopTime>
           <StopName
+            key={station.stationId}
             isPast={isTimePast(station.time, currentTime, firstTime, lastTime)}
             isToday={isToday || false}
             isArrivalOrDeparture={isDepartureOrArrival}
@@ -189,6 +190,7 @@ const StationStep = ({
             {station.time}
           </StopTime>
           <StopName
+            key={station.stationId}
             isPast={isTimePast(station.time, currentTime, firstTime, lastTime)}
             isToday={isToday || false}
             isArrivalOrDeparture={isDepartureOrArrival}
