@@ -7,37 +7,36 @@ export const metadata = {
 export default function AboutPage() {
   return (
     <main className="max-w-3xl mx-auto py-24 px-4">
-      <h1 className="text-2xl font-bold mb-1 ">About</h1>
+      <h1 className="text-2xl font-bold mb-1 ">O nama</h1>
       <p className="text-sm text-muted-foreground mb-6 text-justify">
-        kadJeBus is a modern web application developed with the goal of making the daily lives of
-        Zenica citizens easier by providing quick and simple access to information about the city's
-        public transportation.
+        kadJeBus je moderna web aplikacija razvijena s ciljem olakšavanja svakodnevnog života
+        građana Zenice pružajući brz i jednostavan pristup informacijama o gradskom javnom prevozu.
       </p>
 
       <section className="space-y-4">
         <div>
-          <h2 className="text-xl font-semibold mb-1">Our mission</h2>
+          <h2 className="text-xl font-semibold mb-1">Naša misija</h2>
           <p className="text-sm text-muted-foreground text-justify">
-            Our mission is to digitalize and modernize the public transportation system in Zenica,
-            making it more accessible to all citizens. We believe that everyone has the right to
-            accurate and up-to-date information about bus lines, schedules, and stops. Through the
-            kadJeBus application, we strive to reduce waiting times, improve travel planning, and
-            contribute to more environmentally conscious use of public transportation. Our goal is
-            to create a platform that will serve as a reliable daily tool for all public transport
-            users in the city.
+            Naša misija je digitalizirati i modernizovati sistem javnog prevoza u Zenici, čineći ga
+            pristupačnijim svim građanima. Vjerujemo da svako ima pravo na tačne i ažurne
+            informacije o autobusnim linijama, voznim redovima i stajalištima. Kroz kadJeBus
+            aplikaciju, nastojimo smanjiti vrijeme čekanja, poboljšati planiranje putovanja i
+            doprinijeti ekološki osvješćenijem korištenju javnog prevoza. Naš cilj je stvoriti
+            platformu koja će služiti kao pouzdan svakodnevni alat za sve korisnike javnog prevoza u
+            gradu.
           </p>
         </div>
 
         <div>
-          <h2 className="text-xl font-semibold mb-1">Team</h2>
+          <h2 className="text-xl font-semibold mb-1">Tim</h2>
           <p className="text-sm text-muted-foreground text-justify">
-            kadJeBus is a product of the ZeForge community - a group of enthusiasts, programmers,
-            and designers from Zenica who share a common vision of a more technologically advanced
-            Bosnia and Herzegovina. Our team consists of volunteers from various backgrounds - from
-            students to experienced professionals - who work in their free time on projects that
-            have a direct positive impact on the local community. We believe in the power of open
-            source philosophy and open collaboration, and we invite all interested parties to join
-            our efforts by contributing to code, design, or application testing.
+            kadJeBus je proizvod ZeForge zajednice - grupe entuzijasta, programera i dizajnera iz
+            Zenice koji dijele zajedničku viziju o tehnološki naprednijoj Bosni i Hercegovini. Naš
+            tim čine volonteri različitih profila - od studenata do iskusnih profesionalaca - koji u
+            slobodno vrijeme rade na projektima koji imaju direktan pozitivan uticaj na lokalnu
+            zajednicu. Vjerujemo u snagu open source filozofije i otvorene saradnje, te pozivamo sve
+            zainteresirane da se pridruže našim naporima kroz doprinose kodu, dizajnu ili testiranju
+            aplikacije.
           </p>
         </div>
 
