@@ -40,6 +40,7 @@
     "leaflet-routing-machine": "^3.2.12",
     "lucide-react": "^0.451.0",
     "next": "^16.0.1",
+    "next-themes": "^0.4.6",
     "react": "^18",
     "react-day-picker": "^8.10.1",
     "react-dom": "^18",

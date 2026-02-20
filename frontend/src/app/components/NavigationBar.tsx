@@ -7,6 +7,7 @@ import { useSearchParams } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Bus } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { ThemeToggle } from "./ThemeToggle";
 
 const NavigationBar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -66,9 +67,7 @@ const NavigationBar: React.FC = () => {
                 key={item.name}
                 href={item.href}
                 className={`relative px-3 py-2 text-sm font-medium transition-colors hover:text-primary ${
-                  isActive(item.href)
-                    ? "text-primary"
-                    : "text-muted-foreground"
+                  isActive(item.href) ? "text-primary" : "text-muted-foreground"
                 }`}
               >
                 {item.name}
@@ -87,15 +86,32 @@ const NavigationBar: React.FC = () => {
           <div className="hidden md:flex items-center space-x-4">
             {/* Auth links now use unified /auth route with query mode=login|register */}
             <Button variant="ghost" asChild>
-              <Link href={'/auth?mode=login'} className={pathname?.startsWith('/auth') && searchParams?.get('mode') === 'login' ? 'text-primary' : ''}>
+              <Link
+                href={"/auth?mode=login"}
+                className={
+                  pathname?.startsWith("/auth") && searchParams?.get("mode") === "login"
+                    ? "text-primary"
+                    : ""
+                }
+              >
                 Login
               </Link>
             </Button>
             <Button asChild>
-              <Link href={'/auth?mode=register'} className={pathname?.startsWith('/auth') && searchParams?.get('mode') === 'register' ? 'text-primary' : ''}>
+              <Link
+                href={"/auth?mode=register"}
+                className={
+                  pathname?.startsWith("/auth") && searchParams?.get("mode") === "register"
+                    ? "text-primary"
+                    : ""
+                }
+              >
                 Sign Up
               </Link>
             </Button>
+          </div>
+          <div className="hidden md:flex items-center">
+            <ThemeToggle />
           </div>
 
           {/* Mobile menu button */}
@@ -172,12 +188,12 @@ const NavigationBar: React.FC = () => {
               >
                 <div className="flex flex-col space-y-2 px-3">
                   <Button variant="outline" className="w-full" asChild>
-                    <Link href={'/auth?mode=login'} onClick={closeMenu}>
+                    <Link href={"/auth?mode=login"} onClick={closeMenu}>
                       Login
                     </Link>
                   </Button>
                   <Button className="w-full" asChild>
-                    <Link href={'/auth?mode=register'} onClick={closeMenu}>
+                    <Link href={"/auth?mode=register"} onClick={closeMenu}>
                       Sign Up
                     </Link>
                   </Button>
