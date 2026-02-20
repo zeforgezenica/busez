@@ -17,10 +17,16 @@ export const useReverseGeocoding = () => {
 
   useEffect(() => {
     if (!lat || !lon) return;
-    fetchReverseGeocoding({ lat, lon }).then((data) => {
-      setAddress(parseGeocodeJSONAddress(data));
-      setIsReverseGeocodingLoading(false);
-    });
+    fetchReverseGeocoding({ lat, lon })
+      .then((data) => {
+        setAddress(parseGeocodeJSONAddress(data));
+      })
+      .catch((err) => {
+        console.warn("Reverse geocoding failed:", err);
+      })
+      .finally(() => {
+        setIsReverseGeocodingLoading(false);
+      });
   }, [lat, lon]);
 
   return {
@@ -43,12 +49,19 @@ async function fetchReverseGeocoding({
   const response = await fetch(
     `https://nominatim.openstreetmap.org/reverse?format=geojson&lat=${lat}&lon=${lon}`
   );
+  if (!response.ok) {
+    throw new Error(`Reverse geocoding request failed: ${response.status}`);
+  }
   const responseJson = await response.json();
   return responseJson;
 }
 
 function parseGeocodeJSONAddress(json: any) {
+  const features = json?.features;
+  if (!features || features.length === 0) return undefined;
   const { road, house_number, postcode, city, country } =
-    json.features[0].properties.address;
-  return [road, house_number, postcode, city, country].join(" ");
+    features[0].properties.address;
+  return [road, house_number, postcode, city, country]
+    .filter(Boolean)
+    .join(" ");
 }
