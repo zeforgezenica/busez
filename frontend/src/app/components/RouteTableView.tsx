@@ -57,6 +57,20 @@ const RouteTableView: React.FC<RouteTableViewProps> = ({
     return stations.find(station => station._id === arrivalStationId);
   };
 
+  const formatDuration = (totalMinutes: number) => {
+    if (totalMinutes < 60) {
+      return `${totalMinutes} ${getGrammaticalForm(totalMinutes, 'minuta', 'minute', 'minuta')}`;
+    }
+
+    const hours = Math.floor(totalMinutes / 60);
+    const mins = totalMinutes % 60;
+
+    const hoursText = `${hours}h`;
+    const minsText = mins > 0 ? ` ${mins}min` : '';
+
+    return hoursText + minsText;
+  };
+
   const getETAForRoute = (departureTime: string) => {
     if (!isToday) return { eta: '', etaColor: 'inherit' };
     
@@ -72,8 +86,17 @@ const RouteTableView: React.FC<RouteTableViewProps> = ({
     let etaColor = 'inherit';
     
     if (remainingMinutes > 0) {
-      eta = `${remainingMinutes} min`;
+      const hours = Math.floor(remainingMinutes / 60);
+      const mins = remainingMinutes % 60;
+      
+      if (hours > 0) {
+        eta = `${hours}h ${mins}min`;
+      } else {
+        eta = `${mins}min`;
+      }
+
       etaColor = remainingMinutes > 9 ? '#10B981' : remainingMinutes > 3 ? '#F59E0B' : '#EF4444';
+      
     } else if (remainingMinutes >= -5) {
       eta = 'Upravo sada';
       etaColor = '#EF4444';
@@ -90,13 +113,13 @@ const RouteTableView: React.FC<RouteTableViewProps> = ({
       <table className="w-full border-collapse rounded-lg overflow-hidden shadow-lg">
         <thead>
           <tr className="bg-gradient-to-r from-blue-600 to-blue-700 text-white">
-            <th className="p-4 text-left font-bold text-sm uppercase tracking-wider border-r border-blue-500">Linija</th>
-            <th className="p-4 text-left font-bold text-sm uppercase tracking-wider border-r border-blue-500">Agencija</th>
-            <th className="p-4 text-left font-bold text-sm uppercase tracking-wider border-r border-blue-500">Polazak</th>
-            <th className="p-4 text-left font-bold text-sm uppercase tracking-wider border-r border-blue-500">Dolazak</th>
-            <th className="p-4 text-left font-bold text-sm uppercase tracking-wider border-r border-blue-500">Trajanje</th>
+            <th className="p-4 text-center font-bold text-sm uppercase tracking-wider border-r border-blue-500">Linija</th>
+            <th className="p-4 text-center font-bold text-sm uppercase tracking-wider border-r border-blue-500">Agencija</th>
+            <th className="p-4 text-center font-bold text-sm uppercase tracking-wider border-r border-blue-500">Polazak</th>
+            <th className="p-4 text-center font-bold text-sm uppercase tracking-wider border-r border-blue-500">Dolazak</th>
+            <th className="p-4 text-center font-bold text-sm uppercase tracking-wider border-r border-blue-500">Trajanje</th>
             {isToday && (
-              <th className="p-4 text-left font-bold text-sm uppercase tracking-wider border-r border-blue-500">Preostalo</th>
+              <th className="p-4 text-center font-bold text-sm uppercase tracking-wider border-r border-blue-500">Preostalo</th>
             )}
             <th className="p-4 text-center font-bold text-sm uppercase tracking-wider">Detalji</th>
           </tr>
@@ -152,7 +175,7 @@ const RouteTableView: React.FC<RouteTableViewProps> = ({
                 </td>
                 <td className="p-4 border-r border-gray-200">
                   <div className="text-sm font-semibold text-gray-800">
-                    {deltaTime} {getGrammaticalForm(deltaTime, 'minuta', 'minute', 'minuta')}
+                    {formatDuration(deltaTime)}
                   </div>
                 </td>
                 {isToday && (
