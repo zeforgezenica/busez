@@ -17,7 +17,6 @@ import AgencyService from "../services/agency.service";
 import RouteService from "../services/route.service";
 import StationService from "../services/station.service";
 import FilterService from "../handlers/route.filter.handler";
-import GTranslateWidget from "./GTranslateWidget";
 import { toSortedStationsAlphabetically } from "@/lib/utils";
 import { useRouter, useSearchParams } from "next/navigation";
 
@@ -222,7 +221,7 @@ const HomePage: React.FC = () => {
       <link rel="icon" href="/favicon.ico" />
     </Head>
     <div className="container mx-auto p-4 text-center">
-      <h1 className="text-3xl font-bold text-center mb-4">kadJeBus</h1>
+      <h1 className="text-3xl font-bold text-center mb-4 notranslate">kadJeBus</h1>
       <h2 className="text-xl text-center mb-2">
         Aplikacija za prikaz informacija o redu vožnje javnog prevoza u Zenici.
       </h2>
@@ -383,7 +382,6 @@ const HomePage: React.FC = () => {
         </>
       )}
     </div>
-    <GTranslateWidget />
   </>
 );
 

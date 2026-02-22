@@ -20,22 +20,22 @@ export default function ContactForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4 max-w-xl">
+    <form onSubmit={handleSubmit} className="space-y-4 max-full">
       <div>
-        <label className="block text-sm font-medium mb-1">Name</label>
-        <Input name="name" placeholder="Your name" />
+        <label className="block text-sm font-medium mb-1">Ime</label>
+        <Input name="name" placeholder="Vaše ime" />
       </div>
       <div>
         <label className="block text-sm font-medium mb-1">Email</label>
         <Input name="email" placeholder="you@example.com" type="email" />
       </div>
       <div>
-        <label className="block text-sm font-medium mb-1">Message</label>
-        <textarea name="message" className="w-full rounded-md border border-input px-3 py-2 text-sm" rows={5} placeholder="Write your message..." />
+        <label className="block text-sm font-medium mb-1">Poruka</label>
+        <textarea name="message" className="w-full rounded-md border border-input px-3 py-2 text-sm" rows={5} placeholder="Napišite poruku..." />
       </div>
 
       <div>
-        <Button type="submit" disabled={sending}>{sending ? "Sending..." : "Send (placeholder)"}</Button>
+        <Button type="submit" disabled={sending}>{sending ? "Sending..." : "Pošaljite (placeholder)"}</Button>
       </div>
     </form>
   );
