@@ -49,3 +49,7 @@ next-env.d.ts
 
 # WebStorm / JetBrains IDE files
 .idea/
+
+# Build-generated service worker
+sw.js
+sw.js.map
