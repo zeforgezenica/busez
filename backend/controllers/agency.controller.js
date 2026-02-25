@@ -6,6 +6,7 @@ class AgencyController extends BaseController {
     const filePath = path.join(__dirname, "../../database/data/agencies.json");
     const agencySchema = require("../schemas/agency.schema.json");
     super(filePath, agencySchema);
+    this.cacheTTL = 600;
   }
 }
 
