@@ -107,6 +107,42 @@ app.use((err, req, res, _next) => {
 });
 
 const port = 3001;
-app.listen(port, () => {
+const server = app.listen(port, () => {
   logger.info(`Server is running on port ${port}`);
 });
+
+let isShuttingDown = false;
+
+const shutdown = (signal) => {
+  if (isShuttingDown) {
+    return;
+  }
+
+  isShuttingDown = true;
+  logger.info(`${signal} received. Shutting down gracefully...`);
+
+  const forceShutdownTimer = setTimeout(() => {
+    logger.error("Force shutdown after timeout");
+    process.exit(1);
+  }, 10000);
+
+  if (typeof forceShutdownTimer.unref === "function") {
+    forceShutdownTimer.unref();
+  }
+
+  server.close((error) => {
+    clearTimeout(forceShutdownTimer);
+
+    if (error) {
+      logger.error(`Error during server shutdown: ${error.message}`);
+      process.exit(1);
+      return;
+    }
+
+    logger.info("HTTP server closed");
+    process.exit(0);
+  });
+};
+
+process.on("SIGINT", () => shutdown("SIGINT"));
+process.on("SIGTERM", () => shutdown("SIGTERM"));
