@@ -12,6 +12,7 @@
     "format:check": "prettier --check \"**/*.{js,jsx,ts,tsx,json,md}\""
   },
   "devDependencies": {
+    "node-cache": "^5.1.2",
     "prettier": "^3.4.2",
     "turbo": "2.0.14"
   },
