@@ -1,10 +1,6 @@
-import React from 'react';
-import {
-  CaretSortIcon,
-  CheckIcon,
-  CounterClockwiseClockIcon,
-} from '@radix-ui/react-icons';
-import { Button } from '@/components/ui/button';
+import React from "react";
+import { CaretSortIcon, CheckIcon, CounterClockwiseClockIcon } from "@radix-ui/react-icons";
+import { Button } from "@/components/ui/button";
 import {
   Command,
   CommandEmpty,
@@ -12,14 +8,10 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from '@/components/ui/command';
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from '@/components/ui/popover';
-import { cn } from '@/lib/utils';
-import { Station } from '../models/station.model';
+} from "@/components/ui/command";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import { cn } from "@/lib/utils";
+import { Station } from "../models/station.model";
 
 interface StationSelectProps {
   stations: Station[];
@@ -56,33 +48,30 @@ const StationSelect: React.FC<StationSelectProps> = ({
     <Popover open={open} onOpenChange={setOpen}>
       <PopoverTrigger asChild>
         <Button
-          variant='outline'
-          role='combobox'
+          variant="outline"
+          role="combobox"
           aria-expanded={open}
-          className='w-full justify-between'
+          className="w-80 justify-between"
         >
-          <span 
-            key={selectedStation || 'placeholder'}
-            className={selectedStation ? 'notranslate' : ''} 
-            translate={selectedStation ? 'no' : 'yes'} 
-            lang={selectedStation ? 'bs' : undefined}
+          <span
+            key={selectedStation || "placeholder"}
+            className={selectedStation ? "notranslate" : ""}
+            translate={selectedStation ? "no" : "yes"}
+            lang={selectedStation ? "bs" : undefined}
           >
             {selectedStation
               ? stations.find((station) => station._id === selectedStation)?.name
               : placeholder}
           </span>
-          <CaretSortIcon className='ml-2 h-4 w-4 shrink-0 opacity-50' />
+          <CaretSortIcon className="ml-2 h-4 w-4 shrink-0 opacity-50" />
         </Button>
       </PopoverTrigger>
-      <PopoverContent className='w-[240px] p-0'>
+      <PopoverContent className="w-[240px] p-0">
         <Command>
           <CommandInput placeholder={placeholder} />
           <CommandList>
             <CommandEmpty>{placeholder}</CommandEmpty>
-            <HistoryCommandGroup
-              stations={stationsHistory}
-              onStationSelect={onStationSelect}
-            />
+            <HistoryCommandGroup stations={stationsHistory} onStationSelect={onStationSelect} />
             <CommandGroup>
               {stationsNotInHistory.map((station) => (
                 <CommandItem
@@ -90,13 +79,13 @@ const StationSelect: React.FC<StationSelectProps> = ({
                   value={station.name}
                   onSelect={() => onStationSelect(station)}
                 >
-                  <span className='notranslate' translate='no' lang='bs'>{station.name}</span>
+                  <span className="notranslate" translate="no" lang="bs">
+                    {station.name}
+                  </span>
                   <CheckIcon
                     className={cn(
-                      'ml-auto h-4 w-4',
-                      selectedStation === station._id
-                        ? 'opacity-100'
-                        : 'opacity-0'
+                      "ml-auto h-4 w-4",
+                      selectedStation === station._id ? "opacity-100" : "opacity-0"
                     )}
                   />
                 </CommandItem>
@@ -118,8 +107,8 @@ const HistoryCommandGroup = ({
 }) => {
   if (stations.length === 0) return null;
   return (
-    <CommandGroup className={'border-b-3'}>
-      <p className={'select-none text-sm px-2 py-1.5 flex gap-2 items-center'}>
+    <CommandGroup className={"border-b-3"}>
+      <p className={"select-none text-sm px-2 py-1.5 flex gap-2 items-center"}>
         <CounterClockwiseClockIcon />
         Prošle pretrage
       </p>
@@ -129,7 +118,9 @@ const HistoryCommandGroup = ({
           value={station.name}
           onSelect={() => onStationSelect(station)}
         >
-          <span className='notranslate' translate='no' lang='bs'>{station.name}</span>
+          <span className="notranslate" translate="no" lang="bs">
+            {station.name}
+          </span>
         </CommandItem>
       ))}
     </CommandGroup>
