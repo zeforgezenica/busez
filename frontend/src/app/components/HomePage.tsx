@@ -2,6 +2,7 @@
 
 import { GeolocationDisplay } from "@/components/GeolocationDisplay";
 import { useSearchHistory } from "@/hooks/useSearchHistory";
+import { useFavorites } from "@/hooks/useFavorites";
 import { Button } from "@nextui-org/react";
 import dayjs from "dayjs";
 import "dayjs/locale/en";
@@ -13,12 +14,15 @@ import RouteSearch from "../routes/RouteSearch";
 import RouteSearchResult from "../routes/RouteSearchResult";
 import RouteGridView from "./RouteGridView";
 import RouteTableView from './RouteTableView';
+import FavoriteButton from "./FavoriteButton";
+import FavoritesList from "./FavoritesList";
 import AgencyService from "../services/agency.service";
 import RouteService from "../services/route.service";
 import StationService from "../services/station.service";
 import FilterService from "../handlers/route.filter.handler";
 import { toSortedStationsAlphabetically } from "@/lib/utils";
 import { useRouter, useSearchParams } from "next/navigation";
+import { Star } from "lucide-react";
 
 const HomePage: React.FC = () => {
   const [routeResults, setRouteResults] = useState<RouteLap[]>([]);
@@ -42,6 +46,9 @@ const HomePage: React.FC = () => {
     historyArrivalStationIds,
     addStationsToHistory,
   } = useSearchHistory();
+
+  const { favorites, isFavorite, toggleFavorite, removeFavorite } = useFavorites();
+  const [showFavorites, setShowFavorites] = useState(false);
   const [dateOfDeparture, setDateOfDeparture] =
     React.useState<dayjs.Dayjs | null>(dayjs());
   const [error, setError] = useState<string | null>(null);
@@ -198,6 +205,19 @@ const HomePage: React.FC = () => {
     setShowGame(!showGame);
   };
 
+  const handleFavoriteSearch = (
+    departureStationId: string,
+    arrivalStationId: string
+  ) => {
+    setShowFavorites(false);
+    const params = new URLSearchParams({
+      from: departureStationId,
+      to: arrivalStationId,
+      date: dayjs().format("YYYY-MM-DD"),
+    });
+    router.push(`/?${params.toString()}`, { scroll: false });
+  };
+
   const toggleExpand = () => {
     setIsExpanded(!isExpanded);
   };
@@ -239,7 +259,40 @@ const HomePage: React.FC = () => {
         historyDepartureStationIds={historyDepartureStationIds}
       />
 
+      <div className="flex justify-center my-4">
+        <Button
+          color={showFavorites ? "primary" : "default"}
+          variant={showFavorites ? "solid" : "bordered"}
+          onClick={() => setShowFavorites(!showFavorites)}
+          className="gap-2"
+        >
+          <Star className={`h-5 w-5 ${showFavorites ? "fill-yellow-400 text-yellow-400" : ""}`} />
+          {showFavorites ? "Sakrij Favorite" : `Prikaži Favorite (${favorites.length})`}
+        </Button>
+      </div>
+
+      {showFavorites && (
+        <div className="mb-6">
+          <h2 className="text-xl font-semibold mb-4">Omiljene Linije</h2>
+          <FavoritesList
+            favorites={favorites}
+            stations={stations}
+            onRemove={removeFavorite}
+            onSearch={handleFavoriteSearch}
+          />
+        </div>
+      )}
+
       {error && <div className="error">{error}</div>}
+
+      {hasSearched && selectedDepartureStation && selectedArrivalStation && (
+        <div className="flex justify-center mb-4">
+          <FavoriteButton
+            isFavorite={isFavorite(selectedDepartureStation, selectedArrivalStation)}
+            onToggle={() => toggleFavorite(selectedDepartureStation, selectedArrivalStation)}
+          />
+        </div>
+      )}
 
       {hasSearched && fixedIsToday && (
         <div className="text-xl font-semibold mb-4">Nadolazeći Polasci</div>
