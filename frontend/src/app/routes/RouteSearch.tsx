@@ -6,7 +6,6 @@ import { handleFilterClick, handleSwapStations } from "../handlers/route.search.
 import dayjs from "dayjs";
 import StationSelect from "@/components/StationSelect";
 import DateSelector from "@/components/DateSelector";
-import MapSelector from "../components/MapSelector";
 
 interface RouteSearchProps {
   stations: Station[];
