@@ -7,6 +7,8 @@ import { useSearchParams } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Bus } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { ThemeToggle } from "./ThemeToggle";
+import GTranslateWidget from "./GTranslateWidget";
 
 const NavigationBar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,9 +17,9 @@ const NavigationBar: React.FC = () => {
   const searchParams = useSearchParams();
 
   const navigationItems = [
-    { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
-    { name: "Contact", href: "/contact" },
+    { name: "Početna", href: "/" },
+    { name: "O nama", href: "/about" },
+    { name: "Kontakt", href: "/contact" },
   ];
 
   useEffect(() => {
@@ -52,57 +54,78 @@ const NavigationBar: React.FC = () => {
       transition={{ duration: 0.5 }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2" onClick={closeMenu}>
+          <Link href="/" className="flex items-center space-x-2 shrink-0" onClick={closeMenu}>
             <Bus className="h-8 w-8 text-primary" />
-            <span className="text-xl font-bold text-foreground">kadJeBus</span>
+            <span className="text-xl font-bold text-foreground notranslate">kadJeBus</span>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            {navigationItems.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className={`relative px-3 py-2 text-sm font-medium transition-colors hover:text-primary ${
-                  isActive(item.href)
-                    ? "text-primary"
-                    : "text-muted-foreground"
-                }`}
-              >
-                {item.name}
-                {isActive(item.href) && (
-                  <motion.div
-                    className="absolute inset-x-0 -bottom-1 h-0.5 bg-primary rounded-full"
-                    layoutId="navbar"
-                    transition={{ type: "spring", bounce: 0.25 }}
-                  />
-                )}
-              </Link>
-            ))}
+          <div className="hidden md:flex flex-1 justify-center px-6">
+            <div className="flex items-center space-x-4 lg:space-x-8">
+              {navigationItems.map((item) => (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className={`relative px-3 py-2 text-sm font-medium transition-colors hover:text-primary ${
+                    isActive(item.href) ? "text-primary" : "text-muted-foreground"
+                  }`}
+                >
+                  {item.name}
+                  {isActive(item.href) && (
+                    <motion.div
+                      className="absolute inset-x-0 -bottom-1 h-0.5 bg-primary rounded-full"
+                      layoutId="navbar"
+                      transition={{ type: "spring", bounce: 0.25 }}
+                    />
+                  )}
+                </Link>
+              ))}
+            </div>
           </div>
 
-          {/* CTA Buttons */}
-          <div className="hidden md:flex items-center space-x-4">
-            {/* Auth links now use unified /auth route with query mode=login|register */}
-            <Button variant="ghost" asChild>
-              <Link href={'/auth?mode=login'} className={pathname?.startsWith('/auth') && searchParams?.get('mode') === 'login' ? 'text-primary' : ''}>
-                Login
-              </Link>
-            </Button>
-            <Button asChild>
-              <Link href={'/auth?mode=register'} className={pathname?.startsWith('/auth') && searchParams?.get('mode') === 'register' ? 'text-primary' : ''}>
-                Sign Up
-              </Link>
-            </Button>
+          <div className="hidden md:flex items-center gap-2 lg:gap-4 shrink-0 ml-auto">
+            {/* CTA Buttons */}
+            <div className="flex items-center space-x-2 lg:space-x-4">
+              {/* Auth links now use unified /auth route with query mode=login|register */}
+              <Button variant="ghost" asChild>
+                <Link
+                  href={"/auth?mode=login"}
+                  className={
+                    pathname?.startsWith("/auth") && searchParams?.get("mode") === "login"
+                      ? "text-primary"
+                      : ""
+                  }
+                >
+                  Login
+                </Link>
+              </Button>
+              <Button asChild>
+                <Link
+                  href={"/auth?mode=register"}
+                  className={
+                    pathname?.startsWith("/auth") && searchParams?.get("mode") === "register"
+                      ? "text-primary"
+                      : ""
+                  }
+                >
+                  Sign Up
+                </Link>
+              </Button>
+            </div>
+
+            <div className="flex items-center">
+              <ThemeToggle />
+              <GTranslateWidget />
+            </div>
           </div>
 
           {/* Mobile menu button */}
           <Button
             variant="ghost"
             size="icon"
-            className="md:hidden"
+            className="md:hidden ml-auto"
             onClick={toggleMenu}
             aria-label="Toggle menu"
           >
@@ -172,15 +195,13 @@ const NavigationBar: React.FC = () => {
               >
                 <div className="flex flex-col space-y-2 px-3">
                   <Button variant="outline" className="w-full" asChild>
-                    <Link href={'/auth?mode=login'} onClick={closeMenu}>
+                    <Link href={"/auth?mode=login"} onClick={closeMenu}>
                       Login
                     </Link>
                   </Button>
-                  <Button className="w-full" asChild>
-                    <Link href={'/auth?mode=register'} onClick={closeMenu}>
-                      Sign Up
-                    </Link>
-                  </Button>
+                  <div className="flex justify-center">
+                    <GTranslateWidget />
+                  </div>
                 </div>
               </motion.div>
             </div>

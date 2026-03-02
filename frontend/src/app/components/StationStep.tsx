@@ -128,9 +128,13 @@ const StationStep = ({
             {station.time}
           </StopTime>
           <StopName
+            key={station.stationId}
             isPast={isTimePast(station.time, currentTime, firstTime, lastTime)}
             isToday={isToday || false}
             isArrivalOrDeparture={isDepartureOrArrival}
+            className='notranslate'
+            translate='no'
+            lang='bs'
           >
             {loading ? <Skeleton className="h-4 w-32" /> : stationName}
           </StopName>
@@ -186,9 +190,13 @@ const StationStep = ({
             {station.time}
           </StopTime>
           <StopName
+            key={station.stationId}
             isPast={isTimePast(station.time, currentTime, firstTime, lastTime)}
             isToday={isToday || false}
             isArrivalOrDeparture={isDepartureOrArrival}
+            className='notranslate'
+            translate='no'
+            lang='bs'
           >
             {loading ? <Skeleton className="h-4 w-32" /> : stationName}
           </StopName>
