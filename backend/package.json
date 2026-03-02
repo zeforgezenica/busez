@@ -1,7 +1,7 @@
 {
   "name": "backend",
-  "scripts": {
-    "dev": "nodemon -r dotenv/config server.js",
+"scripts": {
+    "dev": "nodemon --signal SIGTERM -r dotenv/config server.js",
     "test": "jest",
     "lint": "eslint . --ext .js"
   },
