@@ -11,7 +11,6 @@ import React, { useEffect, useState } from "react";
 import { Route, RouteLap } from "../models/route.model";
 import Station from "../models/station.model";
 import RouteSearch from "../routes/RouteSearch";
-import RouteSearchResult from "../routes/RouteSearchResult";
 import RouteGridView from "./RouteGridView";
 import RouteTableView from './RouteTableView';
 import FavoriteButton from "./FavoriteButton";

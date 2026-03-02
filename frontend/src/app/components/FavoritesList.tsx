@@ -6,7 +6,6 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import Station from "../models/station.model";
 import { FavoriteRoute } from "../hooks/useFavorites";
-import dayjs from "dayjs";
 
 interface FavoritesListProps {
   favorites: FavoriteRoute[];
