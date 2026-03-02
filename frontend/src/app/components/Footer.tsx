@@ -58,9 +58,10 @@ const Footer: React.FC = () => {
 
   return (
     <footer className="bg-gray-900 text-gray-300 border-t border-gray-700 mt-auto py-10">
-      <div className="container mx-auto px-6 grid gap-10 md:grid-cols-3">
+      
+      <div className="container mx-auto px-6 grid gap-10 md:grid-cols-3 max-w-7xl">
         {/* Left Section */}
-        <div>
+        <div className="flex flex-col">
           <h2 className="text-lg font-bold text-white mb-2">ZeForge Zenica</h2>
           <p className="text-sm">
             Aplikacija za pretraživanje autobusnih linija 🚍 <br />
@@ -93,9 +94,48 @@ const Footer: React.FC = () => {
               +387 32 979 844
             </a>
           </p>
+        </div>
 
+        {/* Right Section */}
+        <div className="flex flex-col md:items-end">
+          <h3 className="font-semibold text-white mb-3">Pratite nas 🌐</h3>
+          <div className="flex gap-5 text-2xl mb-4">
+            <a
+              href="https://github.com/zeforgezenica"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-blue-400"
+            >
+              <FaGithub />
+            </a>
+            <a
+              href="https://linkedin.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-blue-400"
+            >
+              <FaLinkedin />
+            </a>
+            <a
+              href="https://instagram.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-blue-400"
+            >
+              <FaInstagram />
+            </a>
+            <a
+              href="https://twitter.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-blue-400"
+            >
+              <FaTwitter />
+            </a>
+          </div>
+          
           <Dialog>
-            <DialogTrigger className="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 mt-2 rounded-lg">
+            <DialogTrigger className="text-blue-400 hover:underline cursor-pointer">
               Prijavite problem / predložite funkcionalnost
             </DialogTrigger>
             <DialogContent>
@@ -162,7 +202,7 @@ const Footer: React.FC = () => {
                     <DialogClose asChild>
                       <Button variant="destructive">Zatvorite</Button>
                     </DialogClose>
-                    <Button type="submit" className="bg-blue-600">
+                    <Button type="submit" className="bg-blue-600 text-white hover:bg-blue-500">
                       Pošaljite
                     </Button>
                   </div>
@@ -170,45 +210,6 @@ const Footer: React.FC = () => {
               </Form>
             </DialogContent>
           </Dialog>
-        </div>
-
-        {/* Right Section */}
-        <div>
-          <h3 className="font-semibold text-white mb-3">Pratite nas 🌐</h3>
-          <div className="flex gap-5 text-2xl">
-            <a
-              href="https://github.com/zeforgezenica"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-blue-400"
-            >
-              <FaGithub />
-            </a>
-            <a
-              href="https://linkedin.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-blue-400"
-            >
-              <FaLinkedin />
-            </a>
-            <a
-              href="https://instagram.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-blue-400"
-            >
-              <FaInstagram />
-            </a>
-            <a
-              href="https://twitter.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-blue-400"
-            >
-              <FaTwitter />
-            </a>
-          </div>
         </div>
       </div>
     </footer>

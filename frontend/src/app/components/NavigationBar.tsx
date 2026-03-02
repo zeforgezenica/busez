@@ -8,6 +8,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Bus } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "./ThemeToggle";
+import GTranslateWidget from "./GTranslateWidget";
 
 const NavigationBar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,9 +17,9 @@ const NavigationBar: React.FC = () => {
   const searchParams = useSearchParams();
 
   const navigationItems = [
-    { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
-    { name: "Contact", href: "/contact" },
+    { name: "Početna", href: "/" },
+    { name: "O nama", href: "/about" },
+    { name: "Kontakt", href: "/contact" },
   ];
 
   useEffect(() => {
@@ -57,11 +58,11 @@ const NavigationBar: React.FC = () => {
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2" onClick={closeMenu}>
             <Bus className="h-8 w-8 text-primary" />
-            <span className="text-xl font-bold text-foreground">kadJeBus</span>
+            <span className="text-xl font-bold text-foreground notranslate">kadJeBus</span>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 items-center space-x-8">
             {navigationItems.map((item) => (
               <Link
                 key={item.name}
@@ -112,6 +113,7 @@ const NavigationBar: React.FC = () => {
           </div>
           <div className="hidden md:flex items-center">
             <ThemeToggle />
+            <GTranslateWidget />
           </div>
 
           {/* Mobile menu button */}
@@ -192,11 +194,9 @@ const NavigationBar: React.FC = () => {
                       Login
                     </Link>
                   </Button>
-                  <Button className="w-full" asChild>
-                    <Link href={"/auth?mode=register"} onClick={closeMenu}>
-                      Sign Up
-                    </Link>
-                  </Button>
+                  <div className="flex justify-center">
+                    <GTranslateWidget />
+                  </div>
                 </div>
               </motion.div>
             </div>

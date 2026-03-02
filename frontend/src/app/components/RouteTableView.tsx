@@ -57,6 +57,20 @@ const RouteTableView: React.FC<RouteTableViewProps> = ({
     return stations.find(station => station._id === arrivalStationId);
   };
 
+  const formatDuration = (totalMinutes: number) => {
+    if (totalMinutes < 60) {
+      return `${totalMinutes} ${getGrammaticalForm(totalMinutes, 'minuta', 'minute', 'minuta')}`;
+    }
+
+    const hours = Math.floor(totalMinutes / 60);
+    const mins = totalMinutes % 60;
+
+    const hoursText = `${hours}h`;
+    const minsText = mins > 0 ? ` ${mins}min` : '';
+
+    return hoursText + minsText;
+  };
+
   const getETAForRoute = (departureTime: string) => {
     if (!isToday) return { eta: '', etaColor: 'inherit' };
     
@@ -72,8 +86,17 @@ const RouteTableView: React.FC<RouteTableViewProps> = ({
     let etaColor = 'inherit';
     
     if (remainingMinutes > 0) {
-      eta = `${remainingMinutes} min`;
+      const hours = Math.floor(remainingMinutes / 60);
+      const mins = remainingMinutes % 60;
+      
+      if (hours > 0) {
+        eta = `${hours}h ${mins}min`;
+      } else {
+        eta = `${mins}min`;
+      }
+
       etaColor = remainingMinutes > 9 ? '#10B981' : remainingMinutes > 3 ? '#F59E0B' : '#EF4444';
+      
     } else if (remainingMinutes >= -5) {
       eta = 'Upravo sada';
       etaColor = '#EF4444';
@@ -87,21 +110,21 @@ const RouteTableView: React.FC<RouteTableViewProps> = ({
 
   return (
     <div className="w-full overflow-x-auto mb-4">
-      <table className="w-full border-collapse rounded-lg overflow-hidden shadow-lg">
+      <table className="w-full border-collapse rounded-lg overflow-hidden shadow-xl">
         <thead>
-          <tr className="bg-gradient-to-r from-blue-600 to-blue-700 text-white">
-            <th className="p-4 text-left font-bold text-sm uppercase tracking-wider border-r border-blue-500">Linija</th>
-            <th className="p-4 text-left font-bold text-sm uppercase tracking-wider border-r border-blue-500">Agencija</th>
-            <th className="p-4 text-left font-bold text-sm uppercase tracking-wider border-r border-blue-500">Polazak</th>
-            <th className="p-4 text-left font-bold text-sm uppercase tracking-wider border-r border-blue-500">Dolazak</th>
-            <th className="p-4 text-left font-bold text-sm uppercase tracking-wider border-r border-blue-500">Trajanje</th>
+          <tr className="bg-gray-900 border-b border-gray-700">
+            <th className="p-4 text-center font-semibold text-sm text-gray-200 border-r border-gray-700">Linija</th>
+            <th className="p-4 text-center font-semibold text-sm text-gray-200 border-r border-gray-700">Agencija</th>
+            <th className="p-4 text-center font-semibold text-sm text-gray-200 border-r border-gray-700">Polazak</th>
+            <th className="p-4 text-center font-semibold text-sm text-gray-200 border-r border-gray-700">Dolazak</th>
+            <th className="p-4 text-center font-semibold text-sm text-gray-200 border-r border-gray-700">Trajanje</th>
             {isToday && (
-              <th className="p-4 text-left font-bold text-sm uppercase tracking-wider border-r border-blue-500">Preostalo</th>
+              <th className="p-4 text-center font-semibold text-sm text-gray-200 border-r border-gray-700">Preostalo</th>
             )}
-            <th className="p-4 text-center font-bold text-sm uppercase tracking-wider">Detalji</th>
+            <th className="p-4 text-center font-semibold text-sm text-gray-200">Detalji</th>
           </tr>
         </thead>
-        <tbody className="bg-white">
+        <tbody>
           {routes.map((routeLap, index) => {
             const departureStationIndex = routeLap.stations.findIndex(
               (station: { stationId?: string }) => station.stationId === selectedDepartureStation
@@ -123,41 +146,41 @@ const RouteTableView: React.FC<RouteTableViewProps> = ({
             return (
               <tr 
                 key={`${routeLap._id}-${departureTime}-${arrivalTime}-${index}`} 
-                className={`${isEven ? 'bg-gray-50' : 'bg-white'} hover:bg-blue-50 transition-all duration-200 border-b border-gray-200`}
+                className="bg-gray-800 hover:bg-gray-700 transition-all duration-200 border-b border-gray-700"
               >
-                <td className="p-4 border-r border-gray-200">
-                  <div className="font-bold text-base text-blue-900">{routeLap.name}</div>
+                <td className="p-4 border-r border-gray-700">
+                  <div className="font-semibold text-base text-white notranslate" lang="bs">{routeLap.name}</div>
                 </td>
-                <td className="p-4 border-r border-gray-200">
+                <td className="p-4 border-r border-gray-700">
                   <Button
                     variant="light"
                     size="sm"
-                    className="text-blue-600 hover:text-blue-800 hover:bg-blue-100 underline p-0 h-auto min-w-0 font-semibold transition-colors"
+                    className="text-blue-400 hover:text-blue-300 underline p-0 h-auto min-w-0 transition-colors"
                     onClick={() => handleAgencyClick(routeLap.agencyId)}
                   >
-                    {agencyNames[routeLap.agencyId]}
+                    <span className="notranslate" lang="bs">{agencyNames[routeLap.agencyId]}</span>
                   </Button>
                 </td>
-                <td className="p-4 border-r border-gray-200">
+                <td className="p-4 border-r border-gray-700" translate="no" lang="bs">
                   <div className="space-y-1">
-                    <div className="font-semibold text-gray-900 text-sm">{departureStation?.name || 'Nepoznato'}</div>
-                    <div className="text-blue-700 font-mono font-bold text-base">{departureTime}</div>
+                    <div key={selectedDepartureStation} className="text-sm text-gray-400 notranslate" lang="bs" translate="no">{departureStation?.name || 'Nepoznato'}</div>
+                    <div className="font-medium text-base text-white">{departureTime}</div>
                   </div>
                 </td>
-                <td className="p-4 border-r border-gray-200">
+                <td className="p-4 border-r border-gray-700" translate="no" lang="bs">
                   <div className="space-y-1">
-                    <div className="font-semibold text-gray-900 text-sm">{arrivalStation?.name || 'Nepoznato'}</div>
-                    <div className="text-blue-700 font-mono font-bold text-base">{arrivalTime}</div>
+                    <div key={selectedArrivalStation} className="text-sm text-gray-400 notranslate" lang="bs" translate="no">{arrivalStation?.name || 'Nepoznato'}</div>
+                    <div className="font-medium text-base text-white">{arrivalTime}</div>
                   </div>
                 </td>
-                <td className="p-4 border-r border-gray-200">
-                  <div className="text-sm font-semibold text-gray-800">
-                    {deltaTime} {getGrammaticalForm(deltaTime, 'minuta', 'minute', 'minuta')}
+                <td className="p-4 border-r border-gray-700 text-center">
+                  <div className="text-sm text-gray-300">
+                    {formatDuration(deltaTime)}
                   </div>
                 </td>
                 {isToday && (
-                  <td className="p-4 border-r border-gray-200">
-                    <div className="text-sm font-bold" style={{ color: etaColor }}>
+                  <td className="p-4 border-r border-gray-700 text-center">
+                    <div className="text-sm font-semibold" style={{ color: etaColor }}>
                       {eta || '-'}
                     </div>
                   </td>
@@ -165,7 +188,7 @@ const RouteTableView: React.FC<RouteTableViewProps> = ({
                 <td className="p-4 text-center">
                   <Button
                     size="sm"
-                    className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 transition-colors"
+                    className="bg-white hover:bg-gray-200 text-black px-6 transition-colors font-medium"
                     onClick={() => handleDetailsClick(routeLap)}
                   >
                     Pogledaj
