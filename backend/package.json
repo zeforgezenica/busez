@@ -1,8 +1,7 @@
 {
   "name": "backend",
 "scripts": {
-    "predev": "taskkill /f /im node.exe /t /fi \"status eq running\" || exit 0",
-    "dev": "nodemon -r dotenv/config server.js",
+    "dev": "nodemon --signal SIGTERM -r dotenv/config server.js",
     "test": "jest",
     "lint": "eslint . --ext .js"
   },

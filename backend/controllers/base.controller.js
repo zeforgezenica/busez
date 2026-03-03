@@ -1,5 +1,6 @@
 const fs = require("fs");
 const { v4: uuidv4 } = require("uuid");
+const cache = require("../utils/cache");
 
 class BaseController {
   constructor(filePath, schema) {
@@ -14,14 +15,30 @@ class BaseController {
   }
 
   async getAll(req, res) {
+    // Svaki resurs ima svoj ključ, npr. "cache_agencies"
+    const cacheKey = `cache_${this.constructor.name}`;
+
+    // Provjeri da li podaci već postoje u cache-u
+    const cachedData = cache.get(cacheKey);
+    if (cachedData) {
+      console.info(`Cache HIT za: ${cacheKey}`);
+      return res.status(200).send(cachedData);
+    }
+
+    // Ako ne postoje, čitaj s diska
     try {
+      console.info(`Cache MISS za: ${cacheKey} – čitam s diska`);
       const items = await this.readFromFile();
+
+      // Sačuvaj u cache za sljedeći put
+      cache.set(cacheKey, items);
+
       res.status(200).send(items);
     } catch (error) {
       console.error(error);
-      res
-        .status(500)
-        .send({ message: "An error occurred while trying to get the items" });
+      res.status(500).send({
+        message: "An error occurred while trying to get the items"
+      });
     }
   }
 
@@ -56,6 +73,7 @@ class BaseController {
       let items = await this.readFromFile();
       items.push(newItemData);
       await this.writeToFile(items);
+      cache.del(`cache_${this.constructor.name}`);
       res.status(200).send(newItemData);
     } catch (error) {
       console.error(error);
@@ -77,6 +95,7 @@ class BaseController {
       }
       items[index] = { ...items[index], ...newData };
       await this.writeToFile(items);
+      cache.del(`cache_${this.constructor.name}`);
       res.status(200).send(items[index]);
     } catch (error) {
       console.error(error);
@@ -96,6 +115,7 @@ class BaseController {
       }
       items.splice(index, 1);
       await this.writeToFile(items);
+      cache.del(`cache_${this.constructor.name}`);
       res.status(200).send({ message: "Item deleted successfully" });
     } catch (error) {
       console.error(error);
@@ -164,6 +184,7 @@ class BaseController {
 
     return { isValid: true, errors: null };
   }
+
 }
 
 module.exports = BaseController;

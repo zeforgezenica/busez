@@ -6,6 +6,7 @@ import { Providers } from "./providers";
 import Footer from "./components/Footer";
 import NavigationBar from "./components/NavigationBar";
 import { Toaster } from "./components/ui/toaster";
+import { ThemeProvider } from "./components/ThemeProvider";
 
 export const metadata: Metadata = {
   title: "kadJeBus - ZeForge Zenica",
@@ -18,16 +19,23 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" suppressHydrationWarning>
       <body className="flex flex-col min-h-screen">
-        <Providers>
-          <React.Suspense fallback={null}>
-            <NavigationBar />
-          </React.Suspense>
-          <main className="flex-1 pt-16">{children}</main>
-          <Toaster />
-        </Providers>
-        <Footer />
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Providers>
+            <React.Suspense fallback={null}>
+              <NavigationBar />
+            </React.Suspense>
+            <main className="flex-1 pt-16">{children}</main>
+            <Toaster />
+          </Providers>
+          <Footer />
+        </ThemeProvider>
         <Analytics />
       </body>
     </html>
