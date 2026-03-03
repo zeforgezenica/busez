@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button } from '@nextui-org/react';
+import { Button, Card, CardBody } from '@nextui-org/react';
 import { Repeat } from '@mui/icons-material';
 import { Station } from '../models/station.model';
 import {
@@ -9,7 +9,6 @@ import {
 import dayjs from 'dayjs';
 import StationSelect from '@/components/StationSelect';
 import DateSelector from '@/components/DateSelector';
-import MapSelector from '../components/MapSelector';
 
 interface RouteSearchProps {
   stations: Station[];
@@ -39,75 +38,81 @@ const RouteSearch: React.FC<RouteSearchProps> = ({
   const [error, setError] = useState<string | null>(null);
 
   return (
-    <>
-      <h1>Pretraži Linije</h1>
-      {/* TODO: Uncomment and use MapSelector once station coordinates are gathered
-      <MapSelector
-        stations={stations}
-        setSelectedDepartureStationId={setSelectedDepartureStation}
-        setSelectedDestinationStationId={setSelectedArrivalStation}
-        selectedDepartureStationId={selectedDepartureStation}
-        selectedDestinationStationId={selectedArrivalStation}
-      />
-      */}
-      <div className='flex flex-col items-center space-y-4 my-4 max-w-screen-sm mx-auto'>
-        <StationSelect
-          stations={stations}
-          selectedStation={selectedDepartureStation}
-          setSelectedStation={setSelectedDepartureStation}
-          placeholder='Odaberite Stanicu Polaska'
-          history={historyDepartureStationIds}
-        />
-        <Button
-          radius='full'
-          onClick={() =>
-            handleSwapStations(
-              selectedDepartureStation,
-              selectedArrivalStation,
-              setSelectedDepartureStation,
-              setSelectedArrivalStation
-            )
-          }
-          isDisabled={!selectedDepartureStation || !selectedArrivalStation}
-        >
-          Obrni
-          <Repeat sx={{ fontSize: 30 }} />
-        </Button>
-        <StationSelect
-          stations={stations}
-          selectedStation={selectedArrivalStation}
-          setSelectedStation={setSelectedArrivalStation}
-          placeholder='Odaberite Odredišnu Stanicu'
-          history={historyArrivalStationIds}
-        />
-      </div>
-      <div className='flex justify-center space-x-4 my-4 max-w-screen-sm mx-auto'>
-        <DateSelector
-          dateOfDeparture={dateOfDeparture}
-          onDateChange={onDateChange}
-        />
-      </div>
-      {error && (
-        <div className='flex justify-center my-4'>
-          <div style={{ color: 'red' }}>{error}</div>
-        </div>
-      )}
-      <div className='flex justify-center my-4'>
-        <Button
-          isDisabled={!selectedDepartureStation || !selectedArrivalStation}
-          onClick={() =>
-            handleFilterClick(
-              selectedDepartureStation,
-              selectedArrivalStation,
-              onFilter,
-              setError
-            )
-          }
-        >
-          Pretraži
-        </Button>
-      </div>
-    </>
+    <div className="flex flex-col items-center w-full px-4">
+      <h1 className="text-2xl font-bold mb-6 text-white">Pretraži Linije</h1>
+      
+      <Card className="w-full max-w-md bg-white/5 backdrop-blur-md border border-white/10 shadow-2xl">
+        <CardBody className="flex flex-col gap-4 p-6">
+          
+          <StationSelect
+            stations={stations}
+            selectedStation={selectedDepartureStation}
+            setSelectedStation={setSelectedDepartureStation}
+            placeholder='Odaberite Stanicu Polaska'
+            history={historyDepartureStationIds}
+          />
+
+          <div className="flex justify-center -my-2 z-10">
+            <Button
+              isIconOnly
+              radius="full"
+              variant="flat"
+              color="primary"
+              className="hover:rotate-180 transition-transform duration-500 shadow-lg border-2 border-white/5 bg-blue-600/20"
+              onClick={() =>
+                handleSwapStations(
+                  selectedDepartureStation,
+                  selectedArrivalStation,
+                  setSelectedDepartureStation,
+                  setSelectedArrivalStation
+                )
+              }
+              isDisabled={!selectedDepartureStation || !selectedArrivalStation}
+            >
+              <Repeat className="text-blue-400" />
+            </Button>
+          </div>
+
+          <StationSelect
+            stations={stations}
+            selectedStation={selectedArrivalStation}
+            setSelectedStation={setSelectedArrivalStation}
+            placeholder='Odaberite Odredišnu Stanicu'
+            history={historyArrivalStationIds}
+          />
+
+          <div className="mt-2">
+            <DateSelector
+              dateOfDeparture={dateOfDeparture}
+              onDateChange={onDateChange}
+            />
+          </div>
+
+          {error && (
+            <div className="text-red-500 text-sm text-center font-medium">
+              {error}
+            </div>
+          )}
+
+          <Button
+            className="w-full mt-4 font-bold bg-blue-600 hover:bg-blue-500 shadow-lg shadow-blue-900/20"
+            size="lg"
+            isDisabled={!selectedDepartureStation || !selectedArrivalStation}
+            onClick={() =>
+              handleFilterClick(
+                selectedDepartureStation,
+                selectedArrivalStation,
+                onFilter,
+                setError
+              )
+            }
+          >
+            Pretraži
+          </Button>
+          
+        </CardBody>
+      </Card>
+    </div>
   );
 };
 
