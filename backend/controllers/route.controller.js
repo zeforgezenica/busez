@@ -6,6 +6,7 @@ class RouteController extends BaseController {
     const filePath = path.join(__dirname, "../../database/data/routes.json");
     const routeSchema = require("../schemas/route.schema.json");
     super(filePath, routeSchema);
+    this.cacheTTL = 120;
   }
 }
 

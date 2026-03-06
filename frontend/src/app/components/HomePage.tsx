@@ -2,6 +2,7 @@
 
 import { GeolocationDisplay } from "@/components/GeolocationDisplay";
 import { useSearchHistory } from "@/hooks/useSearchHistory";
+import { useFavorites } from "@/hooks/useFavorites";
 import { Button } from "@nextui-org/react";
 import dayjs from "dayjs";
 import "dayjs/locale/en";
@@ -12,12 +13,16 @@ import Station from "../models/station.model";
 import RouteSearch from "../routes/RouteSearch";
 import RouteGridView from "./RouteGridView";
 import RouteTableView from "./RouteTableView";
+import RouteTableView from './RouteTableView';
+import FavoriteButton from "./FavoriteButton";
+import FavoritesList from "./FavoritesList";
 import AgencyService from "../services/agency.service";
 import RouteService from "../services/route.service";
 import StationService from "../services/station.service";
 import FilterService from "../handlers/route.filter.handler";
 import { toSortedStationsAlphabetically } from "@/lib/utils";
 import { useRouter, useSearchParams } from "next/navigation";
+import { Star } from "lucide-react";
 
 const HomePage: React.FC = () => {
   const [routeResults, setRouteResults] = useState<RouteLap[]>([]);
@@ -40,6 +45,8 @@ const HomePage: React.FC = () => {
     addStationsToHistory,
   } = useSearchHistory();
 
+  const { favorites, isFavorite, toggleFavorite, removeFavorite } = useFavorites();
+  const [showFavorites, setShowFavorites] = useState(false);
   const [dateOfDeparture, setDateOfDeparture] =
     React.useState<dayjs.Dayjs | null>(dayjs());
 
@@ -193,6 +200,19 @@ const HomePage: React.FC = () => {
     setShowGame(!showGame);
   };
 
+  const handleFavoriteSearch = (
+    departureStationId: string,
+    arrivalStationId: string
+  ) => {
+    setShowFavorites(false);
+    const params = new URLSearchParams({
+      from: departureStationId,
+      to: arrivalStationId,
+      date: dayjs().format("YYYY-MM-DD"),
+    });
+    router.push(`/?${params.toString()}`, { scroll: false });
+  };
+
   const toggleExpand = () => {
     setIsExpanded(!isExpanded);
   };
@@ -265,6 +285,107 @@ const HomePage: React.FC = () => {
 
               <div className="rounded-2xl border border-yellow-500/20 bg-black/30 p-4 md:p-5">
                 <RouteSearch
+ return (
+  <>
+    <Head>
+      <title>kadJeBus</title>
+      <link rel="icon" href="/favicon.ico" />
+    </Head>
+    <div className="container mx-auto p-4 text-center">
+      <h1 className="text-3xl font-bold text-center mb-4 notranslate">kadJeBus</h1>
+      <h2 className="text-xl text-center mb-2">
+        Aplikacija za prikaz informacija o redu vožnje javnog prevoza u Zenici.
+      </h2>
+      <GeolocationDisplay />
+      <RouteSearch
+        stations={stations}
+        selectedDepartureStation={tempDepartureStation}
+        selectedArrivalStation={tempArrivalStation}
+        setSelectedDepartureStation={setTempDepartureStation}
+        setSelectedArrivalStation={setTempArrivalStation}
+        dateOfDeparture={dateOfDeparture}
+        onDateChange={handleDateChange}
+        onFilter={handleFilterRoutes}
+        historyArrivalStationIds={historyArrivalStationIds}
+        historyDepartureStationIds={historyDepartureStationIds}
+      />
+
+      <div className="flex justify-center my-4">
+        <Button
+          color={showFavorites ? "primary" : "default"}
+          variant={showFavorites ? "solid" : "bordered"}
+          onClick={() => setShowFavorites(!showFavorites)}
+          className="gap-2"
+        >
+          <Star className={`h-5 w-5 ${showFavorites ? "fill-yellow-400 text-yellow-400" : ""}`} />
+          {showFavorites ? "Sakrij Favorite" : `Prikaži Favorite (${favorites.length})`}
+        </Button>
+      </div>
+
+      {showFavorites && (
+        <div className="mb-6">
+          <h2 className="text-xl font-semibold mb-4">Omiljene Linije</h2>
+          <FavoritesList
+            favorites={favorites}
+            stations={stations}
+            onRemove={removeFavorite}
+            onSearch={handleFavoriteSearch}
+          />
+        </div>
+      )}
+
+      {error && <div className="error">{error}</div>}
+
+      {hasSearched && selectedDepartureStation && selectedArrivalStation && (
+        <div className="flex justify-center mb-4">
+          <FavoriteButton
+            isFavorite={isFavorite(selectedDepartureStation, selectedArrivalStation)}
+            onToggle={() => toggleFavorite(selectedDepartureStation, selectedArrivalStation)}
+          />
+        </div>
+      )}
+
+      {hasSearched && fixedIsToday && (
+        <div className="text-xl font-semibold mb-4">Nadolazeći Polasci</div>
+      )}
+
+      {hasSearched && routeResults.length > 0 && (
+        <div className="flex justify-center gap-2 mb-4">
+          <Button
+            color={viewMode === "card" ? "primary" : "default"}
+            variant={viewMode === "card" ? "solid" : "bordered"}
+            onClick={() => setViewMode("card")}
+          >
+            Prikaz Kartica
+          </Button>
+          <Button
+            color={viewMode === "table" ? "primary" : "default"}
+            variant={viewMode === "table" ? "solid" : "bordered"}
+            onClick={() => setViewMode("table")}
+          >
+            Tabela Prikaz
+          </Button>
+        </div>
+      )}
+
+      {hasSearched && (
+        <>
+          {routeResults.length > 0 ? (
+            <>
+              {viewMode === "card" ? (
+                <RouteGridView
+                  routes={routeResults}
+                  agencyNames={agencyNames}
+                  stations={stations}
+                  selectedDepartureStation={selectedDepartureStation}
+                  selectedArrivalStation={selectedArrivalStation}
+                  isToday={fixedIsToday}
+                  calculateDuration={calculateDuration}
+                />
+              ) : (
+                <RouteTableView
+                  routes={routeResults}
+                  agencyNames={agencyNames}
                   stations={stations}
                   selectedDepartureStation={tempDepartureStation}
                   selectedArrivalStation={tempArrivalStation}
