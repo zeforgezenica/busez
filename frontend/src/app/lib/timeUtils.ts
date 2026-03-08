@@ -24,13 +24,22 @@ export const calculateETA = (
     'YYYY-MM-DD HH:mm'
   );
 
-  if (departure.isBefore(current)) {
-    setEta('Vrijeme polaska je prošlo.');
-    return null;
-  } else {
-    const totalSecondsDiff = departure.diff(current, 'second');
-    const remainingMinutes = Math.floor(totalSecondsDiff / 60);
+  const totalSecondsDiff = departure.diff(current, 'second');
+  const remainingMinutes = Math.floor(totalSecondsDiff / 60);
 
+  if (remainingMinutes < -60) {
+    setEta('Vrijeme polaska je prošlo.');
+    return remainingMinutes;
+  } else if (remainingMinutes < 0) {
+    const absMinutes = Math.abs(remainingMinutes);
+    setEta(`Prije ${absMinutes} ${getGrammaticalForm(
+      absMinutes,
+      'minutu',
+      'minute',
+      'minuta'
+    )}`);
+    return remainingMinutes;
+  } else {
     const hours = Math.floor(totalSecondsDiff / 3600);
     const minutes = Math.floor((totalSecondsDiff % 3600) / 60);
     const seconds = totalSecondsDiff % 60;
