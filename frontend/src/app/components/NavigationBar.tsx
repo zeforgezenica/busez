@@ -115,17 +115,19 @@ const NavigationBar: React.FC = () => {
               </Button>
             </div>
 
-            <div className="flex items-center">
-              <ThemeToggle />
+            <div className="flex items-center ml-2 lg:ml-4">
               <GTranslateWidget />
             </div>
           </div>
+
+          <div className="flex items-center md:ml-4 gap-2 md:gap-4 ml-auto">
+            <ThemeToggle />
 
           {/* Mobile menu button */}
           <Button
             variant="ghost"
             size="icon"
-            className="md:hidden ml-auto"
+            className="md:hidden"
             onClick={toggleMenu}
             aria-label="Toggle menu"
           >
@@ -153,6 +155,7 @@ const NavigationBar: React.FC = () => {
               )}
             </AnimatePresence>
           </Button>
+          </div>
         </div>
       </div>
 
