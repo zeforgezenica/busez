@@ -39,9 +39,9 @@ const RouteSearch: React.FC<RouteSearchProps> = ({
 
   return (
     <div className="flex flex-col items-center w-full px-4">
-      <h1 className="text-2xl font-bold mb-6 text-white">Pretraži Linije</h1>
+      <h1 className="text-2xl font-bold mb-6 text-foreground">Pretraži Linije</h1>
       
-      <Card className="w-full max-w-md bg-white/5 backdrop-blur-md border border-white/10 shadow-2xl">
+      <Card className="w-full max-w-md bg-card/95 border border-border shadow-2xl">
         <CardBody className="flex flex-col gap-4 p-6">
           
           <StationSelect
@@ -58,7 +58,7 @@ const RouteSearch: React.FC<RouteSearchProps> = ({
               radius="full"
               variant="flat"
               color="primary"
-              className="hover:rotate-180 transition-transform duration-500 shadow-lg border-2 border-white/5 bg-blue-600/20"
+              className="hover:rotate-180 transition-transform duration-500 shadow-md border border-border bg-secondary/80 hover:bg-secondary"
               onClick={() =>
                 handleSwapStations(
                   selectedDepartureStation,
@@ -69,7 +69,7 @@ const RouteSearch: React.FC<RouteSearchProps> = ({
               }
               isDisabled={!selectedDepartureStation || !selectedArrivalStation}
             >
-              <Repeat className="text-blue-400" />
+              <Repeat className="text-primary" />
             </Button>
           </div>
 
@@ -89,13 +89,13 @@ const RouteSearch: React.FC<RouteSearchProps> = ({
           </div>
 
           {error && (
-            <div className="text-red-500 text-sm text-center font-medium">
+            <div className="text-red-700 dark:text-red-400 text-sm text-center font-medium">
               {error}
             </div>
           )}
 
           <Button
-            className="w-full mt-4 font-bold bg-blue-600 hover:bg-blue-500 shadow-lg shadow-blue-900/20"
+            className="w-full mt-4 font-bold text-white bg-blue-600 hover:bg-blue-500 shadow-lg shadow-blue-900/20"
             size="lg"
             isDisabled={!selectedDepartureStation || !selectedArrivalStation}
             onClick={() =>
