@@ -95,7 +95,7 @@ const RouteSearch: React.FC<RouteSearchProps> = ({
           )}
 
           <Button
-            className="w-80 mt-4 font-bold text-white bg-blue-600 hover:bg-blue-500 shadow-lg shadow-blue-900/20"
+            className="w-full max-w-sm mt-4 font-bold text-white bg-blue-600 hover:bg-blue-500 shadow-lg shadow-blue-900/20"
             size="lg"
             isDisabled={!selectedDepartureStation || !selectedArrivalStation}
             onClick={() =>

@@ -51,7 +51,7 @@ const StationSelect: React.FC<StationSelectProps> = ({
           variant="outline"
           role="combobox"
           aria-expanded={open}
-          className="w-80 justify-between"
+          className="w-full max-w-sm justify-between"
         >
           <span
             key={selectedStation || "placeholder"}
@@ -66,7 +66,7 @@ const StationSelect: React.FC<StationSelectProps> = ({
           <CaretSortIcon className="ml-2 h-4 w-4 shrink-0 opacity-50" />
         </Button>
       </PopoverTrigger>
-      <PopoverContent className="w-[240px] p-0">
+      <PopoverContent className="w-[var(--radix-popover-trigger-width)] max-w-[calc(100vw-3rem)] p-0" align="center">
         <Command>
           <CommandInput placeholder={placeholder} />
           <CommandList>
