@@ -166,7 +166,7 @@ function dividePastAndCurrentRouteLaps(routeLaps: RouteLap[], departureStationId
         const reducerInit = { futureRoutes: [] as RouteLap[], pastRoutes: [] as RouteLap[] };
         const { futureRoutes, pastRoutes } = routeLaps.reduce(dividePastAndFutureRoutes, reducerInit);
         const sortedResults = futureRoutes.sort(routeLapSorter);
-        const sortedPastDepartures = pastRoutes.sort(routeLapSorter);
+        const sortedPastDepartures = pastRoutes.sort(routeLapSorter).reverse();
         return { sortedResults, sortedPastDepartures };
     }
     const sortedResults = routeLaps.sort(routeLapSorter);
