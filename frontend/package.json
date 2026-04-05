@@ -8,7 +8,7 @@
     "build": "dotenv -e .env.production -- next build",
     "start": "dotenv -e .env.production -- next start",
     "test": "jest",
-    "lint": "next lint"
+    "lint": "eslint ."
   },
   "dependencies": {
     "@emotion/react": "^11.13.3",

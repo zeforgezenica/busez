@@ -1,15 +1,15 @@
-const request = require('supertest');
-const express = require('express');
-const fs = require('fs');
-const cityRoutes = require('../routes/city.routes');
+const request = require("supertest");
+const express = require("express");
+const fs = require("fs");
+const cityRoutes = require("../routes/city.routes");
 const app = express();
 
-jest.mock('fs');
+jest.mock("fs");
 
 app.use(express.json());
-app.use('/cities', cityRoutes);
+app.use("/cities", cityRoutes);
 
-describe('CityController', () => {
+describe("CityController", () => {
   let mockCities;
 
   beforeEach(() => {
@@ -43,22 +43,22 @@ describe('CityController', () => {
     jest.clearAllMocks();
   });
 
-  it('should return all cities', async () => {
-    const response = await request(app).get('/cities');
+  it("should return all cities", async () => {
+    const response = await request(app).get("/cities");
     expect(response.statusCode).toBe(200);
     expect(response.body.length).toBe(2);
     expect(response.body).toEqual(mockCities);
   });
 
-  it('should return a city by ID', async () => {
-    const response = await request(app).get('/cities/1');
+  it("should return a city by ID", async () => {
+    const response = await request(app).get("/cities/1");
     expect(response.statusCode).toBe(200);
     expect(response.body).toEqual(mockCities[0]);
   });
 
-  it('should return 404 if city not found', async () => {
-    const response = await request(app).get('/cities/999');
+  it("should return 404 if city not found", async () => {
+    const response = await request(app).get("/cities/999");
     expect(response.statusCode).toBe(404);
-    expect(response.body).toEqual({ message: 'Item not found' }); 
+    expect(response.body).toEqual({ message: "Item not found" }); 
   });
 });

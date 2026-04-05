@@ -1,14 +1,14 @@
 /** @type {import('jest').Config} */
 module.exports = {
-  testEnvironment: 'node',
-  coverageDirectory: 'coverage',
+  testEnvironment: "node",
+  coverageDirectory: "coverage",
   collectCoverageFrom: [
-    'controllers/**/*.js',
-    'routes/**/*.js',
-    '!**/node_modules/**',
-    '!**/test/**',
+    "controllers/**/*.js",
+    "routes/**/*.js",
+    "!**/node_modules/**",
+    "!**/test/**",
   ],
-  testMatch: ['**/test/**/*.test.js'],
+  testMatch: ["**/test/**/*.test.js"],
   verbose: true,
   clearMocks: true,
   resetMocks: true,

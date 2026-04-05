@@ -80,7 +80,7 @@ describe("RouteController", () => {
 
   it("should return a route by id", async () => {
     
-    const response = await request(app).get(`/routes/1`);
+    const response = await request(app).get("/routes/1");
 
     expect(response.status).toBe(200);
     expect(response.body).toEqual(routesData[0]);

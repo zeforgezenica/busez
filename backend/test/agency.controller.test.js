@@ -1,12 +1,10 @@
-const fs = require('fs');
-const path = require('path');
-const AgencyController = require('../controllers/agency.controller');
-const request = require('supertest');
-const express = require('express');
+const fs = require("fs");
+const request = require("supertest");
+const express = require("express");
 
 
-jest.mock('fs');
-jest.mock('ajv');
+jest.mock("fs");
+jest.mock("ajv");
 
 
 const app = express();
