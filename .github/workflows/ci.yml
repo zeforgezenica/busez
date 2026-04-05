@@ -5,16 +5,16 @@ on:
     branches:
       - main
     paths-ignore:
-      - logo-ideas/*
-      - scripts/*
-      - *.md
+      - 'logo-ideas/*'
+      - 'scripts/*'
+      - '*.md'
   pull_request:
     branches:
       - main
     paths-ignore:
-      - logo-ideas/*
-      - scripts/*
-      - *.md
+      - 'logo-ideas/*'
+      - 'scripts/*'
+      - '*.md'
 
 jobs:
   build:
