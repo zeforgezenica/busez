@@ -1,12 +1,11 @@
 "use client";
 
 import * as React from "react";
-import { Moon, Sun } from "lucide-react";
+import { MoonStar, SunMedium } from "lucide-react";
 import { useTheme } from "next-themes";
-import { Button } from "@/components/ui/button";
 
 export function ThemeToggle() {
-  const { theme, setTheme } = useTheme();
+  const { theme, setTheme, resolvedTheme } = useTheme();
   const [mounted, setMounted] = React.useState(false);
 
   React.useEffect(() => {
@@ -15,15 +14,43 @@ export function ThemeToggle() {
 
   if (!mounted) return null;
 
+  const currentTheme = theme === "system" ? resolvedTheme : theme;
+  const isDark = currentTheme === "dark";
+
   const toggleTheme = () => {
-    setTheme(theme === "dark" ? "light" : "dark");
+    setTheme(isDark ? "light" : "dark");
   };
 
   return (
-    <Button variant="ghost" size="icon" onClick={toggleTheme}>
-      <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-      <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+    <button
+      onClick={toggleTheme}
+      className={`relative inline-flex h-8 w-16 items-center rounded-full transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 dark:focus-visible:ring-offset-background border border-border/50 ${
+        isDark ? "bg-indigo-950/30" : "bg-orange-100/50"
+      }`}
+      aria-label="Toggle theme"
+    >
       <span className="sr-only">Toggle theme</span>
-    </Button>
+      
+      {/* Background Icons */}
+      <div className="absolute inset-0 flex items-center justify-between px-2 cursor-pointer">
+        <MoonStar className="h-4 w-4 text-indigo-400" />
+        <SunMedium className="h-4 w-4 text-orange-400" />
+      </div>
+
+      {/* Thumb */}
+      <span
+        className={`pointer-events-none relative z-10 flex h-6 w-6 items-center justify-center rounded-full shadow-md transition-transform duration-500 ease-in-out ${
+          isDark 
+            ? "translate-x-1 bg-indigo-500" 
+            : "translate-x-9 bg-white"
+        }`}
+      >
+        {isDark ? (
+           <MoonStar className="h-3.5 w-3.5 text-white" />
+        ) : (
+           <SunMedium className="h-3.5 w-3.5 text-orange-500" />
+        )}
+      </span>
+    </button>
   );
 }
