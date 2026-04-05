@@ -3,7 +3,6 @@
   "outputDirectory": ".next",
   "installCommand": "pnpm install --frozen-lockfile",
   "framework": "nextjs",
-  "nodeVersion": "20.x",
   "projectSettings": {
     "rootDirectory": "frontend"
   }
