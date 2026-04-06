@@ -86,34 +86,7 @@ const NavigationBar: React.FC = () => {
           </div>
 
           <div className="hidden md:flex items-center gap-2 lg:gap-4 shrink-0 ml-auto">
-            {/* CTA Buttons */}
-            <div className="flex items-center space-x-2 lg:space-x-4">
-              {/* Auth links now use unified /auth route with query mode=login|register */}
-              <Button variant="ghost" asChild>
-                <Link
-                  href={"/auth?mode=login"}
-                  className={
-                    pathname?.startsWith("/auth") && searchParams?.get("mode") === "login"
-                      ? "text-primary"
-                      : ""
-                  }
-                >
-                  Login
-                </Link>
-              </Button>
-              <Button asChild>
-                <Link
-                  href={"/auth?mode=register"}
-                  className={
-                    pathname?.startsWith("/auth") && searchParams?.get("mode") === "register"
-                      ? "text-primary"
-                      : ""
-                  }
-                >
-                  Sign Up
-                </Link>
-              </Button>
-            </div>
+
 
             <div className="flex items-center ml-2 lg:ml-4">
               <GTranslateWidget />
@@ -197,11 +170,6 @@ const NavigationBar: React.FC = () => {
                 transition={{ delay: navigationItems.length * 0.1 }}
               >
                 <div className="flex flex-col space-y-2 px-3">
-                  <Button variant="outline" className="w-full" asChild>
-                    <Link href={"/auth?mode=login"} onClick={closeMenu}>
-                      Login
-                    </Link>
-                  </Button>
                   <div className="flex justify-center">
                     <GTranslateWidget />
                   </div>
