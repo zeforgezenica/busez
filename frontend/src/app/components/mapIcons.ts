@@ -20,3 +20,11 @@ export const destinationIcon = new Icon({
   iconAnchor: [8, 26],
   popupAnchor: [8, 0],
 });
+
+export const emailIcon = new Icon({
+  iconUrl: "/email.png",
+  iconSize: [16, 16],
+  iconAnchor: [0, 0],
+  popupAnchor: [8, 0],
+});
+
